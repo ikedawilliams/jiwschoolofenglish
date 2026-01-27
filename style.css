@@ -73,14 +73,14 @@ hr {
     max-width: 100%;
   }
 
-  a[href*="trial"],
-  a[href*="lesson"],
-  a[href*="book"] {
+@media (max-width: 768px) {
+  .hero .cta-button {
     display: block;
     width: 100%;
-    margin: 12px auto;
+    max-width: 100%;
     text-align: center;
     font-size: 18px;
     padding: 16px 0;
   }
 }
+
