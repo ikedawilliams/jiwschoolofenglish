@@ -66,3 +66,21 @@ hr {
 .cta-button:hover {
   background: #159688;
 }
+
+/* Mobile CTA button: full width */
+@media (max-width: 768px) {
+  a {
+    max-width: 100%;
+  }
+
+  a[href*="trial"],
+  a[href*="lesson"],
+  a[href*="book"] {
+    display: block;
+    width: 100%;
+    margin: 12px auto;
+    text-align: center;
+    font-size: 18px;
+    padding: 16px 0;
+  }
+}
