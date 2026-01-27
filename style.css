@@ -86,7 +86,7 @@ hr {
 
 @media (max-width: 768px) {
   .cta-button {
-    font-size: 24px;     /* make it clearly readable */
+    font-size: 36px;     /* make it clearly readable */
     font-weight: 800;
     line-height: 1.15;
   }
