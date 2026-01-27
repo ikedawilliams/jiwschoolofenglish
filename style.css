@@ -51,44 +51,41 @@ hr {
   border-top: 1px solid #ddd;
 }
 
-/* Free Trial Button */
+/* ===== CTA BUTTON ===== */
 .cta-button {
   display: inline-block;
   background: #1FB9A8;
-  color: white;
-  padding: 14px 22px;
-  border-radius: 6px;
+  color: #ffffff;
+  padding: 16px 26px;
+  border-radius: 8px;
   text-decoration: none;
-  font-weight: 600;
-  margin-top: 12px;
+  font-weight: 700;
+  margin-top: 16px;
 }
 
+/* Hover (desktop only, harmless on mobile) */
 .cta-button:hover {
   background: #159688;
 }
 
-/* Mobile CTA button: full width */
-@media (max-width: 768px) {
-  a {
-    max-width: 100%;
-  }
-
-@media (max-width: 768px) {
-  .hero .cta-button {
-    display: block;
-    width: 100%;
-    max-width: 100%;
-    text-align: center;
-    font-size: 18px;
-    padding: 16px 0;
-  }
-}
-
+/* ===== MOBILE CTA (FINAL) ===== */
 @media (max-width: 768px) {
   .cta-button {
-    font-size: 36px;     /* make it clearly readable */
+    display: block;
+    width: 100%;
+    font-size: 26px;     /* BIG, readable on phones */
     font-weight: 800;
     line-height: 1.15;
+    padding: 24px 0;     /* tall, thumb-friendly */
+    text-align: center;
+    border-radius: 12px;
+  }
+
+  .cta-micro {
+    font-size: 14px;
+    margin-top: 12px;
+    opacity: 0.85;
+    line-height: 1.4;
   }
 }
 
