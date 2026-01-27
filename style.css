@@ -7,6 +7,18 @@ body {
   color: #111;
 }
 
+/* Hero section */
+.hero {
+  background: linear-gradient(
+    135deg,
+    rgba(31,185,168,0.08),
+    rgba(21,150,136,0.08)
+  );
+  padding: 32px 24px;
+  border-radius: 8px;
+  margin-bottom: 32px;
+}
+
 h1 {
   font-size: 2rem;
   margin-top: 0;
