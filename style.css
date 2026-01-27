@@ -91,3 +91,9 @@ hr {
     line-height: 1.15;
   }
 }
+
+.cta-micro {
+  margin-top: 10px;
+  font-size: 14px;
+  opacity: 0.85;
+}
