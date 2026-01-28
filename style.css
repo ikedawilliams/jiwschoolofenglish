@@ -9,18 +9,21 @@ body {
 
 /* Hero section */
 .hero {
-  position: relative; /* allows absolute positioning of the photo */
+  position: relative;
+
   background: linear-gradient(
     135deg,
     rgba(31,185,168,0.08),
     rgba(21,150,136,0.08)
   );
-  padding: 32px 24px;
-  padding-right: 260px;   /* space so text doesn't run under photo */
-  padding-bottom: 64px;   /* space for bottom-right photo */
+
+  padding: 32px;
   border-radius: 8px;
   margin-bottom: 32px;
-  overflow: hidden;       /* keeps fade/shadow clipped cleanly */
+
+  /* reserve space so text never collides with photo */
+  padding-right: 260px;
+  padding-bottom: 96px;
 }
 
 
