@@ -1,3 +1,7 @@
+/* ===== Base ===== */
+
+* { box-sizing: border-box; }
+
 body {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
   line-height: 1.6;
@@ -7,72 +11,19 @@ body {
   color: #111;
 }
 
-/* Hero section */
-.hero {
-  position: relative;
+p, li { font-size: 1rem; }
 
-  background: linear-gradient(
-    135deg,
-    rgba(31,185,168,0.08),
-    rgba(21,150,136,0.08)
-  );
+ul { padding-left: 18px; }
 
-  padding: 32px;
-  border-radius: 8px;
-  margin-bottom: 32px;
-
-  /* reserve space so text never collides with photo */
-  padding-right: 260px;
-  padding-bottom: 96px;
+hr {
+  margin: 28px 0;
+  border: none;
+  border-top: 1px solid #ddd;
 }
-
-
-/* ===== HERO LAYOUT WITH TEACHER PHOTO (FIXED) ===== */
-
-.hero-inner {
-  display: flex;
-  align-items: flex-start;   /* stop “big top block” feel */
-  gap: 18px;
-}
-
-.teacher-photo {
-  float: right;
-  margin: 0 0 12px 24px;
-
-  width: 180px;
-  height: 180px;
-
-  object-fit: cover;
-  object-position: 50% 50%;
-
-  border-radius: 18px;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.10);
-  background: #fff;
-}
-
-
-/* ===== MOBILE: keep it small and not "banner-like" ===== */
-@media (max-width: 768px) {
-  .hero-inner {
-    flex-direction: row;     /* keep photo + text together */
-    align-items: flex-start;
-    text-align: left;        /* avoids “poster” vibe */
-  }
-
-  .teacher-photo {
-    width: 96px;             /* much smaller on phone */
-    height: 96px;
-    border-radius: 16px;
-    margin-top: 4px;
-  }
-}
-
-
 
 h1 {
   font-size: 2rem;
-  margin-top: 0;
-  margin-bottom: 12px;
+  margin: 0 0 12px;
 }
 
 h2 {
@@ -87,52 +38,83 @@ h3 {
   font-size: 1.1rem;
 }
 
-p, li {
-  font-size: 1rem;
+/* ===== Hero ===== */
+
+.hero {
+  position: relative;
+  background: linear-gradient(
+    135deg,
+    rgba(31,185,168,0.08),
+    rgba(21,150,136,0.08)
+  );
+
+  /* symmetrical padding baseline */
+  padding: 32px;
+  border-radius: 12px;
+  margin-bottom: 32px;
+
+  /* reserve space so text never collides with the photo (desktop) */
+  padding-right: 280px;
+  padding-bottom: 120px;
+
+  overflow: hidden;
 }
 
-ul {
-  padding-left: 18px;
+/* Face photo (desktop: bottom-right anchor) */
+.teacher-photo {
+  position: absolute;
+  right: 32px;
+  bottom: 32px;
+
+  width: 210px;
+  height: 210px;
+
+  object-fit: cover;
+  object-position: 50% 50%; /* centers face */
+
+  border-radius: 18px;
+  background: #fff;
+  box-shadow: 0 10px 26px rgba(0,0,0,0.12);
+
+  /* keeps it calm, not screaming */
+  opacity: 0.98;
 }
 
-hr {
-  margin: 28px 0;
-  border: none;
-  border-top: 1px solid #ddd;
+/* Hero text niceties */
+.hero-sub {
+  margin: 0 0 10px;
+}
+
+.hero-jp {
+  margin: 0 0 6px;
+  opacity: 0.9;
+}
+
+.cta-micro {
+  margin: 10px 0 0;
+  opacity: 0.85;
+  font-size: 0.95rem;
 }
 
 /* ===== CTA BUTTON ===== */
+
 .cta-button {
   display: inline-block;
   background: #1FB9A8;
   color: #ffffff;
   padding: 16px 26px;
-  border-radius: 8px;
+  border-radius: 10px;
   text-decoration: none;
-  font-weight: 700;
-  margin-top: 16px;
+  font-weight: 800;
+  margin-top: 14px;
 }
 
-/* Hover (desktop only, harmless on mobile) */
 .cta-button:hover {
   background: #159688;
 }
 
-/* ===== FINAL MOBILE CTA (LOCKED) ===== */
-@media (max-width: 768px) {
-  .hero .cta-button {
-    display: block;
-    width: 100%;
-    font-size: 32px;      /* LOCKED: readable on a train */
-    font-weight: 800;
-    line-height: 1.1;
-    padding: 26px 0;     /* tall, confident tap target */
-    text-align: center;
-    border-radius: 12px;
-  }
-}
-
 /* ===== Testimonial (Japanese) ===== */
+
 .testimonial {
   margin: 36px auto;
   max-width: 900px;
@@ -163,24 +145,58 @@ hr {
   opacity: 0.75;
 }
 
+/* ===== Mobile (phone-first polish) ===== */
+
 @media (max-width: 768px) {
+
+  body {
+    padding: 18px;
+  }
+
+  .hero {
+    /* remove reserved photo space on mobile */
+    padding-right: 24px;
+    padding-bottom: 24px;
+    padding-left: 24px;
+    padding-top: 24px;
+    border-radius: 14px;
+  }
+
+  /* move photo into normal flow, centered above headline */
+  .teacher-photo {
+    position: static;
+    display: block;
+    margin: 0 auto 14px;
+
+    width: 140px;
+    height: 140px;
+    border-radius: 18px;
+
+    object-position: 50% 50%;
+  }
+
+  /* Keep your CTA locked big (your rule), but make it not absurdly tall */
+  .hero .cta-button {
+    display: block;
+    width: 100%;
+    font-size: 32px;      /* LOCKED */
+    font-weight: 900;
+    line-height: 1.1;
+    padding: 24px 0;      /* still huge, slightly cleaner */
+    text-align: center;
+    border-radius: 12px;
+  }
+
   .testimonial {
     margin: 28px auto;
+    padding: 0 8px;
   }
+
   .testimonial-quote {
     padding: 16px 14px;
   }
+
   .testimonial-text {
     font-size: 15px;
-  }
-}
-
-@media (max-width: 768px) {
-  .teacher-photo {
-    float: none;
-    display: block;
-    margin: 0 auto 16px;
-    width: 140px;
-    height: 140px;
   }
 }
