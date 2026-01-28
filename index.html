@@ -210,6 +210,25 @@ start with a free trial lesson.
   </div>
 </footer>
 
+      <script>
+  (function () {
+    const buttons = document.querySelectorAll(".lang-btn");
+    const nodes = document.querySelectorAll("[data-i18n]");
+    const savedLang = localStorage.getItem("jiw_lang") || "en";
+
+    function setLang(lang){
+      nodes.forEach(el => {
+        el.style.display = (el.dataset.i18n === lang) ? "" : "none";
+      });
+      buttons.forEach(b => b.classList.toggle("active", b.dataset.lang === lang));
+      localStorage.setItem("jiw_lang", lang);
+    }
+
+    buttons.forEach(b => b.addEventListener("click", () => setLang(b.dataset.lang)));
+    setLang(savedLang);
+  })();
+</script>
+
 </body>
 </html>
 
