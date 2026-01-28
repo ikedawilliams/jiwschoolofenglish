@@ -48,6 +48,11 @@ body {
   opacity: 0.95;
 }
 
+.hero-inner {
+  position: relative;
+}
+
+
 /* Soft fade at the edges (works best on Safari/Chrome) */
 .teacher-photo {
   -webkit-mask-image: radial-gradient(circle at 55% 45%, black 62%, transparent 100%);
