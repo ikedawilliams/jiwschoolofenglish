@@ -34,19 +34,21 @@ body {
 
 .teacher-photo {
   position: absolute;
-  right: 20px;
-  bottom: 18px;
+  right: 24px;
+  bottom: 24px;
 
-  width: 210px;
-  height: 210px;
+  width: 200px;
+  height: 200px;
 
   object-fit: cover;
-  object-position: 55% 50%; /* centers face; tweak first number 45–65% */
+  object-position: 50% 50%; /* TRUE CENTER */
 
   border-radius: 18px;
-  box-shadow: 0 10px 28px rgba(0,0,0,0.10);
-  opacity: 0.95;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.10);
+
+  background: #fff; /* ensures clean white frame */
 }
+
 
 .hero-inner {
   position: relative;
