@@ -73,7 +73,7 @@ hr {
   .cta-button {
     display: block;
     width: 100%;
-    font-size: 26px;     /* BIG, readable on phones */
+    font-size: 40px;     /* BIG, readable on phones */
     font-weight: 800;
     line-height: 1.15;
     padding: 24px 0;     /* tall, thumb-friendly */
