@@ -68,25 +68,16 @@ hr {
   background: #159688;
 }
 
-/* ===== MOBILE CTA (FINAL) ===== */
+/* ===== FINAL MOBILE CTA (LOCKED) ===== */
 @media (max-width: 768px) {
-  .cta-button {
+  .hero .cta-button {
     display: block;
     width: 100%;
-    font-size: 36px;     /* BIG, readable on phones */
+    font-size: 32px;      /* LOCKED: readable on a train */
     font-weight: 800;
-    line-height: 1.15;
-    padding: 24px 0;     /* tall, thumb-friendly */
+    line-height: 1.1;
+    padding: 26px 0;     /* tall, confident tap target */
     text-align: center;
     border-radius: 12px;
   }
-
-  .cta-micro {
-    margin-top: 10px;
-    font-size: 14px;
-    margin-top: 12px;
-    opacity: 0.85;
-    text-align: center;
-    line-height: 1.4;
-  }
-
+}
