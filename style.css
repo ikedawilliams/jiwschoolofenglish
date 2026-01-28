@@ -334,6 +334,31 @@ h3 {
   text-decoration: none;
   font-weight: 600;
 }
+.hero { position: relative; }
+
+.lang-toggle{
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  display:flex;
+  gap:8px;
+  margin: 0;
+}
+
+.lang-btn{
+  border:1px solid #ddd;
+  background:#fff;
+  padding:6px 10px;
+  border-radius:10px;
+  cursor:pointer;
+  font-weight:700;
+  font-size:0.85rem;
+}
+
+.lang-btn.active{
+  border-color:#1FB9A8;
+  color:#1FB9A8;
+}
 
 /* Language default (so layout doesn’t “double” before JS runs) */
 [data-i18n="jp"] { display: none; }
