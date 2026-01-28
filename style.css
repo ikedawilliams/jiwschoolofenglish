@@ -19,6 +19,40 @@ body {
   margin-bottom: 32px;
 }
 
+/* ===== HERO LAYOUT WITH TEACHER PHOTO ===== */
+
+.hero-inner {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.teacher-photo {
+  width: 220px;
+  max-width: 40vw;
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+  flex-shrink: 0;
+}
+
+.hero-text {
+  flex: 1;
+}
+
+/* ===== MOBILE BEHAVIOR ===== */
+@media (max-width: 768px) {
+  .hero-inner {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .teacher-photo {
+    width: 170px;
+    margin-bottom: 16px;
+  }
+}
+
+
 h1 {
   font-size: 2rem;
   margin-top: 0;
