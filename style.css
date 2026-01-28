@@ -255,8 +255,8 @@ h3 {
 
 /* Desktop photo sizing */
 .teacher-photo.desktop {
-  width: 230px;     /* ↓ smaller */
-  height: 230px;    /* ↓ smaller */
+  width: 220px;     /* ↓ smaller */
+  height: 220px;    /* ↓ smaller */
   object-fit: cover;
   object-position: 50% 40%;
   display: block;
