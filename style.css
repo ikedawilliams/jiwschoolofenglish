@@ -254,10 +254,13 @@ h3 {
 }
 
 /* Desktop photo sizing */
-.teacher-photo.desktop{
-  width: min(320px, 100%);
-  height: auto;
+.teacher-photo.desktop {
+  width: 220px;     /* ↓ smaller */
+  height: 220px;    /* ↓ smaller */
+  object-fit: cover;
+  object-position: 50% 40%;
   display: block;
+  margin-bottom: 22px;
 }
 
 /* Mobile headline row: text left, small photo right */
