@@ -216,3 +216,96 @@ h3 {
   .hero-head{ display:block; }
   .hero-avatar{ display:none; }
 }
+
+/* ===== HERO LAYOUT FIXES ===== */
+
+.hero{
+  display: grid;
+  grid-template-columns: 1.7fr 1fr;
+  gap: 48px;
+  align-items: end;      /* bottom-align text + photo on desktop */
+  padding: 48px;
+  border-radius: 18px;
+}
+
+/* Let the headline breathe a bit */
+.hero h1{
+  line-height: 1.05;
+  margin: 0 0 16px 0;
+}
+
+/* Make the text area comfortably wide */
+.hero-copy{
+  max-width: 44rem;
+}
+
+/* Photo containers */
+.hero-photo{
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;  /* helps bottom alignment */
+}
+
+/* Teacher photo styling (both versions) */
+.teacher-photo{
+  border-radius: 18px;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.12);
+  background: rgba(255,255,255,0.65);
+}
+
+/* Desktop photo sizing */
+.teacher-photo.desktop{
+  width: min(320px, 100%);
+  height: auto;
+  display: block;
+}
+
+/* Mobile headline row: text left, small photo right */
+.hero-head{
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+}
+
+.teacher-photo.mobile{
+  width: 96px;
+  height: 96px;
+  object-fit: cover;
+  flex: 0 0 auto;
+  display: none; /* hidden by default; shown on mobile below */
+}
+
+/* CTA sizing: big but not ridiculous on mobile */
+.cta-button{
+  display: inline-block;
+  font-size: clamp(18px, 2.2vw, 24px);
+  padding: 16px 22px;
+  border-radius: 14px;
+  font-weight: 800;
+  text-decoration: none;
+}
+
+/* ===== MOBILE RULES ===== */
+@media (max-width: 768px){
+
+  .hero{
+    grid-template-columns: 1fr;
+    gap: 24px;
+    padding: 28px;
+  }
+
+  /* show small photo beside headline */
+  .teacher-photo.mobile{
+    display: block;
+  }
+
+  /* hide the big right-side photo on mobile */
+  .hero-photo{
+    display: none;
+  }
+
+  /* keep headline + small photo */
+  .hero-head{
+    align-items: flex-start;
+  }
+}
