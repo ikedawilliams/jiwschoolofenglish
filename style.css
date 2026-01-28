@@ -334,3 +334,6 @@ h3 {
   text-decoration: none;
   font-weight: 600;
 }
+
+/* Language default (so layout doesn’t “double” before JS runs) */
+[data-i18n="jp"] { display: none; }
