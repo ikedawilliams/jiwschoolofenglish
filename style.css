@@ -81,3 +81,46 @@ hr {
     border-radius: 12px;
   }
 }
+
+/* ===== Testimonial (Japanese) ===== */
+.testimonial {
+  margin: 36px auto;
+  max-width: 900px;
+  padding: 0 16px;
+}
+
+.testimonial h2 {
+  font-size: 20px;
+  margin: 0 0 14px;
+}
+
+.testimonial-quote {
+  margin: 0;
+  padding: 18px 18px;
+  border-radius: 12px;
+  background: rgba(0, 0, 0, 0.04);
+}
+
+.testimonial-text {
+  margin: 0;
+  font-size: 16px;
+  line-height: 1.8;
+}
+
+.testimonial-attrib {
+  margin: 12px 0 0;
+  font-size: 14px;
+  opacity: 0.75;
+}
+
+@media (max-width: 768px) {
+  .testimonial {
+    margin: 28px auto;
+  }
+  .testimonial-quote {
+    padding: 16px 14px;
+  }
+  .testimonial-text {
+    font-size: 15px;
+  }
+}
