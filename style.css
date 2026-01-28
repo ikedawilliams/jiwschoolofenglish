@@ -9,15 +9,20 @@ body {
 
 /* Hero section */
 .hero {
+  position: relative; /* allows absolute positioning of the photo */
   background: linear-gradient(
     135deg,
     rgba(31,185,168,0.08),
     rgba(21,150,136,0.08)
   );
   padding: 32px 24px;
+  padding-right: 260px;   /* space so text doesn't run under photo */
+  padding-bottom: 64px;   /* space for bottom-right photo */
   border-radius: 8px;
   margin-bottom: 32px;
+  overflow: hidden;       /* keeps fade/shadow clipped cleanly */
 }
+
 
 /* ===== HERO LAYOUT WITH TEACHER PHOTO (FIXED) ===== */
 
@@ -28,13 +33,25 @@ body {
 }
 
 .teacher-photo {
-  width: 140px;              /* smaller on desktop */
-  height: 140px;             /* force a tidy shape */
-  object-fit: cover;         /* prevents stretching */
+  position: absolute;
+  right: 20px;
+  bottom: 18px;
+
+  width: 210px;
+  height: 210px;
+
+  object-fit: cover;
+  object-position: 55% 50%; /* centers face; tweak first number 45–65% */
+
   border-radius: 18px;
-  box-shadow: 0 6px 18px rgba(0,0,0,0.10);
-  flex-shrink: 0;
-  margin-top: 6px;           /* aligns with headline */
+  box-shadow: 0 10px 28px rgba(0,0,0,0.10);
+  opacity: 0.95;
+}
+
+/* Soft fade at the edges (works best on Safari/Chrome) */
+.teacher-photo {
+  -webkit-mask-image: radial-gradient(circle at 55% 45%, black 62%, transparent 100%);
+          mask-image: radial-gradient(circle at 55% 45%, black 62%, transparent 100%);
 }
 
 .hero-text {
