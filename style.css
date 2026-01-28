@@ -263,3 +263,24 @@ body > * {
   transform: translateY(-2px);
   background: rgba(255,255,255,0.12);
 }
+
+/* Social icon brand colors */
+.social-icons a[aria-label="X"] svg{
+  fill: #000000;
+}
+
+.social-icons a[aria-label="Facebook"] svg{
+  fill: #1877F2;
+}
+
+.social-icons a[aria-label="Instagram"] svg{
+  fill: #E4405F;
+}
+
+.social-icons a[aria-label="YouTube"] svg{
+  fill: #FF0000;
+}
+
+.social-icons a:hover svg{
+  opacity: 0.85;
+}
