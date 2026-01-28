@@ -1,238 +1,128 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
   <title>JIW School of English</title>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-
-  <!-- THIS LINE IS REQUIRED -->
+  <!-- CSS (cache-bust with ?v=7) -->
   <link rel="stylesheet" href="style.css?v=7">
 </head>
 
 <body>
 
-<div class="hero">
+  <div class="hero">
 
-  <!-- LEFT SIDE (text) -->
-  <div class="hero-copy">
- <!-- Language toggle -->
-  <div class="lang-toggle">
-    <button type="button" class="lang-btn active" data-lang="en">EN</button>
-    <button type="button" class="lang-btn" data-lang="jp">日本語</button>
-  </div>
-    <body>
+    <!-- Language toggle -->
+    <div class="lang-toggle">
+      <button type="button" class="lang-btn active" data-lang="en">EN</button>
+      <button type="button" class="lang-btn" data-lang="jp">日本語</button>
+    </div>
 
-<div class="hero">
+    <!-- LEFT SIDE (text) -->
+    <div class="hero-copy">
 
-  <!-- LEFT SIDE (text) -->
-  <div class="hero-copy">
+      <!-- Headline + (mobile) small photo -->
+      <div class="hero-head">
+        <h1>
+          <span data-i18n="en">You know English. Speaking is the hard part.</span>
+          <span data-i18n="jp">英語は分かる。でも、話すのが一番むずかしい。</span>
+        </h1>
 
-    <!-- Mobile: headline + small photo on the right -->
-    <div class="hero-head">
-      <h1>
-  <span data-i18n="en">You know English. Speaking is the hard part.</span>
-  <span data-i18n="jp">英語は分かる。でも、話すのが一番むずかしい。</span>
-</h1>
+        <img
+          src="images/John.png"
+          alt="John Ikeda-Williams – JIW School of English"
+          class="teacher-photo mobile"
+        >
+      </div>
 
+      <p class="hero-sub">
+        <span data-i18n="en">
+          I help Japanese learners speak naturally and confidently — fast. 25+ years teaching in Japan.
+        </span>
+        <span data-i18n="jp">
+          日本人学習者が自然に、自信を持って英語を話せるようお手伝いします。日本での指導経験25年以上。
+        </span>
+      </p>
 
+      <p class="hero-jp">英語を「知っている」から「話せる」へ</p>
+
+      <a
+        href="https://forms.gle/n8geMQRcMrjNFaKj6"
+        class="cta-button"
+        target="_blank"
+        rel="noopener"
+      >
+        🎯 Request a Free Trial
+      </a>
+
+      <p class="cta-micro">
+        Zoom • 30 minutes • No pressure<br>
+        Zoomで30分・無理な勧誘なし
+      </p>
+    </div>
+
+    <!-- RIGHT SIDE (desktop photo) -->
+    <div class="hero-photo">
       <img
         src="images/John.png"
         alt="John Ikeda-Williams – JIW School of English"
-        class="teacher-photo mobile"
+        class="teacher-photo desktop"
       >
     </div>
-
-    <!-- Mobile: headline + small photo on the right -->
-    <div class="hero-head">
-      <h1>You know English. Speaking is the hard part.</h1>
-
-      <img
-        src="images/John.png"
-        alt="John Ikeda-Williams – JIW School of English"
-        class="teacher-photo mobile"
-      >
-    </div>
-
-    <p class="hero-sub">
-  <span data-i18n="en">
-    I help Japanese learners speak naturally and confidently — fast. 25+ years teaching in Japan.
-  </span>
-  <span data-i18n="jp">
-    日本人学習者が自然に、自信を持って英語を話せるようお手伝いします。日本での指導経験25年以上。
-  </span>
-</p>
-
-
-    <p class="hero-jp">英語を「知っている」から「話せる」へ</p>
-
-    <a href="https://forms.gle/n8geMQRcMrjNFaKj6"
-       class="cta-button"
-       target="_blank"
-       rel="noopener">
-  🎯 Request a Free Trial
-    </a>
-
-
-    <p class="cta-micro">
-      Zoom • 30 minutes • No pressure<br>
-      Zoomで30分・無理な勧誘なし
-    </p>
-
   </div>
 
-  <!-- RIGHT SIDE (desktop photo) -->
-  <div class="hero-photo">
-    <img
-      src="images/John.png"
-      alt="John Ikeda-Williams – JIW School of English"
-      class="teacher-photo desktop"
-    >
-  </div>
+  <hr>
 
-</div>
+  <section class="testimonial">
+    <h2>受講者の声</h2>
+    <blockquote class="testimonial-quote">
+      <p class="testimonial-text">
+        「英語表現を磨く一番のポイントは“使う頻度”だと実感しています。<br>
+        毎週のレッスンでは、社会問題・哲学・歴史など、普段あまり英語で話さないテーマについて議論します。<br>
+        簡単ではありませんが、その負荷が確実に英語力向上につながっています。」
+      </p>
+      <p class="testimonial-attrib">— 社会人（経営・ファイナンス分野）</p>
+    </blockquote>
+  </section>
 
+  <h2>About</h2>
+  <p>Hi, I’m <strong>John Ikeda-Williams</strong>, the founder of JIW School of English.</p>
+  <p>I’ve been teaching English in Japan for over <strong>25 years</strong>, working with students ranging from junior high school students to business professionals.</p>
+  <p>My focus is simple: helping Japanese learners speak <strong>clear, natural English</strong> with confidence in real situations.</p>
 
-<hr>
+  <hr>
 
-<section class="testimonial">
-  <h2>受講者の声</h2>
+  <h2>The 4K Method</h2>
+  <p>JIW School of English uses the <strong>4K Method</strong>, inspired by martial arts training.</p>
 
-  <blockquote class="testimonial-quote">
-    <p class="testimonial-text">
-      「英語表現を磨く一番のポイントは“使う頻度”だと実感しています。<br>
-      毎週のレッスンでは、社会問題・哲学・歴史など、普段あまり英語で話さないテーマについて議論します。<br>
-      簡単ではありませんが、その負荷が確実に英語力向上につながっています。」
-    </p>
-    <p class="testimonial-attrib">— 社会人（経営・ファイナンス分野）</p>
-  </blockquote>
-</section>
+  <h3>Before lessons</h3>
+  <ul>
+    <li><strong>Kihon</strong> – Grammar, vocabulary, pronunciation (input)</li>
+    <li><strong>Kata</strong> – Diary writing, pattern practice, AI role-plays (output)</li>
+  </ul>
 
-<h2>About</h2>
+  <h3>During lessons</h3>
+  <ul>
+    <li><strong>Kumite</strong> – Live conversation and practical speaking</li>
+    <li><strong>Kachi</strong> – Confidence and real-world results</li>
+  </ul>
 
-<p>
-Hi, I’m <strong>John Ikeda-Williams</strong>, the founder of JIW School of English.
-</p>
+  <hr>
 
-<p>
-I’ve been teaching English in Japan for over <strong>25 years</strong>, working with students ranging from junior high school students to business professionals.
-</p>
+  <h2>What lessons feel like</h2>
+  <ul>
+    <li>Plenty of speaking time</li>
+    <li>Clear, direct corrections</li>
+    <li>A relaxed but focused atmosphere</li>
+    <li>Mistakes are expected — and useful</li>
+    <li>Detailed feedback after lessons</li>
+  </ul>
 
-<p>
-My focus is simple: helping Japanese learners speak <strong>clear, natural English</strong> with confidence in real situations.
-</p>
+  <hr>
 
-<hr>
-
-<h2>The 4K Method</h2>
-
-<p>
-JIW School of English uses the <strong>4K Method</strong>, inspired by martial arts training.
-</p>
-
-<h3>Before lessons</h3>
-<ul>
-  <li><strong>Kihon</strong> – Grammar, vocabulary, pronunciation (input)</li>
-  <li><strong>Kata</strong> – Diary writing, pattern practice, AI role-plays (output)</li>
-</ul>
-
-<h3>During lessons</h3>
-<ul>
-  <li><strong>Kumite</strong> – Live conversation and practical speaking</li>
-  <li><strong>Kachi</strong> – Confidence and real-world results</li>
-</ul>
-
-<hr>
-
-<h2>What lessons feel like</h2>
-
-<ul>
-  <li>Plenty of speaking time</li>
-  <li>Clear, direct corrections</li>
-  <li>A relaxed but focused atmosphere</li>
-  <li>Mistakes are expected — and useful</li>
-  <li>Detailed feedback after lessons</li>
-</ul>
-
-<hr>
-
-<p>
-New students are welcome to try a <strong>free online trial lesson</strong>.
-</p>
-
-<ul>
-  <li>30 minutes</li>
-  <li>No pressure</li>
-  <li>No obligation</li>
-</ul>
-
-<p>
-Just a chance to see if the style fits you.
-</p>
-
-<hr>
-
-<h2>FAQ</h2>
-
-<p>
-<strong>Who are lessons for?</strong><br>
-Japanese learners from teens to adults.
-</p>
-
-<p>
-<strong>What level do I need?</strong><br>
-Beginner to advanced.
-</p>
-
-<p>
-<strong>Are lessons online?</strong><br>
-Yes, all lessons are online via Zoom.
-</p>
-
-<p>
-<strong>Is Japanese used?</strong><br>
-When helpful, especially for clarification.
-</p>
-
-<hr>
-
-<p>
-If you’re curious about improving your English in a calm, practical way,
-start with a free trial lesson.
-</p>
-
-  <footer class="site-footer">
-  <div class="social-links">
-    <a href="https://x.com/JIWSchoolEng" target="_blank" rel="noopener">X</a> ·
-    <a href="https://facebook.com/jiwschoolofenglish/" target="_blank" rel="noopener">Facebook</a> ·
-    <a href="https://instagram.com/jiwschoolofenglish/" target="_blank" rel="noopener">Instagram</a> ·
-    <a href="https://www.youtube.com/@JIWSchoolofEnglish" target="_blank" rel="noopener">YouTube</a>
-  </div>
-
-  <div class="footer-note">
-    © JIW School of English
-  </div>
-</footer>
-
-      <script>
-  (function () {
-    const buttons = document.querySelectorAll(".lang-btn");
-    const nodes = document.querySelectorAll("[data-i18n]");
-    const savedLang = localStorage.getItem("jiw_lang") || "en";
-
-    function setLang(lang){
-      nodes.forEach(el => {
-        el.style.display = (el.dataset.i18n === lang) ? "" : "none";
-      });
-      buttons.forEach(b => b.classList.toggle("active", b.dataset.lang === lang));
-      localStorage.setItem("jiw_lang", lang);
-    }
-
-    buttons.forEach(b => b.addEventListener("click", () => setLang(b.dataset.lang)));
-    setLang(savedLang);
-  })();
-</script>
-
-</body>
-</html>
-
-
+  <p>New students are welcome to try a <strong>free online trial lesson</strong>.</p>
+  <ul>
+    <li>30 minutes</li>
+    <li>No pressure</li>
+    <li>No obligation</li>
+  </ul>
