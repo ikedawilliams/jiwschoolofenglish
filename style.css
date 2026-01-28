@@ -179,7 +179,7 @@ h3 {
   .hero .cta-button {
     display: block;
     width: 100%;
-    font-size: 32px;      /* LOCKED */
+    font-size: 24px;      /* LOCKED */
     font-weight: 900;
     line-height: 1.1;
     padding: 24px 0;      /* still huge, slightly cleaner */
