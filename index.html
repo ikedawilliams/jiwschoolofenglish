@@ -118,3 +118,33 @@
     <li>No pressure</li>
     <li>No obligation</li>
   </ul>
+
+  <script>
+  (function () {
+    const buttons = document.querySelectorAll(".lang-btn");
+    const enBlock = document.querySelector(".lang-en");
+    const jpBlock = document.querySelector(".lang-jp");
+
+    if (!buttons.length || !enBlock || !jpBlock) return;
+
+    function setLang(lang) {
+      const isEN = lang === "en";
+      enBlock.hidden = !isEN;
+      jpBlock.hidden = isEN;
+
+      buttons.forEach(btn => {
+        btn.classList.toggle("active", btn.dataset.lang === lang);
+      });
+    }
+
+    buttons.forEach(btn => {
+      btn.addEventListener("click", () => setLang(btn.dataset.lang));
+    });
+
+    setLang("en");
+  })();
+</script>
+
+</body>
+</html>
+
