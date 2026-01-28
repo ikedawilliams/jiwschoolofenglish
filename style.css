@@ -54,7 +54,7 @@ hr {
 /* ===== CTA BUTTON ===== */
 .cta-button {
   display: inline-block;
-  background: #1FB9A8;
+  background: red !important;
   color: #ffffff;
   padding: 16px 26px;
   border-radius: 8px;
