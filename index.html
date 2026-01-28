@@ -119,15 +119,24 @@
     <li>No obligation</li>
   </ul>
 
-  <script>
-  (function () {
+<script>
+  console.log("LANG SCRIPT LOADED ✅");
+
+  document.addEventListener("DOMContentLoaded", () => {
     const buttons = document.querySelectorAll(".lang-btn");
     const enBlock = document.querySelector(".lang-en");
     const jpBlock = document.querySelector(".lang-jp");
 
-    if (!buttons.length || !enBlock || !jpBlock) return;
+    console.log("buttons:", buttons.length);
+    console.log("enBlock found:", !!enBlock);
+    console.log("jpBlock found:", !!jpBlock);
+
+    if (!buttons.length) alert("No .lang-btn buttons found");
+    if (!enBlock) alert("No .lang-en block found");
+    if (!jpBlock) alert("No .lang-jp block found");
 
     function setLang(lang) {
+      console.log("setLang:", lang);
       const isEN = lang === "en";
       enBlock.hidden = !isEN;
       jpBlock.hidden = isEN;
@@ -138,12 +147,17 @@
     }
 
     buttons.forEach(btn => {
-      btn.addEventListener("click", () => setLang(btn.dataset.lang));
+      btn.addEventListener("click", (e) => {
+        e.preventDefault();
+        alert("CLICK ✅ " + btn.dataset.lang); // <- proves click is reaching the button
+        setLang(btn.dataset.lang);
+      });
     });
 
     setLang("en");
-  })();
+  });
 </script>
+
 
 </body>
 </html>
