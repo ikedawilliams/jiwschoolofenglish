@@ -171,3 +171,13 @@ hr {
     font-size: 15px;
   }
 }
+
+@media (max-width: 768px) {
+  .teacher-photo {
+    float: none;
+    display: block;
+    margin: 0 auto 16px;
+    width: 140px;
+    height: 140px;
+  }
+}
