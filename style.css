@@ -309,3 +309,7 @@ h3 {
     align-items: flex-start;
   }
 }
+
+@media (min-width: 900px) {
+  /* styles here */
+}
