@@ -33,34 +33,20 @@ body {
 }
 
 .teacher-photo {
-  position: absolute;
-  right: 24px;
-  bottom: 24px;
+  float: right;
+  margin: 0 0 12px 24px;
 
-  width: 200px;
-  height: 200px;
+  width: 180px;
+  height: 180px;
 
   object-fit: cover;
-  object-position: 50% 50%; /* TRUE CENTER */
+  object-position: 50% 50%;
 
   border-radius: 18px;
   box-shadow: 0 8px 20px rgba(0,0,0,0.10);
-
-  background: #fff; /* ensures clean white frame */
+  background: #fff;
 }
 
-
-.hero-inner {
-  position: relative;
-}
-
-
-
-
-
-.hero-text {
-  flex: 1;
-}
 
 /* ===== MOBILE: keep it small and not "banner-like" ===== */
 @media (max-width: 768px) {
