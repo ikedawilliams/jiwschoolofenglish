@@ -53,11 +53,8 @@ body {
 }
 
 
-/* Soft fade at the edges (works best on Safari/Chrome) */
-.teacher-photo {
-  -webkit-mask-image: radial-gradient(circle at 55% 45%, black 62%, transparent 100%);
-          mask-image: radial-gradient(circle at 55% 45%, black 62%, transparent 100%);
-}
+
+
 
 .hero-text {
   flex: 1;
