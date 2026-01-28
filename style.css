@@ -82,15 +82,11 @@ hr {
   }
 
   .cta-micro {
+    margin-top: 10px;
     font-size: 14px;
     margin-top: 12px;
     opacity: 0.85;
+    text-align: center;
     line-height: 1.4;
   }
-}
 
-.cta-micro {
-  margin-top: 10px;
-  font-size: 14px;
-  opacity: 0.85;
-}
