@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Lesson Policy | JIW School of English</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Same CSS as index.html -->
+  <link rel="stylesheet" href="style.css?v=7">
+</head>
+
+<body>
+
+  <div class="hero">
+
+    <!-- Language toggle (same class as main page) -->
+    <div class="lang-toggle">
+      <button type="button" onclick="setLanguage('en')">English</button>
+      <button type="button" onclick="setLanguage('jp')">日本語</button>
+    </div>
+
+    <h1>Lesson Policy / レッスンポリシー</h1>
+
+    <!-- English -->
+    <div class="lang lang-en">
+      <p><strong>English policy text goes here.</strong></p>
+    </div>
+
+    <!-- Japanese -->
+    <div class="lang lang-jp">
+      <p><strong>Japanese policy text goes here.</strong></p>
+    </div>
+
+  </div>
+
+  <!-- Same language JS used on main page -->
+  <script>
+    function setLanguage(lang) {
+      document.querySelectorAll('.lang').forEach(el => {
+        el.style.display = 'none';
+      });
+
+      const target = document.querySelector('.lang-' + lang);
+      if (target) target.style.display = 'block';
+
+      localStorage.setItem('lang', lang);
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+      const savedLang = localStorage.getItem('lang') || 'en';
+      setLanguage(savedLang);
+    });
+  </script>
+
+</body>
+</html>
