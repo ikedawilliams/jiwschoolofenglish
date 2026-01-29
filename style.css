@@ -593,3 +593,13 @@ body > * {
     flex-wrap:wrap;
   }
 }
+
+.topnav a,
+.topnav a:visited {
+  color: #1b5e20; /* dark green */
+  text-decoration: none;
+}
+
+.topnav a:hover {
+  text-decoration: underline;
+}
