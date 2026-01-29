@@ -540,3 +540,20 @@ body > * {
   margin: 0;
   padding-left: 18px;
 }
+
+/* ===== Bullet position: slightly above center (balanced) ===== */
+
+.lessons-grid{
+  align-items: center;
+}
+
+.lessons-points{
+  display: flex;
+  justify-content: center;
+  transform: translateY(-24px); /* nudges bullets UP */
+}
+
+.lessons-points ul{
+  margin: 0;
+  padding-left: 18px;
+}
