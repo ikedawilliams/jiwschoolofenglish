@@ -405,3 +405,16 @@ body > * {
     grid-template-columns: 1fr;
   }
 }
+
+/* ===== Align "What lessons feel like" with site content width ===== */
+
+.lessons-feel{
+  max-width: 980px;      /* matches a typical site column */
+  margin: 48px auto;     /* centers the section */
+  padding: 0 18px;       /* keeps it off screen edges on small screens */
+}
+
+/* If your bullets look too far right/left, this helps */
+.lessons-grid{
+  width: 100%;
+}
