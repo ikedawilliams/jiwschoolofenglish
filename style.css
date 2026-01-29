@@ -491,3 +491,32 @@ body > * {
     max-width: 100%;
   }
 }
+
+/* ===== Caption polish (centered under image, 2 lines) ===== */
+
+.lesson-figure{
+  text-align: center; /* centers caption relative to image */
+}
+
+.lesson-zoom-link{
+  display: inline-block; /* keeps link width to image width */
+}
+
+.lesson-caption{
+  margin: 12px auto 0 auto;
+  max-width: 520px;       /* prevents long caption from stretching too wide */
+  text-align: center;
+  line-height: 1.35;
+}
+
+.lesson-caption .cap-main{
+  display: block;
+  font-weight: 600;
+}
+
+.lesson-caption .cap-sub{
+  display: block;
+  margin-top: 6px;
+  opacity: 0.85;
+  font-size: 0.95em;
+}
