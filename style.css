@@ -603,3 +603,13 @@ body > * {
 .topnav a:hover {
   text-decoration: underline;
 }
+
+.policy-link,
+.policy-link:visited {
+  color: #1FB9A8; /* your dark green */
+  text-decoration: none;
+}
+
+.policy-link:hover {
+  text-decoration: underline;
+}
