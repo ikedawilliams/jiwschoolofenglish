@@ -284,3 +284,124 @@ body > * {
 .social-icons a:hover svg{
   opacity: 0.85;
 }
+
+/* ===== WHAT LESSONS FEEL LIKE ===== */
+
+.lessons-feel{
+  margin: 48px 0;
+}
+
+.lessons-header h2{
+  margin: 0 0 6px 0;
+}
+
+.lessons-lead{
+  margin: 0 0 18px 0;
+  font-weight: 700;
+}
+
+.lessons-lead-sub{
+  display: block;
+  margin-top: 6px;
+  font-weight: 400;
+  opacity: 0.9;
+}
+
+.lessons-grid{
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 28px;
+  align-items: start;
+}
+
+/* Image (kept slightly quiet so headline leads) */
+.lesson-shot{
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 14px;
+  box-shadow: 0 10px 24px rgba(0,0,0,0.12);
+  filter: saturate(0.95) contrast(0.98);
+}
+
+.lesson-caption{
+  margin-top: 10px;
+  font-size: 0.95rem;
+  opacity: 0.85;
+}
+
+.lessons-points ul{
+  margin: 0;
+  padding-left: 18px;
+}
+
+.lessons-points li{
+  margin: 10px 0;
+}
+
+/* ===== CLICK-TO-ZOOM LIGHTBOX ===== */
+
+.lesson-zoom-link{
+  display: block;
+  cursor: zoom-in;
+}
+
+.lightbox{
+  position: fixed;
+  inset: 0;
+  display: none;
+  z-index: 9999;
+}
+
+.lightbox:target{
+  display: block;
+}
+
+.lightbox-close{
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.72);
+}
+
+.lightbox-inner{
+  position: relative;
+  max-width: min(1100px, 92vw);
+  max-height: 86vh;
+  margin: 7vh auto 0 auto;
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 18px 60px rgba(0,0,0,0.35);
+  background: #fff;
+}
+
+.lightbox-img{
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.lightbox-x{
+  position: absolute;
+  top: 10px;
+  right: 14px;
+  width: 40px;
+  height: 40px;
+  border-radius: 999px;
+  display: grid;
+  place-items: center;
+  text-decoration: none;
+  font-size: 28px;
+  background: rgba(255,255,255,0.9);
+  color: #111;
+}
+
+.lightbox-x:hover{
+  background: rgba(255,255,255,1);
+}
+
+/* ===== Mobile ===== */
+@media (max-width: 768px){
+  .lessons-grid{
+    grid-template-columns: 1fr;
+  }
+}
