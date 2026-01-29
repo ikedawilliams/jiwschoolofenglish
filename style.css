@@ -557,3 +557,20 @@ body > * {
   margin: 0;
   padding-left: 18px;
 }
+
+/* ===== Bullet position: balanced (slightly left, slightly high) ===== */
+
+.lessons-grid{
+  align-items: center;
+}
+
+.lessons-points{
+  display: flex;
+  justify-content: center;
+  transform: translate(-24px, -20px); /* LEFT + UP */
+}
+
+.lessons-points ul{
+  margin: 0;
+  padding-left: 18px;
+}
