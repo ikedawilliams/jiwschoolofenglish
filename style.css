@@ -446,3 +446,48 @@ body > * {
     margin: 44px auto;
   }
 }
+
+/* ===== Lessons section: centered + nicer balance ===== */
+
+.lessons-feel{
+  max-width: 980px;
+  margin: 56px auto;
+  padding: 0 24px;
+}
+
+/* Make the grid feel centered + more even */
+.lessons-grid{
+  grid-template-columns: 1.15fr 0.85fr; /* slightly more room for image */
+  gap: 36px;
+  align-items: center;                  /* centers bullets vertically vs image */
+}
+
+/* Reduce bullet indent so the list sits cleaner */
+.lessons-points ul{
+  padding-left: 16px;
+}
+
+.lessons-points li{
+  margin: 12px 0;
+}
+
+/* Caption: align under image nicely */
+.lesson-caption{
+  max-width: 92%;
+  line-height: 1.35;
+}
+
+/* Mobile */
+@media (max-width: 768px){
+  .lessons-feel{
+    padding: 0 18px;
+    margin: 44px auto;
+  }
+  .lessons-grid{
+    gap: 20px;
+    align-items: start;
+  }
+  .lesson-caption{
+    max-width: 100%;
+  }
+}
