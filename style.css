@@ -567,7 +567,7 @@ body > * {
 .lessons-points{
   display: flex;
   justify-content: center;
-  transform: translate(-24px, -20px); /* LEFT + UP */
+  transform: translate(-36px, -20px); /* LEFT + UP */
 }
 
 .lessons-points ul{
