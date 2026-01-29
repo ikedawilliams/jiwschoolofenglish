@@ -524,3 +524,19 @@ body > * {
 .lesson-caption{
   font-family: inherit;
 }
+
+/* ===== Center-align bullets relative to image (balanced look) ===== */
+
+.lessons-grid{
+  align-items: center; /* centers bullets vs image */
+}
+
+.lessons-points{
+  display: flex;
+  justify-content: center; /* vertical centering inside column */
+}
+
+.lessons-points ul{
+  margin: 0;
+  padding-left: 18px;
+}
