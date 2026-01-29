@@ -520,3 +520,7 @@ body > * {
   opacity: 0.85;
   font-size: 0.95em;
 }
+
+.lesson-caption{
+  font-family: inherit;
+}
