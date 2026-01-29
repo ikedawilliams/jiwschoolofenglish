@@ -418,3 +418,31 @@ body > * {
 .lessons-grid{
   width: 100%;
 }
+
+/* ===== Align "What lessons feel like" with the rest of the site ===== */
+
+.lessons-feel{
+  max-width: 980px;          /* content column width */
+  margin: 56px auto;         /* center the whole section */
+  padding: 0 24px;           /* consistent side gutters */
+}
+
+/* Slightly tighten and balance the 2-column layout on desktop */
+.lessons-grid{
+  grid-template-columns: 1.05fr 0.95fr; /* image + bullets balanced */
+  gap: 32px;
+  align-items: start;
+}
+
+/* Keep the image from feeling too heavy */
+.lesson-shot{
+  border-radius: 14px;
+}
+
+/* Mobile spacing */
+@media (max-width: 768px){
+  .lessons-feel{
+    padding: 0 18px;
+    margin: 44px auto;
+  }
+}
