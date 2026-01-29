@@ -613,3 +613,34 @@ body > * {
 .policy-link:hover {
   text-decoration: underline;
 }
+
+
+/* Keep Policy/Back link from affecting hero layout */
+.hero { 
+  position: relative;
+}
+
+.policy-link,
+.policy-link:visited {
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  z-index: 10;
+
+  color: #1FB9A8;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.policy-link:hover {
+  text-decoration: underline;
+}
+
+/* Small screens: tuck it a bit tighter */
+@media (max-width: 600px) {
+  .policy-link,
+  .policy-link:visited {
+    top: 10px;
+    left: 10px;
+  }
+}
