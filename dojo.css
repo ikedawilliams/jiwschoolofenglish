@@ -23,7 +23,7 @@ h1,
 h2,
 h3 {
   margin-top: 1.6em;
-  color: #1f4f3a; /* JIWSOE dark green */
+  color: #1FB9A8; /* Policy / brand green */
 }
 
 hr {
@@ -44,20 +44,20 @@ hr {
 }
 
 .dojo-nav a {
-  color: #1f4f3a;           /* brand green */
-  font-weight: 700;        /* bold */
+  color: #1FB9A8;          /* exact brand green */
+  font-weight: 700;       /* bold */
   text-decoration: none;
-  border-bottom: 1px dotted #1f4f3a;
+  border-bottom: 1px dotted #1FB9A8;
 }
 
 .dojo-nav a:hover {
-  opacity: 0.75;
+  opacity: 0.8;
 }
 
 /* Part 2 label (not clickable) */
 .nav-label {
   font-weight: 700;
-  color: #1f4f3a;
+  color: #1FB9A8;
   cursor: default;
 }
 
@@ -67,16 +67,16 @@ hr {
 
 .prompt {
   background: #ffffff;
-  border-left: 4px solid #1f4f3a;
+  border-left: 4px solid #1FB9A8;
   padding: 20px;
   margin: 20px 0;
 }
 
-/* Force ALL prompt text to be bold + green */
+/* Force ALL prompt text to be bold + brand green */
 .prompt,
 .prompt p,
 .prompt strong {
-  color: #1f4f3a;
+  color: #1FB9A8;
   font-weight: 700;
 }
 
@@ -93,15 +93,4 @@ hr {
 .note {
   font-style: italic;
   color: #555;
-  font-weight: 400;
-}
-
-/* =========================
-   CLOSING TEXT
-========================= */
-
-.closing {
-  text-align: center;
-  font-weight: 500;
-  margin-top: 30px;
-}
+  font-weight: 400
