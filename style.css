@@ -934,3 +934,71 @@ hr {
   display:flex;
   justify-content: flex-end;
 }
+
+/* =========================
+   GLOBAL HEADER (LOCKED)
+   ========================= */
+
+.site-header {
+  background: #fff;
+  border-bottom: 1px solid rgba(0,0,0,0.08);
+}
+
+.header-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 14px 20px;
+
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+}
+
+/* LEFT */
+.site-brand {
+  color: #000;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+/* CENTER */
+.header-center {
+  display: flex;
+  justify-content: center;
+}
+
+/* RIGHT */
+.header-right {
+  display: flex;
+  justify-content: flex-end;
+  gap: 16px;
+}
+
+.header-right a {
+  color: #1fa58a; /* your green */
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.header-right a:hover {
+  text-decoration: underline;
+}
+
+/* Toggle (safe to include now) */
+.lang-toggle {
+  display: flex;
+  gap: 8px;
+}
+
+.lang-btn {
+  padding: 6px 12px;
+  border: 1px solid rgba(0,0,0,0.25);
+  background: transparent;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+
+.lang-btn.active {
+  font-weight: 700;
+}
