@@ -7,6 +7,7 @@ body {
   background: #f7f9f7;
   color: #222;
   line-height: 1.6;
+  margin: 0;
 }
 
 .dojo-container {
@@ -19,11 +20,9 @@ body {
    HEADINGS (STRUCTURE)
 ========================= */
 
-h1,
-h2,
-h3 {
+h1, h2, h3 {
   margin-top: 1.6em;
-  color: #000000; /* black titles */
+  color: #000000;
 }
 
 hr {
@@ -41,10 +40,11 @@ hr {
   flex-wrap: wrap;
   gap: 12px;
   font-size: 0.95rem;
+  align-items: center;
 }
 
 .dojo-nav a {
-  color: #1FB9A8;          /* brand green */
+  color: #1FB9A8;
   font-weight: 700;
   text-decoration: none;
   border-bottom: 1px dotted #1FB9A8;
@@ -54,7 +54,6 @@ hr {
   opacity: 0.8;
 }
 
-/* Part 2 label (not clickable) */
 .nav-label {
   font-weight: 700;
   color: #1FB9A8;
@@ -62,27 +61,61 @@ hr {
 }
 
 /* =========================
-   PROMPT BLOCKS (COPY / PASTE)
+   PROMPT BLOCKS
 ========================= */
 
 .prompt {
   background: #ffffff;
   border-left: 4px solid #1FB9A8;
-  padding: 20px;
+  padding: 16px 20px 20px;
   margin: 20px 0;
+  border-radius: 6px;
 }
 
-/* Force ALL prompt text to be bold + green */
-.prompt,
-.prompt p,
-.prompt strong {
+/* Top row inside prompt (copy button) */
+.prompt-top {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 10px;
+}
+
+/* Copy button (minimal utility look) */
+.copy-btn {
+  appearance: none;
+  border: 1px solid rgba(31, 185, 168, 0.35);
+  background: transparent;
+  color: #1FB9A8;
+  font-weight: 700;
+  font-size: 0.9rem;
+  padding: 6px 10px;
+  border-radius: 999px;
+  cursor: pointer;
+}
+
+.copy-btn:hover {
+  opacity: 0.85;
+}
+
+.copy-btn.copied {
+  border-color: rgba(31, 185, 168, 0.7);
+}
+
+/* Force prompt text bold + green */
+.prompt-content,
+.prompt-content p,
+.prompt-content strong,
+.prompt-content li {
   color: #1FB9A8;
   font-weight: 700;
 }
 
+.prompt-content ul {
+  margin: 10px 0 0 20px;
+}
+
 /* Editable slots inside prompts */
 .slot {
-  color: #000000;          /* black for editable parts */
+  color: #000000;
   font-weight: 700;
 }
 
@@ -103,9 +136,12 @@ hr {
 .closing {
   text-align: center;
   font-weight: 500;
-  margin-top: 30px
+  margin-top: 30px;
+}
 
-/* AI usage section */
+/* =========================
+   AI USAGE SECTION
+========================= */
 
 .dojo-ai {
   margin: 40px 0;
@@ -113,8 +149,4 @@ hr {
 
 .dojo-ai p {
   max-width: 700px;
-}
-
-.dojo-ai h2 {
-  margin-top: 0;
 }
