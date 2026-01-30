@@ -104,3 +104,17 @@ hr {
   text-align: center;
   font-weight: 500;
   margin-top: 30px
+
+/* AI usage section */
+
+.dojo-ai {
+  margin: 40px 0;
+}
+
+.dojo-ai p {
+  max-width: 700px;
+}
+
+.dojo-ai h2 {
+  margin-top: 0;
+}
