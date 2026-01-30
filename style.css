@@ -457,3 +457,31 @@ a:hover {
 .copy-prompt-btn:active{
   transform: translateY(0);
 }
+/* ===== Dojo: Copy prompt button (outlined + crisp) ===== */
+
+.copy-prompt-btn{
+  background: transparent !important;
+  color: #1fa58a !important;            /* JIW green */
+  border: 2px solid #1fa58a !important; /* outline */
+  border-radius: 999px;
+  padding: 7px 14px;
+  font-size: 0.85rem;
+  font-weight: 800;
+  cursor: pointer;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;             /* centers text */
+  line-height: 1;                      /* crisp vertical center */
+
+  transition: background .15s ease, transform .15s ease, opacity .15s ease;
+}
+
+.copy-prompt-btn:hover{
+  background: rgba(31,165,138,0.08) !important;
+  transform: translateY(-1px);
+}
+
+.copy-prompt-btn:active{
+  transform: translateY(0);
+}
