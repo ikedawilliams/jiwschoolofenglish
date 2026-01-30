@@ -880,3 +880,10 @@ hr {
   grid-column: 3 !important;
   justify-self: end !important;
 }
+
+/* Align brand, toggle, and links on one line */
+.top-nav .nav-inner{
+  align-items: center !important;
+  padding-top: 10px !important;
+  padding-bottom: 10px !important;
+}
