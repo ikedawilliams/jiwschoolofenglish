@@ -1,105 +1,111 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>JIW School of English</title>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="style.css?v=7">
+  <link rel="stylesheet" href="style.css" />
 </head>
-
 <body>
 
-<!-- ================= TOP HERO ================= -->
-<div class="hero">
+  <header class="site-header">
+    <div class="container header-row">
+      <a class="brand" href="index.html">JIW School of English</a>
 
-  <!-- Policy link -->
-  <a href="/policy.html" class="policy-link">Policy</a>
+      <nav class="nav">
+        <a href="study.html">Study Hub</a>
+        <a href="teachers.html">Teachers</a>
+        <a class="policy-link" href="policy.html">Policy</a>
+      </nav>
+    </div>
+  </header>
 
-  <!-- Language toggle -->
-  <div class="lang-toggle">
-    <button type="button" class="lang-btn active" data-lang="en">EN</button>
-    <button type="button" class="lang-btn" data-lang="jp">JP</button>
-  </div>
+  <main>
+    <section class="hero">
+      <div class="container hero-grid">
 
-  <!-- ===== ENGLISH ===== -->
-  <div class="lang-block lang-en">
+        <div class="hero-copy">
+          <h1>You know English. Speaking is the hard part.</h1>
 
-    <h1>You know English. Speaking is the hard part.</h1>
+          <p class="hero-sub">
+            I help Japanese learners speak naturally and confidently — fast.<br />
+            25+ years teaching in Japan.
+          </p>
 
-    <p class="hero-sub">
-      I help Japanese learners speak naturally and confidently — fast.<br>
-      25+ years teaching in Japan.
-    </p>
+          <p class="hero-jp">英語を「知っている」から「話せる」へ</p>
 
-    <a href="https://forms.gle/deckEoSGvQyVB17E7"
-       class="cta-button"
-       target="_blank"
-       rel="noopener">
-      🎯 Book Free Trial
-    </a>
+          <div class="cta-row">
+            <a class="cta-button" href="YOUR_BOOKING_LINK" target="_blank" rel="noopener noreferrer">
+              🎯 Book Free Trial
+            </a>
+            <a class="cta-secondary policy-link" href="policy.html">Read lesson policy</a>
+          </div>
 
-    <p class="cta-micro">Zoom • First lesson free</p>
+          <p class="cta-micro">
+            Zoom • 30 minutes • First lesson free
+          </p>
+        </div>
 
-  </div>
+        <div class="hero-face">
+          <img src="images/John.png" alt="John Ikeda-Williams" />
+          <p class="face-caption">John (English Teacher • 25+ years)</p>
+        </div>
 
-  <!-- ===== JAPANESE ===== -->
-  <div class="lang-block lang-jp" hidden>
+      </div>
+    </section>
 
-    <h1>英語を「知っている」から「話せる」へ</h1>
+    <section class="section">
+      <div class="container">
+        <h2>What lessons feel like</h2>
+        <p class="muted">
+          Real speaking, clear corrections, and a calm but challenging pace — so you improve quickly.
+        </p>
 
-    <p class="hero-sub">
-      日本人学習者が「自然に、自信を持って話せる」ようにサポートします。<br>
-      指導歴25年以上（日本）。
-    </p>
+        <div class="card">
+          <p class="muted">
+            ✅ Add your real lesson screenshot here later (recommended for trust).
+          </p>
+        </div>
+      </div>
+    </section>
 
-    <a href="https://forms.gle/deckEoSGvQyVB17E7"
-       class="cta-button"
-       target="_blank"
-       rel="noopener">
-      🎯 無料体験を予約する
-    </a>
+    <section class="section">
+      <div class="container">
+        <h2>How you improve faster</h2>
+        <div class="grid-2">
+          <div class="card">
+            <h3>Train anytime</h3>
+            <p class="muted">Use the Study Hub to practice speaking before and after lessons.</p>
+            <a class="text-link" href="study.html">Go to Study Hub →</a>
+          </div>
 
-    <p class="cta-micro">Zoom • 初回無料</p>
+          <div class="card">
+            <h3>Get real corrections</h3>
+            <p class="muted">Lessons focus on your most important mistakes — not busywork.</p>
+            <a class="text-link policy-link" href="policy.html">Lesson policy →</a>
+          </div>
+        </div>
+      </div>
+    </section>
 
-  </div>
+  </main>
 
-  <!-- Photo -->
-  <div class="hero-photo">
-    <img
-      src="images/John.png"
-      alt="John Ikeda-Williams – JIW School of English"
-      class="teacher-photo desktop">
-  </div>
+  <footer class="site-footer">
+    <div class="container footer-row">
+      <div class="footer-links">
+        <a href="study.html">Study Hub</a>
+        <a href="teachers.html">Teachers</a>
+        <a class="policy-link" href="policy.html">Policy</a>
+      </div>
 
-</div>
+      <div class="social">
+        <a href="YOUR_YOUTUBE_LINK" target="_blank" rel="noopener noreferrer">YouTube</a>
+        <a href="YOUR_X_LINK" target="_blank" rel="noopener noreferrer">X</a>
+        <a href="YOUR_INSTAGRAM_LINK" target="_blank" rel="noopener noreferrer">Instagram</a>
+        <a href="YOUR_FACEBOOK_LINK" target="_blank" rel="noopener noreferrer">Facebook</a>
+      </div>
+    </div>
+  </footer>
 
-<hr>
-
-<!-- ================= TESTIMONIAL ================= -->
-<section class="testimonial">
-  <h2>受講者の声</h2>
-  <blockquote class="testimonial-quote">
-    <p class="testimonial-text">
-      「英語表現を磨く一番のポイントは“使う頻度”だと実感しています。<br>
-      毎週のレッスンでは、社会問題・哲学・歴史など、普段あまり英語で話さないテーマについて議論します。<br>
-      簡単ではありませんが、その負荷が確実に英語力向上につながっています。」
-    </p>
-    <p class="testimonial-attrib">— 社会人（経営・ファイナンス分野）</p>
-  </blockquote>
-</section>
-
-<hr>
-
-<!-- ================= ABOUT ================= -->
-<section>
-  <h2>About</h2>
-  <p>Hi, I’m <strong>John Ikeda-Williams</strong>, the founder of JIW School of English.</p>
-  <p>I’ve been teaching English in Japan for over <strong>25 years</strong>.</p>
-</section>
-
-<hr>
-
-<!-- ================= LESSON CTA ================= -->
-<section id="lessons">
-  <h2>What lessons feel like</h2>
-  <p>Calm, focused, p
+</body>
+</html>
