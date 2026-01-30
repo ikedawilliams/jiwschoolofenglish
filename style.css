@@ -1,22 +1,110 @@
+/* =========================
+   BASE
+   ========================= */
+
 * { box-sizing: border-box; }
 
-body {
+:root{
+  --green: #1fa58a;
+  --green2: #1FB9A8;
+  --text: #111;
+  --muted: rgba(0,0,0,0.72);
+  --line: rgba(0,0,0,0.08);
+}
+
+body{
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
   line-height: 1.6;
   margin: 0;
-  padding: 24px;
-  color: #111;
+  padding: 0;              /* IMPORTANT: header needs full width */
+  color: var(--text);
   background: #fff;
 }
 
-/* This is the key: a centered page width */
-body > * {
-  max-width: 980px;
-  margin-left: auto;
-  margin-right: auto;
+/* Shared content width */
+.page,
+.dojo-container,
+.policy-page{
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 22px 20px 60px;
 }
 
-.hero {
+/* =========================
+   GLOBAL HEADER (LOCKED)
+   Brand left (black) / toggle center / links right (green)
+   ========================= */
+
+.site-header{
+  width: 100%;
+  background: #fff;
+  border-bottom: 1px solid var(--line);
+}
+
+.header-inner{
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 14px 20px;
+
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+}
+
+.site-brand{
+  color: #000;
+  font-weight: 700;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.header-center{
+  display: flex;
+  justify-content: center;
+}
+
+.header-right{
+  display: flex;
+  justify-content: flex-end;
+  gap: 16px;
+}
+
+.header-right a{
+  color: var(--green);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.header-right a:hover{
+  text-decoration: underline;
+}
+
+/* Toggle pills (same vibe as you have now) */
+.lang-toggle{
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.lang-btn{
+  border: 1px solid rgba(0,0,0,0.20);
+  background: #fff;
+  padding: 6px 12px;
+  border-radius: 999px;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+.lang-btn.active{
+  border-color: var(--green2);
+  color: var(--green2);
+}
+
+/* =========================
+   HOME: HERO
+   ========================= */
+
+.hero{
   position: relative;
   width: 100%;
   background: linear-gradient(135deg, rgba(31,185,168,0.08), rgba(21,150,136,0.08));
@@ -28,21 +116,14 @@ body > * {
   align-items: end;
 }
 
-.hero-copy { max-width: none; } /* prevent “narrow inner card” effect */
+.hero-copy{ max-width: none; }
 
+.hero-sub{ margin-bottom: 10px; }
+.hero-jp{ opacity: 0.9; }
 
-.hero-head {
-  display: flex;
-  align-items: flex-start;
-  gap: 16px;
-}
-
-.hero-sub { margin-bottom: 10px; }
-.hero-jp { opacity: 0.9; }
-
-.cta-button {
+.cta-button{
   display: inline-block;
-  background: #1FB9A8;
+  background: var(--green2);
   color: #fff;
   padding: 16px 22px;
   border-radius: 14px;
@@ -50,271 +131,72 @@ body > * {
   text-decoration: none;
 }
 
-.cta-micro {
+.cta-micro{
   margin-top: 10px;
   font-size: 0.95rem;
   opacity: 0.85;
 }
 
+.hero-photo{
+  display: flex;
+  justify-content: flex-end;
+}
+
 /* Photos */
-.teacher-photo {
+.teacher-photo{
   border-radius: 18px;
   background: #fff;
   box-shadow: 0 10px 26px rgba(0,0,0,0.12);
 }
 
-.teacher-photo.desktop {
+.teacher-photo.desktop{
   width: 200px;
   height: 200px;
   object-fit: cover;
 }
 
-.teacher-photo.mobile {
+.teacher-photo.mobile{
   width: 96px;
   height: 96px;
   object-fit: cover;
   display: none;
 }
 
-.hero-photo {
-  display: flex;
-  justify-content: flex-end;
+/* =========================
+   TESTIMONIAL
+   ========================= */
+
+.testimonial{
+  margin: 56px auto;
 }
 
-/* Language toggle */
-[data-i18n="jp"] { display: none; }
-
-.lang-toggle {
-  position: absolute;
-  top: 14px;
-  right: 14px;
-  display: flex;
-  gap: 8px;
-}
-
-.lang-btn {
-  border: 1px solid #ddd;
-  background: #fff;
-  padding: 6px 10px;
-  border-radius: 10px;
-  font-weight: 800;
-  cursor: pointer;
-}
-
-.lang-btn.active {
-  border-color: #1FB9A8;
-  color: #1FB9A8;
-}
-
-/* Testimonial */
-.testimonial-quote {
+.testimonial-quote{
   background: rgba(0,0,0,0.04);
   padding: 18px;
   border-radius: 12px;
 }
 
-.testimonial-attrib {
+.testimonial-attrib{
   margin-top: 10px;
   font-size: 0.9rem;
   opacity: 0.75;
 }
 
-/* Footer */
-.site-footer {
-  margin-top: 48px;
-  padding-top: 24px;
-  border-top: 1px solid #e5e5e5;
-  text-align: center;
-  font-size: 0.95rem;
-  opacity: 0.85;
-}
-
-/* Mobile */
-@media (max-width: 768px) {
-  body { padding: 18px; }
-
-  .hero {
-    grid-template-columns: 1fr;
-    gap: 24px;
-    padding: 28px;
-  }
-
-  .teacher-photo.mobile { display: block; }
-  .hero-photo { display: none; }
-
-  .cta-button {
-    display: block;
-    width: 100%;
-    font-size: 24px;
-    padding: 24px 0;
-    text-align: center;
-  }
-}
-
-/* Keep the language toggle above everything and tappable */
-.lang-toggle {
-  z-index: 10;
-}
-
-.lang-btn {
-  position: relative;
-  z-index: 11;
-  touch-action: manipulation;
-}
-
-/* On mobile, move the toggle away from the photo */
-@media (max-width: 768px) {
-  .lang-toggle {
-    top: 12px;
-    right: auto;
-    left: 12px;      /* move to top-left */
-  }
-}
-
-@media (max-width: 768px) {
-  .teacher-photo.mobile {
-    pointer-events: none;
-  }
-}
-.footer{
-  margin-top: 56px;
-  padding: 28px 16px 20px;
-  text-align: center;
-  opacity: 0.95;
-}
-
-.social-icons{
-  display: flex;
-  justify-content: center;
-  gap: 18px;
-  margin-bottom: 12px;
-}
-
-.social-icons a{
-  width: 42px;
-  height: 42px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 50%;
-  border: 1px solid rgba(255,255,255,0.25);
-  transition: transform .15s ease, background .15s ease;
-}
-
-.social-icons a:hover{
-  transform: translateY(-2px);
-  background: rgba(255,255,255,0.12);
-}
-
-.social-icons svg{
-  width: 20px;
-  height: 20px;
-  fill: currentColor;
-}
-
-.footer-mini{
-  font-size: 0.8rem;
-  opacity: 0.7;
-}
-/* ---- Footer social icons: hard lock sizing (prevents "full screen" icons) ---- */
-.footer .social-icons{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 18px;
-  flex-wrap: wrap;
-  margin: 0 auto 12px;
-}
-
-.footer .social-icons a{
-  /* hard size */
-  width: 42px !important;
-  height: 42px !important;
-
-  /* prevent any global link rules */
-  display: inline-flex !important;
-  flex: 0 0 auto !important;
-
-  align-items: center;
-  justify-content: center;
-
-  border-radius: 999px;
-  border: 1px solid rgba(255,255,255,0.25);
-  text-decoration: none;
-
-  /* prevent weird stretching */
-  max-width: 42px !important;
-  max-height: 42px !important;
-  padding: 0 !important;
-}
-
-.footer .social-icons svg{
-  width: 20px !important;
-  height: 20px !important;
-
-  /* overrides global svg rules */
-  display: block !important;
-  flex: 0 0 auto !important;
-  max-width: 20px !important;
-  max-height: 20px !important;
-}
-
-.footer .social-icons a:hover{
-  transform: translateY(-2px);
-  background: rgba(255,255,255,0.12);
-}
-
-/* Social icon brand colors */
-.social-icons a[aria-label="X"] svg{
-  fill: #000000;
-}
-
-.social-icons a[aria-label="Facebook"] svg{
-  fill: #1877F2;
-}
-
-.social-icons a[aria-label="Instagram"] svg{
-  fill: #E4405F;
-}
-
-.social-icons a[aria-label="YouTube"] svg{
-  fill: #FF0000;
-}
-
-.social-icons a:hover svg{
-  opacity: 0.85;
-}
-
-/* ===== WHAT LESSONS FEEL LIKE ===== */
+/* =========================
+   WHAT LESSONS FEEL LIKE
+   ========================= */
 
 .lessons-feel{
-  margin: 48px 0;
-}
-
-.lessons-header h2{
-  margin: 0 0 6px 0;
-}
-
-.lessons-lead{
-  margin: 0 0 18px 0;
-  font-weight: 700;
-}
-
-.lessons-lead-sub{
-  display: block;
-  margin-top: 6px;
-  font-weight: 400;
-  opacity: 0.9;
+  margin: 56px auto;
 }
 
 .lessons-grid{
   display: grid;
-  grid-template-columns: 1.1fr 0.9fr;
-  gap: 28px;
-  align-items: start;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: 36px;
+  align-items: center;
 }
 
-/* Image (kept slightly quiet so headline leads) */
 .lesson-shot{
   width: 100%;
   height: auto;
@@ -324,10 +206,35 @@ body > * {
   filter: saturate(0.95) contrast(0.98);
 }
 
+.lesson-figure{
+  text-align: center;
+}
+
+.lesson-zoom-link{
+  display: inline-block;
+  cursor: zoom-in;
+}
+
 .lesson-caption{
-  margin-top: 10px;
+  margin: 12px auto 0 auto;
+  max-width: 520px;
+  text-align: center;
+  line-height: 1.35;
   font-size: 0.95rem;
   opacity: 0.85;
+}
+
+.lesson-caption .cap-main{
+  display: block;
+  font-weight: 600;
+  opacity: 1;
+}
+
+.lesson-caption .cap-sub{
+  display: block;
+  margin-top: 6px;
+  opacity: 0.85;
+  font-size: 0.95em;
 }
 
 .lessons-points ul{
@@ -336,16 +243,10 @@ body > * {
 }
 
 .lessons-points li{
-  margin: 10px 0;
+  margin: 12px 0;
 }
 
-/* ===== CLICK-TO-ZOOM LIGHTBOX ===== */
-
-.lesson-zoom-link{
-  display: block;
-  cursor: zoom-in;
-}
-
+/* Lightbox */
 .lightbox{
   position: fixed;
   inset: 0;
@@ -353,9 +254,7 @@ body > * {
   z-index: 9999;
 }
 
-.lightbox:target{
-  display: block;
-}
+.lightbox:target{ display: block; }
 
 .lightbox-close{
   position: absolute;
@@ -396,609 +295,106 @@ body > * {
 }
 
 .lightbox-x:hover{
-  background: rgba(255,255,255,1);
-}
-
-/* ===== Mobile ===== */
-@media (max-width: 768px){
-  .lessons-grid{
-    grid-template-columns: 1fr;
-  }
-}
-
-/* ===== Align "What lessons feel like" with site content width ===== */
-
-.lessons-feel{
-  max-width: 980px;      /* matches a typical site column */
-  margin: 48px auto;     /* centers the section */
-  padding: 0 18px;       /* keeps it off screen edges on small screens */
-}
-
-/* If your bullets look too far right/left, this helps */
-.lessons-grid{
-  width: 100%;
-}
-
-/* ===== Align "What lessons feel like" with the rest of the site ===== */
-
-.lessons-feel{
-  max-width: 980px;          /* content column width */
-  margin: 56px auto;         /* center the whole section */
-  padding: 0 24px;           /* consistent side gutters */
-}
-
-/* Slightly tighten and balance the 2-column layout on desktop */
-.lessons-grid{
-  grid-template-columns: 1.05fr 0.95fr; /* image + bullets balanced */
-  gap: 32px;
-  align-items: start;
-}
-
-/* Keep the image from feeling too heavy */
-.lesson-shot{
-  border-radius: 14px;
-}
-
-/* Mobile spacing */
-@media (max-width: 768px){
-  .lessons-feel{
-    padding: 0 18px;
-    margin: 44px auto;
-  }
-}
-
-/* ===== Lessons section: centered + nicer balance ===== */
-
-.lessons-feel{
-  max-width: 980px;
-  margin: 56px auto;
-  padding: 0 24px;
-}
-
-/* Make the grid feel centered + more even */
-.lessons-grid{
-  grid-template-columns: 1.15fr 0.85fr; /* slightly more room for image */
-  gap: 36px;
-  align-items: center;                  /* centers bullets vertically vs image */
-}
-
-/* Reduce bullet indent so the list sits cleaner */
-.lessons-points ul{
-  padding-left: 16px;
-}
-
-.lessons-points li{
-  margin: 12px 0;
-}
-
-/* Caption: align under image nicely */
-.lesson-caption{
-  max-width: 92%;
-  line-height: 1.35;
-}
-
-/* Mobile */
-@media (max-width: 768px){
-  .lessons-feel{
-    padding: 0 18px;
-    margin: 44px auto;
-  }
-  .lessons-grid{
-    gap: 20px;
-    align-items: start;
-  }
-  .lesson-caption{
-    max-width: 100%;
-  }
-}
-
-/* ===== Caption polish (centered under image, 2 lines) ===== */
-
-.lesson-figure{
-  text-align: center; /* centers caption relative to image */
-}
-
-.lesson-zoom-link{
-  display: inline-block; /* keeps link width to image width */
-}
-
-.lesson-caption{
-  margin: 12px auto 0 auto;
-  max-width: 520px;       /* prevents long caption from stretching too wide */
-  text-align: center;
-  line-height: 1.35;
-}
-
-.lesson-caption .cap-main{
-  display: block;
-  font-weight: 600;
-}
-
-.lesson-caption .cap-sub{
-  display: block;
-  margin-top: 6px;
-  opacity: 0.85;
-  font-size: 0.95em;
-}
-
-.lesson-caption{
-  font-family: inherit;
-}
-
-/* ===== Center-align bullets relative to image (balanced look) ===== */
-
-.lessons-grid{
-  align-items: center; /* centers bullets vs image */
-}
-
-.lessons-points{
-  display: flex;
-  justify-content: center; /* vertical centering inside column */
-}
-
-.lessons-points ul{
-  margin: 0;
-  padding-left: 18px;
-}
-
-/* ===== Bullet position: slightly above center (balanced) ===== */
-
-.lessons-grid{
-  align-items: center;
-}
-
-.lessons-points{
-  display: flex;
-  justify-content: center;
-  transform: translateY(-24px); /* nudges bullets UP */
-}
-
-.lessons-points ul{
-  margin: 0;
-  padding-left: 18px;
-}
-
-/* ===== Bullet position: balanced (slightly left, slightly high) ===== */
-
-.lessons-grid{
-  align-items: center;
-}
-
-.lessons-points{
-  display: flex;
-  justify-content: center;
-  transform: translate(-36px, -20px); /* LEFT + UP */
-}
-
-.lessons-points ul{
-  margin: 0;
-  padding-left: 18px;
-}
-
-.topbar{
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  gap:12px;
-  margin-bottom:12px;
-}
-
-.topnav a{
-  text-decoration:none;
-  font-weight:600;
-}
-
-@media (max-width: 600px){
-  .topbar{
-    flex-wrap:wrap;
-  }
-}
-
-.topnav a,
-.topnav a:visited {
-  color: #1FB9A8; /* dark green */
-  text-decoration: none;
-}
-
-.topnav a:hover {
-  text-decoration: underline;
-}
-
-.policy-link,
-.policy-link:visited {
-  color: #1FB9A8; /* your dark green */
-  text-decoration: none;
-}
-
-.policy-link:hover {
-  text-decoration: underline;
-}
-
-
-/* Keep Policy/Back link from affecting hero layout */
-.hero { 
-  position: relative;
-}
-
-.policy-link,
-.policy-link:visited {
-  position: absolute;
-  top: 16px;
-  left: 16px;
-  z-index: 10;
-
-  color: #1FB9A8;
-  text-decoration: none;
-  font-weight: 600;
-}
-
-.policy-link:hover {
-  text-decoration: underline;
-}
-
-/* Small screens: tuck it a bit tighter */
-@media (max-width: 600px) {
-  .policy-link,
-  .policy-link:visited {
-    top: 10px;
-    left: 10px;
-  }
-}
-.real-lesson{
-  max-width: 1050px;
-  margin: 40px auto 0;
-  padding: 0 24px;
-}
-
-.section-title{
-  margin: 0 0 10px;
-  font-size: 28px;
-  font-weight: 800;
-}
-
-.section-sub{
-  margin: 0 0 18px;
-  color: #6B7280;
-}
-
-.photo-grid{
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
-  gap: 16px;
-}
-
-.photo-card{
-  display: block;
-  text-decoration: none;
-  border-radius: 16px;
-  overflow: hidden;
-  background: #ffffff;
-  box-shadow: 0 8px 22px rgba(0,0,0,0.06);
-}
-
-.photo-card img{
-  width: 100%;
-  height: 160px;
-  object-fit: cover;
-  display: block;
-}
-
-.photo-card span{
-  display: block;
-  padding: 10px 12px;
-  font-size: 14px;
-  color: #6B7280;
-}
-
-section,
-.testimonial,
-.lessons-feel {
-  margin: 56px auto;
-}
-h2 {
-  margin-top: 0;
-  margin-bottom: 16px;
-}
-
-h3 {
-  margin-top: 32px;
-  margin-bottom: 12px;
-}
-p {
-  line-height: 1.6;
-  margin-bottom: 14px;
-}
-hr {
-  border: none;
-  border-top: 1px solid rgba(0,0,0,0.08);
-  margin: 64px 0;
-}
-
-.page-top{
-  max-width: 1050px;
-  margin: 18px auto 0;
-  padding: 0 24px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 16px;
-}
-
-.page{
-  max-width: 1050px;
-  margin: 20px auto 64px;
-  padding: 0 24px;
-}
-
-.page-title{
-  margin-top: 10px;
-  margin-bottom: 18px;
-}
-
-.policy-page h2{
-  margin-top: 28px;
-  margin-bottom: 10px;
-}
-
-.policy-page ul{
-  margin-top: 10px;
-  margin-bottom: 16px;
-}
-.policy-sign{
-  margin-top: 24px;
-}
-
-/* ===== Top Navigation ===== */
-
-.top-nav{
-  background: #ffffff;
-  border-bottom: 1px solid rgba(0,0,0,0.08);
-}
-
-
-.nav-inner{
-  max-width: 1050px;
-  margin: 0 auto;
-  padding: 14px 24px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.nav-brand{
-  font-weight: 700;
-  text-decoration: none;
-  color: #111111;
-}
-
-.nav-links{
-  display: flex;
-  gap: 18px;
-}
-
-.nav-link{
-  text-decoration: none;
-  font-weight: 600;
-  color: #4FD1C5;
-}
-
-.nav-link:hover{
-  text-decoration: underline;
-}
-
-.nav-link.active{
-  color: #111111;
-  text-decoration: underline;
-}
-
-/* Center language toggle inside top nav */
-.top-nav .lang-toggle{
-  display: flex;
-  gap: 8px;
-  align-items: center;
-}
-
-.nav-inner{
-  grid-template-columns: auto 1fr auto;
-}
-
-/* ===== Nav layout: brand left, toggle center, links right ===== */
-.nav-inner{
-  max-width: 1050px;
-  margin: 0 auto;
-  padding: 14px 24px;
-  display: grid;
-  grid-template-columns: auto 1fr auto;
-  align-items: center;
-  gap: 16px;
-}
-
-/* Put the language toggle in the middle column and center it */
-.nav-inner .lang-toggle{
-  grid-column: 2;
-  justify-self: center;
-  display: flex;
-  gap: 8px;
-  align-items: center;
-}
-
-/* Keep the links on the right */
-.nav-inner .nav-links{
-  grid-column: 3;
-  justify-self: end;
-}
-
-/* FORCE: brand left, toggle center, links right */
-.top-nav .nav-inner{
-  display: grid !important;
-  grid-template-columns: auto 1fr auto !important;
-  align-items: center !important;
-  gap: 16px !important;
-}
-
-.top-nav .nav-inner .lang-toggle{
-  grid-column: 2 !important;
-  justify-self: center !important;
-  display: flex !important;
-  gap: 8px !important;
-  align-items: center !important;
-}
-
-.top-nav .nav-inner .nav-links{
-  grid-column: 3 !important;
-  justify-self: end !important;
-}
-
-/* FIX: lang toggle was originally positioned for the hero.
-   Reset it when it's inside the top nav. */
-.top-nav .lang-toggle{
-  position: static !important;
-  top: auto !important;
-  right: auto !important;
-  left: auto !important;
-  bottom: auto !important;
-  margin: 0 !important;
-  display: flex !important;
-  gap: 8px !important;
-  align-items: center !important;
-}
-
-/* Nav layout: brand left, toggle center, links right */
-.top-nav .nav-inner{
-  display: grid !important;
-  grid-template-columns: auto 1fr auto !important;
-  align-items: center !important;
-  gap: 16px !important;
-}
-
-.top-nav .nav-inner .lang-toggle{
-  grid-column: 2 !important;
-  justify-self: center !important;
-}
-
-.top-nav .nav-inner .nav-links{
-  grid-column: 3 !important;
-  justify-self: end !important;
-}
-
-/* Align brand, toggle, and links on one line */
-.top-nav .nav-inner{
-  align-items: center !important;
-  padding-top: 10px !important;
-  padding-bottom: 10px !important;
-}
-
-.site-header{
-  width:100%;
-  border-bottom:1px solid rgba(0,0,0,0.08);
-}
-
-.header-inner{
-  max-width: 980px;
-  margin: 0 auto;
-  padding: 14px 18px;
-  display:flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 16px;
-}
-
-.brand{
-  font-weight: 700;
-  text-decoration:none;
-  color: inherit;
-  white-space: nowrap;
-}
-
-.top-nav{
-  display:flex;
-  gap: 14px;
-  align-items: center;
-  justify-content: center;
-  flex-wrap: wrap;
-}
-
-.top-nav a{
-  text-decoration:none;
-  color: inherit;
-  opacity: 0.9;
-}
-
-.top-nav a:hover{
-  opacity: 1;
-  text-decoration: underline;
-}
-
-.header-right{
-  min-width: 120px; /* keeps center nav centered */
-  display:flex;
-  justify-content: flex-end;
+  background: #fff;
 }
 
 /* =========================
-   GLOBAL HEADER (LOCKED)
+   FOOTER + SOCIAL
    ========================= */
 
-.site-header {
-  background: #fff;
-  border-bottom: 1px solid rgba(0,0,0,0.08);
+.footer{
+  margin-top: 56px;
+  padding: 28px 16px 20px;
+  text-align: center;
+  opacity: 0.95;
+  border-top: 1px solid var(--line);
 }
 
-.header-inner {
-  max-width: 1100px;
-  margin: 0 auto;
-  padding: 14px 20px;
-
-  display: grid;
-  grid-template-columns: 1fr auto 1fr;
-  align-items: center;
-}
-
-/* LEFT */
-.site-brand {
-  color: #000;
-  font-weight: 700;
-  text-decoration: none;
-}
-
-/* CENTER */
-.header-center {
+.social-icons{
   display: flex;
   justify-content: center;
+  align-items: center;
+  gap: 18px;
+  flex-wrap: wrap;
+  margin: 0 auto 12px;
 }
 
-/* RIGHT */
-.header-right {
-  display: flex;
-  justify-content: flex-end;
-  gap: 16px;
-}
-
-.header-right a {
-  color: #1fa58a; /* your green */
+.social-icons a{
+  width: 42px;
+  height: 42px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 999px;
+  border: 1px solid rgba(0,0,0,0.12);
   text-decoration: none;
-  font-weight: 500;
+  transition: transform .15s ease, background .15s ease;
 }
 
-.header-right a:hover {
-  text-decoration: underline;
+.social-icons a:hover{
+  transform: translateY(-2px);
+  background: rgba(0,0,0,0.04);
 }
 
-/* Toggle (safe to include now) */
-.lang-toggle {
-  display: flex;
-  gap: 8px;
+.social-icons svg{
+  width: 20px;
+  height: 20px;
+  fill: currentColor;
+  display: block;
 }
 
-.lang-btn {
-  padding: 6px 12px;
-  border: 1px solid rgba(0,0,0,0.25);
-  background: transparent;
-  border-radius: 10px;
-  cursor: pointer;
-  font-size: 0.9rem;
+.footer-mini{
+  font-size: 0.8rem;
+  opacity: 0.7;
 }
 
-.lang-btn.active {
-  font-weight: 700;
+/* Optional icon colors */
+.social-icons a[aria-label="X"] svg{ fill: #000000; }
+.social-icons a[aria-label="Facebook"] svg{ fill: #1877F2; }
+.social-icons a[aria-label="Instagram"] svg{ fill: #E4405F; }
+.social-icons a[aria-label="YouTube"] svg{ fill: #FF0000; }
+
+.social-icons a:hover svg{ opacity: 0.85; }
+
+/* =========================
+   DOJO / POLICY BASIC TYPO (safe)
+   ========================= */
+
+h1{ line-height: 1.15; }
+h2{ margin: 28px 0 10px; }
+h3{ margin: 22px 0 8px; }
+p{ margin: 0 0 14px; }
+hr{
+  border: none;
+  border-top: 1px solid var(--line);
+  margin: 56px 0;
+}
+
+/* =========================
+   MOBILE
+   ========================= */
+
+@media (max-width: 768px){
+  .hero{
+    grid-template-columns: 1fr;
+    gap: 24px;
+    padding: 28px;
+  }
+
+  .teacher-photo.mobile{ display: block; }
+  .hero-photo{ display: none; }
+
+  .cta-button{
+    display: block;
+    width: 100%;
+    font-size: 24px;
+    padding: 24px 0;
+    text-align: center;
+  }
+
+  .lessons-grid{
+    grid-template-columns: 1fr;
+    gap: 20px;
+    align-items: start;
+  }
 }
