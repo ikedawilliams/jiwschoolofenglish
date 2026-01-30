@@ -55,10 +55,12 @@ hr {
 }
 
 .nav-label {
-  font-weight: 700;
   color: #1FB9A8;
+  font-weight: 700;
+  border-bottom: 1px dotted #1FB9A8;
   cursor: default;
 }
+
 
 /* =========================
    PROMPT BLOCKS
