@@ -713,3 +713,24 @@ hr {
   border-top: 1px solid rgba(0,0,0,0.08);
   margin: 64px 0;
 }
+
+.page-top{
+  max-width: 1050px;
+  margin: 18px auto 0;
+  padding: 0 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.page{
+  max-width: 1050px;
+  margin: 20px auto 64px;
+  padding: 0 24px;
+}
+
+.page-title{
+  margin-top: 10px;
+  margin-bottom: 18px;
+}
