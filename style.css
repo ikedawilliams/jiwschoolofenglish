@@ -801,3 +801,29 @@ hr {
 .nav-inner{
   grid-template-columns: auto 1fr auto;
 }
+
+/* ===== Nav layout: brand left, toggle center, links right ===== */
+.nav-inner{
+  max-width: 1050px;
+  margin: 0 auto;
+  padding: 14px 24px;
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  gap: 16px;
+}
+
+/* Put the language toggle in the middle column and center it */
+.nav-inner .lang-toggle{
+  grid-column: 2;
+  justify-self: center;
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+/* Keep the links on the right */
+.nav-inner .nav-links{
+  grid-column: 3;
+  justify-self: end;
+}
