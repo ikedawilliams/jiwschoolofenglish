@@ -644,3 +644,48 @@ body > * {
     left: 10px;
   }
 }
+.real-lesson{
+  max-width: 1050px;
+  margin: 40px auto 0;
+  padding: 0 24px;
+}
+
+.section-title{
+  margin: 0 0 10px;
+  font-size: 28px;
+  font-weight: 800;
+}
+
+.section-sub{
+  margin: 0 0 18px;
+  color: #6B7280;
+}
+
+.photo-grid{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+  gap: 16px;
+}
+
+.photo-card{
+  display: block;
+  text-decoration: none;
+  border-radius: 16px;
+  overflow: hidden;
+  background: #ffffff;
+  box-shadow: 0 8px 22px rgba(0,0,0,0.06);
+}
+
+.photo-card img{
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  display: block;
+}
+
+.photo-card span{
+  display: block;
+  padding: 10px 12px;
+  font-size: 14px;
+  color: #6B7280;
+}
