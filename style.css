@@ -887,3 +887,50 @@ hr {
   padding-top: 10px !important;
   padding-bottom: 10px !important;
 }
+
+.site-header{
+  width:100%;
+  border-bottom:1px solid rgba(0,0,0,0.08);
+}
+
+.header-inner{
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 14px 18px;
+  display:flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.brand{
+  font-weight: 700;
+  text-decoration:none;
+  color: inherit;
+  white-space: nowrap;
+}
+
+.top-nav{
+  display:flex;
+  gap: 14px;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.top-nav a{
+  text-decoration:none;
+  color: inherit;
+  opacity: 0.9;
+}
+
+.top-nav a:hover{
+  opacity: 1;
+  text-decoration: underline;
+}
+
+.header-right{
+  min-width: 120px; /* keeps center nav centered */
+  display:flex;
+  justify-content: flex-end;
+}
