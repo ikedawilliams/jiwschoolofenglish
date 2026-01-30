@@ -848,3 +848,35 @@ hr {
   grid-column: 3 !important;
   justify-self: end !important;
 }
+
+/* FIX: lang toggle was originally positioned for the hero.
+   Reset it when it's inside the top nav. */
+.top-nav .lang-toggle{
+  position: static !important;
+  top: auto !important;
+  right: auto !important;
+  left: auto !important;
+  bottom: auto !important;
+  margin: 0 !important;
+  display: flex !important;
+  gap: 8px !important;
+  align-items: center !important;
+}
+
+/* Nav layout: brand left, toggle center, links right */
+.top-nav .nav-inner{
+  display: grid !important;
+  grid-template-columns: auto 1fr auto !important;
+  align-items: center !important;
+  gap: 16px !important;
+}
+
+.top-nav .nav-inner .lang-toggle{
+  grid-column: 2 !important;
+  justify-self: center !important;
+}
+
+.top-nav .nav-inner .nav-links{
+  grid-column: 3 !important;
+  justify-self: end !important;
+}
