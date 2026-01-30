@@ -790,3 +790,10 @@ hr {
   color: #111111;
   text-decoration: underline;
 }
+
+/* Center language toggle inside top nav */
+.top-nav .lang-toggle{
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
