@@ -66,6 +66,38 @@
 
 </div>
 
+<div class="lang-all lang-en">
+<h2>About</h2>
+<p>Hi, I’m <strong>John Ikeda-Williams</strong>, the founder of JIW School of English.</p>
+<p>I’ve been teaching English in Japan for over <strong>25 years</strong>, working with junior high school students, university students, and business professionals.</p>
+<p>My focus is simple: helping Japanese learners speak <strong>clear, natural English</strong> with confidence in real situations.</p>
+
+<hr>
+
+<h2>The 4K Method</h2>
+<p>JIW School of English uses the <strong>4K Method</strong>, inspired by martial arts training.</p>
+
+<h3>Before lessons</h3>
+<ul>
+  <li><strong>Kihon</strong> – Grammar, vocabulary, pronunciation</li>
+  <li><strong>Kata</strong> – Diaries, pattern practice, AI role-plays</li>
+</ul>
+
+<h3>During lessons</h3>
+<ul>
+  <li><strong>Kumite</strong> – Live conversation and real speaking practice</li>
+  <li><strong>Kachi</strong> – Confidence and real-world results</li>
+</ul>
+
+<hr>
+
+<p>New students are welcome to try a <strong>free online trial lesson</strong>.</p>
+<ul>
+  <li>30 minutes</li>
+  <li>No pressure</li>
+  <li>No obligation</li>
+</ul>
+</div>
 
   <hr>
 
@@ -104,6 +136,40 @@
   </ul>
 
   <hr>
+<div class="lang-all lang-jp" hidden>
+
+<h2>About</h2>
+<p>JIW School of English代表の <strong>John Ikeda-Williams</strong> です。</p>
+<p>日本で25年以上、英語指導に携わってきました。対象は中学生から社会人・ビジネスパーソンまで幅広く対応しています。</p>
+<p>私の目的はシンプルです。日本人学習者が<strong>自然で伝わる英語</strong>を、自信を持って使えるようになることです。</p>
+
+<hr>
+
+<h2>4Kメソッド</h2>
+<p>JIW School of Englishでは、武道の考え方をもとにした<strong>4Kメソッド</strong>を採用しています。</p>
+
+<h3>レッスン前</h3>
+<ul>
+  <li><strong>Kihon（基礎）</strong> – 文法・語彙・発音</li>
+  <li><strong>Kata（型）</strong> – 日記、パターン練習、AIロールプレイ</li>
+</ul>
+
+<h3>レッスン中</h3>
+<ul>
+  <li><strong>Kumite（組手）</strong> – 実践的な会話練習</li>
+  <li><strong>Kachi（勝ち）</strong> – 自信と実際に使える英語力</li>
+</ul>
+
+<hr>
+
+<p><strong>無料オンライン体験レッスン</strong>を受け付けています。</p>
+<ul>
+  <li>30分</li>
+  <li>プレッシャーなし</li>
+  <li>勧誘なし</li>
+</ul>
+
+</div>
 
  <!-- ===== WHAT LESSONS FEEL LIKE (START) ===== -->
 <section class="lessons-feel" id="lessons">
@@ -177,15 +243,27 @@
 <script>
   document.addEventListener("DOMContentLoaded", () => {
     const buttons = document.querySelectorAll(".lang-btn");
-    const enBlock = document.querySelector(".lang-en");
-    const jpBlock = document.querySelector(".lang-jp");
 
-    if (!buttons.length || !enBlock || !jpBlock) return;
+    const heroEN = document.querySelector(".lang-block.lang-en");
+    const heroJP = document.querySelector(".lang-block.lang-jp");
+
+    const pageEN = document.querySelector(".lang-all.lang-en");
+    const pageJP = document.querySelector(".lang-all.lang-jp");
 
     function setLang(lang) {
       const isEN = lang === "en";
-      enBlock.hidden = !isEN;
-      jpBlock.hidden = isEN;
+
+      // Hero
+      if (heroEN && heroJP) {
+        heroEN.hidden = !isEN;
+        heroJP.hidden = isEN;
+      }
+
+      // Main page content
+      if (pageEN && pageJP) {
+        pageEN.hidden = !isEN;
+        pageJP.hidden = isEN;
+      }
 
       buttons.forEach(btn => {
         btn.classList.toggle("active", btn.dataset.lang === lang);
@@ -199,6 +277,7 @@
     setLang("en");
   });
 </script>
+
 
 <footer class="footer">
   <div class="social-icons">
