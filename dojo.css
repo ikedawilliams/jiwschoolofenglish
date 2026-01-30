@@ -16,14 +16,14 @@ body {
 }
 
 /* =========================
-   HEADINGS
+   HEADINGS (STRUCTURE)
 ========================= */
 
 h1,
 h2,
 h3 {
   margin-top: 1.6em;
-  color: #1FB9A8; /* Policy / brand green */
+  color: #000000; /* black titles */
 }
 
 hr {
@@ -33,7 +33,7 @@ hr {
 }
 
 /* =========================
-   TOP NAV (JUMP LINKS)
+   TOP NAV (ACTION LINKS)
 ========================= */
 
 .dojo-nav {
@@ -44,8 +44,8 @@ hr {
 }
 
 .dojo-nav a {
-  color: #1FB9A8;          /* exact brand green */
-  font-weight: 700;       /* bold */
+  color: #1FB9A8;          /* brand green */
+  font-weight: 700;
   text-decoration: none;
   border-bottom: 1px dotted #1FB9A8;
 }
@@ -72,7 +72,7 @@ hr {
   margin: 20px 0;
 }
 
-/* Force ALL prompt text to be bold + brand green */
+/* Force ALL prompt text to be bold + green */
 .prompt,
 .prompt p,
 .prompt strong {
@@ -93,4 +93,14 @@ hr {
 .note {
   font-style: italic;
   color: #555;
-  font-weight: 400
+  font-weight: 400;
+}
+
+/* =========================
+   CLOSING TEXT
+========================= */
+
+.closing {
+  text-align: center;
+  font-weight: 500;
+  margin-top: 30px
