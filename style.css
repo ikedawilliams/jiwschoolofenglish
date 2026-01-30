@@ -398,3 +398,25 @@ hr{
     align-items: start;
   }
 }
+/* ===== Global link color lock ===== */
+a,
+a:visited {
+  color: #1fa58a;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* ===== Dojo prompt styling ===== */
+
+.dojo-prompt {
+  font-weight: 700;
+  color: #1fa58a; /* JIW green */
+}
+
+.dojo-prompt .bracket {
+  color: #111;
+  font-weight: 700;
+}
