@@ -420,3 +420,12 @@ a:hover {
   color: #111;
   font-weight: 700;
 }
+/* === CTA button: hard lock white text === */
+.cta-button,
+.cta-button:visited{
+  color: #fff !important;
+}
+
+.cta-button:hover{
+  color: #fff !important;
+}
