@@ -54,6 +54,13 @@ hr {
   opacity: 0.8;
 }
 
+.dojo-nav .nav-label {
+  color: #1FB9A8 !important;
+  font-weight: 700;
+  border-bottom: 1px dotted #1FB9A8;
+  cursor: default;
+}
+
 .nav-label {
   color: #1FB9A8;
   font-weight: 700;
