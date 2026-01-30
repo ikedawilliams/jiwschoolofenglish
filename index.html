@@ -1,53 +1,77 @@
+@@ -1,41 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>JIW School of English</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- CSS (cache-bust with ?v=7) -->
+  <link rel="stylesheet" href="style.css?v=7">
+</head>
 
-+20
--14
-Lines changed: 20 additions & 14 deletions
-Original file line number	Diff line number	Diff line change
-@@ -37,21 +37,7 @@
+<body>
+
+<div class="hero">
+
+  <a href="/policy.html" class="policy-link">Policy</a>
+
+  <!-- Language toggle -->
+  <div class="lang-toggle">
+    <button type="button" class="lang-btn active" data-lang="en">EN</button>
+    <button type="button" class="lang-btn" data-lang="jp">JP</button>
+  </div>
+
+  <!-- English -->
+  <div class="lang-block lang-en">
+
+  <h1>You know English. Speaking is the hard part.</h1>
+
+  <p class="hero-sub">
+    I help Japanese learners speak naturally and confidently — fast.<br>
+    25+ years teaching in Japan.
+  </p>
+
+  <a href="https://forms.gle/deckEoSGvQyVB17E7" class="cta-button" target="_blank" rel="noopener">
+    🎯 Book Free Trial
+  </a>
+
   <p class="cta-micro">Zoom • First lesson free</p>
+
   </div>
 
 <!-- Japanese -->
 <div class="lang-block lang-jp" hidden>
-  <h1>英語を「知っている」から「話せる」へ</h1>
-  <p class="hero-sub">
-    日本人学習者が「自然に、自信を持って話せる」ようにサポートします。<br>
-    指導歴25年以上（日本）。
-  </p>
-
-  <a href="https://forms.gle/deckEoSGvQyVB17E7" class="cta-button" target="_blank" rel="noopener">
-    🎯 無料体験を予約する
-  </a>
-  <p class="cta-micro">Zoom • 初回無料</p>
-</div>
-
-
-  <!-- RIGHT SIDE (desktop photo) -->
-@@ -173,6 +159,24 @@
+@@ -173,63 +173,63 @@
     <li>No obligation</li>
   </ul>
 
-</div> <!-- end .lang-block.lang-en -->
-<!-- Japanese -->
-<div class="lang-block lang-jp" hidden>
-  <h1>英語を「知っている」から「話せる」へ</h1>
-  <p class="hero-sub">
-    日本人学習者が「自然に、自信を持って話せる」ようにサポートします。<br>
-    指導歴25年以上（日本）。
-  </p>
-  <p>
-    ※ 日本語ページは現在準備中です。<br>
-    レッスン内容・詳細は英語ページをご覧ください。
-  </p>
-</div>
+  </div>
 
 
 <script>
-@@ -199,37 +203,39 @@
+  document.addEventListener("DOMContentLoaded", () => {
+    const buttons = document.querySelectorAll(".lang-btn");
+    const enBlock = document.querySelector(".lang-en");
+    const jpBlock = document.querySelector(".lang-jp");
+
+    if (!buttons.length || !enBlock || !jpBlock) return;
+
+    function setLang(lang) {
+      const isEN = lang === "en";
+      enBlock.hidden = !isEN;
+      jpBlock.hidden = isEN;
+
+      buttons.forEach(btn => {
+        btn.classList.toggle("active", btn.dataset.lang === lang);
+      });
+    }
+
+    buttons.forEach(btn => {
+      btn.addEventListener("click", () => setLang(btn.dataset.lang));
+    });
 
     setLang("en");
   });
-  
 </script>
 
 <footer class="footer">
