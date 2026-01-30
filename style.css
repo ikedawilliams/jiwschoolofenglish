@@ -827,3 +827,24 @@ hr {
   grid-column: 3;
   justify-self: end;
 }
+
+/* FORCE: brand left, toggle center, links right */
+.top-nav .nav-inner{
+  display: grid !important;
+  grid-template-columns: auto 1fr auto !important;
+  align-items: center !important;
+  gap: 16px !important;
+}
+
+.top-nav .nav-inner .lang-toggle{
+  grid-column: 2 !important;
+  justify-self: center !important;
+  display: flex !important;
+  gap: 8px !important;
+  align-items: center !important;
+}
+
+.top-nav .nav-inner .nav-links{
+  grid-column: 3 !important;
+  justify-self: end !important;
+}
