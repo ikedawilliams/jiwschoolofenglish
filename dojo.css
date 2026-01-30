@@ -25,19 +25,21 @@ hr {
 .dojo-nav {
   display: flex;
   flex-wrap: wrap;
-  gap: 10px;
+  gap: 12px;
   font-size: 0.95rem;
 }
 
 .dojo-nav a {
+  color: #1f4f3a;          /* JIWSOE dark green */
+  font-weight: 700;       /* bold */
   text-decoration: none;
-  color: #1f4f3a;
   border-bottom: 1px dotted #1f4f3a;
 }
 
 .dojo-nav a:hover {
-  opacity: 0.7;
+  opacity: 0.75;
 }
+
 
 .prompt {
   background: #ffffff;
@@ -57,7 +59,8 @@ hr {
 }
 
 .nav-label {
-  margin-left: 10px;
-  font-weight: 600;
-  color: #555;
+  font-weight: 700;
+  color: #1f4f3a;          /* same dark green */
+  cursor: default;
 }
+
