@@ -747,3 +747,40 @@ hr {
 .policy-sign{
   margin-top: 24px;
 }
+
+/* ===== Top Navigation ===== */
+
+.top-nav{
+  background: #F2FBF9;
+  border-bottom: 1px solid rgba(0,0,0,0.06);
+}
+
+.nav-inner{
+  max-width: 1050px;
+  margin: 0 auto;
+  padding: 14px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nav-brand{
+  font-weight: 700;
+  text-decoration: none;
+  color: #111111;
+}
+
+.nav-links{
+  display: flex;
+  gap: 18px;
+}
+
+.nav-link{
+  text-decoration: none;
+  font-weight: 600;
+  color: #4FD1C5;
+}
+
+.nav-link:hover{
+  text-decoration: underline;
+}
