@@ -793,3 +793,26 @@ p, li, h1, h2, h3, a {
   border-radius: 999px;     /* circle */
   object-fit: cover;
 }
+/* =========================
+   DESKTOP HERO LOCK (matches your old PC layout)
+   ========================= */
+
+.hero-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 28px;
+}
+
+.hero-photo img {
+  width: 220px;
+  height: 220px;
+  border-radius: 18px;   /* rounded square */
+  object-fit: cover;
+  display: block;
+}
+
+.hero-text {
+  flex: 1;
+  min-width: 0;
+}
