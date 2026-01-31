@@ -923,3 +923,56 @@ header{
   /* do not let old mobile blocks force flex on ALL headers */
   display: block;
 }
+/* =========================
+   MOBILE HOME: KILL DUPLICATE HERO PHOTO
+   Paste at very bottom of style.css
+   ========================= */
+
+@media (max-width: 768px){
+
+  /* Header: stack cleanly + keep all links visible */
+  .site-header .header-inner{
+    grid-template-columns: 1fr !important;
+    gap: 10px !important;
+    text-align: center !important;
+  }
+  .site-header .header-right{
+    justify-content: center !important;
+    flex-wrap: wrap !important;
+    gap: 10px 14px !important;
+  }
+
+  /* Hero layout */
+  .hero{
+    grid-template-columns: 1fr !important;
+    gap: 18px !important;
+    align-items: start !important;
+  }
+
+  /* 🚫 Force-hide ANY desktop hero photo container */
+  .hero-photo--desktop,
+  .hero .hero-photo.desktop,
+  .hero img.teacher-photo.desktop,
+  .hero > .hero-photo:last-child{
+    display: none !important;
+    visibility: hidden !important;
+    height: 0 !important;
+    overflow: hidden !important;
+  }
+
+  /* ✅ Keep only the “mobile” photo */
+  .hero-photo--mobile{
+    display: flex !important;
+    justify-content: center !important;
+    margin: 0 0 12px 0 !important;
+  }
+
+  /* Mobile photo sizing */
+  .teacher-photo.mobile{
+    display: block !important;
+    width: 84px !important;
+    height: 84px !important;
+    object-fit: cover !important;
+    border-radius: 16px !important;
+  }
+}
