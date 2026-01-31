@@ -708,3 +708,36 @@ p, li, h1, h2, h3, a {
   }
 
 }
+/* =========================
+   MOBILE HERO POLISH
+   ========================= */
+
+@media (max-width: 768px) {
+
+  /* Hero card spacing */
+  .hero,
+  .hero-card,
+  .hero-box {
+    padding: 18px 16px;   /* slightly tighter, calmer */
+  }
+
+  /* Headline: still strong, less bulky */
+  .hero h1,
+  .hero-title {
+    font-size: 1.45rem;
+    line-height: 1.25;
+    margin-bottom: 10px;
+  }
+
+  /* Subtext */
+  .hero p {
+    font-size: 0.95rem;
+    line-height: 1.6;
+  }
+
+  /* CTA breathing room */
+  .hero .cta-button {
+    margin-top: 14px;
+    margin-bottom: 6px;
+  }
+}
