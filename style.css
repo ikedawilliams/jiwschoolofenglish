@@ -741,3 +741,18 @@ p, li, h1, h2, h3, a {
     margin-bottom: 6px;
   }
 }
+/* =========================
+   MOBILE HEADER CALMING
+   ========================= */
+
+@media (max-width: 768px) {
+
+  header {
+    gap: 6px;           /* slightly tighter vertical rhythm */
+  }
+
+  header nav a {
+    font-size: 0.9rem;
+  }
+
+}
