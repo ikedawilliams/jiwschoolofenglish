@@ -1007,3 +1007,85 @@ header{
     display: none !important;
   }
 }
+/* =========================
+   HOME MOBILE: HERO PHOTO ON RIGHT
+   ========================= */
+@media (max-width: 768px){
+
+  /* Make the hero a 2-column row: text left, photo right */
+  .hero{
+    display: grid !important;
+    grid-template-columns: 1fr auto !important;
+    align-items: start !important;
+    column-gap: 14px !important;
+  }
+
+  /* Keep hero copy on the left */
+  .hero .hero-copy{
+    grid-column: 1 !important;
+  }
+
+  /* Put the small photo on the right */
+  .hero .lang-block .hero-photo{
+    display: flex !important;
+    justify-content: flex-end !important;
+    align-items: flex-start !important;
+    margin: 0 !important;
+
+    grid-column: 2 !important;
+    grid-row: 1 !important;
+  }
+
+  .hero .lang-block .hero-photo img{
+    width: 86px !important;
+    height: 86px !important;
+    border-radius: 16px !important;
+    object-fit: cover !important;
+  }
+
+  /* CTA should span full width below */
+  .hero .cta-button{
+    grid-column: 1 / -1 !important;
+  }
+}
+/* =========================
+   MOBILE HEADER: COMPACT + CLEAN
+   ========================= */
+@media (max-width: 768px){
+
+  /* Tighten the header container */
+  .site-header .header-inner{
+    padding: 10px 12px !important;
+    gap: 8px !important;
+  }
+
+  /* Brand smaller */
+  .site-brand{
+    font-size: 1.02rem !important;
+    line-height: 1.1 !important;
+  }
+
+  /* Toggle smaller */
+  .lang-btn{
+    padding: 5px 10px !important;
+    font-size: 0.85rem !important;
+  }
+
+  /* Nav links: compact and wrap nicely */
+  .header-right{
+    gap: 8px 12px !important;
+  }
+
+  .header-right a{
+    padding: 6px 8px !important;
+    font-size: 0.92rem !important;
+    line-height: 1 !important;
+  }
+
+  /* IMPORTANT: neutralize generic header rules in your CSS */
+  header{
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+    gap: 0 !important;
+  }
+}
