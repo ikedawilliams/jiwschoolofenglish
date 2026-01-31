@@ -976,3 +976,34 @@ header{
     border-radius: 16px !important;
   }
 }
+/* =========================
+   HOME MOBILE: FORCE SINGLE HERO PHOTO (FINAL OVERRIDE)
+   ========================= */
+@media (max-width: 768px){
+
+  /* Kill the desktop/right-side photo (it’s the 2nd big face) */
+  .hero > .hero-photo{
+    display: none !important;
+  }
+
+  /* Keep the small photo inside the EN/JP hero block */
+  .hero .lang-block .hero-photo{
+    display: flex !important;
+    justify-content: center !important;
+    margin: 0 0 12px 0 !important;
+  }
+
+  /* Make that small photo actually small */
+  .hero .lang-block .hero-photo img{
+    width: 84px !important;
+    height: 84px !important;
+    object-fit: cover !important;
+    border-radius: 16px !important;
+    display: block !important;
+  }
+
+  /* Extra safety: never show desktop image on mobile */
+  .teacher-photo.desktop{
+    display: none !important;
+  }
+}
