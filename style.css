@@ -838,3 +838,10 @@ p, li, h1, h2, h3, a {
     margin-top: 14px;
   }
 }
+@media (max-width: 768px) {
+  header nav a.lang-jp,
+  header nav a#jp,
+  header nav a[data-lang="jp"] {
+    color: #555 !important;
+  }
+}
