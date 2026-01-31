@@ -845,3 +845,81 @@ p, li, h1, h2, h3, a {
     color: #555 !important;
   }
 }
+/* =========================
+   HOME: FIX HERO PHOTO VISIBILITY
+   ========================= */
+
+.hero-photo--mobile { display: none; }
+.hero-photo--desktop { display: flex; justify-content: flex-end; }
+
+/* Make sure the mobile teacher photo style actually applies */
+.teacher-photo.mobile{
+  width: 96px;
+  height: 96px;
+  object-fit: cover;
+  border-radius: 16px;
+  box-shadow: 0 10px 26px rgba(0,0,0,0.12);
+}
+
+/* =========================
+   MOBILE: LOCK HEADER + HERO (scoped)
+   Stop generic "header { ... }" rules from wrecking layout
+   ========================= */
+
+@media (max-width: 768px){
+
+  /* Keep your locked header grid but allow wrapping nicely */
+  .site-header .header-inner{
+    grid-template-columns: 1fr;
+    gap: 10px;
+    text-align: center;
+  }
+
+  .site-header .header-left,
+  .site-header .header-center,
+  .site-header .header-right{
+    justify-content: center;
+  }
+
+  .site-header .header-right{
+    flex-wrap: wrap;
+    gap: 10px 14px;
+  }
+
+  /* HERO: one column, photo shows, desktop photo hides */
+  .hero{
+    grid-template-columns: 1fr;
+    gap: 18px;
+    padding: 24px 18px;
+    align-items: start;
+  }
+
+  .hero-photo--desktop{ display: none; }
+  .hero-photo--mobile{
+    display: flex;
+    justify-content: flex-start;
+    margin-bottom: 10px;
+  }
+
+  /* CTA: tap-friendly but not absurdly huge */
+  .cta-button{
+    display: block;
+    width: 100%;
+    font-size: 1.15rem;
+    padding: 16px 0;
+    text-align: center;
+  }
+
+  /* Avoid sideways scrolling caused by old rules */
+  body{ overflow-x: hidden; padding-left: 0; padding-right: 0; }
+}
+
+/* =========================
+   IMPORTANT: neutralize the generic rules that target plain "header"
+   (your site uses .site-header)
+   ========================= */
+
+header{
+  /* do not let old mobile blocks force flex on ALL headers */
+  display: block;
+}
