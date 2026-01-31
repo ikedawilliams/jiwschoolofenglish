@@ -636,3 +636,75 @@ p, li, h1, h2, h3, a {
     font-weight: 600;
   }
 }
+/* =========================
+   MOBILE HEADER TITLE TWEAK
+   ========================= */
+
+@media (max-width: 768px) {
+
+  header h1,
+  header .site-title {
+    font-size: 1.1rem;     /* smaller, calmer */
+    line-height: 1.2;
+  }
+
+}
+/* =========================
+   MOBILE LANGUAGE TOGGLE
+   ========================= */
+
+@media (max-width: 768px) {
+
+  .lang-toggle,
+  .language-toggle {
+    display: flex;
+    gap: 8px;              /* breathing room between EN / JP */
+    margin: 6px 0;
+  }
+
+  .lang-toggle a,
+  .language-toggle a {
+    padding: 6px 10px;
+    font-size: 0.85rem;
+  }
+
+}
+/* =========================
+   LANGUAGE COLOR FIX
+   ========================= */
+
+@media (max-width: 768px) {
+
+  .lang-jp,
+  .lang-toggle .jp,
+  .language-toggle .jp {
+    color: #555;           /* neutral dark gray */
+  }
+
+  .lang-toggle .active,
+  .language-toggle .active {
+    color: #0bb3a4;        /* your brand green */
+    font-weight: 600;
+  }
+
+}
+/* =========================
+   NAV OVERFLOW SAFETY
+   ========================= */
+
+@media (max-width: 768px) {
+
+  header nav {
+    max-width: 100%;
+  }
+
+  header nav ul,
+  header nav {
+    overflow-x: hidden;
+  }
+
+  header nav a {
+    max-width: 100%;
+  }
+
+}
