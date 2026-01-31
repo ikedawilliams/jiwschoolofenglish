@@ -609,3 +609,30 @@ p, li, h1, h2, h3, a {
     white-space: nowrap;  /* keeps “Home / Dojo / Policy” from breaking */
   }
 }
+/* =========================
+   MOBILE NAV POLISH
+   ========================= */
+
+@media (max-width: 768px) {
+
+  /* Slight visual separation from content */
+  header {
+    border-bottom: 1px solid rgba(0,0,0,0.08);
+  }
+
+  /* Make nav links feel lighter and calmer */
+  header nav a {
+    font-size: 0.95rem;
+    opacity: 0.85;
+  }
+
+  header nav a:hover {
+    opacity: 1;
+  }
+
+  /* If you have a CTA in the nav (Book Free Trial) */
+  header nav .cta-button {
+    opacity: 1;
+    font-weight: 600;
+  }
+}
