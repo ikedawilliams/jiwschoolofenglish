@@ -816,3 +816,25 @@ p, li, h1, h2, h3, a {
   flex: 1;
   min-width: 0;
 }
+/* =========================
+   MOBILE HERO ONLY
+   ========================= */
+@media (max-width: 768px) {
+  .hero-card {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    column-gap: 14px;
+    align-items: center;
+  }
+
+  .hero-photo img {
+    width: 96px;
+    height: 96px;
+    border-radius: 16px;
+  }
+
+  .hero .cta-button {
+    grid-column: 1 / -1;
+    margin-top: 14px;
+  }
+}
