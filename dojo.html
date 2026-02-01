@@ -414,6 +414,47 @@ document.addEventListener("DOMContentLoaded", () => {
   setLang(lang);
 });
 </script>
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  // Copy button handler for all prompts
+  document.querySelectorAll(".copy-prompt-btn").forEach(btn => {
+    btn.addEventListener("click", async () => {
+      const wrap = btn.closest(".copy-prompt-wrap");
+      if (!wrap) return;
+
+      // The prompt text is in the next .prompt-content after the button
+      const prompt = wrap.nextElementSibling;
+      if (!prompt || !prompt.classList.contains("prompt-content")) return;
+
+      const text = prompt.innerText.trim();
+
+      try {
+        await navigator.clipboard.writeText(text);
+
+        const original = btn.textContent;
+        btn.textContent = "Copied ✓";
+        btn.disabled = true;
+
+        setTimeout(() => {
+          btn.textContent = original;
+          btn.disabled = false;
+        }, 1200);
+
+      } catch (e) {
+        // Fallback: select text (rare Safari cases)
+        const range = document.createRange();
+        range.selectNodeContents(prompt);
+        const sel = window.getSelection();
+        sel.removeAllRanges();
+        sel.addRange(range);
+
+        btn.textContent = "Select + Copy";
+        setTimeout(() => { btn.textContent = "Copy this prompt"; }, 1500);
+      }
+    });
+  });
+});
+</script>
 
 </body>
 </html>
