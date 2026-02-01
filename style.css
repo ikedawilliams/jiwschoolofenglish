@@ -1234,3 +1234,10 @@ header{
     display: none !important;
   }
 }
+/* =========================================
+   LANGUAGE TOGGLE: HARD HIDE (prevents EN+JP showing together)
+   ========================================= */
+.lang-block[hidden],
+.lang-all[hidden]{
+  display: none !important;
+}
