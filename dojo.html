@@ -427,22 +427,36 @@ document.addEventListener("DOMContentLoaded", () => {
 </script>
 <script>
 document.addEventListener("DOMContentLoaded", () => {
-  // Copy button handler for all prompts
   document.querySelectorAll(".copy-prompt-btn").forEach(btn => {
     btn.addEventListener("click", async () => {
-      const wrap = btn.closest(".copy-prompt-wrap");
-      if (!wrap) return;
 
-      // The prompt text is in the next .prompt-content after the button
-      const prompt = wrap.nextElementSibling;
-      if (!prompt || !prompt.classList.contains("prompt-content")) return;
+      // Find the prompt content near this button:
+      // Works for either:
+      //  A) .prompt-head + next .prompt-content
+      //  B) .copy-prompt-wrap + next .prompt-content
+      let prompt = null;
+
+      const head = btn.closest(".prompt-head");
+      if (head && head.nextElementSibling && head.nextElementSibling.classList.contains("prompt-content")) {
+        prompt = head.nextElementSibling;
+      }
+
+      if (!prompt) {
+        const wrap = btn.closest(".copy-prompt-wrap");
+        if (wrap && wrap.nextElementSibling && wrap.nextElementSibling.classList.contains("prompt-content")) {
+          prompt = wrap.nextElementSibling;
+        }
+      }
+
+      if (!prompt) return;
 
       const text = prompt.innerText.trim();
+
+      const original = btn.textContent;
 
       try {
         await navigator.clipboard.writeText(text);
 
-        const original = btn.textContent;
         btn.textContent = "Copied ✓";
         btn.disabled = true;
 
@@ -452,7 +466,7 @@ document.addEventListener("DOMContentLoaded", () => {
         }, 1200);
 
       } catch (e) {
-        // Fallback: select text (rare Safari cases)
+        // Fallback
         const range = document.createRange();
         range.selectNodeContents(prompt);
         const sel = window.getSelection();
@@ -460,12 +474,13 @@ document.addEventListener("DOMContentLoaded", () => {
         sel.addRange(range);
 
         btn.textContent = "Select + Copy";
-        setTimeout(() => { btn.textContent = "Copy this prompt"; }, 1500);
+        setTimeout(() => { btn.textContent = original; }, 1500);
       }
     });
   });
 });
 </script>
+
 
 </body>
 </html>
