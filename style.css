@@ -1410,3 +1410,17 @@ header{
     white-space: nowrap;
   }
 }
+.prompt-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+.prompt-head:hover .copy-prompt-btn {
+  background-color: #e6f5ef;
+  border-color: #0a8f6a;
+}
+.prompt-head h2,
+.prompt-head h3 {
+  margin: 0;
+}
