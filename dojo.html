@@ -13,20 +13,17 @@
 <header class="site-header">
   <div class="header-inner">
 
-    <!-- LEFT: Brand -->
     <div class="header-left">
       <a href="index.html" class="site-brand">JIW School of English</a>
     </div>
 
-    <!-- CENTER: Language toggle -->
     <div class="header-center">
       <div class="lang-toggle">
-        <button type="button" class="lang-btn active" data-lang="en">EN</button>
+        <button type="button" class="lang-btn" data-lang="en">EN</button>
         <button type="button" class="lang-btn" data-lang="jp">JP</button>
       </div>
     </div>
 
-    <!-- RIGHT: Nav -->
     <nav class="header-right">
       <a href="index.html">Home</a>
       <a href="dojo.html">Dojo</a>
@@ -35,6 +32,7 @@
 
   </div>
 </header>
+
 
 
 
@@ -372,64 +370,49 @@
   </div>
 
   <!-- COPY SCRIPT (bottom of page, once) -->
-  <script>
-    (function () {
-      function normalizeText(text) {
-        return text
-          .replace(/\u00A0/g, " ")
-          .replace(/[ \t]+\n/g, "\n")
-          .replace(/\n{3,}/g, "\n\n")
-          .trim();
-      }
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const buttons = document.querySelectorAll(".lang-btn");
 
-      document.addEventListener("click", async function (e) {
-        const btn = e.target.closest(".copy-btn");
-        if (!btn) return;
+  const heroEN = document.querySelector(".lang-block.lang-en");
+  const heroJP = document.querySelector(".lang-block.lang-jp");
 
-        const prompt = btn.closest(".prompt");
-        if (!prompt) return;
+  const pageEN = document.querySelector(".lang-all.lang-en");
+  const pageJP = document.querySelector(".lang-all.lang-jp");
 
-        const content = prompt.querySelector(".prompt-content");
-        if (!content) return;
+  function setLang(lang) {
+    const isEN = (lang === "en");
 
-        const textToCopy = normalizeText(content.innerText);
+    if (heroEN) heroEN.hidden = !isEN;
+    if (heroJP) heroJP.hidden = isEN;
 
-        try {
-          await navigator.clipboard.writeText(textToCopy);
+    if (pageEN) pageEN.hidden = !isEN;
+    if (pageJP) pageJP.hidden = isEN;
 
-          const original = btn.textContent;
-          btn.textContent = "Copied ✓";
-          btn.classList.add("copied");
+    buttons.forEach(btn => {
+      btn.classList.toggle("active", btn.dataset.lang === lang);
+    });
 
-          window.setTimeout(function () {
-            btn.textContent = original;
-            btn.classList.remove("copied");
-          }, 1200);
-        } catch (err) {
-          // Fallback for older browsers
-          const textarea = document.createElement("textarea");
-          textarea.value = textToCopy;
-          textarea.style.position = "fixed";
-          textarea.style.left = "-9999px";
-          document.body.appendChild(textarea);
-          textarea.focus();
-          textarea.select();
-          try {
-            document.execCommand("copy");
-            const original = btn.textContent;
-            btn.textContent = "Copied ✓";
-            btn.classList.add("copied");
-            window.setTimeout(function () {
-              btn.textContent = original;
-              btn.classList.remove("copied");
-            }, 1200);
-          } finally {
-            document.body.removeChild(textarea);
-          }
-        }
-      });
-    })();
-  </script>
+    try { localStorage.setItem("jiw_lang", lang); } catch(e) {}
+  }
+
+  // Read saved preference; default EN
+  let lang = "en";
+  try {
+    const saved = localStorage.getItem("jiw_lang");
+    if (saved === "jp" || saved === "en") lang = saved;
+  } catch(e) {}
+
+  // Button clicks
+  buttons.forEach(btn => {
+    btn.addEventListener("click", () => setLang(btn.dataset.lang));
+  });
+
+  // Set immediately on load
+  setLang(lang);
+});
+</script>
+
 
 </body>
 </html>
