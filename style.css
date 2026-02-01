@@ -1185,3 +1185,52 @@ header{
   }
 }
 
+/* =========================================
+   MOBILE HERO — IMAGE ON RIGHT (FINAL)
+   ========================================= */
+@media (max-width: 768px){
+
+  /* Make the language block a 2-column grid */
+  .hero .lang-block{
+    display: grid !important;
+    grid-template-columns: 1fr auto !important;
+    column-gap: 14px !important;
+    align-items: start !important;
+  }
+
+  /* Place text on the left */
+  .hero .lang-block h1,
+  .hero .lang-block .hero-sub{
+    grid-column: 1 !important;
+  }
+
+  /* Place photo on the RIGHT, top-aligned */
+  .hero .lang-block .hero-photo{
+    grid-column: 2 !important;
+    grid-row: 1 !important;
+    display: flex !important;
+    justify-content: flex-end !important;
+    margin: 0 !important;
+  }
+
+  /* Size the photo correctly */
+  .hero .lang-block .hero-photo img{
+    width: 84px !important;
+    height: 84px !important;
+    border-radius: 16px !important;
+    object-fit: cover !important;
+    display: block !important;
+  }
+
+  /* CTA should span full width BELOW */
+  .hero .cta-button{
+    grid-column: 1 / -1 !important;
+    margin-top: 14px !important;
+  }
+
+  /* Absolute safety: never show desktop hero image */
+  .teacher-photo.desktop,
+  .hero > .hero-photo{
+    display: none !important;
+  }
+}
