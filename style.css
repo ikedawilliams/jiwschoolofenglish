@@ -1281,3 +1281,38 @@ header{
   .header-right a{ padding: 4px 6px !important; font-size: .92rem !important; line-height: 1 !important; }
 }
 
+/* =========================================
+   DOJO: JUMP LINKS SPACING (MOBILE + DESKTOP)
+   ========================================= */
+.dojo-nav{
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px 14px;          /* space between links */
+}
+
+.dojo-nav .nav-break{
+  flex-basis: 100%;
+  height: 0;
+}
+/* =========================================
+   DOJO: NOTES IN ITALICS
+   ========================================= */
+.note{
+  font-style: italic;
+  opacity: 0.85;
+}
+/* =========================================
+   DOJO: PROMPT VISUAL CLARITY
+   Green = stable text
+   Black = customize parts (slot)
+   ========================================= */
+.prompt-content{
+  color: var(--green);
+  font-weight: 700;
+}
+
+.prompt-content .slot{
+  color: #111;
+  font-weight: 800;
+}
