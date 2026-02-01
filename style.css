@@ -1384,3 +1384,29 @@ header{
 .dojo-container p{
   margin-bottom: 16px;
 }
+/* =========================================
+   DOJO: ALIGN HEADING + COPY BUTTON
+   ========================================= */
+.prompt-head{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+  margin: 26px 0 10px;
+}
+
+.prompt-head h2,
+.prompt-head h3{
+  margin: 0;
+}
+
+@media (max-width: 768px){
+  .prompt-head{
+    gap: 10px;
+  }
+  .prompt-head .copy-prompt-btn{
+    padding: 6px 12px;
+    font-size: 0.82rem;
+    white-space: nowrap;
+  }
+}
