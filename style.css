@@ -1316,3 +1316,38 @@ header{
   color: #111;
   font-weight: 800;
 }
+
+/* =========================================
+   DOJO POLISH: prompt blocks + section spacing
+   ========================================= */
+
+/* Headings stand out more */
+.dojo-container h2{
+  margin: 34px 0 12px;
+}
+.dojo-container h3{
+  margin: 28px 0 10px;
+  font-size: 1.15rem;
+}
+
+/* Prompt block styling (green rail + calm card) */
+.dojo-container .prompt-content{
+  margin: 10px 0 26px;
+  padding: 14px 16px;
+  border-left: 6px solid var(--green);
+  background: rgba(31,165,138,0.06);
+  border-radius: 14px;
+}
+
+/* Notes: italic only (not bold) */
+.dojo-container .note{
+  font-style: italic;
+  font-weight: 400;
+  opacity: 0.85;
+  margin: 6px 0 10px;
+}
+
+/* Slightly more breathing room between copy button and prompt */
+.copy-prompt-wrap{
+  margin: 10px 0 8px;
+}
