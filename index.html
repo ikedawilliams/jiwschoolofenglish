@@ -4,7 +4,7 @@
   <title>JIW School of English</title>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="style.css?v=12">
+  <link rel="stylesheet" href="style.css?v=13">
 </head>
 
 <body>
@@ -325,39 +325,48 @@
 </main>
 
 <script>
-  document.addEventListener("DOMContentLoaded", () => {
-    const buttons = document.querySelectorAll(".lang-btn");
+document.addEventListener("DOMContentLoaded", () => {
+  const buttons = document.querySelectorAll(".lang-btn");
 
-    const heroEN = document.querySelector(".lang-block.lang-en");
-    const heroJP = document.querySelector(".lang-block.lang-jp");
-    const pageEN = document.querySelector(".lang-all.lang-en");
-    const pageJP = document.querySelector(".lang-all.lang-jp");
+  const heroEN = document.querySelector(".lang-block.lang-en");
+  const heroJP = document.querySelector(".lang-block.lang-jp");
 
-    function setLang(lang) {
-      const isEN = lang === "en";
+  const pageEN = document.querySelector(".lang-all.lang-en");
+  const pageJP = document.querySelector(".lang-all.lang-jp");
 
-      if (heroEN && heroJP) {
-        heroEN.hidden = !isEN;
-        heroJP.hidden = isEN;
-      }
+  function setLang(lang) {
+    const isEN = (lang === "en");
 
-      if (pageEN && pageJP) {
-        pageEN.hidden = !isEN;
-        pageJP.hidden = isEN;
-      }
+    if (heroEN) heroEN.hidden = !isEN;
+    if (heroJP) heroJP.hidden = isEN;
 
-      buttons.forEach(btn => {
-        btn.classList.toggle("active", btn.dataset.lang === lang);
-      });
-    }
+    if (pageEN) pageEN.hidden = !isEN;
+    if (pageJP) pageJP.hidden = isEN;
 
     buttons.forEach(btn => {
-      btn.addEventListener("click", () => setLang(btn.dataset.lang));
+      btn.classList.toggle("active", btn.dataset.lang === lang);
     });
 
-    setLang("en");
+    try { localStorage.setItem("jiw_lang", lang); } catch(e) {}
+  }
+
+  // Read saved preference; default EN
+  let lang = "en";
+  try {
+    const saved = localStorage.getItem("jiw_lang");
+    if (saved === "jp" || saved === "en") lang = saved;
+  } catch(e) {}
+
+  // Button clicks
+  buttons.forEach(btn => {
+    btn.addEventListener("click", () => setLang(btn.dataset.lang));
   });
+
+  // Set immediately on load
+  setLang(lang);
+});
 </script>
+
 
 <footer class="footer">
   <div class="social-icons">
