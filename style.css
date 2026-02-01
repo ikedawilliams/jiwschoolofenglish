@@ -1241,3 +1241,43 @@ header{
 .lang-all[hidden]{
   display: none !important;
 }
+/* =========================================
+   MOBILE HEADER (FINAL) — 2 ROWS, COMPACT
+   ========================================= */
+@media (max-width: 768px){
+
+  .site-header .header-inner{
+    display: grid !important;
+    grid-template-columns: 1fr auto !important;
+    grid-template-areas:
+      "brand brand"
+      "toggle nav" !important;
+    gap: 6px 10px !important;
+    padding: 8px 12px !important;
+    align-items: center !important;
+  }
+
+  .site-header .header-left{
+    grid-area: brand !important;
+    justify-self: center !important;
+  }
+
+  .site-header .header-center{
+    grid-area: toggle !important;
+    justify-self: start !important;
+  }
+
+  .site-header .header-right{
+    grid-area: nav !important;
+    justify-self: end !important;
+    gap: 8px !important;
+    flex-wrap: nowrap !important;
+  }
+
+  .site-brand{ font-size: 1rem !important; line-height: 1.1 !important; }
+
+  .lang-btn{ padding: 4px 10px !important; font-size: .85rem !important; }
+
+  .header-right a{ padding: 4px 6px !important; font-size: .92rem !important; line-height: 1 !important; }
+}
+
