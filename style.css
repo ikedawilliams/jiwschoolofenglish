@@ -657,3 +657,71 @@ hr{
     display: none !important;
   }
 }
+/* =========================================
+   HOME (MOBILE) — HERO: text left, face right (FINAL)
+   Paste at VERY BOTTOM of style.css
+   ========================================= */
+
+@media (max-width: 768px){
+
+  /* 1) Always hide the desktop hero image on mobile (prevents duplicates) */
+  .hero-photo--desktop,
+  .teacher-photo.desktop{
+    display: none !important;
+  }
+
+  /* 2) Hero becomes 1 column container */
+  .hero{
+    grid-template-columns: 1fr !important;
+    gap: 16px !important;
+    align-items: start !important;
+  }
+
+  /* 3) Inside each language block: 2-column layout (text left, face right) */
+  .hero .lang-block{
+    display: grid !important;
+    grid-template-columns: 1fr auto !important;
+    column-gap: 14px !important;
+    align-items: start !important;
+  }
+
+  /* 4) Put the mobile face on the RIGHT, top-aligned */
+  .hero .lang-block .hero-photo--mobile{
+    display: flex !important;
+    justify-content: flex-end !important;
+    align-items: flex-start !important;
+    margin: 0 !important;
+
+    grid-column: 2 !important;
+    grid-row: 1 !important;
+  }
+
+  /* Size/shape of the face on mobile */
+  .hero .lang-block .hero-photo--mobile img{
+    width: 84px !important;
+    height: 84px !important;
+    object-fit: cover !important;
+    border-radius: 16px !important;
+    display: block !important;
+
+    /* small nudge down so it feels like desktop alignment */
+    transform: translateY(6px) !important;
+  }
+
+  /* 5) Keep hero text on the LEFT column */
+  .hero .lang-block h1,
+  .hero .lang-block .hero-sub,
+  .hero .lang-block .cta-micro{
+    grid-column: 1 !important;
+  }
+
+  /* 6) CTA spans FULL WIDTH below both columns and centers */
+  .hero .lang-block .cta-button{
+    grid-column: 1 / -1 !important;
+    justify-self: stretch !important;
+    width: 100% !important;
+    text-align: center !important;
+    display: block !important;
+  }
+}
+
