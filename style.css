@@ -1643,3 +1643,25 @@ header{
     padding-right: 130px;
   }
 }
+/* =========================
+   LANG TOGGLE: inactive black, active green
+   ========================= */
+
+.lang-btn{
+  -webkit-appearance: none;
+  appearance: none;
+  color: #111 !important;
+  background: #fff;
+  border: 2px solid rgba(0,0,0,0.18);
+}
+
+.lang-btn.active{
+  background: var(--green) !important;
+  border-color: var(--green) !important;
+  color: #fff !important;
+}
+@media (max-width: 640px){
+  .hero-card img{
+    top: 28px;   /* was 18px */
+  }
+}
