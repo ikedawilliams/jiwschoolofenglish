@@ -1436,3 +1436,99 @@ header{
 .note.compact {
   margin-bottom: 0.5em;
 }
+
+/* =========================================
+   DOJO — FINAL OVERRIDES (SAFE)
+   Paste at VERY BOTTOM of style.css
+   Only affects dojo page elements
+   ========================================= */
+
+/* Hard-hide hidden language blocks (prevents EN+JP overlap) */
+.lang-all[hidden]{ display:none !important; }
+
+/* Prompt header row: stable alignment */
+.dojo-container .prompt-head{
+  display:flex !important;
+  align-items:center !important;
+  justify-content:space-between !important;
+  gap:14px !important;
+  margin:26px 0 10px !important;
+}
+
+.dojo-container .prompt-head h2,
+.dojo-container .prompt-head h3{
+  margin:0 !important;
+}
+
+/* Copy button: pick ONE style (outlined, crisp) and lock it */
+.dojo-container .copy-prompt-btn{
+  background: transparent !important;
+  color: var(--green) !important;
+  border: 2px solid var(--green) !important;
+  border-radius: 999px !important;
+  padding: 7px 14px !important;
+  font-size: 0.85rem !important;
+  font-weight: 800 !important;
+  cursor: pointer !important;
+  line-height: 1 !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  transition: background .15s ease, transform .15s ease, opacity .15s ease !important;
+}
+
+.dojo-container .copy-prompt-btn:hover{
+  background: rgba(31,165,138,0.08) !important;
+  transform: translateY(-1px) !important;
+}
+
+.dojo-container .copy-prompt-btn:active{
+  transform: translateY(0) !important;
+}
+
+/* Prompt box: consistent “green card” copy target */
+.dojo-container .prompt-content{
+  color: var(--green) !important;
+  font-weight: 700 !important;
+  margin: 10px 0 26px !important;
+  padding: 14px 16px !important;
+  border-left: 6px solid var(--green) !important;
+  background: rgba(31,165,138,0.06) !important;
+  border-radius: 14px !important;
+}
+
+/* Slot text inside prompt: black & strong */
+.dojo-container .prompt-content .slot{
+  color:#111 !important;
+  font-weight:800 !important;
+}
+
+/* Notes: italic, calm */
+.dojo-container .note{
+  font-style: italic !important;
+  font-weight: 400 !important;
+  opacity: 0.85 !important;
+  margin: 6px 0 10px !important;
+}
+
+/* Mobile “long press” hint: keep it subtle */
+.dojo-container .mobile-copy-hint{
+  font-size: 0.95rem;
+  opacity: 0.9;
+  margin: 10px 0 10px;
+}
+
+/* If you want the Japanese hint smaller */
+.dojo-container .mobile-copy-hint .jp{
+  font-size: 0.92em;
+  opacity: 0.9;
+}
+
+/* Mobile: keep the copy button tap-friendly but not huge */
+@media (max-width: 768px){
+  .dojo-container .copy-prompt-btn{
+    padding: 6px 12px !important;
+    font-size: 0.82rem !important;
+    white-space: nowrap !important;
+  }
+}
