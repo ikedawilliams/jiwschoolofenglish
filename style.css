@@ -1902,3 +1902,35 @@ header{
 .header-right a[href$="policy.html"]{
   color: var(--green) !important;
 }
+/* =========================================================
+   EMERGENCY FIX — language toggle + Home hero photos
+   Paste at VERY BOTTOM of style.css
+   ========================================================= */
+
+/* 1) Never show hidden language blocks (prevents JP under EN) */
+.lang-block[hidden],
+.lang-all[hidden]{
+  display: none !important;
+}
+
+/* 2) HOME HERO: restore photo visibility rules cleanly */
+.hero .hero-photo--desktop{ display: flex !important; }
+.hero .teacher-photo.desktop{ display: block !important; }
+
+/* If any old rules are hiding ALL hero photos, neutralize them */
+.hero > .hero-photo{ display: flex !important; } /* desktop wrapper */
+@media (max-width: 768px){
+  /* On mobile: hide desktop/right photo */
+  .hero .hero-photo--desktop,
+  .hero .teacher-photo.desktop{
+    display: none !important;
+  }
+
+  /* On mobile: show ONLY the small photo inside the visible lang-block */
+  .hero .lang-block:not([hidden]) .hero-photo--mobile{
+    display: flex !important;
+    justify-content: flex-end !important;
+    margin: 0 !important;
+  }
+
+  .hero .lang-bl
