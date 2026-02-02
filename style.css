@@ -1433,3 +1433,6 @@ header{
   color: #000;
   font-weight: normal;
 }
+.note.compact {
+  margin-bottom: 0.5em;
+}
