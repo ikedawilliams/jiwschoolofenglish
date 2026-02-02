@@ -1698,3 +1698,8 @@ header{
     transform: translateY(12px);   /* increase to 16px if needed */
   }
 }
+@media (max-width: 640px){
+  .hero-face{
+    transform: translateY(12px);
+  }
+}
