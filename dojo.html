@@ -459,9 +459,10 @@
       Part 2の具体的なプロンプトは、英語版Dojoページにあります。
     </p>
 
-<a href="dojo.html#part2" class="cta-button part2-cta">
+<a href="#part2" class="cta-button part2-cta" id="jp-to-part2">
   ▶ Part 2 を見る（英語）
 </a>
+
 
 
 
@@ -574,6 +575,28 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 </script>
 
+<script>
+  // JP button: switch to EN tab, then jump to the Jump Links (#part2)
+  (function () {
+    var jpLink = document.getElementById('jp-to-part2');
+    if (!jpLink) return;
+
+    jpLink.addEventListener('click', function (e) {
+      e.preventDefault();
+
+      // 1) switch to EN
+      var enBtn = document.querySelector('.lang-btn[data-lang="en"]');
+      if (enBtn) enBtn.click();
+
+      // 2) jump to #part2 after EN is visible
+      setTimeout(function () {
+        location.hash = 'part2';
+        var target = document.getElementById('part2');
+        if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }, 50);
+    });
+  })();
+</script>
 
 </body>
 </html>
