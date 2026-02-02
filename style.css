@@ -472,3 +472,89 @@ hr{
   font-style: italic;
   opacity: 0.85;
 }
+/* =========================
+   DOJO: prompt layout + copy buttons
+   ========================= */
+
+.dojo-nav{
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px 14px;
+}
+.dojo-nav .nav-break{
+  flex-basis: 100%;
+  height: 0;
+}
+
+.prompt-head{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+  margin: 26px 0 10px;
+}
+.prompt-head h2,
+.prompt-head h3{
+  margin: 0;
+}
+
+.copy-prompt-wrap{
+  display: flex;
+  justify-content: flex-end;
+}
+
+.copy-prompt-btn{
+  background: transparent;
+  color: var(--brand);
+  border: 2px solid var(--brand);
+  border-radius: 999px;
+  padding: 7px 14px;
+  font-size: 0.85rem;
+  font-weight: 900;
+  cursor: pointer;
+  line-height: 1;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: background .15s ease, transform .15s ease, opacity .15s ease;
+}
+.copy-prompt-btn:hover{
+  background: rgba(31,185,168,0.10);
+  transform: translateY(-1px);
+}
+.copy-prompt-btn:active{
+  transform: translateY(0);
+}
+
+.prompt-content{
+  color: var(--brand);
+  font-weight: 800;
+  margin: 10px 0 26px;
+  padding: 14px 16px;
+  border-left: 6px solid var(--brand);
+  background: rgba(31,185,168,0.06);
+  border-radius: 14px;
+}
+.prompt-content .slot{
+  color: #111;
+  font-weight: 900;
+}
+
+.mobile-copy-hint{
+  font-size: 0.95rem;
+  opacity: 0.9;
+  margin: 10px 0 10px;
+}
+.mobile-copy-hint .jp{
+  font-size: 0.92em;
+  opacity: 0.9;
+}
+
+@media (max-width: 768px){
+  .copy-prompt-btn{
+    padding: 6px 12px;
+    font-size: 0.82rem;
+    white-space: nowrap;
+  }
+}
