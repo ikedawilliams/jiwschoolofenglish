@@ -840,3 +840,9 @@ hr{
   color: #000;
   font-weight: 600;
 }
+/* DOJO: Brackets should be BLACK but NOT bold (even inside <strong>) */
+.prompt-content .slot,
+.prompt-content .edit {
+  color: #000 !important;
+  font-weight: 400 !important;
+}
