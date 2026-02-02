@@ -725,3 +725,25 @@ hr{
   }
 }
 
+/* =========================================
+   LANGUAGE VISIBILITY — HARD LOCK (GLOBAL)
+   Prevent EN + JP showing together
+   Paste at VERY BOTTOM of style.css
+   ========================================= */
+
+/* If an element has the hidden attribute, it must never render */
+[hidden]{
+  display: none !important;
+}
+
+/* Extra safety for your language wrappers */
+.lang-all[hidden],
+.lang-block[hidden]{
+  display: none !important;
+}
+
+/* When visible, make sure language blocks behave normally */
+.lang-all,
+.lang-block{
+  display: block;
+}
