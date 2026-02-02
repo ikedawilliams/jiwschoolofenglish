@@ -829,3 +829,10 @@ hr{
   color: #000;          /* force black */
   font-weight: normal;  /* keep calm, not loud */
 }
+.prompt-content .edit {
+  color: #000;
+}
+.prompt-content .slot,
+.prompt-content .edit {
+  color: #000;
+}
