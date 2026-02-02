@@ -1425,3 +1425,11 @@ header{
   margin: 0;
 }
 
+.lang-jp {
+  color: #000;
+}
+
+.lang-jp .slot {
+  color: #000;
+  font-weight: normal;
+}
