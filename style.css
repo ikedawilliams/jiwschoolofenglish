@@ -1884,3 +1884,21 @@ header{
     text-align: center !important;
   }
 }
+/* =========================
+   POLICY PAGE: spacing + Policy link darker green
+   (bottom-of-file overrides only)
+   ========================= */
+
+.policy-page h1{
+  margin-top: 6px;
+}
+
+.policy-page ul{
+  margin-top: 8px;
+  margin-bottom: 18px;
+}
+
+/* Make only the Policy nav link darker green */
+.header-right a[href$="policy.html"]{
+  color: var(--green) !important;
+}
