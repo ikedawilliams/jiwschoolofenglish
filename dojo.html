@@ -112,10 +112,9 @@
 
     <hr>
 
-    <!-- PART 1 -->
+    <!-- PART 1 (FIXED STRUCTURE) -->
     <div class="prompt-head">
       <h2 id="part1">PART 1 — Identity Prompt</h2>
-
       <div class="copy-prompt-wrap">
         <button class="copy-prompt-btn" data-copy-label="first">Copy 1st prompt</button>
       </div>
@@ -132,12 +131,12 @@
       <p>I want to do this <span class="slot">(verbally / via text)</span>.</p>
       <p>If you need more information, ask me before continuing.</p>
       <p>This is Part 1 of my prompt. I will send Part 2 next.</p>
-      <p>Please respond with OK, I am waiting for you to give me Part 2</p>
+      <p>Please respond with OK, I am waiting for you to give me Part 2.</p>
     </div>
 
     <hr>
 
-    <!-- ✅ FIX: add id="part2" so JP link can jump correctly -->
+    <!-- PART 2 -->
     <h2 id="part2">PART 2 — DOJO TRAINING PROMPTS</h2>
 
     <p class="note">
@@ -145,14 +144,11 @@
       <strong>Choose one area. Train it. Stop.</strong>
     </p>
 
-    <!-- ROLE PLAY (VOICE MODE) -->
+    <!-- ROLE PLAY (VOICE MODE) (FIXED STRUCTURE) -->
     <div class="prompt-head">
       <h3 id="roleplay-voice">Role Play (phone only)</h3>
-
       <div class="copy-prompt-wrap">
-        <button class="copy-prompt-btn" data-copy-label="part2">
-          Copy 2nd prompt
-        </button>
+        <button class="copy-prompt-btn" data-copy-label="part2">Copy 2nd prompt</button>
       </div>
     </div>
 
@@ -173,19 +169,16 @@
 
     <div class="prompt-content">
       <p><strong>Please help me practice speaking English through role play.</strong></p>
-
       <p>
         I am using this on my <strong>phone in voice mode</strong>.<br>
         I want to actively <strong>participate in the conversation</strong>.
       </p>
-
       <p><strong>First, ask me to choose:</strong><br>
         - <strong>Situation:</strong> (meeting / ordering food / customer service / travel / daily life / work)<br>
         - <strong>My role:</strong> (customer / staff / colleague / manager / etc.)<br>
         - <strong>Number of speakers:</strong> (1 / 2 / 3)<br>
         - <strong>Speed:</strong> (slow / natural)
       </p>
-
       <p><strong>Rules:</strong><br>
         - Stay <strong>in character</strong> during the role play.<br>
         - Speak in short, natural turns.<br>
@@ -193,24 +186,11 @@
         - Do not interrupt the conversation with long explanations.<br>
         - If my response is unclear, ask me to repeat or rephrase.
       </p>
-
       <p><strong>How to start:</strong><br>
         - Set the scene briefly (1–2 sentences max).<br>
         - Start speaking as your role.<br>
         - Ask me a natural question and <strong>wait</strong> for my reply.
       </p>
-
-      <p><strong>During the role play:</strong><br>
-        - Keep the conversation going naturally.<br>
-        - Adjust difficulty to my level.<br>
-        - Encourage me to speak in full sentences.
-      </p>
-
-      <p><strong>Optional (only if useful):</strong><br>
-        - Restart the same scene with slightly higher difficulty.<br>
-        - Switch roles (you become the customer / I become the staff).
-      </p>
-
       <p><strong>At the end:</strong><br>
         - give brief spoken feedback (1–2 sentences)<br>
         - tell me my current speaking level<br>
@@ -218,7 +198,7 @@
       </p>
     </div>
 
-    <!-- LISTENING -->
+    <!-- LISTENING (FIXED STRUCTURE) -->
     <div class="prompt-head">
       <h3 id="listening">Listening (phone only)</h3>
       <div class="copy-prompt-wrap">
@@ -243,38 +223,31 @@
 
     <div class="prompt-content">
       <p><strong>Please help me improve my listening skills using AI-generated audio.</strong></p>
-
       <p>I am using this on my <strong>phone in voice mode</strong>.</p>
-
       <p>First, <strong>read a short listening script aloud</strong>.<br>
         <strong>Do not show the script yet.</strong></p>
-
       <p><strong>Script requirements:</strong><br>
         - Topic: <span class="slot">(choose)</span><br>
         - Speakers: <span class="slot">(1 / 2 / 3)</span><br>
         - Accent: <span class="slot">(requested)</span><br>
         - Speed: <span class="slot">(slow / natural / fast)</span><br>
         - Length: <span class="slot">(30s / 1m / 2m)</span></p>
-
       <p><strong>Rules:</strong><br>
         - Read once only<br>
         - No explanation before listening</p>
-
       <p>After listening:<br>
         - ask comprehension questions<br>
         - check understanding verbally</p>
-
       <p>Then:<br>
         - read again<br>
         - show the script<br>
         - explain difficult points briefly</p>
-
       <p>Finish with:<br>
         - one follow-up task<br>
         - difficulty adjustment question</p>
     </div>
 
-    <!-- PRONUNCIATION -->
+    <!-- PRONUNCIATION (FIXED STRUCTURE) -->
     <div class="prompt-head">
       <h3 id="pronunciation-voice">Pronunciation (phone only)</h3>
       <div class="copy-prompt-wrap">
@@ -299,37 +272,28 @@
 
     <div class="prompt-content">
       <p><strong>Please help me improve my pronunciation using phone voice mode.</strong></p>
-
       <p>Focus on clarity, rhythm, and natural speech.</p>
-
       <p><strong>Rules:</strong><br>
         - one item at a time<br>
         - one correction only<br>
         - no IPA unless asked</p>
-
       <p><strong>Step 1 — Words</strong><br>
         5 practical words → listen → repeat → one fix</p>
-
       <p><strong>Step 2 — Sentences</strong><br>
         5 short sentences → rhythm & linking</p>
-
       <p><strong>Step 3 — Intonation</strong><br>
         2 contrast examples → meaning change</p>
-
       <p><strong>Finish with:</strong><br>
         - brief feedback<br>
         - level estimate<br>
         - one daily practice suggestion</p>
     </div>
 
-    <!-- WRITING -->
+    <!-- WRITING (FIXED STRUCTURE) -->
     <div class="prompt-head">
       <h3 id="writing">Writing</h3>
-
       <div class="copy-prompt-wrap">
-        <button class="copy-prompt-btn" data-copy-label="part2">
-          Copy 2nd prompt
-        </button>
+        <button class="copy-prompt-btn" data-copy-label="part2">Copy 2nd prompt</button>
       </div>
     </div>
 
@@ -376,7 +340,7 @@
         - ask if I want to increase or decrease the difficulty</p>
     </div>
 
-    <!-- GRAMMAR -->
+    <!-- GRAMMAR (FIXED STRUCTURE) -->
     <div class="prompt-head">
       <h3 id="grammar">Grammar</h3>
       <div class="copy-prompt-wrap">
@@ -387,19 +351,16 @@
     <div class="prompt-content">
       <p><strong>Please assess my English level.</strong></p>
       <p><strong>Focus on my grammar skills.</strong></p>
-
       <p><strong>Important:</strong> Ask the questions <strong>one by one</strong>.<br>
         Wait for my answer each time before giving the next task.</p>
-
       <p><strong>Total:</strong> About <strong>10</strong> tasks.</p>
-
       <p><strong>At the end:</strong><br>
         - brief feedback<br>
         - level assessment<br>
         - difficulty adjustment question</p>
     </div>
 
-    <!-- VOCABULARY -->
+    <!-- VOCABULARY (FIXED STRUCTURE) -->
     <div class="prompt-head">
       <h3 id="vocabulary">Vocabulary</h3>
       <div class="copy-prompt-wrap">
@@ -410,28 +371,27 @@
     <div class="prompt-content">
       <p><strong>Please assess my English level.</strong></p>
       <p><strong>Focus on my spelling and basic word usage.</strong></p>
-
       <p><strong>Task format:</strong><br>
         Give me a Japanese word (in Japanese).<br>
         I will write the English word.</p>
-
       <p>Prepare 10 words in total. Go one word at a time.</p>
     </div>
-<hr>
 
-<div class="dojo-end">
-  <p class="note">
-    <strong>Kihon</strong> and <strong>Kata</strong> happen here in the Dojo.<br>
-    <strong>Kumite</strong> happens in live lessons.<br>
-    That becomes <strong>Kachi</strong> — real confidence.
-  </p>
+    <hr>
 
-  <p class="note">
-    Clear English. Natural English. Real communication.
-  </p>
-</div>
+    <div class="dojo-end">
+      <p class="note">
+        <strong>Kihon</strong> and <strong>Kata</strong> happen here in the Dojo.<br>
+        <strong>Kumite</strong> happens in live lessons.<br>
+        That becomes <strong>Kachi</strong> — real confidence.
+      </p>
 
-  </div><!-- ✅ FIX: close EN wrapper BEFORE JP wrapper -->
+      <p class="note">
+        Clear English. Natural English. Real communication.
+      </p>
+    </div>
+
+  </div><!-- CLOSE EN -->
 
   <!-- =========================
        JAPANESE
@@ -441,42 +401,73 @@
     <h1>JIW School of English — Study Hub / Dojo</h1>
 
     <p>
-      JIW School of Englishでは、<br>
-      武道の考え方を取り入れた、独自の<strong>4Kメソッド</strong>を採用しています。<br>
+      JIW School of Englishでは、武道の考え方を取り入れた独自の<strong>4Kメソッド</strong>を採用しています。<br>
       DOJO（道場）へようこそ。
     </p>
 
+    <p>
+      教科書だけの学習は、時代的に限界があります。<br>
+      AIを正しく使えば、弱点を集中的に鍛える「練習道具」になります。
+    </p>
+
+    <p>
+      このDojoでは、あなたの弱点に合わせた、シンプルで実用的な練習リソースを用意しています。<br>
+      レッスン前の<strong>Kihon（基礎）</strong>と<strong>Kata（型）</strong>のイメージです。
+    </p>
+
+    <p><strong>
+      できれば1日1つ。<br>
+      強度より「継続」が一番大事です。
+    </strong></p>
+
     <hr>
 
-    <!-- PART 1 -->
+    <div class="dojo-ai">
+      <h2>DojoでのAIの使い方</h2>
+
+      <p>このDojoは「AIの使い方」もトレーニングしています。</p>
+
+      <p>
+        やり方がわからないこと（字幕、音声入力、動画の探し方など）があれば、<strong>まずAIに聞いてください</strong>。
+      </p>
+
+      <p>AIはあなたのトレーニングの一部です。</p>
+    </div>
+
+    <hr>
+
+    <!-- PART 1 (JP) -->
     <div class="prompt-head">
       <h2 id="part1-jp">PART 1 — 自己設定プロンプト</h2>
-      <button class="copy-prompt-btn" data-copy-label="first">まずはこれをコピー</button>
+      <div class="copy-prompt-wrap">
+        <button class="copy-prompt-btn" data-copy-label="first">まずはこれをコピー</button>
+      </div>
     </div>
 
     <p class="note">（先にコピー＆ペーストしてください）</p>
 
-   <div class="prompt-content jp-content">
-  <p>私の名前は <span class="slot">(名前)</span> です。</p>
-  <p>私は <span class="slot">(仕事／学生／立場)</span> です。</p>
-  <p><span class="slot">(会社名／学校名)</span> で働いています／勉強しています。</p>
-  <p>英語は <span class="slot">(目的)</span> のために使います。</p>
-  <p>現在の英語レベルは <span class="slot">(初級／中級／上級)</span> です。</p>
-  <p>私に合わせて、英語レベル・例文・修正内容・話すスピードを調整してください。</p>
-  <p>この練習は <span class="slot">(会話で／テキストで)</span> 行いたいです。</p>
-  <p>追加で必要な情報があれば、続ける前に質問してください。</p>
-  <p>これは私のプロンプトのPart 1です。次にPart 2を送ります。</p>
-</div>
-
+    <div class="prompt-content jp-content">
+      <p>私の名前は <span class="slot">(名前)</span> です。</p>
+      <p>私は <span class="slot">(仕事／学生／立場)</span> です。</p>
+      <p>私は <span class="slot">(会社名／学校名)</span> で <span class="slot">(働いています／勉強しています)</span>。</p>
+      <p>英語は <span class="slot">(会議／試験／仕事／旅行など)</span> のために使います。</p>
+      <p>現在の英語レベルは <span class="slot">(初級／中級／上級)</span> です。</p>
+      <p>私に合わせて、英語レベル・例文・修正内容・話すスピードを調整してください。</p>
+      <p>この練習は <span class="slot">(会話で／テキストで)</span> 行いたいです。</p>
+      <p>追加で必要な情報があれば、続ける前に質問してください。</p>
+      <p>これは私のプロンプトのPart 1です。次にPart 2を送ります。</p>
+      <p>「OK。Part 2を送ってください。」と返してください。</p>
+    </div>
 
     <hr>
 
-    <!-- PART 2 -->
+    <!-- PART 2 LINK (JP → EN) -->
     <div class="part2-link">
       <h2>PART 2 — DOJO トレーニングプロンプト</h2>
 
       <p class="note">
-        Part 2の具体的なプロンプトは、英語版Dojoページにあります。
+        Part 2の具体的なプロンプトは、英語版Dojoページにあります。<br>
+        下のボタンを押すと、英語表示に切り替えてPart 2へ移動します。
       </p>
 
       <a href="#part2" class="cta-button part2-cta" id="jp-to-part2">
@@ -484,10 +475,10 @@
       </a>
     </div>
 
-  </div>
+  </div><!-- CLOSE JP -->
 
+</div>
 
-</div><!-- ✅ FIX: close .dojo-container BEFORE scripts -->
 
 <!-- LANGUAGE TOGGLE SCRIPT (Dojo uses ONLY .lang-all) -->
 <script>
