@@ -1592,3 +1592,22 @@ header{
     font-size: 14px;
   }
 }
+/* =========================
+   LANG TOGGLE: force black text (override iOS default blue)
+   ========================= */
+.lang-btn{
+  -webkit-appearance: none;
+  appearance: none;
+  color: #111 !important;
+  text-decoration: none;
+}
+
+.lang-btn:visited,
+.lang-btn:active,
+.lang-btn:focus{
+  color: #111 !important;
+}
+
+.lang-btn.active{
+  color: #111 !important;
+}
