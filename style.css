@@ -1744,3 +1744,143 @@ header{
   border-color: var(--green2) !important;
   color: #fff !important;
 }
+/* =========================================================
+   FINAL LOCK (HEADER + HERO) — paste at VERY BOTTOM of style.css
+   ========================================================= */
+
+/* Make hidden language blocks REALLY hidden (prevents overlap) */
+.lang-block[hidden],
+.lang-all[hidden]{
+  display: none !important;
+}
+
+/* Use the CTA color everywhere the “brand green” should appear */
+:root{
+  --brand: var(--green2);
+}
+
+/* Header brand + nav match CTA */
+.site-brand{ color: var(--brand) !important; }
+.header-right a{ color: var(--brand) !important; }
+
+/* Toggle pills: inactive black, active = CTA green */
+.lang-btn{
+  -webkit-appearance: none;
+  appearance: none;
+  background: #fff !important;
+  color: #111 !important;
+  border: 2px solid rgba(0,0,0,0.18) !important;
+}
+.lang-btn.active{
+  background: var(--brand) !important;
+  border-color: var(--brand) !important;
+  color: #fff !important;
+}
+
+/* -------------------------
+   MOBILE: compact header
+   ------------------------- */
+@media (max-width: 768px){
+  .site-header .header-inner{
+    display: grid !important;
+    grid-template-columns: 1fr auto !important;
+    grid-template-areas:
+      "brand brand"
+      "toggle nav" !important;
+    gap: 6px 12px !important;
+    padding: 8px 12px !important;
+    align-items: center !important;
+    text-align: center !important;
+  }
+
+  .header-left{ grid-area: brand !important; justify-self: center !important; }
+  .header-center{ grid-area: toggle !important; justify-self: start !important; }
+  .header-right{ grid-area: nav !important; justify-self: end !important; gap: 10px !important; }
+
+  .site-brand{
+    font-size: 1rem !important;
+    line-height: 1.1 !important;
+    white-space: nowrap !important;
+  }
+
+  .lang-btn{
+    padding: 4px 10px !important;
+    font-size: 0.85rem !important;
+    line-height: 1 !important;
+  }
+
+  .header-right a{
+    font-size: 0.92rem !important;
+    line-height: 1 !important;
+    padding: 4px 6px !important;
+    white-space: nowrap !important;
+  }
+}
+
+/* -------------------------
+   HERO: desktop vs mobile
+   ------------------------- */
+
+/* Desktop: show big photo on right, hide mobile photo */
+.hero-photo--desktop{ display: flex !important; justify-content: flex-end !important; }
+.hero-photo--mobile{ display: none !important; }
+
+/* Mobile: ONE photo only, on the RIGHT inside the hero block */
+@media (max-width: 768px){
+
+  /* hero becomes one column */
+  .hero{
+    grid-template-columns: 1fr !important;
+    gap: 18px !important;
+    padding: 24px 18px !important;
+    align-items: start !important;
+  }
+
+  /* hide desktop photo completely */
+  .hero-photo--desktop,
+  .teacher-photo.desktop{
+    display: none !important;
+  }
+
+  /* inside the active lang-block: 2 columns (text left, face right) */
+  .hero .lang-block{
+    display: grid !important;
+    grid-template-columns: 1fr auto !important;
+    column-gap: 14px !important;
+    align-items: start !important;
+  }
+
+  /* show the mobile photo on the right */
+  .hero .lang-block .hero-photo--mobile{
+    display: flex !important;
+    justify-content: flex-end !important;
+    grid-column: 2 !important;
+    grid-row: 1 !important;
+    margin: 0 !important;
+  }
+
+  /* make sure text stays left */
+  .hero .lang-block h1,
+  .hero .lang-block .hero-sub{
+    grid-column: 1 !important;
+  }
+
+  /* photo sizing + “slightly lower” alignment */
+  .hero-face{
+    width: 86px !important;
+    height: 86px !important;
+    object-fit: cover !important;
+    border-radius: 16px !important;
+    display: block !important;
+    transform: translateY(10px) !important; /* adjust 6–16px */
+  }
+
+  /* CTA spans full width below */
+  .hero .cta-button{
+    grid-column: 1 / -1 !important;
+    width: 100% !important;
+    font-size: 1.1rem !important;
+    padding: 14px 0 !important;
+    text-align: center !important;
+  }
+}
