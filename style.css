@@ -558,3 +558,72 @@ hr{
     white-space: nowrap;
   }
 }
+/* =========================
+   DOJO COPY BUTTONS — LOCKED LAYOUT (final override)
+   Put this at the VERY BOTTOM of style.css
+   ========================= */
+
+.prompt-head{
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  gap: 12px !important;
+  margin: 24px 0 10px !important;
+}
+
+.prompt-head h2,
+.prompt-head h3{
+  margin: 0 !important;
+  padding: 0 !important;
+  line-height: 1.2 !important;
+}
+
+.copy-prompt-wrap{
+  margin-left: auto !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: flex-end !important;
+  flex: 0 0 auto !important;
+}
+
+.copy-prompt-btn{
+  appearance: none !important;
+  -webkit-appearance: none !important;
+
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+
+  padding: 7px 14px !important;
+  border-radius: 999px !important;
+
+  border: 2px solid var(--brand) !important;
+  background: transparent !important;
+  color: var(--brand) !important;
+
+  font-size: 0.85rem !important;
+  font-weight: 900 !important;
+  line-height: 1 !important;
+  white-space: nowrap !important;
+
+  cursor: pointer !important;
+}
+
+.copy-prompt-btn:hover{
+  background: rgba(31,185,168,0.10) !important;
+}
+
+.copy-prompt-btn:disabled{
+  opacity: 0.65 !important;
+  cursor: default !important;
+}
+
+/* Mobile: keep it neat if the title is long */
+@media (max-width: 520px){
+  .prompt-head{
+    align-items: flex-start !important;
+  }
+  .copy-prompt-wrap{
+    margin-top: 2px !important;
+  }
+}
