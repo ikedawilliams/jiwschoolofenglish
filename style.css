@@ -1611,3 +1611,35 @@ header{
 .lang-btn.active{
   color: #111 !important;
 }
+/* =========================
+   MOBILE HERO: improve face alignment and prevent overlap
+   NOTE: If this doesn't hit, paste your hero HTML and I'll target exactly.
+   ========================= */
+@media (max-width: 640px){
+
+  /* Hero card common candidates */
+  .hero-card, .hero, .hero .card, .hero-box{
+    position: relative;
+  }
+
+  /* If the face image is absolutely positioned, align it and size it */
+  .hero-card img,
+  .hero .card img{
+    max-width: 92px;
+    height: auto;
+  }
+
+  /* If it's absolute, these help it sit nicely */
+  .hero-card img{
+    position: absolute;
+    top: 18px;
+    right: 18px;
+    border-radius: 16px;
+  }
+
+  /* Make sure headline + text don't run underneath the face */
+  .hero-card h1,
+  .hero-card p{
+    padding-right: 130px;
+  }
+}
