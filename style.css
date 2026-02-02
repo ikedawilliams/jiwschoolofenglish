@@ -1690,3 +1690,11 @@ header{
   border-color: var(--green) !important;
   color: #fff !important;
 }
+/* =========================
+   MOBILE HERO FACE: nudge down
+   ========================= */
+@media (max-width: 640px){
+  .hero-face{
+    transform: translateY(12px);   /* increase to 16px if needed */
+  }
+}
