@@ -1703,3 +1703,31 @@ header{
     transform: translateY(12px);
   }
 }
+/* =========================
+   MOBILE HERO: face top-right, aligned, no overlap
+   ========================= */
+@media (max-width: 640px){
+
+  /* make sure the hero card is the positioning container */
+  .hero-photo--mobile{
+    position: absolute;
+    top: 18px;       /* increase to push down */
+    right: 18px;
+    z-index: 2;
+  }
+
+  .hero-face{
+    width: 96px;
+    height: 96px;
+    object-fit: cover;
+    border-radius: 18px;
+    display: block;
+    transform: translateY(10px); /* small “drop” to match desktop feel */
+  }
+
+  /* give text room so it doesn't run under the face */
+  .hero h1,
+  .hero p{
+    padding-right: 130px;
+  }
+}
