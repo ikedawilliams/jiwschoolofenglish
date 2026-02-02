@@ -1665,3 +1665,28 @@ header{
     top: 28px;   /* was 18px */
   }
 }
+/* =========================
+   BRAND COLOR UNIFY (header + active lang pill + CTA)
+   ========================= */
+
+/* If your CTA already uses var(--green), this will match automatically.
+   If your CTA uses --green2, switch var(--green) -> var(--green2) below. */
+
+.site-brand{
+  color: var(--green);
+}
+
+.header-right a{
+  color: var(--green);
+}
+
+.header-right a:hover{
+  opacity: 0.85;
+}
+
+/* active language pill */
+.lang-btn.active{
+  background: var(--green) !important;
+  border-color: var(--green) !important;
+  color: #fff !important;
+}
