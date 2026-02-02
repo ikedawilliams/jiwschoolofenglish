@@ -836,3 +836,7 @@ hr{
 .prompt-content .edit {
   color: #000;
 }
+.prompt-content .edit {
+  color: #000;
+  font-weight: 600;
+}
