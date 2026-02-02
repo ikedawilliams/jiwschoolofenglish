@@ -627,3 +627,33 @@ hr{
     margin-top: 2px !important;
   }
 }
+/* =========================================================
+   HOME HERO CTA — MOBILE CENTER FIX (final override)
+   Paste at VERY BOTTOM of style.css
+   ========================================================= */
+
+@media (max-width: 768px){
+
+  /* Make the CTA always centered + full width inside hero blocks */
+  .hero .cta-button{
+    display: block !important;
+    width: 100% !important;
+    text-align: center !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    justify-self: stretch !important;
+  }
+
+  /* If any old rules pushed hero elements into 2 columns, kill that */
+  .hero{
+    grid-template-columns: 1fr !important;
+  }
+
+  /* Keep your face visible on mobile */
+  .hero-photo--mobile{
+    display: flex !important;
+  }
+  .hero-photo--desktop{
+    display: none !important;
+  }
+}
