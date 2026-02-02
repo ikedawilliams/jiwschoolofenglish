@@ -824,3 +824,8 @@ hr{
     padding-right: 0 !important;
   }
 }
+/* Brackets = student-editable choices only */
+.edit {
+  color: #000;          /* force black */
+  font-weight: normal;  /* keep calm, not loud */
+}
