@@ -1731,3 +1731,16 @@ header{
     padding-right: 130px;
   }
 }
+/* =========================
+   COLOR UNIFY: match CTA green
+   ========================= */
+.site-brand,
+.header-right a{
+  color: var(--green2);
+}
+
+.lang-btn.active{
+  background: var(--green2) !important;
+  border-color: var(--green2) !important;
+  color: #fff !important;
+}
