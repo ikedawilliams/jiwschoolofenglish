@@ -906,7 +906,7 @@ hr{
 .punchJ-img{
   display: block;
   width: 100%;
-  max-width: 760px;   /* 👈 desktop presence */
+  max-width: 720px;   /* 👈 desktop presence */
   height: auto;
   margin: 0 auto;
   border-radius: 14px;
