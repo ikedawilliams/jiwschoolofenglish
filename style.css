@@ -863,12 +863,7 @@ hr{
   box-shadow: 0 8px 24px rgba(0,0,0,0.08);
 }
 
-.punch{
-  margin: 24px auto 32px;
-}
-.punch{
-  margin: 20px auto 26px;
-}
+
 /* =========================
    DOJO – Voice Mode Images (EN/JP)
    ========================= */
@@ -889,3 +884,11 @@ hr{
   border-radius: 10px;
   box-shadow: 0 8px 24px rgba(0,0,0,0.08);
 }
+
+<section class="punchE">
+  <img src="images/punchE.PNG" class="punchE-img" alt="">
+</section>
+
+<section class="punchJ">
+  <img src="images/punchJ.PNG" class="punchJ-img" alt="">
+</section>
