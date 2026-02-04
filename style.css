@@ -898,7 +898,7 @@ hr{
 
 .punchE,
 .punchJ{
-  margin: 22px auto 28px;
+  margin: 28px auto 36px;
   text-align: center;
 }
 
@@ -906,17 +906,26 @@ hr{
 .punchJ-img{
   display: block;
   width: 100%;
-  max-width: 520px;   /* desktop cap */
+  max-width: 760px;   /* 👈 desktop presence */
   height: auto;
   margin: 0 auto;
-  border-radius: 10px;
-  box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+  border-radius: 14px;
+  box-shadow: 0 10px 28px rgba(0,0,0,0.10);
 }
 
-/* Mobile: make it feel less huge */
+/* Tablet */
+@media (max-width: 900px){
+  .punchE-img,
+  .punchJ-img{
+    max-width: 640px;
+  }
+}
+
+/* Mobile */
 @media (max-width: 600px){
   .punchE-img,
   .punchJ-img{
-    max-width: 360px;  /* 👈 try 320–420 */
+    max-width: 380px;
   }
 }
+
