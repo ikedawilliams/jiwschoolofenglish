@@ -892,3 +892,31 @@ hr{
 <section class="punchJ">
   <img src="images/punchJ.PNG" class="punchJ-img" alt="">
 </section>
+/* =========================
+   DOJO – Voice Mode Images (EN/JP)
+   ========================= */
+
+.punchE,
+.punchJ{
+  margin: 22px auto 28px;
+  text-align: center;
+}
+
+.punchE-img,
+.punchJ-img{
+  display: block;
+  width: 100%;
+  max-width: 520px;   /* desktop cap */
+  height: auto;
+  margin: 0 auto;
+  border-radius: 10px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+}
+
+/* Mobile: make it feel less huge */
+@media (max-width: 600px){
+  .punchE-img,
+  .punchJ-img{
+    max-width: 360px;  /* 👈 try 320–420 */
+  }
+}
