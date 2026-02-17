@@ -843,3 +843,10 @@ p{ margin: 10px 0 0; }
 .header-right a[href*="policy"]:active{
   color: var(--green) !important;
 }
+/* FORCE darker green for Policy link */
+.header-right a[href$="policy.html"],
+.header-right a[href$="policy.html"]:visited,
+.header-right a[href$="policy.html"]:active,
+.header-right a[href$="policy.html"]:hover{
+  color: var(--green) !important;
+}
