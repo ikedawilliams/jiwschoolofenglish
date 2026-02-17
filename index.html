@@ -506,20 +506,24 @@
 document.addEventListener("DOMContentLoaded", () => {
   const buttons = document.querySelectorAll(".lang-btn");
 
-  const heroEN = document.querySelector(".lang-block.lang-en");
-  const heroJP = document.querySelector(".lang-block.lang-jp");
+  const heroEN = document.querySelectorAll(".lang-block.lang-en");
+  const heroJP = document.querySelectorAll(".lang-block.lang-jp");
 
-  const pageEN = document.querySelector(".lang-all.lang-en");
-  const pageJP = document.querySelector(".lang-all.lang-jp");
+  const pageEN = document.querySelectorAll(".lang-all.lang-en");
+  const pageJP = document.querySelectorAll(".lang-all.lang-jp");
+
+  function setHidden(nodeList, hidden) {
+    nodeList.forEach(el => { el.hidden = hidden; });
+  }
 
   function setLang(lang) {
     const isEN = (lang === "en");
 
-    if (heroEN) heroEN.hidden = !isEN;
-    if (heroJP) heroJP.hidden = isEN;
+    setHidden(heroEN, !isEN);
+    setHidden(heroJP,  isEN);
 
-    if (pageEN) pageEN.hidden = !isEN;
-    if (pageJP) pageJP.hidden = isEN;
+    setHidden(pageEN, !isEN);
+    setHidden(pageJP,  isEN);
 
     buttons.forEach(btn => {
       btn.classList.toggle("active", btn.dataset.lang === lang);
@@ -534,13 +538,11 @@ document.addEventListener("DOMContentLoaded", () => {
     if (saved === "jp" || saved === "en") lang = saved;
   } catch(e) {}
 
-  buttons.forEach(btn => {
-    btn.addEventListener("click", () => setLang(btn.dataset.lang));
-  });
-
+  buttons.forEach(btn => btn.addEventListener("click", () => setLang(btn.dataset.lang)));
   setLang(lang);
 });
 </script>
+
 
 <footer class="footer">
   <div class="social-icons">
