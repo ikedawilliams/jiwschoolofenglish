@@ -850,3 +850,8 @@ p{ margin: 10px 0 0; }
 .header-right a[href$="policy.html"]:hover{
   color: var(--green) !important;
 }
+/* Policy page section spacing */
+.policy-page h2,
+.policy-page h3{
+  margin-top: 32px;
+}
