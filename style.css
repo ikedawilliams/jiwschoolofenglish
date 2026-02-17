@@ -1108,3 +1108,41 @@ hr{
   margin: 34px 0;
   opacity: 0.12;
 }
+/* =========================================
+   CARD SPACING NORMALIZER (fix uneven boxes)
+   Paste at VERY bottom of style.css
+========================================= */
+
+/* Treat these as the only "cards" */
+.fees-card,
+.strategy-call,
+.fit,
+.testimonial-quote{
+  margin: 18px 0 0 !important;     /* same space above every card */
+  padding: 22px 24px !important;   /* same inner padding */
+  border-radius: 12px;
+  border: 1px solid rgba(0,0,0,0.08);
+  background: #f7f7f7;
+}
+
+/* Kill the “stuck to the top-left” look inside cards */
+.fees-card > :first-child,
+.strategy-call > :first-child,
+.fit > :first-child,
+.testimonial-quote > :first-child{
+  margin-top: 0 !important;
+}
+
+.fees-card > :last-child,
+.strategy-call > :last-child,
+.fit > :last-child,
+.testimonial-quote > :last-child{
+  margin-bottom: 0 !important;
+}
+
+/* Strategy Call: remove random default margins on its inner parts */
+.strategy-call h2{ margin-top: 0 !important; }
+.strategy-call .call-lead{ margin: 10px 0 0 !important; }
+.strategy-call ul{ margin: 12px 0 0 !important; padding-left: 20px; }
+.strategy-call .cta-button{ margin: 14px 0 0 !important; display: inline-block; }
+.strategy-call .cta-micro{ margin: 10px 0 0 !important; opacity: 0.8; }
