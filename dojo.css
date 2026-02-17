@@ -158,3 +158,69 @@ hr {
   flex-basis: 100%;
   height: 0;
 }
+/* =========================
+   DOJO PATCH (append at bottom)
+   - supports prompt-head + copy button
+   - fixes bracket choice styling
+========================= */
+
+/* Header row above each prompt (title + copy button) */
+.prompt-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-top: 1.6em;
+}
+
+.copy-prompt-wrap {
+  display: flex;
+  align-items: center;
+}
+
+/* Copy button (matches your existing style) */
+.copy-prompt-btn {
+  appearance: none;
+  border: 1px solid rgba(31, 185, 168, 0.35);
+  background: transparent;
+  color: #1FB9A8;
+  font-weight: 700;
+  font-size: 0.9rem;
+  padding: 6px 10px;
+  border-radius: 999px;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.copy-prompt-btn:hover {
+  opacity: 0.85;
+}
+
+.copy-prompt-btn:disabled {
+  opacity: 0.65;
+  cursor: default;
+}
+
+/* Prompt content: keep the "prompt text" green, but stop forcing EVERYTHING bold */
+.prompt-content {
+  color: #1FB9A8;
+  font-weight: 600; /* slightly less shouty than 700 */
+}
+
+/* Only bold key labels, not every single word */
+.prompt-content strong {
+  font-weight: 700;
+}
+
+/* Lists inside prompt blocks */
+.prompt-content ul {
+  margin: 10px 0 0 20px;
+}
+
+/* Slots already black in your CSS — keep them readable */
+.prompt-content .slot {
+  color: #000000;
+  font-weight: 700;
+}
+
+/* ✅ Fix: bracket choice text should be b*
