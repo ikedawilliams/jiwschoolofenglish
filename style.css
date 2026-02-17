@@ -929,3 +929,40 @@ hr{
   }
 }
 
+/* ===== Strategy Call (firmer, less soft) ===== */
+.strategy-call {
+  border: 1px solid rgba(0,0,0,0.12);
+  border-radius: 14px;
+  padding: 18px 18px;
+  background: #fff;
+}
+
+.strategy-call h2 {
+  margin: 0 0 6px;
+  letter-spacing: 0.2px;
+}
+
+.call-lead {
+  margin: 0 0 14px;
+  font-weight: 600;
+}
+
+.call-points {
+  margin: 0 0 16px;
+  padding-left: 18px;
+}
+
+.call-points li {
+  margin: 8px 0;
+}
+
+.cta-button--secondary {
+  display: inline-block;
+  margin-top: 4px;
+}
+
+.strategy-call .cta-micro {
+  margin-top: 10px;
+  opacity: 0.85;
+  font-weight: 600;
+}
