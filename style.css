@@ -883,3 +883,47 @@ hr{
 /* Tighten spacing between Results lists so it doesn’t feel redundant */
 .results .results-core{ margin-top: 8px; }
 .results .results-wins{ margin-top: 8px; }
+/* =================================
+   FLATTEN + SIMPLIFY (No Shadows)
+================================= */
+
+/* Remove ALL box shadows */
+.fit,
+.testimonial-quote,
+.fees-card,
+.strategy-call,
+.results-note{
+  box-shadow: none !important;
+}
+
+/* Make cards subtle instead of floating */
+.fit,
+.testimonial-quote,
+.fees-card,
+.strategy-call{
+  background: #f7f7f7;
+  border: 1px solid rgba(0,0,0,0.08);
+  border-radius: 12px;
+  padding: 18px 20px;
+}
+
+/* Remove the "extra box" feeling in Results */
+.results-note{
+  background: transparent;
+  border: 0;
+  padding: 0;
+  margin-top: 16px;
+  font-weight: 500;
+  opacity: 0.9;
+}
+
+/* Tighten section rhythm */
+.page hr{
+  margin: 32px 0;
+  opacity: 0.15;
+}
+
+/* Slightly increase breathing room above big sections */
+.page section{
+  margin-top: 6px;
+}
