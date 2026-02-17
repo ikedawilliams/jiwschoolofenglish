@@ -837,3 +837,9 @@ p{ margin: 10px 0 0; }
   border-top: 0 !important;
   padding: 0 !important;
 }
+/* HARD LOCK: Policy link darker green */
+.header-right a[href*="policy"],
+.header-right a[href*="policy"]:visited,
+.header-right a[href*="policy"]:active{
+  color: var(--green) !important;
+}
