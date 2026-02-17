@@ -767,3 +767,13 @@ hr{
 .header-right a:hover {
   opacity: 0.8;
 }
+/* Home: Fees block (minimal, premium) */
+.fees-block { margin: 40px 0; }
+.fees-card {
+  background: #ffffff;
+  border: 1px solid rgba(0,0,0,0.08);
+  border-radius: 10px;
+  padding: 18px 20px;
+}
+.fees-line { margin: 0 0 14px; }
+.fees-note { margin: 0; color: #555; font-style: italic; }
