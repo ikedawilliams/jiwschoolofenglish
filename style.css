@@ -756,3 +756,14 @@ hr{
     max-width: 380px;
   }
 }
+/* Force consistent header nav color */
+
+.header-right a,
+.header-right a:visited,
+.header-right a:active {
+  color: #1FB9A8;
+}
+
+.header-right a:hover {
+  opacity: 0.8;
+}
