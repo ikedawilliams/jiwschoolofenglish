@@ -777,3 +777,45 @@ hr{
 }
 .fees-line { margin: 0 0 14px; }
 .fees-note { margin: 0; color: #555; font-style: italic; }
+/* ===== Layout rhythm + width (safe overrides) ===== */
+.page{
+  max-width: 860px;      /* was likely smaller */
+  margin: 0 auto;
+  padding: 24px 18px;    /* a touch tighter */
+}
+
+.page section{
+  margin: 0;
+  padding: 0;
+}
+
+.page hr{
+  margin: 26px 0;        /* reduces the “floating” feel */
+  opacity: 0.25;
+}
+
+/* Headings spacing: consistent rhythm */
+.page h2{
+  margin: 0 0 12px;
+}
+
+.page h3{
+  margin: 18px 0 10px;
+}
+
+/* Lists: slightly easier to scan */
+.page ul{
+  margin: 10px 0 0;
+  padding-left: 18px;
+}
+
+.page li{
+  margin: 8px 0;
+}
+
+/* Testimonial box: match content width + weight */
+.testimonial-quote{
+  max-width: 100%;
+  margin: 0;
+  padding: 16px 18px;
+}
