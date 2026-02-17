@@ -6,15 +6,10 @@
 *{ box-sizing:border-box; }
 
 :root{
-  --brand: #1FB9A8;   /* THE ONLY GREEN */
+  --green:  #1FB9A8;
+  --green2: #1FB9A8;
+  --brand:  #1FB9A8;
 
-  --text:  #111;
-  --muted: rgba(0,0,0,0.72);
-  --line:  rgba(0,0,0,0.08);
-
-  --cardbg: #f7f7f7;
-  --radius: 14px;
-}
 
 html{
   -webkit-text-size-adjust:100%;
