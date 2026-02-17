@@ -855,31 +855,3 @@ p{ margin: 10px 0 0; }
 .policy-page h3{
   margin-top: 32px;
 }
-/* =========================
-   DOJO VERTICAL RHYTHM FIX
-   ========================= */
-
-/* Tighten spacing between intro text lines */
-.dojo-container p{
-  margin: 10px 0 0;
-}
-
-/* Add intentional space before section headers */
-.dojo-container h2{
-  margin-top: 36px;
-}
-
-/* First h2 on page should not have huge gap */
-.dojo-container h2:first-of-type{
-  margin-top: 24px;
-}
-
-/* Clean spacing for Jump block */
-.dojo-container .dojo-nav{
-  margin: 28px 0 18px;
-}
-
-/* Reduce awkward gap after Jump links */
-.dojo-container .dojo-nav + h2{
-  margin-top: 26px;
-}
