@@ -18,7 +18,7 @@
 
     <div class="header-center">
       <div class="lang-toggle">
-        <button type="button" class="lang-btn" data-lang="en">EN</button>
+        <button type="button" class="lang-btn active" data-lang="en">EN</button>
         <button type="button" class="lang-btn" data-lang="jp">JP</button>
       </div>
     </div>
@@ -34,103 +34,155 @@
 
 <main class="page">
 
-<!-- ================= HERO ================= -->
+  <!-- ================= HERO ================= -->
 
-<div class="hero">
+  <div class="hero">
 
-  <div class="hero-copy">
+    <div class="hero-copy">
 
-    <!-- EN HERO -->
-    <div class="lang-block lang-en">
-      <h1>Stop practicing English.<br>Start performing in English.</h1>
-      <p class="hero-sub">
-        High-standard coaching for Japanese professionals preparing for meetings, presentations, overseas assignments, and high-stakes exams.
-      </p>
-      <a href="https://forms.gle/deckEoSGvQyVB17E7" class="cta-button" target="_blank">
-        Book a Free 30-Min Strategy Call
-      </a>
+      <!-- EN HERO -->
+      <div class="lang-block lang-en">
+
+        <div class="hero-photo hero-photo--mobile">
+          <img src="images/John.png"
+               alt="John Ikeda-Williams – JIW School of English"
+               class="teacher-photo mobile hero-face">
+        </div>
+
+        <h1>Stop practicing English.<br>Start performing in English.</h1>
+
+        <p class="hero-sub">
+          High-standard coaching for Japanese professionals preparing for meetings, presentations, overseas assignments, and high-stakes exams (IELTS / TOEFL / TOEIC / EIKEN).
+        </p>
+
+        <p class="hero-proof">
+          <strong>25+ years teaching in Japan</strong> • Clear, direct corrections • Real-world performance focus
+        </p>
+
+        <a href="https://forms.gle/deckEoSGvQyVB17E7"
+           class="cta-button"
+           target="_blank"
+           rel="noopener">
+          Book a Free 30-Min Strategy Call
+        </a>
+
+      </div>
+
+      <!-- JP HERO -->
+      <div class="lang-block lang-jp" hidden>
+
+        <div class="hero-photo hero-photo--mobile">
+          <img src="images/John.png"
+               alt="John Ikeda-Williams – JIW School of English"
+               class="teacher-photo mobile hero-face">
+        </div>
+
+        <h1>英語を「勉強」から<br>「実戦」へ。</h1>
+
+        <p class="hero-sub">
+          会議・プレゼン・海外出張など、<strong>実務の現場で通用する英語</strong>へ。
+          試験対策（IELTS / TOEFL / TOEIC / 英検）にも対応。
+        </p>
+
+        <p class="hero-proof">
+          <strong>指導歴25年以上（日本）</strong> • 修正は明確に • 実戦重視
+        </p>
+
+        <a href="https://forms.gle/deckEoSGvQyVB17E7"
+           class="cta-button"
+           target="_blank"
+           rel="noopener">
+          無料ストラテジー相談（30分）を予約
+        </a>
+
+      </div>
+
     </div>
 
-    <!-- JP HERO -->
-    <div class="lang-block lang-jp" hidden>
-      <h1>英語を「勉強」から<br>「実戦」へ。</h1>
-      <p class="hero-sub">
-        会議・プレゼン・海外出張など、実務の現場で通用する英語へ。
-      </p>
-      <a href="https://forms.gle/deckEoSGvQyVB17E7" class="cta-button" target="_blank">
-        無料ストラテジー相談（30分）を予約
-      </a>
+    <div class="hero-photo hero-photo--desktop">
+      <img src="images/John.png"
+           alt="John Ikeda-Williams"
+           class="teacher-photo desktop">
     </div>
 
   </div>
 
-</div>
+  <!-- ================= EN CONTENT ================= -->
 
-<!-- ================= ENGLISH CONTENT ================= -->
+  <div class="lang-all lang-en">
 
-<div class="lang-all lang-en">
-
-  <section>
-    <h2>About</h2>
-    <p>I’m John Williams, founder of JIW School of English.</p>
-    <p>25+ years teaching in Japan. Former PwC tax professional. International business background.</p>
-  </section>
-
-  <hr>
-
-  <section>
-    <h2>Professional Coaching Fees (30 minutes)</h2>
-
-    <div class="fees-card">
-      <p><strong>Standard Professional Session</strong><br>¥5,000</p>
-      <p><strong>Prime Performance Session (16:00–18:00)</strong><br>¥6,000</p>
-      <p class="fees-note">
-        Prime sessions are designed for high-focus presentation and executive communication training.
+    <section class="about">
+      <h2>About</h2>
+      <p>Hi, I’m <strong>John Williams</strong>, founder of JIW School of English.</p>
+      <p>
+        I help Japanese professionals communicate clearly and confidently
+        in real-world business situations.
       </p>
-    </div>
-  </section>
+    </section>
 
-  <hr>
+    <hr>
 
-  <section>
-    <h2>Free Strategy Call</h2>
-    <p>30 minutes • Zoom • No pressure</p>
-  </section>
+    <section class="fees-block">
+      <h2>Professional Coaching Fees (30 minutes)</h2>
 
-</div>
+      <div class="fees-card">
+        <p class="fees-line">
+          <strong>Standard Professional Session</strong><br>
+          ¥5,000
+        </p>
 
-<!-- ================= JAPANESE CONTENT ================= -->
+        <p class="fees-line">
+          <strong>Prime Performance Session (16:00–18:00)</strong><br>
+          ¥6,000
+        </p>
 
-<div class="lang-all lang-jp" hidden>
+        <p class="fees-note">
+          Prime sessions are designed for high-focus training such as
+          presentations, business scenarios, and executive communication.
+        </p>
+      </div>
+    </section>
 
-  <section>
-    <h2>講師プロフィール</h2>
-    <p>JIW School of English代表の John Williams です。</p>
-    <p>日本での指導歴25年以上。元PwC税務プロフェッショナル。</p>
-  </section>
+  </div>
 
-  <hr>
+  <!-- ================= JP CONTENT ================= -->
 
-  <section>
-    <h2>プロ向けコーチング料金（30分）</h2>
+  <div class="lang-all lang-jp" hidden>
 
-    <div class="fees-card">
-      <p><strong>スタンダード（プロ向けセッション）</strong><br>¥5,000</p>
-      <p><strong>プライム（高集中セッション／16:00–18:00）</strong><br>¥6,000</p>
-      <p class="fees-note">
-        プレゼン準備や実務英語に集中して取り組む方向けの時間帯です。
+    <section class="about">
+      <h2>講師プロフィール</h2>
+      <p>
+        JIW School of English代表の <strong>John Williams</strong> です。
       </p>
-    </div>
-  </section>
+      <p>
+        実務の現場で通用する英語力の向上に特化しています。
+      </p>
+    </section>
 
-  <hr>
+    <hr>
 
-  <section>
-    <h2>無料ストラテジー相談</h2>
-    <p>30分 • Zoom • 勧誘なし</p>
-  </section>
+    <section class="fees-block">
+      <h2>プロ向けコーチング料金（30分）</h2>
 
-</div>
+      <div class="fees-card">
+        <p class="fees-line">
+          <strong>スタンダード（プロ向けセッション）</strong><br>
+          ¥5,000
+        </p>
+
+        <p class="fees-line">
+          <strong>プライム（高集中セッション／16:00–18:00）</strong><br>
+          ¥6,000
+        </p>
+
+        <p class="fees-note">
+          プレゼン準備・ビジネスロールプレイなど、
+          集中して成果を出すトレーニング向けです。
+        </p>
+      </div>
+    </section>
+
+  </div>
 
 </main>
 
@@ -144,26 +196,25 @@ document.addEventListener("DOMContentLoaded", () => {
 
   function setLang(lang) {
     const isEN = (lang === "en");
-
     heroEN.hidden = !isEN;
     heroJP.hidden = isEN;
-
     pageEN.hidden = !isEN;
     pageJP.hidden = isEN;
 
-    buttons.forEach(btn =>
-      btn.classList.toggle("active", btn.dataset.lang === lang)
-    );
+    buttons.forEach(btn => {
+      btn.classList.toggle("active", btn.dataset.lang === lang);
+    });
 
     localStorage.setItem("jiw_lang", lang);
   }
 
-  const saved = localStorage.getItem("jiw_lang");
-  setLang(saved === "jp" ? "jp" : "en");
+  let lang = localStorage.getItem("jiw_lang") || "en";
 
-  buttons.forEach(btn =>
-    btn.addEventListener("click", () => setLang(btn.dataset.lang))
-  );
+  buttons.forEach(btn => {
+    btn.addEventListener("click", () => setLang(btn.dataset.lang));
+  });
+
+  setLang(lang);
 });
 </script>
 
