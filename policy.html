@@ -18,7 +18,7 @@
 
     <div class="header-center">
       <div class="lang-toggle">
-        <button type="button" class="lang-btn active" data-lang="en">EN</button>
+        <button type="button" class="lang-btn" data-lang="en">EN</button>
         <button type="button" class="lang-btn" data-lang="jp">JP</button>
       </div>
     </div>
@@ -179,7 +179,7 @@
   <h2>7. 紹介制度（2026年）</h2>
   <ul>
     <li>2026年に新規受講者を紹介した場合、紹介者の料金を<strong>10%割引</strong>とします。</li>
-    <li>割引は紹介者が在籍している間適用されます。</li>
+    <li>割引は紹介された受講者が在籍している間適用されます。</li>
   </ul>
 
   <h2>8. 料金</h2>
@@ -209,3 +209,35 @@
 </div>
 
 </main>
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const buttons = document.querySelectorAll(".lang-btn");
+  const pageEN = document.querySelector(".lang-all.lang-en");
+  const pageJP = document.querySelector(".lang-all.lang-jp");
+
+  function setLang(lang) {
+    const isEN = (lang === "en");
+    if (pageEN) pageEN.hidden = !isEN;
+    if (pageJP) pageJP.hidden = isEN;
+
+    buttons.forEach(btn => {
+      btn.classList.toggle("active", btn.dataset.lang === lang);
+    });
+
+    try { localStorage.setItem("jiw_lang", lang); } catch(e) {}
+  }
+
+  let lang = "en";
+  try {
+    const saved = localStorage.getItem("jiw_lang");
+    if (saved === "jp" || saved === "en") lang = saved;
+  } catch(e) {}
+
+  buttons.forEach(btn => btn.addEventListener("click", () => setLang(btn.dataset.lang)));
+  setLang(lang);
+});
+</script>
+
+</body>
+</html>
