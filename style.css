@@ -1025,3 +1025,86 @@ hr{
   margin-top: 14px;
   opacity: 0.8;
 }
+/* =========================================
+   BOX ALIGNMENT + RESULTS SUBSECTION STYLE
+   Paste at VERY bottom of style.css
+========================================= */
+
+/* 1) Make the main column feel anchored */
+.page{
+  max-width: 880px;
+  margin: 0 auto;
+  padding: 34px 22px;
+}
+
+/* Give sections a consistent left edge */
+.page section{
+  margin-left: 0;
+  margin-right: 0;
+}
+
+/* 2) Cards: consistent padding + consistent spacing outside */
+.fit,
+.testimonial-quote,
+.fees-card,
+.strategy-call{
+  background: #f7f7f7;
+  border: 1px solid rgba(0,0,0,0.08);
+  border-radius: 12px;
+
+  /* consistent inner padding */
+  padding: 22px 24px;
+
+  /* consistent outer spacing */
+  margin: 18px 0 0;
+}
+
+/* Fix list indentation inside cards (the bullets were pushing weird) */
+.fit ul,
+.strategy-call ul{
+  padding-left: 20px;
+  margin-top: 10px;
+}
+
+.fit li,
+.strategy-call li{
+  margin: 10px 0;
+  line-height: 1.7;
+}
+
+/* 3) Results section: treat "Recent Client Results" as a real centered subheader */
+.results h3{
+  margin: 30px 0 14px;
+  padding: 10px 0 12px;
+  text-align: center;
+  font-weight: 700;
+  letter-spacing: 0.2px;
+
+  /* subtle separator line (clean, not messy) */
+  border-top: 1px solid rgba(0,0,0,0.08);
+}
+
+/* Reduce list clutter and align bullets cleanly in Results */
+.results ul{
+  padding-left: 20px;
+}
+
+.results li{
+  margin: 10px 0;
+  line-height: 1.7;
+}
+
+/* Make the closing line feel intentional */
+.results-note{
+  margin-top: 18px;
+  padding-top: 14px;
+  border-top: 1px solid rgba(0,0,0,0.08);
+  font-weight: 600;
+  opacity: 0.85;
+}
+
+/* 4) Reduce the "random whitespace" feeling between major blocks */
+.page hr{
+  margin: 34px 0;
+  opacity: 0.12;
+}
