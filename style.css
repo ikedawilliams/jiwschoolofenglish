@@ -819,3 +819,67 @@ hr{
   margin: 0;
   padding: 16px 18px;
 }
+/* ================================
+   FINAL OVERRIDES — CONSISTENCY
+   Paste at VERY bottom of style.css
+================================ */
+
+/* Page width + padding (desktop-friendly) */
+.page{
+  max-width: 880px;
+  margin: 0 auto;
+  padding: 24px 18px;
+}
+
+/* Vertical rhythm */
+.page hr{
+  margin: 26px 0;
+  opacity: 0.22;
+}
+
+.page h2{ margin: 0 0 12px; }
+.page h3{ margin: 18px 0 10px; }
+.page p{ margin: 10px 0 0; }
+
+.page ul{
+  margin: 10px 0 0;
+  padding-left: 18px;
+}
+
+.page li{ margin: 8px 0; }
+
+/* ---- ONE consistent "card" style for ALL boxes ---- */
+.fit,
+.testimonial-quote,
+.fees-card,
+.strategy-call,
+.results-note{
+  background: #fff;
+  border: 1px solid rgba(0,0,0,0.10);
+  border-radius: 14px;
+  padding: 16px 18px;
+  box-shadow: 0 8px 22px rgba(0,0,0,0.06);
+}
+
+/* Remove weird extra spacing inside card blocks */
+.testimonial-quote{ margin: 0; }
+.testimonial-text{ margin: 0; }
+.testimonial-attrib{ margin: 12px 0 0; }
+
+.fees-card .fees-line{ margin: 0 0 12px; }
+.fees-card .fees-line:last-child{ margin-bottom: 0; }
+
+.strategy-call .call-lead{ margin-top: 6px; }
+.strategy-call .cta-button{
+  margin-top: 14px;
+  display: inline-block;
+}
+
+/* Make the "syllabus" box feel intentional, not random */
+.results-note{
+  margin-top: 14px;
+}
+
+/* Tighten spacing between Results lists so it doesn’t feel redundant */
+.results .results-core{ margin-top: 8px; }
+.results .results-wins{ margin-top: 8px; }
