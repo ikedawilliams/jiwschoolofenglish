@@ -1,22 +1,21 @@
 /* =========================
-   JIW SCHOOL OF ENGLISH — CLEAN BASE CSS (POLISHED)
+   JIW SCHOOL OF ENGLISH — CLEAN SINGLE SOURCE CSS
    Replace your entire style.css with this file
    ========================= */
 
 *{ box-sizing:border-box; }
 
 :root{
-  --green:  #1fa58a;    /* darker */
-  --green2: #1FB9A8;    /* CTA / main brand */
+  --green:  #1fa58a;
+  --green2: #1FB9A8;
   --brand:  var(--green2);
 
   --text:  #111;
   --muted: rgba(0,0,0,0.72);
   --line:  rgba(0,0,0,0.08);
 
-  --card: rgba(0,0,0,0.035);
-  --shadow: 0 10px 26px rgba(0,0,0,0.10);
-  --radius: 16px; /* slightly less soft */
+  --cardbg: #f7f7f7;
+  --radius: 14px;
 }
 
 html{
@@ -26,7 +25,7 @@ html{
 
 body{
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
-  line-height: 1.6;
+  line-height: 1.65;
   margin: 0;
   color: var(--text);
   background: #fff;
@@ -36,9 +35,9 @@ body{
 .page,
 .dojo-container,
 .policy-page{
-  max-width: 1100px;
+  max-width: 900px;
   margin: 0 auto;
-  padding: 22px 20px 60px;
+  padding: 34px 22px 70px;
 }
 
 /* HARD LOCK: anything with [hidden] must never render */
@@ -101,7 +100,10 @@ a:hover{ text-decoration: underline; }
   gap: 16px;
 }
 
-.header-right a{
+/* nav color consistent */
+.header-right a,
+.header-right a:visited,
+.header-right a:active{
   color: var(--brand);
   text-decoration: none;
   font-weight: 800;
@@ -110,9 +112,7 @@ a:hover{ text-decoration: underline; }
 .header-right a:hover{ opacity: 0.9; }
 
 /* Policy link darker green (your preference) */
-.header-right a[href*="policy"]{
-  color: var(--green);
-}
+.header-right a[href*="policy"]{ color: var(--green); }
 
 /* Language toggle pills */
 .lang-toggle{
@@ -135,7 +135,6 @@ a:hover{ text-decoration: underline; }
   cursor: pointer;
   line-height: 1;
 }
-
 .lang-btn:focus{ outline: none; }
 .lang-btn.active{
   background: var(--brand);
@@ -144,19 +143,67 @@ a:hover{ text-decoration: underline; }
 }
 
 /* =========================
-   TYPO
+   TYPO + RHYTHM (ELITE BASE)
    ========================= */
 
-h1{ line-height: 1.15; margin: 0 0 12px; letter-spacing: -0.3px; }
-h2{ margin: 28px 0 10px; letter-spacing: -0.2px; }
-h3{ margin: 22px 0 8px; }
-p{ margin: 0 0 14px; }
+h1{ line-height: 1.12; margin: 0 0 14px; letter-spacing: -0.3px; }
+h2{ margin: 0 0 14px; letter-spacing: -0.2px; line-height: 1.18; }
+h3{ margin: 26px 0 12px; line-height: 1.22; }
+p{ margin: 12px 0 0; }
 
 hr{
   border: none;
   border-top: 1px solid var(--line);
-  margin: 52px 0;
+  margin: 40px 0;
+  opacity: 0.12;
 }
+
+/* =========================
+   NEW: INTENTIONAL SECTION SYSTEM
+   (Works with the rewritten HTML)
+   ========================= */
+
+.block{ margin: 0; }
+.block + .block{ margin-top: 40px; }
+
+.section-title{ margin: 0 0 14px; }
+.sub-title{ margin: 26px 0 12px; }
+.sub-title--center{ text-align: center; }
+
+.list{ margin: 12px 0 0; padding-left: 20px; }
+.list li{ margin: 10px 0; line-height: 1.7; }
+
+.muted{ color: var(--muted); }
+.takeaway{
+  margin-top: 18px;
+  padding-top: 14px;
+  border-top: 1px solid rgba(0,0,0,0.08);
+  font-weight: 650;
+  opacity: 0.88;
+}
+
+/* ONE intentional card style (no floating shadows) */
+.card,
+.fit,
+.testimonial-quote,
+.fees-card,
+.strategy-call{
+  background: var(--cardbg);
+  border: 1px solid rgba(0,0,0,0.08);
+  border-radius: var(--radius);
+  padding: 22px 24px;
+  margin-top: 18px;
+}
+.card > :first-child,
+.fit > :first-child,
+.testimonial-quote > :first-child,
+.fees-card > :first-child,
+.strategy-call > :first-child{ margin-top: 0 !important; }
+.card > :last-child,
+.fit > :last-child,
+.testimonial-quote > :last-child,
+.fees-card > :last-child,
+.strategy-call > :last-child{ margin-bottom: 0 !important; }
 
 /* =========================
    HOME: HERO
@@ -174,10 +221,11 @@ hr{
   align-items: end;
 }
 
-.hero-sub{ margin-bottom: 10px; max-width: 46rem; }
+.hero-title{ margin: 0 0 14px; }
+.hero-sub{ margin: 0 0 12px; max-width: 46rem; }
 
 .hero-proof{
-  margin: 0 0 16px;
+  margin: 0 0 18px;
   font-size: 0.98rem;
   color: rgba(0,0,0,0.78);
 }
@@ -189,22 +237,23 @@ hr{
 /* CTA buttons */
 .cta-button{
   display: inline-block;
-  background: var(--brand);
+  background: var(--brand);              /* GREEN by default (elite confidence) */
   padding: 16px 22px;
   border-radius: 12px;
   font-weight: 900;
   letter-spacing: 0.2px;
-  box-shadow: 0 10px 24px rgba(31,185,168,0.18);
+  box-shadow: none;                      /* flat, premium */
 }
+.cta-button:hover{ text-decoration: none; filter: brightness(0.98); }
 
-.cta-button:hover{
-  text-decoration: none;
-  filter: brightness(0.98);
-}
-
+/* Secondary stays black (optional use) */
 .cta-button--secondary{
   background: #111;
-  box-shadow: 0 10px 24px rgba(0,0,0,0.14);
+}
+
+/* optional explicit primary alias */
+.cta-button--primary{
+  background: var(--brand);
 }
 
 .cta-micro{
@@ -212,9 +261,7 @@ hr{
   font-size: 0.95rem;
   color: rgba(0,0,0,0.72);
 }
-.cta-micro a{
-  font-weight: 800;
-}
+.cta-micro a{ font-weight: 800; }
 
 /* Photos */
 .hero-photo{ display: flex; justify-content: flex-end; }
@@ -222,7 +269,8 @@ hr{
 .teacher-photo{
   border-radius: 18px;
   background: #fff;
-  box-shadow: var(--shadow);
+  box-shadow: none;     /* remove “random shadow” feeling */
+  border: 1px solid rgba(0,0,0,0.08);
 }
 
 .teacher-photo.desktop{
@@ -242,87 +290,62 @@ hr{
 }
 
 /* =========================
-   ABOUT + FIT (new sections)
+   ABOUT
    ========================= */
 
-.about ul{
-  margin: 0;
-  padding-left: 18px;
-}
-.about li{
-  margin: 8px 0;
-}
+.about ul{ margin: 12px 0 0; padding-left: 20px; }
+.about li{ margin: 10px 0; }
 
-.fit{
-  margin-top: 18px;
-  padding: 16px 16px;
-  border: 1px solid rgba(0,0,0,0.10);
-  border-radius: 14px;
-  background: #fff;
-}
-.fit ul{
-  margin: 0;
-  padding-left: 18px;
-}
-.fit li{ margin: 9px 0; }
-.fit-note{
-  margin: 12px 0 0;
-  font-size: 0.95rem;
-  color: rgba(0,0,0,0.72);
-}
+/* Fit box (uses the card system above) */
+.fit ul{ margin: 10px 0 0; padding-left: 20px; }
+.fit li{ margin: 10px 0; }
+.fit-note{ margin-top: 12px; font-size: 0.95rem; color: var(--muted); }
 
 /* =========================
-   RESULTS (polish)
+   RESULTS (make “Recent…” intentional)
    ========================= */
 
-.results ul{
-  margin: 0;
-  padding-left: 18px;
-}
+.results ul{ margin: 12px 0 0; padding-left: 20px; }
 .results li{ margin: 10px 0; }
 
-.results-core li strong{
-  font-weight: 900;
-}
+.results-core li strong{ font-weight: 800; }
 
+/* Subheader style (centered + divider) */
 .results h3{
-  margin-top: 18px;
+  margin: 30px 0 14px;
+  padding: 12px 0 12px;
+  text-align: center;
+  border-top: 1px solid rgba(0,0,0,0.08);
 }
 
+/* Closing line */
 .results-note{
-  margin-top: 14px;
-  padding: 12px 14px;
-  border-left: 5px solid rgba(0,0,0,0.14);
-  background: var(--card);
-  border-radius: 12px;
-  color: rgba(0,0,0,0.78);
-  font-weight: 700;
+  margin-top: 18px;
+  padding-top: 14px;
+  border-top: 1px solid rgba(0,0,0,0.08);
+  font-weight: 650;
+  opacity: 0.88;
+  background: transparent;
+  border-left: 0;
+  border-radius: 0;
 }
 
 /* =========================
    TESTIMONIAL
    ========================= */
 
-.testimonial{ margin: 56px auto; }
+.testimonial{ margin: 0; } /* let .block control vertical rhythm */
 
-.testimonial-quote{
-  background: var(--card);
-  padding: 18px;
-  border-radius: 12px;
-  border: 1px solid rgba(0,0,0,0.08);
-}
-
+.testimonial-text{ margin: 0; line-height: 1.75; }
 .testimonial-attrib{
-  margin-top: 10px;
-  font-size: 0.9rem;
-  opacity: 0.75;
+  margin-top: 14px;
+  font-size: 0.92rem;
+  opacity: 0.78;
 }
 
 /* =========================
    WHAT LESSONS FEEL LIKE
    ========================= */
-
-.lessons-feel{ margin: 56px auto; }
 
 .lessons-grid{
   display: grid;
@@ -336,7 +359,8 @@ hr{
   height: auto;
   display: block;
   border-radius: 14px;
-  box-shadow: 0 10px 24px rgba(0,0,0,0.12);
+  box-shadow: none;
+  border: 1px solid rgba(0,0,0,0.08);
   filter: saturate(0.95) contrast(0.98);
 }
 
@@ -365,8 +389,8 @@ hr{
   font-size: 0.95em;
 }
 
-.lessons-points ul{ margin:0; padding-left:18px; }
-.lessons-points li{ margin:12px 0; }
+.lessons-points ul{ margin:12px 0 0; padding-left:20px; }
+.lessons-points li{ margin:10px 0; line-height:1.7; }
 
 /* Lightbox */
 .lightbox{
@@ -390,15 +414,11 @@ hr{
   margin: 7vh auto 0 auto;
   border-radius: 14px;
   overflow: hidden;
-  box-shadow: 0 18px 60px rgba(0,0,0,0.35);
   background: #fff;
+  box-shadow: none;
 }
 
-.lightbox-img{
-  width: 100%;
-  height: auto;
-  display:block;
-}
+.lightbox-img{ width: 100%; height: auto; display:block; }
 
 .lightbox-x{
   position:absolute;
@@ -417,42 +437,26 @@ hr{
 .lightbox-x:hover{ background:#fff; }
 
 /* =========================
-   STRATEGY CALL (firmer, less soft)
+   FEES
    ========================= */
 
-.strategy-call{
-  border: 1px solid rgba(0,0,0,0.12);
-  border-radius: 14px;
-  padding: 18px 18px;
-  background: #fff;
-  box-shadow: 0 10px 22px rgba(0,0,0,0.06);
-}
+.fees-block{ margin: 0; } /* let .block control */
+.fees-line{ margin: 0 0 12px; }
+.fees-note{ margin: 10px 0 0; color: #555; font-style: italic; }
 
-.strategy-call h2{
-  margin: 0 0 6px;
-  letter-spacing: -0.2px;
-}
+/* =========================
+   STRATEGY CALL
+   ========================= */
 
+.strategy-call h2{ margin: 0 0 6px; }
 .call-lead{
   margin: 0 0 14px;
   font-weight: 800;
   color: rgba(0,0,0,0.78);
 }
 
-.call-points{
-  margin: 0 0 16px;
-  padding-left: 18px;
-}
-
-.call-points li{
-  margin: 8px 0;
-}
-
-.strategy-call .cta-micro{
-  margin-top: 10px;
-  opacity: 0.88;
-  font-weight: 800;
-}
+.call-points{ margin: 0 0 16px; padding-left: 20px; }
+.call-points li{ margin: 10px 0; line-height: 1.7; }
 
 /* =========================
    FOOTER + SOCIAL
@@ -499,10 +503,7 @@ hr{
   display:block;
 }
 
-.footer-mini{
-  font-size:0.8rem;
-  opacity:0.7;
-}
+.footer-mini{ font-size:0.8rem; opacity:0.7; }
 
 /* Optional icon colors */
 .social-icons a[aria-label="X"] svg{ fill:#000; }
@@ -516,7 +517,6 @@ hr{
 
 @media (max-width: 768px){
 
-  /* Header becomes 2 rows, compact */
   .header-inner{
     grid-template-columns: 1fr auto;
     grid-template-areas:
@@ -530,15 +530,9 @@ hr{
   .header-center{ grid-area: toggle; justify-self: start; }
   .header-right{ grid-area: nav; justify-self: end; gap: 10px; }
 
-  .site-brand{
-    font-size: 1rem;
-    line-height: 1.1;
-  }
+  .site-brand{ font-size: 1rem; line-height: 1.1; }
 
-  .lang-btn{
-    padding: 4px 10px;
-    font-size: 0.85rem;
-  }
+  .lang-btn{ padding: 4px 10px; font-size: 0.85rem; }
 
   .header-right a{
     font-size: 0.92rem;
@@ -547,7 +541,8 @@ hr{
     white-space: nowrap;
   }
 
-  /* HERO: one column */
+  .page{ padding: 28px 16px 60px; }
+
   .hero{
     grid-template-columns: 1fr;
     gap: 16px;
@@ -555,13 +550,9 @@ hr{
     align-items: start;
   }
 
-  /* Hide desktop hero image on mobile */
   .hero-photo--desktop,
-  .teacher-photo.desktop{
-    display: none !important;
-  }
+  .teacher-photo.desktop{ display: none !important; }
 
-  /* Inside each language block: 2-column (text left, face right) */
   .hero .lang-block{
     display: grid;
     grid-template-columns: 1fr auto;
@@ -577,19 +568,13 @@ hr{
     margin: 0;
   }
 
-  .hero-face{
-    transform: translateY(6px);
-  }
+  .hero-face{ transform: translateY(6px); }
 
-  /* Make text never run under the face */
   .hero .lang-block h1,
   .hero .lang-block .hero-sub,
   .hero .lang-block .hero-proof,
-  .hero .lang-block .cta-micro{
-    grid-column: 1;
-  }
+  .hero .lang-block .cta-micro{ grid-column: 1; }
 
-  /* CTA spans full width under both columns */
   .cta-button{
     grid-column: 1 / -1;
     display: block;
@@ -599,7 +584,6 @@ hr{
     text-align: center;
   }
 
-  /* Lessons section stacks */
   .lessons-grid{
     grid-template-columns: 1fr;
     gap: 20px;
@@ -608,28 +592,19 @@ hr{
 }
 
 /* =========================
-   DOJO / POLICY SAFE BASICS (no layout hacks)
+   DOJO / POLICY SAFE BASICS
    ========================= */
 
-.note{
-  font-style: italic;
-  opacity: 0.85;
-}
+.note{ font-style: italic; opacity: 0.85; }
 
-/* =========================
-   DOJO: prompt layout + copy buttons (locked)
-   ========================= */
-
+/* DOJO prompt layout + copy buttons (locked) */
 .dojo-nav{
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   gap: 10px 14px;
 }
-.dojo-nav .nav-break{
-  flex-basis: 100%;
-  height: 0;
-}
+.dojo-nav .nav-break{ flex-basis: 100%; height: 0; }
 
 .prompt-head{
   display: flex !important;
@@ -682,9 +657,7 @@ hr{
   background: rgba(31,185,168,0.10) !important;
   transform: translateY(-1px) !important;
 }
-.copy-prompt-btn:active{
-  transform: translateY(0) !important;
-}
+.copy-prompt-btn:active{ transform: translateY(0) !important; }
 
 .copy-prompt-btn:disabled{
   opacity: 0.65 !important;
@@ -711,19 +684,11 @@ hr{
 
 /* Mobile: keep it neat if the title is long */
 @media (max-width: 520px){
-  .prompt-head{
-    align-items: flex-start !important;
-  }
-  .copy-prompt-wrap{
-    margin-top: 2px !important;
-  }
+  .prompt-head{ align-items: flex-start !important; }
+  .copy-prompt-wrap{ margin-top: 2px !important; }
 }
 
-/* =========================
-   DOJO – Voice Mode Images (EN/JP)
-   (NOTE: HTML sections belong in your .html file, NOT here.)
-   ========================= */
-
+/* Dojo voice mode images */
 .punchE,
 .punchJ{
   margin: 28px auto 36px;
@@ -738,411 +703,16 @@ hr{
   height: auto;
   margin: 0 auto;
   border-radius: 14px;
-  box-shadow: 0 10px 28px rgba(0,0,0,0.10);
+  border: 1px solid rgba(0,0,0,0.08);
+  box-shadow: none;
 }
 
-/* Tablet */
 @media (max-width: 900px){
   .punchE-img,
-  .punchJ-img{
-    max-width: 700px;
-  }
+  .punchJ-img{ max-width: 700px; }
 }
 
-/* Mobile */
 @media (max-width: 600px){
   .punchE-img,
-  .punchJ-img{
-    max-width: 380px;
-  }
+  .punchJ-img{ max-width: 380px; }
 }
-/* Force consistent header nav color */
-
-.header-right a,
-.header-right a:visited,
-.header-right a:active {
-  color: #1FB9A8;
-}
-
-.header-right a:hover {
-  opacity: 0.8;
-}
-/* Home: Fees block (minimal, premium) */
-.fees-block { margin: 40px 0; }
-.fees-card {
-  background: #ffffff;
-  border: 1px solid rgba(0,0,0,0.08);
-  border-radius: 10px;
-  padding: 18px 20px;
-}
-.fees-line { margin: 0 0 14px; }
-.fees-note { margin: 0; color: #555; font-style: italic; }
-/* ===== Layout rhythm + width (safe overrides) ===== */
-.page{
-  max-width: 860px;      /* was likely smaller */
-  margin: 0 auto;
-  padding: 24px 18px;    /* a touch tighter */
-}
-
-.page section{
-  margin: 0;
-  padding: 0;
-}
-
-.page hr{
-  margin: 26px 0;        /* reduces the “floating” feel */
-  opacity: 0.25;
-}
-
-/* Headings spacing: consistent rhythm */
-.page h2{
-  margin: 0 0 12px;
-}
-
-.page h3{
-  margin: 18px 0 10px;
-}
-
-/* Lists: slightly easier to scan */
-.page ul{
-  margin: 10px 0 0;
-  padding-left: 18px;
-}
-
-.page li{
-  margin: 8px 0;
-}
-
-/* Testimonial box: match content width + weight */
-.testimonial-quote{
-  max-width: 100%;
-  margin: 0;
-  padding: 16px 18px;
-}
-/* ================================
-   FINAL OVERRIDES — CONSISTENCY
-   Paste at VERY bottom of style.css
-================================ */
-
-/* Page width + padding (desktop-friendly) */
-.page{
-  max-width: 880px;
-  margin: 0 auto;
-  padding: 24px 18px;
-}
-
-/* Vertical rhythm */
-.page hr{
-  margin: 26px 0;
-  opacity: 0.22;
-}
-
-.page h2{ margin: 0 0 12px; }
-.page h3{ margin: 18px 0 10px; }
-.page p{ margin: 10px 0 0; }
-
-.page ul{
-  margin: 10px 0 0;
-  padding-left: 18px;
-}
-
-.page li{ margin: 8px 0; }
-
-/* ---- ONE consistent "card" style for ALL boxes ---- */
-.fit,
-.testimonial-quote,
-.fees-card,
-.strategy-call,
-.results-note{
-  background: #fff;
-  border: 1px solid rgba(0,0,0,0.10);
-  border-radius: 14px;
-  padding: 16px 18px;
-  box-shadow: 0 8px 22px rgba(0,0,0,0.06);
-}
-
-/* Remove weird extra spacing inside card blocks */
-.testimonial-quote{ margin: 0; }
-.testimonial-text{ margin: 0; }
-.testimonial-attrib{ margin: 12px 0 0; }
-
-.fees-card .fees-line{ margin: 0 0 12px; }
-.fees-card .fees-line:last-child{ margin-bottom: 0; }
-
-.strategy-call .call-lead{ margin-top: 6px; }
-.strategy-call .cta-button{
-  margin-top: 14px;
-  display: inline-block;
-}
-
-/* Make the "syllabus" box feel intentional, not random */
-.results-note{
-  margin-top: 14px;
-}
-
-/* Tighten spacing between Results lists so it doesn’t feel redundant */
-.results .results-core{ margin-top: 8px; }
-.results .results-wins{ margin-top: 8px; }
-/* =================================
-   FLATTEN + SIMPLIFY (No Shadows)
-================================= */
-
-/* Remove ALL box shadows */
-.fit,
-.testimonial-quote,
-.fees-card,
-.strategy-call,
-.results-note{
-  box-shadow: none !important;
-}
-
-/* Make cards subtle instead of floating */
-.fit,
-.testimonial-quote,
-.fees-card,
-.strategy-call{
-  background: #f7f7f7;
-  border: 1px solid rgba(0,0,0,0.08);
-  border-radius: 12px;
-  padding: 18px 20px;
-}
-
-/* Remove the "extra box" feeling in Results */
-.results-note{
-  background: transparent;
-  border: 0;
-  padding: 0;
-  margin-top: 16px;
-  font-weight: 500;
-  opacity: 0.9;
-}
-
-/* Tighten section rhythm */
-.page hr{
-  margin: 32px 0;
-  opacity: 0.15;
-}
-
-/* Slightly increase breathing room above big sections */
-.page section{
-  margin-top: 6px;
-}
-/* =========================================
-   ELITE RHYTHM PASS — Results + spacing
-   Paste at VERY bottom of style.css
-========================================= */
-
-/* Overall text rhythm */
-.page{
-  max-width: 860px;
-  margin: 0 auto;
-  padding: 34px 20px;
-}
-
-.page h2{
-  margin: 0 0 14px;
-  line-height: 1.15;
-}
-
-.page h3{
-  margin: 26px 0 12px;   /* more separation (Results -> Recent Client Results) */
-  line-height: 1.2;
-}
-
-.page p{
-  margin: 12px 0 0;
-  line-height: 1.7;
-}
-
-.page hr{
-  margin: 40px 0;
-  opacity: 0.12;
-}
-
-/* Lists: cleaner, more premium spacing */
-.page ul{
-  margin: 12px 0 0;
-  padding-left: 20px;
-}
-
-.page li{
-  margin: 10px 0;
-  line-height: 1.7;
-}
-
-/* Results section: add clear vertical structure */
-.results .results-core{
-  margin-top: 14px;
-}
-
-.results .results-wins{
-  margin-top: 16px;
-  padding-top: 10px;
-  border-top: 1px solid rgba(0,0,0,0.08); /* subtle divider so it feels intentional */
-}
-
-/* The closing line: make it look like a designed "takeaway" */
-.results-note{
-  margin-top: 18px;
-  font-weight: 600;
-  opacity: 0.85;
-}
-
-/* Make the bullet labels breathe a bit */
-.results strong{
-  font-weight: 700;
-}
-
-/* Card blocks: tighten and align (no shadows) */
-.fit,
-.testimonial-quote,
-.fees-card,
-.strategy-call{
-  background: #f7f7f7;
-  border: 1px solid rgba(0,0,0,0.08);
-  border-radius: 12px;
-  padding: 20px 22px;
-  margin-top: 16px;   /* ensures cards don’t feel stuck to previous content */
-}
-
-/* Fix the awkward first bullet alignment in the "Is this for you?" box */
-.fit ul{
-  margin-top: 10px;
-}
-.fit p.fit-note{
-  margin-top: 12px;
-}
-
-/* Testimonials: stop it feeling cramped */
-.testimonial-quote{
-  margin-top: 16px;
-}
-.testimonial-text{
-  margin: 0;
-  line-height: 1.75;
-}
-.testimonial-attrib{
-  margin-top: 14px;
-  opacity: 0.8;
-}
-/* =========================================
-   BOX ALIGNMENT + RESULTS SUBSECTION STYLE
-   Paste at VERY bottom of style.css
-========================================= */
-
-/* 1) Make the main column feel anchored */
-.page{
-  max-width: 880px;
-  margin: 0 auto;
-  padding: 34px 22px;
-}
-
-/* Give sections a consistent left edge */
-.page section{
-  margin-left: 0;
-  margin-right: 0;
-}
-
-/* 2) Cards: consistent padding + consistent spacing outside */
-.fit,
-.testimonial-quote,
-.fees-card,
-.strategy-call{
-  background: #f7f7f7;
-  border: 1px solid rgba(0,0,0,0.08);
-  border-radius: 12px;
-
-  /* consistent inner padding */
-  padding: 22px 24px;
-
-  /* consistent outer spacing */
-  margin: 18px 0 0;
-}
-
-/* Fix list indentation inside cards (the bullets were pushing weird) */
-.fit ul,
-.strategy-call ul{
-  padding-left: 20px;
-  margin-top: 10px;
-}
-
-.fit li,
-.strategy-call li{
-  margin: 10px 0;
-  line-height: 1.7;
-}
-
-/* 3) Results section: treat "Recent Client Results" as a real centered subheader */
-.results h3{
-  margin: 30px 0 14px;
-  padding: 10px 0 12px;
-  text-align: center;
-  font-weight: 700;
-  letter-spacing: 0.2px;
-
-  /* subtle separator line (clean, not messy) */
-  border-top: 1px solid rgba(0,0,0,0.08);
-}
-
-/* Reduce list clutter and align bullets cleanly in Results */
-.results ul{
-  padding-left: 20px;
-}
-
-.results li{
-  margin: 10px 0;
-  line-height: 1.7;
-}
-
-/* Make the closing line feel intentional */
-.results-note{
-  margin-top: 18px;
-  padding-top: 14px;
-  border-top: 1px solid rgba(0,0,0,0.08);
-  font-weight: 600;
-  opacity: 0.85;
-}
-
-/* 4) Reduce the "random whitespace" feeling between major blocks */
-.page hr{
-  margin: 34px 0;
-  opacity: 0.12;
-}
-/* =========================================
-   CARD SPACING NORMALIZER (fix uneven boxes)
-   Paste at VERY bottom of style.css
-========================================= */
-
-/* Treat these as the only "cards" */
-.fees-card,
-.strategy-call,
-.fit,
-.testimonial-quote{
-  margin: 18px 0 0 !important;     /* same space above every card */
-  padding: 22px 24px !important;   /* same inner padding */
-  border-radius: 12px;
-  border: 1px solid rgba(0,0,0,0.08);
-  background: #f7f7f7;
-}
-
-/* Kill the “stuck to the top-left” look inside cards */
-.fees-card > :first-child,
-.strategy-call > :first-child,
-.fit > :first-child,
-.testimonial-quote > :first-child{
-  margin-top: 0 !important;
-}
-
-.fees-card > :last-child,
-.strategy-call > :last-child,
-.fit > :last-child,
-.testimonial-quote > :last-child{
-  margin-bottom: 0 !important;
-}
-
-/* Strategy Call: remove random default margins on its inner parts */
-.strategy-call h2{ margin-top: 0 !important; }
-.strategy-call .call-lead{ margin: 10px 0 0 !important; }
-.strategy-call ul{ margin: 12px 0 0 !important; padding-left: 20px; }
-.strategy-call .cta-button{ margin: 14px 0 0 !important; display: inline-block; }
-.strategy-call .cta-micro{ margin: 10px 0 0 !important; opacity: 0.8; }
