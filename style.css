@@ -787,3 +787,14 @@ h3{
 .cta-button{
   line-height: 1.1;
 }
+/* Remove the old Results h3 divider styling inside the boxed area */
+.results-box h3{
+  border-top: 0 !important;
+  padding: 0 !important;
+  margin: 0 0 12px !important;
+}
+/* Slightly tighter spacing between Results bullets and the box */
+.results .results-box{ margin-top: 16px; }
+
+/* Keep list alignment consistent inside the box */
+.results-box .list{ margin-top: 10px; }
