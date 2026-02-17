@@ -798,3 +798,42 @@ h3{
 
 /* Keep list alignment consistent inside the box */
 .results-box .list{ margin-top: 10px; }
+/* =========================
+   ELITE TYPO + RHYTHM FIX
+   (About / Professional Background / Is this for you)
+   ========================= */
+
+/* 1) One unified “section heading” size */
+.section-title,
+.h2-like{
+  font-size: 1.55rem;      /* consistent with About/Results */
+  font-weight: 900;
+  letter-spacing: -0.2px;
+  line-height: 1.18;
+}
+
+/* 2) Restore proper spacing ABOVE sub-sections like Professional Background */
+.h2-like{
+  margin: 30px 0 14px;     /* gives space above the heading */
+}
+
+/* 3) BUT: headings inside cards should not have a big top gap */
+.card .h2-like,
+.results-box .h2-like{
+  margin-top: 0;
+}
+
+/* 4) Tighten body rhythm so it stops looking “high school” */
+p{ margin: 10px 0 0; }
+
+.list{ margin: 12px 0 0; padding-left: 20px; }
+.list li{ margin: 8px 0; line-height: 1.65; }
+
+/* 5) Make the About section feel cleaner: add breathing room before the first sub-section */
+.block.about .section-title + p{ margin-top: 14px; }
+
+/* 6) If your old Results h3 divider rule is still hitting anything, kill it inside the box */
+.results-box h3{
+  border-top: 0 !important;
+  padding: 0 !important;
+}
