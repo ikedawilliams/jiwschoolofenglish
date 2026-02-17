@@ -224,3 +224,39 @@ hr {
 }
 
 /* ✅ Fix: bracket choice text should be b*
+
+/* =========================
+   DOJO COLOR LOGIC LOCK
+   Green = fixed prompt text
+   Black = student editable text only
+========================= */
+
+/* Fixed prompt text = green */
+.prompt-content {
+  color: #1FB9A8;
+  font-weight: 600;
+}
+
+/* Keep strong labels bold */
+.prompt-content strong {
+  font-weight: 700;
+}
+
+/* Student editable slots = black */
+.prompt-content .slot {
+  color: #000000;
+  font-weight: 700;
+}
+
+/* If any sections use .edit instead of .slot, treat them the same */
+.prompt-content .edit {
+  color: #000000;
+  font-weight: 700;
+}
+
+/* Prevent accidental inherited bolding */
+.prompt-content p,
+.prompt-content li {
+  font-weight: 600;
+}
+
