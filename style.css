@@ -1,5 +1,5 @@
 /* =========================
-   JIW SCHOOL OF ENGLISH — CLEAN BASE CSS
+   JIW SCHOOL OF ENGLISH — CLEAN BASE CSS (POLISHED)
    Replace your entire style.css with this file
    ========================= */
 
@@ -13,6 +13,10 @@
   --text:  #111;
   --muted: rgba(0,0,0,0.72);
   --line:  rgba(0,0,0,0.08);
+
+  --card: rgba(0,0,0,0.035);
+  --shadow: 0 10px 26px rgba(0,0,0,0.10);
+  --radius: 16px; /* slightly less soft */
 }
 
 html{
@@ -37,7 +41,8 @@ body{
   padding: 22px 20px 60px;
 }
 
-/* Hard-hide language blocks when hidden (prevents EN+JP overlap) */
+/* HARD LOCK: anything with [hidden] must never render */
+[hidden],
 .lang-block[hidden],
 .lang-all[hidden]{
   display: none !important;
@@ -99,9 +104,15 @@ a:hover{ text-decoration: underline; }
 .header-right a{
   color: var(--brand);
   text-decoration: none;
-  font-weight: 700;
+  font-weight: 800;
+  letter-spacing: 0.2px;
 }
 .header-right a:hover{ opacity: 0.9; }
+
+/* Policy link darker green (your preference) */
+.header-right a[href*="policy"]{
+  color: var(--green);
+}
 
 /* Language toggle pills */
 .lang-toggle{
@@ -136,15 +147,15 @@ a:hover{ text-decoration: underline; }
    TYPO
    ========================= */
 
-h1{ line-height: 1.15; margin: 0 0 12px; }
-h2{ margin: 28px 0 10px; }
+h1{ line-height: 1.15; margin: 0 0 12px; letter-spacing: -0.3px; }
+h2{ margin: 28px 0 10px; letter-spacing: -0.2px; }
 h3{ margin: 22px 0 8px; }
 p{ margin: 0 0 14px; }
 
 hr{
   border: none;
   border-top: 1px solid var(--line);
-  margin: 56px 0;
+  margin: 52px 0;
 }
 
 /* =========================
@@ -163,20 +174,46 @@ hr{
   align-items: end;
 }
 
-.hero-sub{ margin-bottom: 10px; }
+.hero-sub{ margin-bottom: 10px; max-width: 46rem; }
 
+.hero-proof{
+  margin: 0 0 16px;
+  font-size: 0.98rem;
+  color: rgba(0,0,0,0.78);
+}
+.hero-proof strong{
+  color: #111;
+  font-weight: 900;
+}
+
+/* CTA buttons */
 .cta-button{
   display: inline-block;
   background: var(--brand);
   padding: 16px 22px;
-  border-radius: 14px;
+  border-radius: 12px;
   font-weight: 900;
+  letter-spacing: 0.2px;
+  box-shadow: 0 10px 24px rgba(31,185,168,0.18);
+}
+
+.cta-button:hover{
+  text-decoration: none;
+  filter: brightness(0.98);
+}
+
+.cta-button--secondary{
+  background: #111;
+  box-shadow: 0 10px 24px rgba(0,0,0,0.14);
 }
 
 .cta-micro{
   margin-top: 10px;
   font-size: 0.95rem;
-  opacity: 0.85;
+  color: rgba(0,0,0,0.72);
+}
+.cta-micro a{
+  font-weight: 800;
 }
 
 /* Photos */
@@ -185,7 +222,7 @@ hr{
 .teacher-photo{
   border-radius: 18px;
   background: #fff;
-  box-shadow: 0 10px 26px rgba(0,0,0,0.12);
+  box-shadow: var(--shadow);
 }
 
 .teacher-photo.desktop{
@@ -194,7 +231,7 @@ hr{
   object-fit: cover;
 }
 
-/* Mobile photo is hidden by default (desktop) */
+/* Mobile photo hidden by default */
 .hero-photo--mobile{ display: none; }
 
 .teacher-photo.mobile{
@@ -205,15 +242,74 @@ hr{
 }
 
 /* =========================
+   ABOUT + FIT (new sections)
+   ========================= */
+
+.about ul{
+  margin: 0;
+  padding-left: 18px;
+}
+.about li{
+  margin: 8px 0;
+}
+
+.fit{
+  margin-top: 18px;
+  padding: 16px 16px;
+  border: 1px solid rgba(0,0,0,0.10);
+  border-radius: 14px;
+  background: #fff;
+}
+.fit ul{
+  margin: 0;
+  padding-left: 18px;
+}
+.fit li{ margin: 9px 0; }
+.fit-note{
+  margin: 12px 0 0;
+  font-size: 0.95rem;
+  color: rgba(0,0,0,0.72);
+}
+
+/* =========================
+   RESULTS (polish)
+   ========================= */
+
+.results ul{
+  margin: 0;
+  padding-left: 18px;
+}
+.results li{ margin: 10px 0; }
+
+.results-core li strong{
+  font-weight: 900;
+}
+
+.results h3{
+  margin-top: 18px;
+}
+
+.results-note{
+  margin-top: 14px;
+  padding: 12px 14px;
+  border-left: 5px solid rgba(0,0,0,0.14);
+  background: var(--card);
+  border-radius: 12px;
+  color: rgba(0,0,0,0.78);
+  font-weight: 700;
+}
+
+/* =========================
    TESTIMONIAL
    ========================= */
 
 .testimonial{ margin: 56px auto; }
 
 .testimonial-quote{
-  background: rgba(0,0,0,0.04);
+  background: var(--card);
   padding: 18px;
   border-radius: 12px;
+  border: 1px solid rgba(0,0,0,0.08);
 }
 
 .testimonial-attrib{
@@ -258,7 +354,7 @@ hr{
 
 .lesson-caption .cap-main{
   display:block;
-  font-weight: 700;
+  font-weight: 800;
   opacity: 1;
 }
 
@@ -319,6 +415,44 @@ hr{
   color:#111;
 }
 .lightbox-x:hover{ background:#fff; }
+
+/* =========================
+   STRATEGY CALL (firmer, less soft)
+   ========================= */
+
+.strategy-call{
+  border: 1px solid rgba(0,0,0,0.12);
+  border-radius: 14px;
+  padding: 18px 18px;
+  background: #fff;
+  box-shadow: 0 10px 22px rgba(0,0,0,0.06);
+}
+
+.strategy-call h2{
+  margin: 0 0 6px;
+  letter-spacing: -0.2px;
+}
+
+.call-lead{
+  margin: 0 0 14px;
+  font-weight: 800;
+  color: rgba(0,0,0,0.78);
+}
+
+.call-points{
+  margin: 0 0 16px;
+  padding-left: 18px;
+}
+
+.call-points li{
+  margin: 8px 0;
+}
+
+.strategy-call .cta-micro{
+  margin-top: 10px;
+  opacity: 0.88;
+  font-weight: 800;
+}
 
 /* =========================
    FOOTER + SOCIAL
@@ -416,16 +550,18 @@ hr{
   /* HERO: one column */
   .hero{
     grid-template-columns: 1fr;
-    gap: 18px;
-    padding: 24px 18px;
+    gap: 16px;
+    padding: 22px 16px;
     align-items: start;
   }
 
-  /* Hide desktop photo column */
-  .hero-photo--desktop{ display: none; }
+  /* Hide desktop hero image on mobile */
+  .hero-photo--desktop,
+  .teacher-photo.desktop{
+    display: none !important;
+  }
 
-  /* Make the active language hero a 2-column layout:
-     text left, photo right */
+  /* Inside each language block: 2-column (text left, face right) */
   .hero .lang-block{
     display: grid;
     grid-template-columns: 1fr auto;
@@ -433,7 +569,6 @@ hr{
     align-items: start;
   }
 
-  /* Show mobile photo on the right */
   .hero-photo--mobile{
     display: flex;
     justify-content: flex-end;
@@ -442,16 +577,24 @@ hr{
     margin: 0;
   }
 
-  /* Slightly “drop” the face to match desktop alignment feel */
   .hero-face{
-    transform: translateY(10px);
+    transform: translateY(6px);
   }
 
-  /* CTA: full width */
+  /* Make text never run under the face */
+  .hero .lang-block h1,
+  .hero .lang-block .hero-sub,
+  .hero .lang-block .hero-proof,
+  .hero .lang-block .cta-micro{
+    grid-column: 1;
+  }
+
+  /* CTA spans full width under both columns */
   .cta-button{
+    grid-column: 1 / -1;
     display: block;
     width: 100%;
-    font-size: 1.1rem;
+    font-size: 1.06rem;
     padding: 14px 0;
     text-align: center;
   }
@@ -472,8 +615,9 @@ hr{
   font-style: italic;
   opacity: 0.85;
 }
+
 /* =========================
-   DOJO: prompt layout + copy buttons
+   DOJO: prompt layout + copy buttons (locked)
    ========================= */
 
 .dojo-nav{
@@ -486,82 +630,6 @@ hr{
   flex-basis: 100%;
   height: 0;
 }
-
-.prompt-head{
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 14px;
-  margin: 26px 0 10px;
-}
-.prompt-head h2,
-.prompt-head h3{
-  margin: 0;
-}
-
-.copy-prompt-wrap{
-  display: flex;
-  justify-content: flex-end;
-}
-
-.copy-prompt-btn{
-  background: transparent;
-  color: var(--brand);
-  border: 2px solid var(--brand);
-  border-radius: 999px;
-  padding: 7px 14px;
-  font-size: 0.85rem;
-  font-weight: 900;
-  cursor: pointer;
-  line-height: 1;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  transition: background .15s ease, transform .15s ease, opacity .15s ease;
-}
-.copy-prompt-btn:hover{
-  background: rgba(31,185,168,0.10);
-  transform: translateY(-1px);
-}
-.copy-prompt-btn:active{
-  transform: translateY(0);
-}
-
-.prompt-content{
-  color: var(--brand);
-  font-weight: 800;
-  margin: 10px 0 26px;
-  padding: 14px 16px;
-  border-left: 6px solid var(--brand);
-  background: rgba(31,185,168,0.06);
-  border-radius: 14px;
-}
-.prompt-content .slot{
-  color: #111;
-  font-weight: 900;
-}
-
-.mobile-copy-hint{
-  font-size: 0.95rem;
-  opacity: 0.9;
-  margin: 10px 0 10px;
-}
-.mobile-copy-hint .jp{
-  font-size: 0.92em;
-  opacity: 0.9;
-}
-
-@media (max-width: 768px){
-  .copy-prompt-btn{
-    padding: 6px 12px;
-    font-size: 0.82rem;
-    white-space: nowrap;
-  }
-}
-/* =========================
-   DOJO COPY BUTTONS — LOCKED LAYOUT (final override)
-   Put this at the VERY BOTTOM of style.css
-   ========================= */
 
 .prompt-head{
   display: flex !important;
@@ -607,15 +675,38 @@ hr{
   white-space: nowrap !important;
 
   cursor: pointer !important;
+  transition: background .15s ease, transform .15s ease, opacity .15s ease;
 }
 
 .copy-prompt-btn:hover{
   background: rgba(31,185,168,0.10) !important;
+  transform: translateY(-1px) !important;
+}
+.copy-prompt-btn:active{
+  transform: translateY(0) !important;
 }
 
 .copy-prompt-btn:disabled{
   opacity: 0.65 !important;
   cursor: default !important;
+}
+
+/* Brackets = student-editable choices only (BLACK, NOT bold) */
+.prompt-content .slot,
+.prompt-content .edit{
+  color: #000 !important;
+  font-weight: 400 !important;
+}
+
+/* Prompt content box */
+.prompt-content{
+  color: var(--brand);
+  font-weight: 800;
+  margin: 10px 0 26px;
+  padding: 14px 16px;
+  border-left: 6px solid var(--brand);
+  background: rgba(31,185,168,0.06);
+  border-radius: 14px;
 }
 
 /* Mobile: keep it neat if the title is long */
@@ -627,273 +718,10 @@ hr{
     margin-top: 2px !important;
   }
 }
-/* =========================================================
-   HOME HERO CTA — MOBILE CENTER FIX (final override)
-   Paste at VERY BOTTOM of style.css
-   ========================================================= */
-
-@media (max-width: 768px){
-
-  /* Make the CTA always centered + full width inside hero blocks */
-  .hero .cta-button{
-    display: block !important;
-    width: 100% !important;
-    text-align: center !important;
-    margin-left: auto !important;
-    margin-right: auto !important;
-    justify-self: stretch !important;
-  }
-
-  /* If any old rules pushed hero elements into 2 columns, kill that */
-  .hero{
-    grid-template-columns: 1fr !important;
-  }
-
-  /* Keep your face visible on mobile */
-  .hero-photo--mobile{
-    display: flex !important;
-  }
-  .hero-photo--desktop{
-    display: none !important;
-  }
-}
-/* =========================================
-   HOME (MOBILE) — HERO: text left, face right (FINAL)
-   Paste at VERY BOTTOM of style.css
-   ========================================= */
-
-@media (max-width: 768px){
-
-  /* 1) Always hide the desktop hero image on mobile (prevents duplicates) */
-  .hero-photo--desktop,
-  .teacher-photo.desktop{
-    display: none !important;
-  }
-
-  /* 2) Hero becomes 1 column container */
-  .hero{
-    grid-template-columns: 1fr !important;
-    gap: 16px !important;
-    align-items: start !important;
-  }
-
-  /* 3) Inside each language block: 2-column layout (text left, face right) */
-  .hero .lang-block{
-    display: grid !important;
-    grid-template-columns: 1fr auto !important;
-    column-gap: 14px !important;
-    align-items: start !important;
-  }
-
-  /* 4) Put the mobile face on the RIGHT, top-aligned */
-  .hero .lang-block .hero-photo--mobile{
-    display: flex !important;
-    justify-content: flex-end !important;
-    align-items: flex-start !important;
-    margin: 0 !important;
-
-    grid-column: 2 !important;
-    grid-row: 1 !important;
-  }
-
-  /* Size/shape of the face on mobile */
-  .hero .lang-block .hero-photo--mobile img{
-    width: 84px !important;
-    height: 84px !important;
-    object-fit: cover !important;
-    border-radius: 16px !important;
-    display: block !important;
-
-    /* small nudge down so it feels like desktop alignment */
-    transform: translateY(6px) !important;
-  }
-
-  /* 5) Keep hero text on the LEFT column */
-  .hero .lang-block h1,
-  .hero .lang-block .hero-sub,
-  .hero .lang-block .cta-micro{
-    grid-column: 1 !important;
-  }
-
-  /* 6) CTA spans FULL WIDTH below both columns and centers */
-  .hero .lang-block .cta-button{
-    grid-column: 1 / -1 !important;
-    justify-self: stretch !important;
-    width: 100% !important;
-    text-align: center !important;
-    display: block !important;
-  }
-}
-
-/* =========================================
-   LANGUAGE VISIBILITY — HARD LOCK (GLOBAL)
-   Prevent EN + JP showing together
-   Paste at VERY BOTTOM of style.css
-   ========================================= */
-
-/* If an element has the hidden attribute, it must never render */
-[hidden]{
-  display: none !important;
-}
-
-/* Extra safety for your language wrappers */
-.lang-all[hidden],
-.lang-block[hidden]{
-  display: none !important;
-}
-
-/* When visible, make sure language blocks behave normally */
-.lang-all,
-.lang-block{
-  display: block;
-}
-/* =========================================
-   FINAL FIX — LANGUAGE TOGGLE + MOBILE HERO
-   Paste at VERY BOTTOM of style.css
-   ========================================= */
-
-/* 1) HARD LOCK: anything with [hidden] must be invisible (prevents EN+JP showing together) */
-[hidden]{
-  display: none !important;
-}
-
-.lang-block[hidden],
-.lang-all[hidden]{
-  display: none !important;
-}
-
-/* Safety: visible blocks should behave normally */
-.lang-block,
-.lang-all{
-  display: block;
-}
-
-/* 2) MOBILE HERO: keep face visible + CTA centered (fix “CTA on right”) */
-@media (max-width: 768px){
-
-  /* Kill the desktop hero photo (right-side duplicate) */
-  .hero-photo--desktop,
-  .teacher-photo.desktop{
-    display: none !important;
-  }
-
-  /* Let the hero be one column on mobile */
-  .hero{
-    grid-template-columns: 1fr !important;
-    position: relative !important;
-    padding: 20px 16px !important;
-  }
-
-  /* Keep the mobile photo visible and put it top-right */
-  .hero-photo--mobile{
-    display: block !important;
-    position: absolute !important;
-    top: 16px !important;
-    right: 16px !important;
-    margin: 0 !important;
-    z-index: 2 !important;
-  }
-
-  .hero-photo--mobile img{
-    width: 84px !important;
-    height: 84px !important;
-    object-fit: cover !important;
-    border-radius: 16px !important;
-    display: block !important;
-  }
-
-  /* Give text room so it doesn't run under the face */
-  .hero .lang-block h1,
-  .hero .lang-block .hero-sub,
-  .hero .lang-block .cta-micro{
-    padding-right: 110px !important;
-  }
-
-  /* CTA: centered + full width (this fixes your screenshot issue) */
-  .hero .cta-button{
-    display: block !important;
-    width: 100% !important;
-    max-width: 360px !important;
-    margin: 14px auto 0 auto !important;
-    text-align: center !important;
-  }
-
-  /* Micro line centered under CTA */
-  .hero .cta-micro{
-    text-align: center !important;
-    padding-right: 0 !important;
-  }
-}
-/* Brackets = student-editable choices only */
-.edit {
-  color: #000;          /* force black */
-  font-weight: normal;  /* keep calm, not loud */
-}
-.prompt-content .edit {
-  color: #000;
-}
-.prompt-content .slot,
-.prompt-content .edit {
-  color: #000;
-}
-.prompt-content .edit {
-  color: #000;
-  font-weight: 600;
-}
-/* DOJO: Brackets should be BLACK but NOT bold (even inside <strong>) */
-.prompt-content .slot,
-.prompt-content .edit {
-  color: #000 !important;
-  font-weight: 400 !important;
-}
-/* =========================
-   DOJO – Voice Mode Image
-   ========================= */
-
-.punch{
-  margin: 22px auto 28px;
-  text-align: center;
-}
-
-.punch-img{
-  width: 100%;
-  max-width: 720px; /* desktop cap */
-  height: auto;
-  border-radius: 10px;
-  box-shadow: 0 8px 24px rgba(0,0,0,0.08);
-}
-
 
 /* =========================
    DOJO – Voice Mode Images (EN/JP)
-   ========================= */
-
-.punchE,
-.punchJ{
-  margin: 22px auto 28px;
-  text-align: center;
-}
-
-.punchE-img,
-.punchJ-img{
-  display: block;
-  width: 100%;
-  max-width: 520px;   /* 👈 smaller desktop cap */
-  height: auto;
-  margin: 0 auto;     /* 👈 centers the image */
-  border-radius: 10px;
-  box-shadow: 0 8px 24px rgba(0,0,0,0.08);
-}
-
-<section class="punchE">
-  <img src="images/punchE.PNG" class="punchE-img" alt="">
-</section>
-
-<section class="punchJ">
-  <img src="images/punchJ.PNG" class="punchJ-img" alt="">
-</section>
-/* =========================
-   DOJO – Voice Mode Images (EN/JP)
+   (NOTE: HTML sections belong in your .html file, NOT here.)
    ========================= */
 
 .punchE,
@@ -906,7 +734,7 @@ hr{
 .punchJ-img{
   display: block;
   width: 100%;
-  max-width: 780px;   /* 👈 desktop presence */
+  max-width: 780px;
   height: auto;
   margin: 0 auto;
   border-radius: 14px;
@@ -927,42 +755,4 @@ hr{
   .punchJ-img{
     max-width: 380px;
   }
-}
-
-/* ===== Strategy Call (firmer, less soft) ===== */
-.strategy-call {
-  border: 1px solid rgba(0,0,0,0.12);
-  border-radius: 14px;
-  padding: 18px 18px;
-  background: #fff;
-}
-
-.strategy-call h2 {
-  margin: 0 0 6px;
-  letter-spacing: 0.2px;
-}
-
-.call-lead {
-  margin: 0 0 14px;
-  font-weight: 600;
-}
-
-.call-points {
-  margin: 0 0 16px;
-  padding-left: 18px;
-}
-
-.call-points li {
-  margin: 8px 0;
-}
-
-.cta-button--secondary {
-  display: inline-block;
-  margin-top: 4px;
-}
-
-.strategy-call .cta-micro {
-  margin-top: 10px;
-  opacity: 0.85;
-  font-weight: 600;
 }
