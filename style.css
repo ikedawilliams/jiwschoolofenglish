@@ -855,3 +855,10 @@ p{ margin: 10px 0 0; }
 .policy-page h3{
   margin-top: 32px;
 }
+/* HARD LOCK policy link color */
+.nav-policy,
+.nav-policy:visited,
+.nav-policy:active,
+.nav-policy:hover{
+  color: var(--green) !important;
+}
