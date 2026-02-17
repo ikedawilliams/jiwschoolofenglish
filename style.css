@@ -6,9 +6,7 @@
 *{ box-sizing:border-box; }
 
 :root{
-  --green:  #1fa58a;
-  --green2: #1FB9A8;
-  --brand:  var(--green2);
+  --brand: #1FB9A8;   /* Your one true green */
 
   --text:  #111;
   --muted: rgba(0,0,0,0.72);
@@ -17,6 +15,7 @@
   --cardbg: #f7f7f7;
   --radius: 14px;
 }
+
 
 html{
   -webkit-text-size-adjust: 100%;
