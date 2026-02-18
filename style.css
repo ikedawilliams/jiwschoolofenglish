@@ -175,10 +175,12 @@ hr{
 
 .muted{ color: var(--muted); }
 .takeaway{
-  margin-top: 22px;
+  margin-top: 20px;
   font-size: 15px;
   color: rgba(0,0,0,0.75);
+  border-top: none;   /* just in case */
 }
+
 
 /* ONE intentional card style (no floating shadows) */
 .card,
