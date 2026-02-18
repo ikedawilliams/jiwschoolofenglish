@@ -855,3 +855,42 @@ p{ margin: 10px 0 0; }
 .policy-page h3{
   margin-top: 32px;
 }
+/* ===== Testimonials Page ===== */
+
+.page-hero {
+  text-align: center;
+  padding: 80px 20px 40px;
+}
+
+.page-hero h1 {
+  margin-bottom: 10px;
+}
+
+.page-hero p {
+  color: rgba(0,0,0,0.7);
+}
+
+.testimonials-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 40px 20px 80px;
+}
+
+.testimonial-card {
+  background: rgba(0,0,0,0.04);
+  padding: 30px;
+  margin-bottom: 30px;
+  border-radius: 14px;
+  line-height: 1.7;
+}
+
+.testimonial-card p {
+  margin-bottom: 15px;
+}
+
+.testimonial-card span {
+  font-weight: 600;
+  display: block;
+  margin-top: 10px;
+  color: rgba(0,0,0,0.75);
+}
