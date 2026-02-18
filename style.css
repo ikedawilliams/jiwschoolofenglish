@@ -994,19 +994,4 @@ body {
   .testimonial-card{ padding: 20px 18px 18px; }
   .testimonial-quote{ font-size: 16px; }
 }
-<header class="site-header">
-  <div class="header-inner">
-    <div class="header-left">
-      <a href="index.html" class="site-brand">JIW School of English</a>
-    </div>
 
-    <!-- Keep spacing consistent with other pages -->
-    <div class="header-center"></div>
-
-    <nav class="header-right">
-      <a href="index.html">Home</a>
-      <a href="dojo.html">Dojo</a>
-      <a href="policy.html">Policy</a>
-    </nav>
-  </div>
-</header>
