@@ -995,3 +995,6 @@ body {
   .testimonial-quote{ font-size: 16px; }
 }
 
+/* Header safety for pages without a center block */
+.header-inner{ display:flex; align-items:center; }
+.header-right{ margin-left:auto; }
