@@ -998,3 +998,33 @@ body {
 /* Header safety for pages without a center block */
 .header-inner{ display:flex; align-items:center; }
 .header-right{ margin-left:auto; }
+/* =========================
+   RESULTS + TESTIMONIAL SPACING CLEANUP
+   ========================= */
+
+.block{
+  margin-top: 80px;
+  margin-bottom: 80px;
+}
+
+.results-core{
+  margin-bottom: 36px;
+}
+
+.results-box{
+  margin-top: 28px;
+  margin-bottom: 40px;
+}
+
+.takeaway{
+  margin-top: 28px;
+}
+
+.testimonial .card{
+  margin-top: 30px;
+}
+
+.read-more-link{
+  margin-top: 30px;
+  margin-bottom: 70px;
+}
