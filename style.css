@@ -751,3 +751,66 @@ h3{
   .punchE-img,
   .punchJ-img{ max-width: 380px; }
 }
+/* =========================
+   TIER UPGRADE PATCH (BOTTOM)
+   Boutique / Executive / Premium
+   Safe overrides for HOME only
+   ========================= */
+
+/* Slightly tighter max width feels more “consulting” */
+.page{ max-width: 880px; }
+
+/* More premium rhythm */
+.block + .block{ margin-top: 56px; }
+.section-title{ margin-bottom: 16px; }
+
+/* Hero: a bit more “boardroom” */
+.hero{
+  padding: 44px;
+  gap: 52px;
+  border-radius: 20px;
+}
+.hero-title{
+  letter-spacing: -0.6px;
+}
+.hero-sub{
+  font-size: 1.02rem;
+  line-height: 1.7;
+}
+
+/* Make cards feel more “consulting doc” and less “course box” */
+.card,
+.fit,
+.fees-card,
+.strategy-call{
+  border: 1px solid rgba(0,0,0,0.10);
+  border-radius: 18px;
+  padding: 24px 26px;
+}
+
+/* Lists: cleaner */
+.list li{ margin: 7px 0; }
+
+/* Investment section: emphasize numbers without shouting */
+.fees-card .fees-line strong{
+  letter-spacing: -0.2px;
+}
+.fees-card .fees-line{
+  font-size: 1.02rem;
+}
+
+/* CTA: slightly more premium */
+.cta-button{
+  border-radius: 14px;
+  padding: 16px 22px;
+}
+
+/* Mobile: preserve the clean feel */
+@media (max-width: 768px){
+  .block + .block{ margin-top: 44px; }
+  .hero{ padding: 24px 18px; }
+  .card,
+  .fit,
+  .fees-card,
+  .strategy-call{ padding: 20px 18px; border-radius: 16px; }
+}
