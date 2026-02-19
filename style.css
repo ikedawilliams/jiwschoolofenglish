@@ -1,5 +1,5 @@
 /* =========================
-   JIW SCHOOL OF ENGLISH — CLEAN SINGLE SOURCE CSS
+   JIW SCHOOL OF ENGLISH — CLEAN SINGLE SOURCE CSS (LOCKED)
    Replace your entire style.css with this file
    ========================= */
 
@@ -111,8 +111,13 @@ a:hover{ text-decoration: underline; }
 }
 .header-right a:hover{ opacity: 0.9; }
 
-/* Policy link darker green (your preference) */
-.header-right a[href*="policy"]{ color: var(--green); }
+/* HARD LOCK: Policy link darker green */
+.header-right a[href$="policy.html"],
+.header-right a[href$="policy.html"]:visited,
+.header-right a[href$="policy.html"]:active,
+.header-right a[href$="policy.html"]:hover{
+  color: var(--green) !important;
+}
 
 /* Language toggle pills */
 .lang-toggle{
@@ -149,7 +154,7 @@ a:hover{ text-decoration: underline; }
 h1{ line-height: 1.12; margin: 0 0 14px; letter-spacing: -0.3px; }
 h2{ margin: 0 0 14px; letter-spacing: -0.2px; line-height: 1.18; }
 h3{ margin: 26px 0 12px; line-height: 1.22; }
-p{ margin: 12px 0 0; }
+p{ margin: 10px 0 0; }
 
 hr{
   border: none;
@@ -159,8 +164,7 @@ hr{
 }
 
 /* =========================
-   NEW: INTENTIONAL SECTION SYSTEM
-   (Works with the rewritten HTML)
+   SECTION SYSTEM (LOCKED)
    ========================= */
 
 .block{ margin: 0; }
@@ -171,18 +175,17 @@ hr{
 .sub-title--center{ text-align: center; }
 
 .list{ margin: 12px 0 0; padding-left: 20px; }
-.list li{ margin: 10px 0; line-height: 1.7; }
+.list li{ margin: 8px 0; line-height: 1.65; }
 
 .muted{ color: var(--muted); }
+
 .takeaway{
-  margin-top: 20px;
+  margin-top: 18px;
   font-size: 15px;
-  color: rgba(0,0,0,0.75);
-  border-top: none;   /* just in case */
+  color: rgba(0,0,0,0.65);
 }
 
-
-/* ONE intentional card style (no floating shadows) */
+/* One intentional card style (no floating shadows) */
 .card,
 .fit,
 .testimonial-quote,
@@ -219,6 +222,9 @@ hr{
   grid-template-columns: 1.7fr 1fr;
   gap: 48px;
   align-items: end;
+
+  /* Elite spacing: more separation before About */
+  margin-bottom: 44px;
 }
 
 .hero-title{ margin: 0 0 14px; }
@@ -237,24 +243,18 @@ hr{
 /* CTA buttons */
 .cta-button{
   display: inline-block;
-  background: var(--brand);              /* GREEN by default (elite confidence) */
+  background: var(--brand);
   padding: 16px 22px;
   border-radius: 12px;
   font-weight: 900;
   letter-spacing: 0.2px;
-  box-shadow: none;                      /* flat, premium */
+  box-shadow: none;
+  line-height: 1.1;
 }
 .cta-button:hover{ text-decoration: none; filter: brightness(0.98); }
 
-/* Secondary stays black (optional use) */
-.cta-button--secondary{
-  background: #111;
-}
-
-/* optional explicit primary alias */
-.cta-button--primary{
-  background: var(--brand);
-}
+.cta-button--secondary{ background: #111; }
+.cta-button--primary{ background: var(--brand); }
 
 .cta-micro{
   margin-top: 10px;
@@ -269,7 +269,7 @@ hr{
 .teacher-photo{
   border-radius: 18px;
   background: #fff;
-  box-shadow: none;     /* remove “random shadow” feeling */
+  box-shadow: none;
   border: 1px solid rgba(0,0,0,0.08);
 }
 
@@ -296,40 +296,85 @@ hr{
 .about ul{ margin: 12px 0 0; padding-left: 20px; }
 .about li{ margin: 10px 0; }
 
-/* Fit box (uses the card system above) */
 .fit ul{ margin: 10px 0 0; padding-left: 20px; }
 .fit li{ margin: 10px 0; }
 .fit-note{ margin-top: 12px; font-size: 0.95rem; color: var(--muted); }
 
-/* RESULTS SECTION CLEAN FIX */
-
-.results-core{
-  margin-bottom: 42px;   /* creates real separation */
-}
-
-.results-box{
-  margin-top: 40;
-  margin-bottom: 32px;
-  padding: 24px 26px;
-}
-
-.takeaway{
-  margin-top: 14px;
-  font-size: 15px;
-  color: rgba(0,0,0,0.65);
-}
-
 /* =========================
-   TESTIMONIAL
+   ELITE HEADING SYSTEM
    ========================= */
 
-.testimonial{ margin: 0; } /* let .block control vertical rhythm */
+/* Unified “section heading” feel */
+.section-title,
+.h2-like{
+  font-size: 1.55rem;
+  font-weight: 900;
+  letter-spacing: -0.2px;
+  line-height: 1.18;
+}
+
+/* Space ABOVE h2-like headings (Professional Background etc.) */
+.h2-like{
+  margin: 30px 0 14px;
+}
+
+/* But: headings inside cards/boxes should not create a big top gap */
+.card .h2-like,
+.results-box .h2-like{
+  margin-top: 0;
+}
+
+/* Keep normal h3 for smaller subheads elsewhere */
+h3{
+  font-size: 1.05rem;
+  font-weight: 800;
+  letter-spacing: -0.1px;
+}
+
+/* Cleaner About rhythm */
+.block.about .section-title + p{ margin-top: 14px; }
+
+/* =========================
+   RESULTS
+   ========================= */
+
+.results-core{ margin-bottom: 24px; }
+
+.results-box{
+  background: var(--cardbg);
+  border: 1px solid rgba(0,0,0,0.08);
+  border-radius: var(--radius);
+  padding: 22px 24px;
+  margin-top: 16px;
+  margin-bottom: 28px;
+}
+
+.results-box h3{
+  border-top: 0 !important;
+  padding: 0 !important;
+  margin: 0 0 12px !important;
+  text-align: center;
+}
+
+.results-box .list{ margin-top: 10px; }
+.results-box li{ margin: 10px 0; line-height: 1.7; }
+
+/* =========================
+   TESTIMONIAL (HOME)
+   ========================= */
+
+.testimonial{ margin: 0; }
 
 .testimonial-text{ margin: 0; line-height: 1.75; }
 .testimonial-attrib{
   margin-top: 14px;
   font-size: 0.92rem;
   opacity: 0.78;
+}
+
+.read-more-link{
+  margin-top: 30px;
+  margin-bottom: 70px;
 }
 
 /* =========================
@@ -429,23 +474,18 @@ hr{
    FEES
    ========================= */
 
-.fees-block{ margin: 0; } /* let .block control */
 .fees-line{ margin: 0 0 12px; }
 .fees-note{ margin: 10px 0 0; color: #555; font-style: italic; }
 
 /* =========================
-   STRATEGY CALL
+   STRATEGY CALL / CTA BOX
    ========================= */
-
-.strategy-call h2{ margin: 0 0 6px; }
-.call-lead{
-  margin: 0 0 14px;
-  font-weight: 800;
-  color: rgba(0,0,0,0.78);
-}
 
 .call-points{ margin: 0 0 16px; padding-left: 20px; }
 .call-points li{ margin: 10px 0; line-height: 1.7; }
+
+/* More space between bullets and CTA */
+.strategy-call .cta-button{ margin-top: 20px; }
 
 /* =========================
    FOOTER + SOCIAL
@@ -581,10 +621,16 @@ hr{
 }
 
 /* =========================
-   DOJO / POLICY SAFE BASICS
+   DOJO / POLICY SAFE BASICS (LOCKED)
    ========================= */
 
 .note{ font-style: italic; opacity: 0.85; }
+
+/* Policy page section spacing */
+.policy-page h2,
+.policy-page h3{
+  margin-top: 32px;
+}
 
 /* DOJO prompt layout + copy buttons (locked) */
 .dojo-nav{
@@ -704,264 +750,4 @@ hr{
 @media (max-width: 600px){
   .punchE-img,
   .punchJ-img{ max-width: 380px; }
-}
-/* =========================
-   ELITE POLISH PATCH (BOTTOM)
-   ========================= */
-
-/* 1) More space between HERO and About */
-.hero{
-  margin-bottom: 44px;
-}
-
-/* 2) Make key sub-headings match section titles (About/Results size)
-      We’ll apply this only to headings you mark with .h2-like */
-.h2-like{
-  font-size: 1.55rem;     /* matches h2 feel */
-  font-weight: 800;
-  letter-spacing: -0.2px;
-  line-height: 1.18;
-  margin: 0 0 14px;
-}
-
-/* Keep normal h3 for smaller subheads elsewhere */
-h3{
-  font-size: 1.05rem;
-  font-weight: 800;
-  letter-spacing: -0.1px;
-}
-
-/* 3) Box style for "Recent Client Results" area */
-.results-box{
-  background: #f7f7f7;
-  border: 1px solid rgba(0,0,0,0.08);
-  border-radius: 14px;
-  padding: 22px 24px;
-  margin-top: 18px;
-}
-
-.results-box .h2-like{
-  margin-bottom: 12px;
-  text-align: center;      /* makes it feel intentional */
-}
-
-.results-box ul{
-  margin-top: 12px;
-  padding-left: 20px;
-}
-
-.results-box li{
-  margin: 10px 0;
-  line-height: 1.7;
-}
-
-/* 4) More space between bullet points and lower CTA button */
-.strategy-call .cta-button{
-  margin-top: 20px;        /* was too tight */
-}
-
-.strategy-call .cta-micro{
-  margin-top: 12px;
-}
-
-/* 5) Card padding consistency: stop “some boxes feel tight” */
-.fit,
-.fees-card,
-.strategy-call,
-.testimonial-quote{
-  padding: 22px 24px;
-}
-
-/* Optional: tighten CTA line-height so button looks premium */
-.cta-button{
-  line-height: 1.1;
-}
-/* Remove the old Results h3 divider styling inside the boxed area */
-.results-box h3{
-  border-top: 0 !important;
-  padding: 0 !important;
-  margin: 0 0 12px !important;
-}
-/* Slightly tighter spacing between Results bullets and the box */
-.results .results-box{ margin-top: 16px; }
-
-/* Keep list alignment consistent inside the box */
-.results-box .list{ margin-top: 10px; }
-/* =========================
-   ELITE TYPO + RHYTHM FIX
-   (About / Professional Background / Is this for you)
-   ========================= */
-
-/* 1) One unified “section heading” size */
-.section-title,
-.h2-like{
-  font-size: 1.55rem;      /* consistent with About/Results */
-  font-weight: 900;
-  letter-spacing: -0.2px;
-  line-height: 1.18;
-}
-
-/* 2) Restore proper spacing ABOVE sub-sections like Professional Background */
-.h2-like{
-  margin: 30px 0 14px;     /* gives space above the heading */
-}
-
-/* 3) BUT: headings inside cards should not have a big top gap */
-.card .h2-like,
-.results-box .h2-like{
-  margin-top: 0;
-}
-
-/* 4) Tighten body rhythm so it stops looking “high school” */
-p{ margin: 10px 0 0; }
-
-.list{ margin: 12px 0 0; padding-left: 20px; }
-.list li{ margin: 8px 0; line-height: 1.65; }
-
-/* 5) Make the About section feel cleaner: add breathing room before the first sub-section */
-.block.about .section-title + p{ margin-top: 14px; }
-
-/* 6) If your old Results h3 divider rule is still hitting anything, kill it inside the box */
-.results-box h3{
-  border-top: 0 !important;
-  padding: 0 !important;
-}
-/* HARD LOCK: Policy link darker green */
-.header-right a[href*="policy"],
-.header-right a[href*="policy"]:visited,
-.header-right a[href*="policy"]:active{
-  color: var(--green) !important;
-}
-/* FORCE darker green for Policy link */
-.header-right a[href$="policy.html"],
-.header-right a[href$="policy.html"]:visited,
-.header-right a[href$="policy.html"]:active,
-.header-right a[href$="policy.html"]:hover{
-  color: var(--green) !important;
-}
-/* Policy page section spacing */
-.policy-page h2,
-.policy-page h3{
-  margin-top: 32px;
-}
-/* =========================
-   TESTIMONIALS — CLEAN ELITE VERSION
-   ========================= */
-
-body {
-  background: #ffffff;
-}
-
-/* Container */
-.testimonials-wrap{
-  max-width: 720px;
-  margin: 0 auto;
-  padding: 40px 20px 80px;
-}
-
-/* Hero */
-.testimonials-hero{
-  text-align: center;
-  margin-bottom: 40px;
-}
-
-.testimonials-hero h1{
-  font-size: clamp(28px, 3vw, 40px);
-  letter-spacing: -0.02em;
-  margin-bottom: 8px;
-}
-
-.testimonials-hero p{
-  color: rgba(0,0,0,0.65);
-  font-size: 15px;
-}
-
-/* Card */
-.testimonial-card{
-  background: #ffffff;
-  border: 1px solid rgba(0,0,0,0.06);
-  border-radius: 18px;
-  padding: 26px 28px;
-  margin: 28px 0;
-  box-shadow: 0 16px 40px rgba(0,0,0,0.05);
-}
-
-/* Quote */
-.testimonial-quote{
-  font-size: 17px;
-  line-height: 1.75;
-  font-weight: 500;
-  margin: 0 0 16px;
-  color: rgba(0,0,0,0.88);
-}
-
-.testimonial-quote:before{
-  content: "“";
-  font-size: 30px;
-  vertical-align: -6px;
-  margin-right: 6px;
-  color: rgba(0,0,0,0.25);
-}
-
-/* Byline */
-.testimonial-byline{
-  font-size: 12.5px;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  color: rgba(0,0,0,0.55);
-  margin: 0;
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-
-.testimonial-byline:before{
-  content: "";
-  width: 18px;
-  height: 2px;
-  background: rgba(0,0,0,0.18);
-  border-radius: 2px;
-}
-
-/* =========================
-   RESULTS SECTION POLISH
-   ========================= */
-
-.block{
-  margin-top: 80px;
-  margin-bottom: 80px;
-}
-
-.results-core{
-  margin-bottom: 24px;
-}
-
-.results-core li,
-.results-box li{
-  margin-bottom: 10px;
-}
-
-.results-box{
-  margin-top: 28px;
-  margin-bottom: 28px;
-  padding: 24px 26px;
-}
-
-.takeaway{
-  margin-top: 18px;
-}
-
-.read-more-link{
-  margin-top: 30px;
-  margin-bottom: 70px;
-}
-
-/* Header stability */
-.header-inner{
-  display: flex;
-  align-items: center;
-}
-
-.header-right{
-  margin-left: auto;
 }
