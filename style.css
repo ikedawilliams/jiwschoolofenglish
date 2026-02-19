@@ -929,3 +929,38 @@ a{
 .header-right a[href$="policy.html"]{
   color: var(--green) !important;
 }
+/* =========================
+   CONSISTENCY TUNE
+   ========================= */
+
+/* Standard section rhythm */
+.block{
+  margin-bottom: 72px;
+}
+
+.section-title{
+  margin-bottom: 18px;
+}
+
+/* Cards consistent */
+.card,
+.fit,
+.fees-card,
+.strategy-call{
+  padding: 26px 28px;
+  margin-top: 22px;
+}
+
+/* Lists tighter + cleaner */
+.list{
+  padding-left: 18px;
+}
+
+.list li{
+  margin: 6px 0;
+}
+
+/* Professional background section consistency */
+.about .list{
+  margin-top: 12px;
+}
