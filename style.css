@@ -964,3 +964,66 @@ a{
 .about .list{
   margin-top: 12px;
 }
+/* =========================
+   PURE EXECUTIVE MODE
+   No boxes. No borders.
+   ========================= */
+
+.card,
+.fit,
+.fees-card,
+.strategy-call{
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+  padding: 0 !important;
+  margin-top: 18px;
+}
+
+/* Standard section rhythm */
+.block{
+  margin-bottom: 80px;
+}
+
+/* Tight, intentional hierarchy */
+.section-title{
+  margin-bottom: 16px;
+}
+
+.sub-title{
+  margin-top: 28px;
+  margin-bottom: 8px;
+}
+
+/* Lists clean */
+.list{
+  padding-left: 20px;
+}
+
+.list li{
+  margin: 6px 0;
+  line-height: 1.7;
+}
+
+/* Remove image borders */
+.teacher-photo,
+.lesson-shot{
+  border: none !important;
+  border-radius: 0 !important;
+}
+
+/* Remove hero containment feeling */
+.hero{
+  border: none !important;
+  padding: 80px 0 60px 0;
+}
+
+/* Footer clean */
+.footer{
+  border-top: none;
+}
+
+/* Header subtle */
+.site-header{
+  border-bottom: 1px solid rgba(0,0,0,0.08);
+}
