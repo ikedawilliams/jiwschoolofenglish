@@ -814,3 +814,118 @@ h3{
   .fees-card,
   .strategy-call{ padding: 20px 18px; border-radius: 16px; }
 }
+/* =========================
+   ULTRA-MINIMAL EXECUTIVE MODE
+   Boutique Consulting Aesthetic
+   ========================= */
+
+/* Pure white background everywhere */
+body{
+  background: #ffffff;
+  color: #000000;
+}
+
+/* Remove hero gradient */
+.hero{
+  background: #ffffff !important;
+  border: none;
+  padding: 60px 0;
+}
+
+/* Stronger headline contrast */
+.hero-title{
+  font-size: clamp(40px, 4vw, 52px);
+  font-weight: 900;
+  letter-spacing: -0.8px;
+  color: #000;
+}
+
+.hero-sub{
+  font-size: 1.05rem;
+  line-height: 1.8;
+  max-width: 600px;
+  color: rgba(0,0,0,0.85);
+}
+
+/* Remove soft grey cards */
+.card,
+.fit,
+.fees-card,
+.strategy-call{
+  background: #ffffff !important;
+  border: 1px solid rgba(0,0,0,0.12);
+  border-radius: 6px; /* tighter, less friendly */
+  box-shadow: none !important;
+  padding: 28px 32px;
+}
+
+/* Remove rounded softness from images */
+.teacher-photo,
+.lesson-shot{
+  border-radius: 6px !important;
+  border: 1px solid rgba(0,0,0,0.15);
+}
+
+/* Strong section spacing */
+.block + .block{
+  margin-top: 80px;
+}
+
+/* Sharper section headings */
+.section-title{
+  font-size: clamp(28px, 2.5vw, 34px);
+  font-weight: 900;
+  letter-spacing: -0.5px;
+  color: #000;
+}
+
+/* Make muted text slightly darker */
+.muted{
+  color: rgba(0,0,0,0.7);
+}
+
+/* Clean lists */
+.list li{
+  margin: 8px 0;
+  line-height: 1.7;
+}
+
+/* CTA – strong, rectangular, confident */
+.cta-button{
+  background: var(--brand);
+  border-radius: 4px;
+  padding: 16px 26px;
+  font-weight: 900;
+  letter-spacing: 0.3px;
+  box-shadow: none;
+}
+
+.cta-button:hover{
+  filter: brightness(0.95);
+}
+
+/* Remove decorative hr softness */
+hr{
+  border-top: 1px solid rgba(0,0,0,0.15);
+  opacity: 1;
+}
+
+/* Header tighter + sharper */
+.site-header{
+  border-bottom: 1px solid rgba(0,0,0,0.15);
+}
+
+/* Footer clean */
+.footer{
+  border-top: 1px solid rgba(0,0,0,0.15);
+}
+
+/* Links stay green */
+a{
+  color: var(--brand);
+}
+
+/* Policy darker green still respected */
+.header-right a[href$="policy.html"]{
+  color: var(--green) !important;
+}
