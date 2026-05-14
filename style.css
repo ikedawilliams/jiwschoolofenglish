@@ -1027,3 +1027,60 @@ a{
 .site-header{
   border-bottom: 1px solid rgba(0,0,0,0.08);
 }
+
+/* =========================
+   SPACING NORMALIZATION
+   ========================= */
+
+/* Consistent section rhythm */
+.block + .block{
+  margin-top: 48px !important;
+}
+
+/* Cleaner heading spacing */
+.section-title{
+  margin-bottom: 14px !important;
+}
+
+/* Prevent giant paragraph stacks */
+.block p{
+  margin-top: 12px;
+}
+
+/* Tighten card rhythm */
+.card,
+.fit,
+.fees-card,
+.strategy-call{
+  margin-top: 18px !important;
+}
+
+/* Remove excessive bottom space before footer */
+.footer{
+  margin-top: 42px !important;
+}
+
+/* Reduce CTA section looseness */
+.strategy-call .cta-button{
+  margin-top: 16px !important;
+}
+
+/* Cleaner subheading rhythm */
+.sub-title,
+.h2-like{
+  margin-top: 26px !important;
+  margin-bottom: 12px !important;
+}
+
+/* Mobile spacing refinement */
+@media (max-width: 768px){
+
+  .block + .block{
+    margin-top: 40px !important;
+  }
+
+  .footer{
+    margin-top: 36px !important;
+  }
+
+}
