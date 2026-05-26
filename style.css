@@ -1084,3 +1084,38 @@ a{
   }
 
 }
+/* =========================
+   EPD FINAL READABILITY TUNE
+   ========================= */
+
+.page{
+  max-width: 850px;
+}
+
+body{
+  line-height: 1.7;
+}
+
+.hero{
+  padding-top: 70px;
+  padding-bottom: 56px;
+}
+
+.block + .block{
+  margin-top: 54px !important;
+}
+
+.muted{
+  color: rgba(0,0,0,0.74);
+}
+
+@media (max-width: 768px){
+  .hero{
+    padding-top: 42px;
+    padding-bottom: 36px;
+  }
+
+  .block + .block{
+    margin-top: 42px !important;
+  }
+}
