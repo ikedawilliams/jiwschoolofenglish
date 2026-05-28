@@ -1,647 +1,570 @@
 /* =========================
-   JIW SCHOOL OF ENGLISH — CLEAN SINGLE SOURCE CSS (LOCKED)
-   Replace your entire style.css with this file
+   JIW SCHOOL OF ENGLISH — CLEAN PREMIUM CSS
+   Replace entire style.css with this file
    ========================= */
 
-*{ box-sizing:border-box; }
+* { box-sizing: border-box; }
 
-:root{
-  --green:  #1FB9A8;
-  --green2: #1FB9A8;
-  --brand:  var(--green2);
-
-  --text:  #111;
+:root {
+  --brand: #1FB9A8;
+  --brand-dark: #178f82;
+  --text: #0b0b0b;
   --muted: rgba(0,0,0,0.72);
-  --line:  rgba(0,0,0,0.08);
-
-  --cardbg: #f7f7f7;
-  --radius: 14px;
+  --line: rgba(0,0,0,0.10);
+  --soft: #f6f6f4;
+  --panel: #0b0b0b;
+  --panel-text: rgba(255,255,255,0.90);
+  --panel-muted: rgba(255,255,255,0.68);
+  --radius: 10px;
 }
 
-html{
+html {
   -webkit-text-size-adjust: 100%;
   text-size-adjust: 100%;
 }
 
-body{
+body {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
-  line-height: 1.65;
+  line-height: 1.7;
   margin: 0;
   color: var(--text);
   background: #fff;
 }
 
-/* Shared content width */
-.page,
-.dojo-container,
-.policy-page{
-  max-width: 900px;
-  margin: 0 auto;
-  padding: 34px 22px 70px;
-}
-
-/* HARD LOCK: anything with [hidden] must never render */
 [hidden],
 .lang-block[hidden],
-.lang-all[hidden]{
+.lang-all[hidden] {
   display: none !important;
 }
 
-/* =========================
-   LINKS
-   ========================= */
-
-a{ color: var(--brand); text-decoration: none; }
-a:hover{ text-decoration: underline; }
-
-/* Keep CTA text white no matter what */
-.cta-button,
-.cta-button:visited{
-  color: #fff !important;
+a {
+  color: var(--brand-dark);
   text-decoration: none;
 }
 
-/* =========================
-   GLOBAL HEADER (LOCKED)
-   ========================= */
-
-.site-header{
-  width: 100%;
-  background: #fff;
-  border-bottom: 1px solid var(--line);
+a:hover {
+  text-decoration: underline;
 }
 
-.header-inner{
+.page,
+.dojo-container,
+.policy-page {
+  max-width: 880px;
+  margin: 0 auto;
+  padding: 34px 22px 76px;
+}
+
+/* =========================
+   HEADER
+   ========================= */
+
+.site-header {
+  width: 100%;
+  background: #fff;
+  border-bottom: 1px solid rgba(0,0,0,0.08);
+}
+
+.header-inner {
   max-width: 1100px;
   margin: 0 auto;
   padding: 14px 20px;
-
   display: grid;
   grid-template-columns: 1fr auto 1fr;
   align-items: center;
   gap: 12px;
 }
 
-.site-brand{
-  color: var(--brand);
-  font-weight: 800;
+.site-brand {
+  color: var(--brand-dark);
+  font-weight: 850;
   text-decoration: none;
   white-space: nowrap;
 }
 
-.header-center{
+.header-center {
   display: flex;
   justify-content: center;
 }
 
-.header-right{
+.header-right {
   display: flex;
   justify-content: flex-end;
   gap: 16px;
 }
 
-/* nav color consistent */
 .header-right a,
 .header-right a:visited,
-.header-right a:active{
-  color: var(--brand);
+.header-right a:active {
+  color: var(--brand-dark);
   text-decoration: none;
-  font-weight: 800;
-  letter-spacing: 0.2px;
-}
-.header-right a:hover{ opacity: 0.9; }
-
-/* HARD LOCK: Policy link darker green */
-.header-right a[href$="policy.html"],
-.header-right a[href$="policy.html"]:visited,
-.header-right a[href$="policy.html"]:active,
-.header-right a[href$="policy.html"]:hover{
-  color: var(--green) !important;
+  font-weight: 850;
 }
 
-/* Language toggle pills */
-.lang-toggle{
+.header-right a:hover {
+  opacity: 0.9;
+}
+
+.lang-toggle {
   display: flex;
   gap: 8px;
   align-items: center;
 }
 
-/* Kill iOS “blue button” behavior */
-.lang-btn{
+.lang-btn {
   -webkit-appearance: none;
   appearance: none;
-
-  border: 2px solid rgba(0,0,0,0.18);
+  border: 1px solid rgba(0,0,0,0.22);
   background: #fff;
   color: #111;
   padding: 6px 12px;
   border-radius: 999px;
-  font-weight: 900;
+  font-weight: 850;
   cursor: pointer;
   line-height: 1;
 }
-.lang-btn:focus{ outline: none; }
-.lang-btn.active{
+
+.lang-btn.active {
   background: var(--brand);
   border-color: var(--brand);
   color: #fff;
 }
 
 /* =========================
-   TYPO + RHYTHM (ELITE BASE)
+   TYPOGRAPHY / RHYTHM
    ========================= */
 
-h1{ line-height: 1.12; margin: 0 0 14px; letter-spacing: -0.3px; }
-h2{ margin: 0 0 14px; letter-spacing: -0.2px; line-height: 1.18; }
-h3{ margin: 26px 0 12px; line-height: 1.22; }
-p{ margin: 10px 0 0; }
-
-hr{
-  border: none;
-  border-top: 1px solid var(--line);
-  margin: 40px 0;
-  opacity: 0.12;
-}
-
-/* =========================
-   SECTION SYSTEM (LOCKED)
-   ========================= */
-
-.block{ margin: 0; }
-.block + .block{ margin-top: 40px; }
-
-.section-title{ margin: 0 0 14px; }
-.sub-title{ margin: 26px 0 12px; }
-.sub-title--center{ text-align: center; }
-
-.list{ margin: 12px 0 0; padding-left: 20px; }
-.list li{ margin: 8px 0; line-height: 1.65; }
-
-.muted{ color: var(--muted); }
-
-.takeaway{
-  margin-top: 18px;
-  font-size: 15px;
-  color: rgba(0,0,0,0.65);
-}
-
-/* One intentional card style (no floating shadows) */
-.card,
-.fit,
-.testimonial-quote,
-.fees-card,
-.strategy-call{
-  background: var(--cardbg);
-  border: 1px solid rgba(0,0,0,0.08);
-  border-radius: var(--radius);
-  padding: 22px 24px;
-  margin-top: 18px;
-}
-.card > :first-child,
-.fit > :first-child,
-.testimonial-quote > :first-child,
-.fees-card > :first-child,
-.strategy-call > :first-child{ margin-top: 0 !important; }
-.card > :last-child,
-.fit > :last-child,
-.testimonial-quote > :last-child,
-.fees-card > :last-child,
-.strategy-call > :last-child{ margin-bottom: 0 !important; }
-
-/* =========================
-   HOME: HERO
-   ========================= */
-
-.hero{
-  position: relative;
-  width: 100%;
-  background: linear-gradient(135deg, rgba(31,185,168,0.08), rgba(21,150,136,0.08));
-  border-radius: 18px;
-  padding: 40px;
-  display: grid;
-  grid-template-columns: 1.7fr 1fr;
-  gap: 48px;
-  align-items: end;
-
-  /* Elite spacing: more separation before About */
-  margin-bottom: 44px;
-}
-
-.hero-title{ margin: 0 0 14px; }
-.hero-sub{ margin: 0 0 12px; max-width: 46rem; }
-
-.hero-proof{
-  margin: 0 0 18px;
-  font-size: 0.98rem;
-  color: rgba(0,0,0,0.78);
-}
-.hero-proof strong{
-  color: #111;
-  font-weight: 900;
-}
-
-/* CTA buttons */
-.cta-button{
-  display: inline-block;
-  background: var(--brand);
-  padding: 16px 22px;
-  border-radius: 12px;
-  font-weight: 900;
-  letter-spacing: 0.2px;
-  box-shadow: none;
-  line-height: 1.1;
-}
-.cta-button:hover{ text-decoration: none; filter: brightness(0.98); }
-
-.cta-button--secondary{ background: #111; }
-.cta-button--primary{ background: var(--brand); }
-
-.cta-micro{
-  margin-top: 10px;
-  font-size: 0.95rem;
-  color: rgba(0,0,0,0.72);
-}
-.cta-micro a{ font-weight: 800; }
-
-/* Photos */
-.hero-photo{ display: flex; justify-content: flex-end; }
-
-.teacher-photo{
-  border-radius: 18px;
-  background: #fff;
-  box-shadow: none;
-  border: 1px solid rgba(0,0,0,0.08);
-}
-
-.teacher-photo.desktop{
-  width: 200px;
-  height: 200px;
-  object-fit: cover;
-}
-
-/* Mobile photo hidden by default */
-.hero-photo--mobile{ display: none; }
-
-.teacher-photo.mobile{
-  width: 86px;
-  height: 86px;
-  object-fit: cover;
-  border-radius: 16px;
-}
-
-/* =========================
-   ABOUT
-   ========================= */
-
-.about ul{ margin: 12px 0 0; padding-left: 20px; }
-.about li{ margin: 10px 0; }
-
-.fit ul{ margin: 10px 0 0; padding-left: 20px; }
-.fit li{ margin: 10px 0; }
-.fit-note{ margin-top: 12px; font-size: 0.95rem; color: var(--muted); }
-
-/* =========================
-   ELITE HEADING SYSTEM
-   ========================= */
-
-/* Unified “section heading” feel */
-.section-title,
-.h2-like{
-  font-size: 1.55rem;
-  font-weight: 900;
-  letter-spacing: -0.2px;
-  line-height: 1.18;
-}
-
-/* Space ABOVE h2-like headings (Professional Background etc.) */
-.h2-like{
-  margin: 30px 0 14px;
-}
-
-/* But: headings inside cards/boxes should not create a big top gap */
-.card .h2-like,
-.results-box .h2-like{
+h1, h2, h3, p {
   margin-top: 0;
 }
 
-/* Keep normal h3 for smaller subheads elsewhere */
-h3{
-  font-size: 1.05rem;
-  font-weight: 800;
-  letter-spacing: -0.1px;
+h1 {
+  line-height: 1.08;
+  letter-spacing: -0.7px;
+  margin-bottom: 16px;
 }
 
-/* Cleaner About rhythm */
-.block.about .section-title + p{ margin-top: 14px; }
-
-/* =========================
-   RESULTS
-   ========================= */
-
-.results-core{ margin-bottom: 24px; }
-
-.results-box{
-  background: var(--cardbg);
-  border: 1px solid rgba(0,0,0,0.08);
-  border-radius: var(--radius);
-  padding: 22px 24px;
-  margin-top: 16px;
-  margin-bottom: 28px;
+h2 {
+  line-height: 1.16;
+  letter-spacing: -0.45px;
 }
 
-.results-box h3{
-  border-top: 0 !important;
-  padding: 0 !important;
-  margin: 0 0 12px !important;
-  text-align: center;
+h3 {
+  line-height: 1.22;
+  letter-spacing: -0.2px;
 }
 
-.results-box .list{ margin-top: 10px; }
-.results-box li{ margin: 10px 0; line-height: 1.7; }
-
-/* =========================
-   TESTIMONIAL (HOME)
-   ========================= */
-
-.testimonial{ margin: 0; }
-
-.testimonial-text{ margin: 0; line-height: 1.75; }
-.testimonial-attrib{
-  margin-top: 14px;
-  font-size: 0.92rem;
-  opacity: 0.78;
+p {
+  margin-bottom: 0;
 }
 
-.read-more-link{
+p + p {
+  margin-top: 12px;
+}
+
+.muted {
+  color: var(--muted);
+}
+
+.block + .block {
+  margin-top: 64px;
+}
+
+.section-title {
+  font-size: clamp(28px, 2.7vw, 36px);
+  font-weight: 900;
+  margin-bottom: 16px;
+}
+
+.sub-title {
+  font-size: 1.08rem;
+  font-weight: 850;
+  margin: 28px 0 10px;
+}
+
+.h2-like {
+  font-size: 1.35rem;
+  font-weight: 900;
   margin-top: 30px;
-  margin-bottom: 70px;
+}
+
+.list {
+  margin: 14px 0 0;
+  padding-left: 20px;
+}
+
+.list li {
+  margin: 7px 0;
+  line-height: 1.68;
+}
+
+.compact-list li {
+  margin: 6px 0;
+}
+
+hr {
+  border: none;
+  border-top: 1px solid var(--line);
+  margin: 28px 0;
 }
 
 /* =========================
-   WHAT LESSONS FEEL LIKE
+   GENERAL CARDS
    ========================= */
 
-.lessons-grid{
-  display: grid;
-  grid-template-columns: 1.15fr 0.85fr;
-  gap: 36px;
-  align-items: center;
+.card,
+.fit,
+.fees-card,
+.strategy-call {
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 26px 28px;
+  margin-top: 20px;
 }
 
-.lesson-shot{
+.card > :first-child,
+.fit > :first-child,
+.fees-card > :first-child,
+.strategy-call > :first-child {
+  margin-top: 0 !important;
+}
+
+.card > :last-child,
+.fit > :last-child,
+.fees-card > :last-child,
+.strategy-call > :last-child {
+  margin-bottom: 0 !important;
+}
+
+/* =========================
+   HERO
+   ========================= */
+
+.hero {
+  display: grid;
+  grid-template-columns: 1.72fr 0.85fr;
+  gap: 56px;
+  align-items: end;
+  padding: 72px 0 60px;
+}
+
+.hero-title {
+  font-size: clamp(42px, 5vw, 60px);
+  font-weight: 950;
+  color: #000;
+}
+
+.hero-sub {
+  font-size: 1.06rem;
+  line-height: 1.82;
+  max-width: 640px;
+  color: rgba(0,0,0,0.82);
+}
+
+.hero-proof {
+  margin-top: 18px;
+  margin-bottom: 22px;
+  font-size: 0.98rem;
+  color: rgba(0,0,0,0.76);
+}
+
+.hero-proof strong {
+  color: #000;
+  font-weight: 900;
+}
+
+.cta-button,
+.cta-button:visited {
+  display: inline-block;
+  background: var(--brand);
+  color: #fff !important;
+  text-decoration: none;
+  padding: 15px 24px;
+  border-radius: 6px;
+  font-weight: 900;
+  letter-spacing: 0.2px;
+  line-height: 1.15;
+}
+
+.cta-button:hover {
+  text-decoration: none;
+  filter: brightness(0.96);
+}
+
+.cta-micro {
+  margin-top: 10px;
+  font-size: 0.94rem;
+  color: rgba(0,0,0,0.68);
+}
+
+.hero-photo {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.teacher-photo {
+  background: #fff;
+}
+
+.teacher-photo.desktop {
+  width: 210px;
+  height: 210px;
+  object-fit: cover;
+}
+
+.hero-photo--mobile {
+  display: none;
+}
+
+.teacher-photo.mobile {
+  width: 86px;
+  height: 86px;
+  object-fit: cover;
+}
+
+/* =========================
+   CASE STUDIES
+   ========================= */
+
+.case-section {
+  padding-top: 8px;
+}
+
+.case-card-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 22px;
+  margin-top: 28px;
+}
+
+.case-card {
+  min-width: 0;
+}
+
+.case-card-visual {
+  display: block;
   width: 100%;
   height: auto;
-  display: block;
-  border-radius: 14px;
-  box-shadow: none;
-  border: 1px solid rgba(0,0,0,0.08);
-  filter: saturate(0.95) contrast(0.98);
+  border-radius: 18px;
+  background: #000;
+  box-shadow: 0 20px 42px rgba(0,0,0,0.18);
 }
 
-.lesson-figure{ text-align: center; }
-.lesson-zoom-link{ display:inline-block; cursor: zoom-in; }
-
-.lesson-caption{
-  margin: 12px auto 0 auto;
-  max-width: 520px;
-  text-align: center;
-  line-height: 1.35;
-  font-size: 0.95rem;
-  opacity: 0.85;
+.case-card-caption {
+  margin-top: 16px;
+  font-size: 0.98rem;
+  line-height: 1.65;
+  color: rgba(0,0,0,0.78);
 }
 
-.lesson-caption .cap-main{
-  display:block;
-  font-weight: 800;
-  opacity: 1;
+.case-card-caption strong {
+  color: #000;
 }
 
-.lesson-caption .cap-sub{
-  display:block;
-  margin-top: 6px;
-  opacity: 0.85;
-  font-size: 0.95em;
+.premium-panel {
+  margin-top: 42px;
+  padding: 34px 36px;
+  border-radius: 18px;
+  background: var(--panel);
+  color: var(--panel-text);
 }
 
-.lessons-points ul{ margin:12px 0 0; padding-left:20px; }
-.lessons-points li{ margin:10px 0; line-height:1.7; }
-
-/* Lightbox */
-.lightbox{
-  position: fixed;
-  inset: 0;
-  display: none;
-  z-index: 9999;
-}
-.lightbox:target{ display:block; }
-
-.lightbox-close{
-  position:absolute;
-  inset:0;
-  background: rgba(0,0,0,0.72);
+.premium-panel .muted {
+  color: var(--panel-muted);
 }
 
-.lightbox-inner{
-  position: relative;
-  max-width: min(1100px, 92vw);
-  max-height: 86vh;
-  margin: 7vh auto 0 auto;
-  border-radius: 14px;
-  overflow: hidden;
-  background: #fff;
-  box-shadow: none;
+.premium-panel .list {
+  color: var(--panel-muted);
 }
 
-.lightbox-img{ width: 100%; height: auto; display:block; }
-
-.lightbox-x{
-  position:absolute;
-  top:10px;
-  right:14px;
-  width:40px;
-  height:40px;
-  border-radius:999px;
-  display:grid;
-  place-items:center;
-  text-decoration:none;
-  font-size:28px;
-  background: rgba(255,255,255,0.9);
-  color:#111;
-}
-.lightbox-x:hover{ background:#fff; }
-
-/* =========================
-   FEES
-   ========================= */
-
-.fees-line{ margin: 0 0 12px; }
-.fees-note{ margin: 10px 0 0; color: #555; font-style: italic; }
-
-/* =========================
-   STRATEGY CALL / CTA BOX
-   ========================= */
-
-.call-points{ margin: 0 0 16px; padding-left: 20px; }
-.call-points li{ margin: 10px 0; line-height: 1.7; }
-
-/* More space between bullets and CTA */
-.strategy-call .cta-button{ margin-top: 20px; }
-
-/* =========================
-   FOOTER + SOCIAL
-   ========================= */
-
-.footer{
-  margin-top: 56px;
-  padding: 28px 16px 20px;
-  text-align:center;
-  opacity: 0.95;
-  border-top: 1px solid var(--line);
+.premium-panel .list strong {
+  color: var(--panel-text);
 }
 
-.social-icons{
-  display:flex;
-  justify-content:center;
-  align-items:center;
-  gap:18px;
-  flex-wrap:wrap;
-  margin: 0 auto 12px;
-}
-
-.social-icons a{
-  width:42px;
-  height:42px;
-  display:inline-flex;
-  align-items:center;
-  justify-content:center;
-  border-radius:999px;
-  border: 1px solid rgba(0,0,0,0.12);
-  text-decoration:none;
-  transition: transform .15s ease, background .15s ease;
-}
-
-.social-icons a:hover{
-  transform: translateY(-2px);
-  background: rgba(0,0,0,0.04);
-}
-
-.social-icons svg{
-  width:20px;
-  height:20px;
-  fill: currentColor;
-  display:block;
-}
-
-.footer-mini{ font-size:0.8rem; opacity:0.7; }
-
-/* Optional icon colors */
-.social-icons a[aria-label="X"] svg{ fill:#000; }
-.social-icons a[aria-label="Facebook"] svg{ fill:#1877F2; }
-.social-icons a[aria-label="Instagram"] svg{ fill:#E4405F; }
-.social-icons a[aria-label="YouTube"] svg{ fill:#FF0000; }
-
-/* =========================
-   MOBILE
-   ========================= */
-
-@media (max-width: 768px){
-
-  .header-inner{
-    grid-template-columns: 1fr auto;
-    grid-template-areas:
-      "brand brand"
-      "toggle nav";
-    padding: 10px 12px;
-    gap: 8px 12px;
-  }
-
-  .header-left{ grid-area: brand; justify-self: center; }
-  .header-center{ grid-area: toggle; justify-self: start; }
-  .header-right{ grid-area: nav; justify-self: end; gap: 10px; }
-
-  .site-brand{ font-size: 1rem; line-height: 1.1; }
-
-  .lang-btn{ padding: 4px 10px; font-size: 0.85rem; }
-
-  .header-right a{
-    font-size: 0.92rem;
-    line-height: 1;
-    padding: 4px 6px;
-    white-space: nowrap;
-  }
-
-  .page{ padding: 28px 16px 60px; }
-
-  .hero{
-    grid-template-columns: 1fr;
-    gap: 16px;
-    padding: 22px 16px;
-    align-items: start;
-  }
-
-  .hero-photo--desktop,
-  .teacher-photo.desktop{ display: none !important; }
-
-  .hero .lang-block{
-    display: grid;
-    grid-template-columns: 1fr auto;
-    column-gap: 14px;
-    align-items: start;
-  }
-
-  .hero-photo--mobile{
-    display: flex;
-    justify-content: flex-end;
-    grid-column: 2;
-    grid-row: 1;
-    margin: 0;
-  }
-
-  .hero-face{ transform: translateY(6px); }
-
-  .hero .lang-block h1,
-  .hero .lang-block .hero-sub,
-  .hero .lang-block .hero-proof,
-  .hero .lang-block .cta-micro{ grid-column: 1; }
-
-  .cta-button{
-    grid-column: 1 / -1;
-    display: block;
-    width: 100%;
-    font-size: 1.06rem;
-    padding: 14px 0;
-    text-align: center;
-  }
-
-  .lessons-grid{
-    grid-template-columns: 1fr;
-    gap: 20px;
-    align-items: start;
-  }
-}
-
-/* =========================
-   DOJO / POLICY SAFE BASICS (LOCKED)
-   ========================= */
-
-.note{ font-style: italic; opacity: 0.85; }
-
-/* Policy page section spacing */
-.policy-page h2,
-.policy-page h3{
+.score-title {
   margin-top: 32px;
 }
 
-/* DOJO prompt layout + copy buttons (locked) */
-.dojo-nav{
+.score-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 14px;
+  margin-top: 18px;
+}
+
+.score-card {
+  min-height: 142px;
+  padding: 18px 16px;
+  border-radius: 14px;
+  background: rgba(255,255,255,0.08);
+  border: 1px solid rgba(255,255,255,0.13);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.score-name {
+  min-height: 46px;
+  font-size: 0.88rem;
+  line-height: 1.38;
+  font-weight: 750;
+  color: rgba(255,255,255,0.80);
+}
+
+.score-values {
+  margin-top: 14px;
+  font-size: clamp(1.35rem, 2.2vw, 1.8rem);
+  line-height: 1.05;
+  font-weight: 900;
+  letter-spacing: -0.4px;
+  color: #fff;
+}
+
+.score-values span {
+  color: var(--brand);
+  margin: 0 3px;
+}
+
+.score-note {
+  margin-top: 16px;
+  font-size: 0.95rem;
+}
+
+/* =========================
+   FRAMEWORK
+   ========================= */
+
+.framework-panel {
+  margin-top: 20px;
+  padding: 30px 32px;
+  border-radius: 18px;
+  background: #f4f4f2;
+}
+
+.framework-flow {
   display: flex;
   flex-wrap: wrap;
-  align-items: center;
-  gap: 10px 14px;
+  gap: 10px;
+  margin: 18px 0 18px;
 }
-.dojo-nav .nav-break{ flex-basis: 100%; height: 0; }
 
-.prompt-head{
+.framework-step {
+  padding: 10px 14px;
+  border-radius: 999px;
+  background: #0b0b0b;
+  color: #fff;
+  font-size: 0.92rem;
+  font-weight: 850;
+  letter-spacing: 0.02em;
+}
+
+.answer-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+  margin-top: 22px;
+}
+
+.answer-box {
+  background: #fff;
+  border: 1px solid rgba(0,0,0,0.10);
+  border-radius: 14px;
+  padding: 20px 22px;
+}
+
+.answer-box-strong {
+  border-color: rgba(31,185,168,0.45);
+}
+
+.answer-label {
+  margin-bottom: 10px;
+  font-size: 0.78rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  font-weight: 900;
+  color: rgba(0,0,0,0.58);
+}
+
+/* =========================
+   FEES / CTA
+   ========================= */
+
+.fees-line {
+  margin-bottom: 12px;
+  font-size: 1.02rem;
+}
+
+.call-points {
+  margin-bottom: 16px;
+}
+
+.strategy-call .cta-button {
+  margin-top: 18px;
+}
+
+/* =========================
+   FOOTER
+   ========================= */
+
+.footer {
+  margin-top: 54px;
+  padding: 28px 16px 20px;
+  text-align: center;
+  opacity: 0.95;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 18px;
+  flex-wrap: wrap;
+  margin: 0 auto 12px;
+}
+
+.social-icons a {
+  width: 42px;
+  height: 42px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 999px;
+  border: 1px solid rgba(0,0,0,0.12);
+  text-decoration: none;
+}
+
+.social-icons svg {
+  width: 20px;
+  height: 20px;
+  fill: currentColor;
+  display: block;
+}
+
+.social-icons a[aria-label="X"] svg { fill: #000; }
+.social-icons a[aria-label="Facebook"] svg { fill: #1877F2; }
+.social-icons a[aria-label="Instagram"] svg { fill: #E4405F; }
+.social-icons a[aria-label="YouTube"] svg { fill: #FF0000; }
+
+.footer-mini {
+  font-size: 0.8rem;
+  opacity: 0.7;
+}
+
+/* =========================
+   DOJO / POLICY SAFE BASICS
+   ========================= */
+
+.note {
+  font-style: italic;
+  opacity: 0.85;
+}
+
+.policy-page h2,
+.policy-page h3 {
+  margin-top: 32px;
+}
+
+.prompt-head {
   display: flex !important;
   align-items: center !important;
   justify-content: space-between !important;
@@ -650,64 +573,44 @@ h3{
 }
 
 .prompt-head h2,
-.prompt-head h3{
+.prompt-head h3 {
   margin: 0 !important;
   padding: 0 !important;
   line-height: 1.2 !important;
 }
 
-.copy-prompt-wrap{
+.copy-prompt-wrap {
   margin-left: auto !important;
   display: flex !important;
-  align-items: center !important;
   justify-content: flex-end !important;
   flex: 0 0 auto !important;
 }
 
-.copy-prompt-btn{
+.copy-prompt-btn {
   appearance: none !important;
   -webkit-appearance: none !important;
-
   display: inline-flex !important;
   align-items: center !important;
   justify-content: center !important;
-
   padding: 7px 14px !important;
   border-radius: 999px !important;
-
   border: 2px solid var(--brand) !important;
   background: transparent !important;
   color: var(--brand) !important;
-
   font-size: 0.85rem !important;
   font-weight: 900 !important;
   line-height: 1 !important;
   white-space: nowrap !important;
-
   cursor: pointer !important;
-  transition: background .15s ease, transform .15s ease, opacity .15s ease;
 }
 
-.copy-prompt-btn:hover{
-  background: rgba(31,185,168,0.10) !important;
-  transform: translateY(-1px) !important;
-}
-.copy-prompt-btn:active{ transform: translateY(0) !important; }
-
-.copy-prompt-btn:disabled{
-  opacity: 0.65 !important;
-  cursor: default !important;
-}
-
-/* Brackets = student-editable choices only (BLACK, NOT bold) */
 .prompt-content .slot,
-.prompt-content .edit{
+.prompt-content .edit {
   color: #000 !important;
   font-weight: 400 !important;
 }
 
-/* Prompt content box */
-.prompt-content{
+.prompt-content {
   color: var(--brand);
   font-weight: 800;
   margin: 10px 0 26px;
@@ -717,509 +620,135 @@ h3{
   border-radius: 14px;
 }
 
-/* Mobile: keep it neat if the title is long */
-@media (max-width: 520px){
-  .prompt-head{ align-items: flex-start !important; }
-  .copy-prompt-wrap{ margin-top: 2px !important; }
-}
-
-/* Dojo voice mode images */
-.punchE,
-.punchJ{
-  margin: 28px auto 36px;
-  text-align: center;
-}
-
-.punchE-img,
-.punchJ-img{
-  display: block;
-  width: 100%;
-  max-width: 780px;
-  height: auto;
-  margin: 0 auto;
-  border-radius: 14px;
-  border: 1px solid rgba(0,0,0,0.08);
-  box-shadow: none;
-}
-
-@media (max-width: 900px){
-  .punchE-img,
-  .punchJ-img{ max-width: 700px; }
-}
-
-@media (max-width: 600px){
-  .punchE-img,
-  .punchJ-img{ max-width: 380px; }
-}
 /* =========================
-   TIER UPGRADE PATCH (BOTTOM)
-   Boutique / Executive / Premium
-   Safe overrides for HOME only
+   MOBILE
    ========================= */
 
-/* Slightly tighter max width feels more “consulting” */
-.page{ max-width: 880px; }
+@media (max-width: 900px) {
+  .score-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
 
-/* More premium rhythm */
-.block + .block{ margin-top: 56px; }
-.section-title{ margin-bottom: 16px; }
+  .case-card-grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
 
-/* Hero: a bit more “boardroom” */
-.hero{
-  padding: 44px;
-  gap: 52px;
-  border-radius: 20px;
-}
-.hero-title{
-  letter-spacing: -0.6px;
-}
-.hero-sub{
-  font-size: 1.02rem;
-  line-height: 1.7;
+  .case-card-visual {
+    max-width: 520px;
+  }
 }
 
-/* Make cards feel more “consulting doc” and less “course box” */
-.card,
-.fit,
-.fees-card,
-.strategy-call{
-  border: 1px solid rgba(0,0,0,0.10);
-  border-radius: 18px;
-  padding: 24px 26px;
-}
+@media (max-width: 768px) {
+  .header-inner {
+    grid-template-columns: 1fr auto;
+    grid-template-areas:
+      "brand brand"
+      "toggle nav";
+    padding: 10px 12px;
+    gap: 8px 12px;
+  }
 
-/* Lists: cleaner */
-.list li{ margin: 7px 0; }
+  .header-left { grid-area: brand; justify-self: center; }
+  .header-center { grid-area: toggle; justify-self: start; }
+  .header-right { grid-area: nav; justify-self: end; gap: 10px; }
 
-/* Investment section: emphasize numbers without shouting */
-.fees-card .fees-line strong{
-  letter-spacing: -0.2px;
-}
-.fees-card .fees-line{
-  font-size: 1.02rem;
-}
+  .site-brand {
+    font-size: 1rem;
+    line-height: 1.1;
+  }
 
-/* CTA: slightly more premium */
-.cta-button{
-  border-radius: 14px;
-  padding: 16px 22px;
-}
+  .header-right a {
+    font-size: 0.92rem;
+    line-height: 1;
+    padding: 4px 6px;
+    white-space: nowrap;
+  }
 
-/* Mobile: preserve the clean feel */
-@media (max-width: 768px){
-  .block + .block{ margin-top: 44px; }
-  .hero{ padding: 24px 18px; }
+  .lang-btn {
+    padding: 4px 10px;
+    font-size: 0.85rem;
+  }
+
+  .page {
+    padding: 28px 16px 60px;
+  }
+
+  .block + .block {
+    margin-top: 48px;
+  }
+
+  .hero {
+    grid-template-columns: 1fr;
+    gap: 16px;
+    padding: 44px 0 40px;
+    align-items: start;
+  }
+
+  .hero-photo--desktop,
+  .teacher-photo.desktop {
+    display: none !important;
+  }
+
+  .hero .lang-block {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    column-gap: 14px;
+    align-items: start;
+  }
+
+  .hero-photo--mobile {
+    display: flex;
+    justify-content: flex-end;
+    grid-column: 2;
+    grid-row: 1;
+    margin: 0;
+  }
+
+  .teacher-photo.mobile {
+    width: 86px;
+    height: 86px;
+  }
+
+  .hero .lang-block h1,
+  .hero .lang-block .hero-sub,
+  .hero .lang-block .hero-proof,
+  .hero .lang-block .cta-micro {
+    grid-column: 1;
+  }
+
+  .cta-button {
+    grid-column: 1 / -1;
+    display: block;
+    width: 100%;
+    text-align: center;
+  }
+
+  .premium-panel,
+  .framework-panel,
   .card,
   .fit,
   .fees-card,
-  .strategy-call{ padding: 20px 18px; border-radius: 16px; }
-}
-/* =========================
-   ULTRA-MINIMAL EXECUTIVE MODE
-   Boutique Consulting Aesthetic
-   ========================= */
-
-/* Pure white background everywhere */
-body{
-  background: #ffffff;
-  color: #000000;
-}
-
-/* Remove hero gradient */
-.hero{
-  background: #ffffff !important;
-  border: none;
-  padding: 60px 0;
-}
-
-/* Stronger headline contrast */
-.hero-title{
-  font-size: clamp(40px, 4vw, 52px);
-  font-weight: 900;
-  letter-spacing: -0.8px;
-  color: #000;
-}
-
-.hero-sub{
-  font-size: 1.05rem;
-  line-height: 1.8;
-  max-width: 600px;
-  color: rgba(0,0,0,0.85);
-}
-
-/* Remove soft grey cards */
-.card,
-.fit,
-.fees-card,
-.strategy-call{
-  background: #ffffff !important;
-  border: 1px solid rgba(0,0,0,0.12);
-  border-radius: 6px; /* tighter, less friendly */
-  box-shadow: none !important;
-  padding: 28px 32px;
-}
-
-/* Remove rounded softness from images */
-.teacher-photo,
-.lesson-shot{
-  border-radius: 6px !important;
-  border: 1px solid rgba(0,0,0,0.15);
-}
-
-/* Strong section spacing */
-.block + .block{
-  margin-top: 80px;
-}
-
-/* Sharper section headings */
-.section-title{
-  font-size: clamp(28px, 2.5vw, 34px);
-  font-weight: 900;
-  letter-spacing: -0.5px;
-  color: #000;
-}
-
-/* Make muted text slightly darker */
-.muted{
-  color: rgba(0,0,0,0.7);
-}
-
-/* Clean lists */
-.list li{
-  margin: 8px 0;
-  line-height: 1.7;
-}
-
-/* CTA – strong, rectangular, confident */
-.cta-button{
-  background: var(--brand);
-  border-radius: 4px;
-  padding: 16px 26px;
-  font-weight: 900;
-  letter-spacing: 0.3px;
-  box-shadow: none;
-}
-
-.cta-button:hover{
-  filter: brightness(0.95);
-}
-
-/* Remove decorative hr softness */
-hr{
-  border-top: 1px solid rgba(0,0,0,0.15);
-  opacity: 1;
-}
-
-/* Header tighter + sharper */
-.site-header{
-  border-bottom: 1px solid rgba(0,0,0,0.15);
-}
-
-/* Footer clean */
-.footer{
-  border-top: 1px solid rgba(0,0,0,0.15);
-}
-
-/* Links stay green */
-a{
-  color: var(--brand);
-}
-
-/* Policy darker green still respected */
-.header-right a[href$="policy.html"]{
-  color: var(--green) !important;
-}
-/* =========================
-   CONSISTENCY TUNE
-   ========================= */
-
-/* Standard section rhythm */
-.block{
-  margin-bottom: 72px;
-}
-
-.section-title{
-  margin-bottom: 18px;
-}
-
-/* Cards consistent */
-.card,
-.fit,
-.fees-card,
-.strategy-call{
-  padding: 26px 28px;
-  margin-top: 22px;
-}
-
-/* Lists tighter + cleaner */
-.list{
-  padding-left: 18px;
-}
-
-.list li{
-  margin: 6px 0;
-}
-
-/* Professional background section consistency */
-.about .list{
-  margin-top: 12px;
-}
-/* =========================
-   PURE EXECUTIVE MODE
-   No boxes. No borders.
-   ========================= */
-
-.card,
-.fit,
-.fees-card,
-.strategy-call{
-  background: transparent !important;
-  border: none !important;
-  box-shadow: none !important;
-  padding: 0 !important;
-  margin-top: 18px;
-}
-
-/* Standard section rhythm */
-.block{
-  margin-bottom: 80px;
-}
-
-/* Tight, intentional hierarchy */
-.section-title{
-  margin-bottom: 16px;
-}
-
-.sub-title{
-  margin-top: 28px;
-  margin-bottom: 8px;
-}
-
-/* Lists clean */
-.list{
-  padding-left: 20px;
-}
-
-.list li{
-  margin: 6px 0;
-  line-height: 1.7;
-}
-
-/* Remove image borders */
-.teacher-photo,
-.lesson-shot{
-  border: none !important;
-  border-radius: 0 !important;
-}
-
-/* Remove hero containment feeling */
-.hero{
-  border: none !important;
-  padding: 80px 0 60px 0;
-}
-
-/* Footer clean */
-.footer{
-  border-top: none;
-}
-
-/* Header subtle */
-.site-header{
-  border-bottom: 1px solid rgba(0,0,0,0.08);
-}
-
-/* =========================
-   SPACING NORMALIZATION
-   ========================= */
-
-/* Consistent section rhythm */
-.block + .block{
-  margin-top: 48px !important;
-}
-
-/* Cleaner heading spacing */
-.section-title{
-  margin-bottom: 14px !important;
-}
-
-/* Prevent giant paragraph stacks */
-.block p{
-  margin-top: 12px;
-}
-
-/* Tighten card rhythm */
-.card,
-.fit,
-.fees-card,
-.strategy-call{
-  margin-top: 18px !important;
-}
-
-/* Remove excessive bottom space before footer */
-.footer{
-  margin-top: 42px !important;
-}
-
-/* Reduce CTA section looseness */
-.strategy-call .cta-button{
-  margin-top: 16px !important;
-}
-
-/* Cleaner subheading rhythm */
-.sub-title,
-.h2-like{
-  margin-top: 26px !important;
-  margin-bottom: 12px !important;
-}
-
-/* Mobile spacing refinement */
-@media (max-width: 768px){
-
-  .block + .block{
-    margin-top: 40px !important;
-  }
-
-  .footer{
-    margin-top: 36px !important;
-  }
-
-}
-/* =========================
-   EPD FINAL READABILITY TUNE
-   ========================= */
-
-.page{
-  max-width: 850px;
-}
-
-body{
-  line-height: 1.7;
-}
-
-.hero{
-  padding-top: 70px;
-  padding-bottom: 56px;
-}
-
-.block + .block{
-  margin-top: 54px !important;
-}
-
-.muted{
-  color: rgba(0,0,0,0.74);
-}
-
-@media (max-width: 768px){
-  .hero{
-    padding-top: 42px;
-    padding-bottom: 36px;
-  }
-
-  .block + .block{
-    margin-top: 42px !important;
-  }
-}
-/* ==========================================
-   FRAMEWORK SECTION
-========================================== */
-
-.framework-card {
-  text-align: center;
-}
-
-.framework-flow {
-  font-size: 1.2rem;
-  letter-spacing: 0.03em;
-  line-height: 1.8;
-}
-
-/* ==========================================
-   SCORE TABLE
-========================================== */
-
-.score-table {
-  width: 100%;
-  border-collapse: collapse;
-  margin-top: 1rem;
-  margin-bottom: 1.5rem;
-}
-
-.score-table th,
-.score-table td {
-  border-bottom: 1px solid rgba(255,255,255,0.12);
-  padding: 0.9rem 0.4rem;
-  text-align: left;
-}
-
-.score-table th {
-  font-weight: 600;
-  opacity: 0.9;
-}
-
-.score-table td:last-child {
-  font-weight: 700;
-  color: #9fd3a8;
-}
-/* ==========================================
-   DIAGNOSTIC MOVEMENT
-========================================== */
-
-.metric-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 18px;
-  margin-top: 1.5rem;
-  margin-bottom: 1.5rem;
-}
-
-.metric-card {
-  background: rgba(255,255,255,0.06);
-  border: 1px solid rgba(255,255,255,0.08);
-  border-radius: 18px;
-
-  padding: 22px 18px;
-
-  min-height: 170px;
-
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-
-.metric-title {
-  font-size: 0.95rem;
-  line-height: 1.45;
-  font-weight: 600;
-  opacity: 0.92;
-
-  min-height: 52px;
-}
-
-.metric-score {
-  font-size: 2rem;
-  font-weight: 700;
-  line-height: 1.1;
-
-  margin-top: 12px;
-}
-
-.metric-score span {
-  opacity: 0.55;
-  margin: 0 4px;
-}
-
-@media (max-width: 900px) {
-  .metric-grid {
-    grid-template-columns: repeat(2, 1fr);
+  .strategy-call {
+    padding: 22px 20px;
   }
 }
 
-@media (max-width: 600px) {
-  .metric-grid {
+@media (max-width: 560px) {
+  .score-grid {
     grid-template-columns: 1fr;
   }
 
-  .metric-card {
+  .score-card {
     min-height: auto;
+  }
+
+  .framework-flow {
+    gap: 8px;
+  }
+
+  .framework-step {
+    font-size: 0.86rem;
+    padding: 9px 12px;
   }
 }
