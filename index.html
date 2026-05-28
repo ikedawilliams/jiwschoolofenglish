@@ -9,120 +9,13 @@
     name="description"
     content="JIW School of English provides diagnostic-driven executive communication coaching for Japanese professionals who need to communicate with clarity, authority, and trust in international business environments."
   />
-  <link rel="stylesheet" href="style.css?v=39" />
-
-  <!-- Small page-specific additions for case studies / framework section.
-       These can be moved to style.css later. -->
-  <style>
-    .case-card-grid {
-      display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 18px;
-      margin-top: 24px;
-    }
-
-    .case-card-visual {
-      display: block;
-      width: 100%;
-      border-radius: 18px;
-      border: 1px solid rgba(255,255,255,0.14);
-      box-shadow: 0 12px 30px rgba(0,0,0,0.22);
-      background: #111;
-    }
-
-    .case-card-caption {
-      margin-top: 12px;
-      font-size: 0.95rem;
-      line-height: 1.6;
-    }
-
-    .mini-case-highlight {
-      margin-top: 28px;
-      padding: 28px;
-      border-radius: 22px;
-      border: 1px solid rgba(255,255,255,0.14);
-      background: rgba(255,255,255,0.045);
-    }
-
-    .diagnostic-score-grid {
-      display: grid;
-      grid-template-columns: repeat(4, minmax(0, 1fr));
-      gap: 12px;
-      margin-top: 18px;
-    }
-
-    .score-box {
-      padding: 16px;
-      border-radius: 16px;
-      background: rgba(0,0,0,0.22);
-      border: 1px solid rgba(255,255,255,0.12);
-    }
-
-    .score-box strong {
-      display: block;
-      margin-bottom: 8px;
-      font-size: 0.9rem;
-      opacity: 0.9;
-    }
-
-    .score-number {
-      display: block;
-      font-size: 1.55rem;
-      font-weight: 700;
-      line-height: 1.1;
-    }
-
-    .framework-flow {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-      margin: 22px 0;
-    }
-
-    .framework-step {
-      padding: 12px 14px;
-      border-radius: 999px;
-      border: 1px solid rgba(255,255,255,0.16);
-      background: rgba(255,255,255,0.055);
-      font-weight: 700;
-      font-size: 0.95rem;
-    }
-
-    .framework-example {
-      margin-top: 18px;
-      padding: 20px;
-      border-radius: 18px;
-      background: rgba(0,0,0,0.22);
-      border: 1px solid rgba(255,255,255,0.10);
-    }
-
-    .framework-label {
-      font-size: 0.85rem;
-      text-transform: uppercase;
-      letter-spacing: 0.08em;
-      opacity: 0.75;
-      margin-bottom: 8px;
-      font-weight: 700;
-    }
-
-    @media (max-width: 800px) {
-      .case-card-grid,
-      .diagnostic-score-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .mini-case-highlight {
-        padding: 20px;
-      }
-    }
-  </style>
+  <link rel="stylesheet" href="style.css?v=44" />
 </head>
 
 <body>
 
 <header class="site-header">
   <div class="header-inner">
-
     <div class="header-left">
       <a href="index.html" class="site-brand">JIW School of English</a>
     </div>
@@ -139,7 +32,6 @@
       <!-- <a href="dojo.html">Dojo</a> -->
       <a href="policy.html" class="nav-policy">Terms</a>
     </nav>
-
   </div>
 </header>
 
@@ -148,7 +40,6 @@
 
   <!-- HERO -->
   <section class="hero" aria-label="Hero">
-
     <div class="hero-copy">
 
       <!-- EN HERO -->
@@ -184,9 +75,7 @@
           Apply for the Executive Performance Diagnostic
         </a>
 
-        <p class="cta-micro">
-          Paid • ¥15,000 • 60 minutes • Application required
-        </p>
+        <p class="cta-micro">Paid • ¥15,000 • 60 minutes • Application required</p>
       </div>
 
       <!-- JP HERO -->
@@ -223,11 +112,8 @@
           エグゼクティブ・パフォーマンス診断に申し込む
         </a>
 
-        <p class="cta-micro">
-          有料 • ¥15,000 • 60分 • 申込制
-        </p>
+        <p class="cta-micro">有料 • ¥15,000 • 60分 • 申込制</p>
       </div>
-
     </div>
 
     <div class="hero-photo hero-photo--desktop">
@@ -237,7 +123,6 @@
         class="teacher-photo desktop"
       />
     </div>
-
   </section>
 
 
@@ -302,9 +187,7 @@
         Executive presence is not only personality. It is also behavior. People appear more intelligent, more trustworthy, and more authoritative when they communicate with structure, control, and strategic clarity.
       </p>
 
-      <p class="muted">
-        At JIWSOE, executive presence is trained as a hybrid system:
-      </p>
+      <p class="muted">At JIWSOE, executive presence is trained as a hybrid system:</p>
 
       <div class="card">
         <ul class="list">
@@ -355,7 +238,7 @@
     </section>
 
     <!-- CASE STUDIES -->
-    <section class="block" aria-label="Executive Communication Case Studies">
+    <section class="block case-section" aria-label="Executive Communication Case Studies">
       <h2 class="section-title">Executive communication case snapshots</h2>
 
       <p class="muted">
@@ -367,85 +250,63 @@
       </p>
 
       <div class="case-card-grid">
-        <div>
-          <img
-            src="images/case-card-01.png"
-            alt="Case study card: Under-expressed expert"
-            class="case-card-visual"
-            loading="lazy"
-          />
-          <p class="case-card-caption muted">
+        <article class="case-card">
+          <img src="images/case-card-01.PNG" alt="Case study card: Fluent English speaker lacked influence" class="case-card-visual" loading="lazy" />
+          <p class="case-card-caption">
             <strong>Case 1:</strong> A fluent English speaker who understood the words, but needed stronger structure, clarity, and strategic direction to influence people.
           </p>
-        </div>
+        </article>
 
-        <div>
-          <img
-            src="images/case-card-02.png"
-            alt="Case study card: Strategic simplification"
-            class="case-card-visual"
-            loading="lazy"
-          />
-          <p class="case-card-caption muted">
+        <article class="case-card">
+          <img src="images/case-card-02.PNG" alt="Case study card: Listener attention disappeared" class="case-card-visual" loading="lazy" />
+          <p class="case-card-caption">
             <strong>Case 2:</strong> A professional who kept speaking after listener attention dropped, and needed prioritization, concision, and stronger cognitive control.
           </p>
-        </div>
+        </article>
 
-        <div>
-          <img
-            src="images/case-card-03.png"
-            alt="Case study card: Executive authority"
-            class="case-card-visual"
-            loading="lazy"
-          />
-          <p class="case-card-caption muted">
+        <article class="case-card">
+          <img src="images/case-card-03.PNG" alt="Case study card: Deeper strategic risks were missing" class="case-card-visual" loading="lazy" />
+          <p class="case-card-caption">
             <strong>Case 3:</strong> A smart professional who could explain surface-level issues clearly, but needed deeper systems thinking, consequences, and strategic risk awareness.
           </p>
-        </div>
+        </article>
       </div>
 
-      <div class="mini-case-highlight">
+      <div class="premium-panel">
         <h3 class="sub-title">Highlighted case: Strong English, limited executive impact</h3>
 
         <p class="muted">
           One advanced professional already had strong English and deep expertise. The issue was not grammar. The issue was that explanations sometimes became too abstract, examples came too late, and the message was not always adapted to the listener.
         </p>
 
-        <div class="card">
-          <ul class="list">
-            <li><strong>Initial pattern:</strong> clear intelligence, but inconsistent audience adaptation and limited concrete examples</li>
-            <li><strong>Primary intervention:</strong> structured responses, strategic examples, stakeholder adaptation, and cognitive load reduction</li>
-            <li><strong>Observed change:</strong> stronger presentation control, clearer executive summaries, and more persuasive explanations in real work situations</li>
-          </ul>
+        <ul class="list compact-list">
+          <li><strong>Initial pattern:</strong> clear intelligence, but inconsistent audience adaptation and limited concrete examples</li>
+          <li><strong>Primary intervention:</strong> structured responses, strategic examples, stakeholder adaptation, and cognitive load reduction</li>
+          <li><strong>Observed change:</strong> stronger presentation control, clearer executive summaries, and more persuasive explanations in real work situations</li>
+        </ul>
+
+        <h3 class="sub-title score-title">Diagnostic movement example</h3>
+
+        <div class="score-grid">
+          <div class="score-card">
+            <div class="score-name">Structural Clarity</div>
+            <div class="score-values">5.0 <span>→</span> 8.0</div>
+          </div>
+          <div class="score-card">
+            <div class="score-name">Examples &amp; Specificity</div>
+            <div class="score-values">4.0 <span>→</span> 8.0</div>
+          </div>
+          <div class="score-card">
+            <div class="score-name">Audience Adaptation</div>
+            <div class="score-values">4.5 <span>→</span> 8.0</div>
+          </div>
+          <div class="score-card">
+            <div class="score-name">Executive Presence</div>
+            <div class="score-values">5.0 <span>→</span> 7.5</div>
+          </div>
         </div>
 
-        <h3 class="sub-title">Diagnostic movement example</h3>
-
-<div class="metric-grid">
-
-  <div class="metric-card">
-    <p class="metric-title">Structural Clarity</p>
-    <p class="metric-score">5.0 <span>→</span> 8.0</p>
-  </div>
-
-  <div class="metric-card">
-    <p class="metric-title">Examples &amp;<br>Specificity</p>
-    <p class="metric-score">4.0 <span>→</span> 8.0</p>
-  </div>
-
-  <div class="metric-card">
-    <p class="metric-title">Audience<br>Adaptation</p>
-    <p class="metric-score">4.5 <span>→</span> 8.0</p>
-  </div>
-
-  <div class="metric-card">
-    <p class="metric-title">Executive Presence</p>
-    <p class="metric-score">5.0 <span>→</span> 7.5</p>
-  </div>
-
-</div>
-
-        <p class="muted">
+        <p class="muted score-note">
           Scores are shown as an example of the type of diagnostic comparison used to track development. Actual coaching priorities are customized by client.
         </p>
       </div>
@@ -459,7 +320,7 @@
         Strong professional communication is not about saying everything. It is about giving the listener a clear path through your thinking.
       </p>
 
-      <div class="card">
+      <div class="framework-panel">
         <h3 class="sub-title">Core response flow</h3>
 
         <div class="framework-flow" aria-label="Structured response framework">
@@ -474,18 +335,18 @@
           This framework helps reduce hesitation, improve clarity, and make answers sound more organized, credible, and executive.
         </p>
 
-        <div class="framework-example">
-          <div class="framework-label">Weak answer</div>
-          <p class="muted">
-            “It depends. There are many things to think about, and different people may have different opinions…”
-          </p>
-        </div>
+        <div class="answer-grid">
+          <div class="answer-box">
+            <div class="answer-label">Weak Answer</div>
+            <p>“It depends. There are many things to think about, and different people may have different opinions...”</p>
+          </div>
 
-        <div class="framework-example">
-          <div class="framework-label">Stronger answer</div>
-          <p class="muted">
-            “In my view, the company should prioritize long-term trust. The main reason is that short-term profit can disappear quickly if customers lose confidence. For example, if a product is launched too early and quality drops, the brand may suffer. So the better decision is to protect trust first, even if growth is slightly slower.”
-          </p>
+          <div class="answer-box answer-box-strong">
+            <div class="answer-label">Stronger Answer</div>
+            <p>
+              “In my view, the company should prioritize long-term trust. The main reason is that short-term profit can disappear quickly if customers lose confidence. For example, if a product is launched too early and quality drops, the brand may suffer. So the better decision is to protect trust first, even if growth is slightly slower.”
+            </p>
+          </div>
         </div>
       </div>
     </section>
@@ -511,9 +372,7 @@
     <section class="block" id="diagnostic" aria-label="Executive Performance Diagnostic">
       <h2 class="section-title">Executive Performance Diagnostic</h2>
 
-      <p class="muted">
-        <strong>¥15,000</strong> • 60 minutes • Zoom • Written performance summary included
-      </p>
+      <p class="muted"><strong>¥15,000</strong> • 60 minutes • Zoom • Written performance summary included</p>
 
       <p class="muted">
         The diagnostic is the entry point. It is designed to identify the communication patterns that limit your professional credibility in English and determine which training priorities will create the greatest improvement.
@@ -528,12 +387,7 @@
           <li>Written Executive Performance Diagnostic summary after the session</li>
         </ul>
 
-        <a
-          href="https://forms.gle/deckEoSGvQyVB17E7"
-          class="cta-button cta-button--primary"
-          target="_blank"
-          rel="noopener"
-        >
+        <a href="https://forms.gle/deckEoSGvQyVB17E7" class="cta-button cta-button--primary" target="_blank" rel="noopener">
           Book Executive Performance Diagnostic (¥15,000)
         </a>
 
@@ -596,105 +450,6 @@
       </div>
     </section>
 
-    <!-- FRAMEWORK EXAMPLE -->
-    <section class="block" aria-label="Structured Responses Framework">
-      <h2 class="section-title">Structured responses create clearer executive communication.</h2>
-
-      <p class="muted">
-        Many professionals already have strong ideas and technical expertise.
-        However, under pressure, communication often becomes:
-      </p>
-
-      <div class="card">
-        <ul class="list">
-          <li>too reactive</li>
-          <li>overly detailed</li>
-          <li>unclear in prioritization</li>
-          <li>slow to reach the main point</li>
-          <li>difficult for listeners to follow</li>
-        </ul>
-      </div>
-
-      <p class="muted">
-        One of the core frameworks used in JIWSOE coaching is:
-      </p>
-
-      <div class="card framework-card">
-        <p class="framework-flow">
-          <strong>Position → Reason → Example → Strategic Ending</strong>
-        </p>
-      </div>
-
-      <p class="muted">
-        This structure helps professionals communicate more clearly, persuasively, and strategically during meetings, presentations, interviews, and high-pressure discussions.
-      </p>
-
-      <div class="card">
-        <p><strong>Question:</strong><br />
-        “Should companies allow remote work?”</p>
-
-        <hr>
-
-        <p><strong>Weak answer:</strong><br />
-        “Remote work has advantages and disadvantages and it depends on the company…”</p>
-
-        <hr>
-
-        <p><strong>Structured answer:</strong><br />
-        “I believe companies should allow remote work when possible because it often improves focus and flexibility. For example, many employees produce higher-quality work when they can reduce commuting stress and control their environment more effectively. However, companies still need strong communication systems and accountability. Long-term, organizations that balance flexibility with structure will likely attract stronger talent.”</p>
-      </div>
-    </section>
-
-    <!-- PERFORMANCE IMPROVEMENT -->
-    <section class="block" aria-label="Measured Improvement">
-      <h2 class="section-title">Measured communication improvement</h2>
-
-      <p class="muted">
-        Communication performance can be observed, analyzed, and improved systematically.
-        The goal is not “perfect English.”
-        The goal is clearer, more effective executive communication.
-      </p>
-
-      <div class="card">
-
-        <table class="score-table">
-          <thead>
-            <tr>
-              <th>Category</th>
-              <th>Initial</th>
-              <th>Revised</th>
-            </tr>
-          </thead>
-
-          <tbody>
-            <tr>
-              <td>Structural Clarity</td>
-              <td>4.5</td>
-              <td>7.5</td>
-            </tr>
-
-            <tr>
-              <td>Audience Adaptation</td>
-              <td>3.5</td>
-              <td>8.0</td>
-            </tr>
-
-            <tr>
-              <td>Executive Presence</td>
-              <td>4.0</td>
-              <td>7.0</td>
-            </tr>
-          </tbody>
-        </table>
-
-        <p class="muted">
-          Example progression from a real executive communication engagement.
-          Individual results vary depending on preparation, repetition, and implementation.
-        </p>
-
-      </div>
-    </section>
-    
     <!-- INVESTMENT -->
     <section class="block fees-block" aria-label="Investment">
       <h2 class="section-title">Investment</h2>
@@ -712,9 +467,7 @@
     <section class="block about" aria-label="About">
       <h2 class="section-title">About</h2>
 
-      <p>
-        Hi, I’m <strong>John Ikeda-Williams</strong>, founder of JIW School of English.
-      </p>
+      <p>Hi, I’m <strong>John Ikeda-Williams</strong>, founder of JIW School of English.</p>
 
       <p class="muted">
         I help Japanese professionals communicate more clearly, strategically, and credibly in international business environments. My work is not based on casual conversation practice. It is structured coaching for people whose English affects their career, leadership, and professional reputation.
@@ -763,12 +516,7 @@
       </p>
 
       <div class="card strategy-call">
-        <a
-          href="https://forms.gle/deckEoSGvQyVB17E7"
-          class="cta-button cta-button--primary"
-          target="_blank"
-          rel="noopener"
-        >
+        <a href="https://forms.gle/deckEoSGvQyVB17E7" class="cta-button cta-button--primary" target="_blank" rel="noopener">
           Book Executive Performance Diagnostic (¥15,000)
         </a>
         <p class="muted"><strong>Limited client slots.</strong></p>
@@ -839,14 +587,12 @@
         エグゼクティブ・プレゼンスは、生まれ持った性格だけで決まるものではありません。話し方、構成、判断の示し方、そして聞き手への配慮によって、人はより知的に、信頼でき、影響力のある人物として見られます。
       </p>
 
-      <p class="muted">
-        JIWSOEでは、エグゼクティブ・プレゼンスを次の二つの側面から鍛えます。
-      </p>
+      <p class="muted">JIWSOEでは、エグゼクティブ・プレゼンスを次の二つの側面から鍛えます。</p>
 
       <div class="card">
         <ul class="list">
-          <li><strong>外側の行動</strong>：ペース、結論の出し方、締め方、落ち着いた話し方、プロらしいトーン、自信のある対応</li>
-          <li><strong>内側の整理力</strong>：優先順位、意思決定の明確さ、ステークホルダー思考、リスク意識、情報の階層化</li>
+          <li><strong>外側の行動</strong> — ペース、結論の出し方、締め方、落ち着いた話し方、プロらしいトーン、自信のある対応</li>
+          <li><strong>内側の整理力</strong> — 優先順位、意思決定の明確さ、ステークホルダー思考、リスク意識、情報の階層化</li>
         </ul>
       </div>
 
@@ -892,7 +638,7 @@
     </section>
 
     <!-- CASE STUDIES JP -->
-    <section class="block" aria-label="エグゼクティブ・コミュニケーション事例">
+    <section class="block case-section" aria-label="エグゼクティブ・コミュニケーション事例">
       <h2 class="section-title">エグゼクティブ・コミュニケーション事例</h2>
 
       <p class="muted">
@@ -904,80 +650,63 @@
       </p>
 
       <div class="case-card-grid">
-        <div>
-          <img
-            src="images/case-card-01.png"
-            alt="事例カード：表現不足の専門家"
-            class="case-card-visual"
-            loading="lazy"
-          />
-          <p class="case-card-caption muted">
+        <article class="case-card">
+          <img src="images/case-card-01.PNG" alt="事例カード：英語は流暢でも影響力が弱いケース" class="case-card-visual" loading="lazy" />
+          <p class="case-card-caption">
             <strong>Case 1:</strong> 英語は流暢でも、相手を動かすための構成、明確さ、戦略的な方向づけが不足していたケース。
           </p>
-        </div>
+        </article>
 
-        <div>
-          <img
-            src="images/case-card-02.png"
-            alt="事例カード：戦略的な簡略化"
-            class="case-card-visual"
-            loading="lazy"
-          />
-          <p class="case-card-caption muted">
+        <article class="case-card">
+          <img src="images/case-card-02.PNG" alt="事例カード：聞き手の集中が切れてしまうケース" class="case-card-visual" loading="lazy" />
+          <p class="case-card-caption">
             <strong>Case 2:</strong> 聞き手の集中が切れても話し続けてしまい、優先順位、簡潔さ、聞き手への意識を強化する必要があったケース。
           </p>
-        </div>
+        </article>
 
-        <div>
-          <img
-            src="images/case-card-03.png"
-            alt="事例カード：エグゼクティブ・プレゼンス"
-            class="case-card-visual"
-            loading="lazy"
-          />
-          <p class="case-card-caption muted">
+        <article class="case-card">
+          <img src="images/case-card-03.PNG" alt="事例カード：戦略的リスクまで踏み込めないケース" class="case-card-visual" loading="lazy" />
+          <p class="case-card-caption">
             <strong>Case 3:</strong> 表面的な問題は明確に説明できる一方で、より深い構造、影響、戦略的リスクまで踏み込む必要があったケース。
           </p>
-        </div>
+        </article>
       </div>
 
-      <div class="mini-case-highlight">
+      <div class="premium-panel">
         <h3 class="sub-title">注目ケース：英語力は高いが、伝わり方に課題があったケース</h3>
 
         <p class="muted">
           ある上級レベルのプロフェッショナルは、すでに高い英語力と深い専門性を持っていました。課題は文法ではありませんでした。説明が抽象的になりやすく、具体例が遅れ、聞き手に合わせた説明が不安定だったことが主な制約でした。
         </p>
 
-        <div class="card">
-          <ul class="list">
-            <li><strong>初期パターン：</strong>知性は十分にあるが、聞き手への適応と具体例の出し方に不安定さがあった</li>
-            <li><strong>主な介入：</strong>構造化された回答、戦略的な具体例、ステークホルダー適応、聞き手の負担を減らす説明</li>
-            <li><strong>観察された変化：</strong>プレゼンの制御力、エグゼクティブ向け要約、実務での説得力が大きく改善</li>
-          </ul>
+        <ul class="list compact-list">
+          <li><strong>初期パターン：</strong>知性は十分にあるが、聞き手への適応と具体例の出し方に不安定さがあった</li>
+          <li><strong>主な介入：</strong>構造化された回答、戦略的な具体例、ステークホルダー適応、聞き手の負担を減らす説明</li>
+          <li><strong>観察された変化：</strong>プレゼンの制御力、エグゼクティブ向け要約、実務での説得力が大きく改善</li>
+        </ul>
+
+        <h3 class="sub-title score-title">診断スコアの変化例</h3>
+
+        <div class="score-grid">
+          <div class="score-card">
+            <div class="score-name">構成の明確さ</div>
+            <div class="score-values">5.0 <span>→</span> 8.0</div>
+          </div>
+          <div class="score-card">
+            <div class="score-name">具体例・解像度</div>
+            <div class="score-values">4.0 <span>→</span> 8.0</div>
+          </div>
+          <div class="score-card">
+            <div class="score-name">聞き手への適応</div>
+            <div class="score-values">4.5 <span>→</span> 8.0</div>
+          </div>
+          <div class="score-card">
+            <div class="score-name">信頼感・存在感</div>
+            <div class="score-values">5.0 <span>→</span> 7.5</div>
+          </div>
         </div>
 
-        <h3 class="sub-title">診断スコアの変化例</h3>
-
-        <div class="diagnostic-score-grid">
-          <div class="score-box">
-            <strong>構成の明確さ</strong>
-            <span class="score-number">5.0 → 8.0</span>
-          </div>
-          <div class="score-box">
-            <strong>具体例・解像度</strong>
-            <span class="score-number">4.0 → 8.0</span>
-          </div>
-          <div class="score-box">
-            <strong>聞き手への適応</strong>
-            <span class="score-number">4.5 → 8.0</span>
-          </div>
-          <div class="score-box">
-            <strong>信頼感・存在感</strong>
-            <span class="score-number">5.0 → 7.5</span>
-          </div>
-        </div>
-
-        <p class="muted">
+        <p class="muted score-note">
           上記は、改善を可視化するための診断比較の一例です。実際の優先課題は、クライアントごとに診断して設計します。
         </p>
       </div>
@@ -991,7 +720,7 @@
         強いプロフェッショナル・コミュニケーションは、すべてを話すことではありません。聞き手が迷わず理解できるように、考えの道筋を作ることです。
       </p>
 
-      <div class="card">
+      <div class="framework-panel">
         <h3 class="sub-title">基本の回答フロー</h3>
 
         <div class="framework-flow" aria-label="構造化回答フレームワーク">
@@ -1006,18 +735,18 @@
           このフレームワークは、迷いを減らし、答えをより明確で、整理され、信頼される形にするための基本構造です。
         </p>
 
-        <div class="framework-example">
-          <div class="framework-label">弱い回答</div>
-          <p class="muted">
-            「場合によります。いろいろ考えることがありますし、人によって意見も違うと思います……」
-          </p>
-        </div>
+        <div class="answer-grid">
+          <div class="answer-box">
+            <div class="answer-label">弱い回答</div>
+            <p>「場合によります。いろいろ考えることがありますし、人によって意見も違うと思います……」</p>
+          </div>
 
-        <div class="framework-example">
-          <div class="framework-label">強い回答</div>
-          <p class="muted">
-            「私の考えでは、会社は長期的な信頼を優先すべきです。理由は、短期的な利益は、顧客の信頼を失えばすぐに消えてしまうからです。例えば、品質が不十分なまま製品を出してしまうと、ブランドへの信頼が大きく下がる可能性があります。ですから、成長が少し遅くなったとしても、まず信頼を守る判断が重要だと思います。」
-          </p>
+          <div class="answer-box answer-box-strong">
+            <div class="answer-label">強い回答</div>
+            <p>
+              「私の考えでは、会社は長期的な信頼を優先すべきです。理由は、短期的な利益は、顧客の信頼を失えばすぐに消えてしまうからです。例えば、品質が不十分なまま製品を出してしまうと、ブランドへの信頼が大きく下がる可能性があります。ですから、成長が少し遅くなったとしても、まず信頼を守る判断が重要だと思います。」
+            </p>
+          </div>
         </div>
       </div>
     </section>
@@ -1043,9 +772,7 @@
     <section class="block" id="diagnostic-jp" aria-label="エグゼクティブ・パフォーマンス診断">
       <h2 class="section-title">エグゼクティブ・パフォーマンス診断</h2>
 
-      <p class="muted">
-        <strong>¥15,000</strong> • 60分 • Zoom • 診断サマリー付き
-      </p>
+      <p class="muted"><strong>¥15,000</strong> • 60分 • Zoom • 診断サマリー付き</p>
 
       <p class="muted">
         この診断はプログラム参加前の入口です。英語でのプロフェッショナルな信頼性を制限しているコミュニケーションパターンを特定し、どの改善が最も大きな成果につながるのかを明確にします。
@@ -1060,12 +787,7 @@
           <li>終了後、文章での Executive Performance Diagnostic サマリーをお渡しします</li>
         </ul>
 
-        <a
-          href="https://forms.gle/deckEoSGvQyVB17E7"
-          class="cta-button cta-button--primary"
-          target="_blank"
-          rel="noopener"
-        >
+        <a href="https://forms.gle/deckEoSGvQyVB17E7" class="cta-button cta-button--primary" target="_blank" rel="noopener">
           エグゼクティブ・パフォーマンス診断（¥15,000）を予約
         </a>
 
@@ -1145,9 +867,7 @@
     <section class="block about" aria-label="講師プロフィール">
       <h2 class="section-title">講師プロフィール</h2>
 
-      <p>
-        JIW School of English代表の <strong>John Ikeda-Williams</strong> です。
-      </p>
+      <p>JIW School of English代表の <strong>John Ikeda-Williams</strong> です。</p>
 
       <p class="muted">
         国際的なビジネス環境で、日本人プロフェッショナルがより明確に、戦略的に、信頼される形で伝えられるよう支援しています。私の指導は、気軽な英会話練習ではありません。英語がキャリア、リーダーシップ、信頼性に関わる方のための、構造化されたコーチングです。
@@ -1196,12 +916,7 @@
       </p>
 
       <div class="card strategy-call">
-        <a
-          href="https://forms.gle/deckEoSGvQyVB17E7"
-          class="cta-button cta-button--primary"
-          target="_blank"
-          rel="noopener"
-        >
+        <a href="https://forms.gle/deckEoSGvQyVB17E7" class="cta-button cta-button--primary" target="_blank" rel="noopener">
           エグゼクティブ・パフォーマンス診断（¥15,000）を予約
         </a>
         <p class="muted"><strong>受付枠には限りがあります。</strong></p>
@@ -1258,7 +973,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
 <footer class="footer">
   <div class="social-icons">
-
     <a href="https://x.com/JIWSchoolEng" target="_blank" rel="noopener" aria-label="X">
       <svg viewBox="0 0 24 24"><path d="M18.9 2H22l-7.6 8.7L23 22h-6.9l-5.4-6.7L4.7 22H1.6l8.1-9.3L1 2h7l4.9 6.2L18.9 2z"/></svg>
     </a>
@@ -1276,8 +990,8 @@ document.addEventListener("DOMContentLoaded", () => {
         <path d="M23 12s0-4-1-6a3 3 0 0 0-2-2c-2-.5-8-.5-8-.5s-6 0-8 .5a3 3 0 0 0-2 2c-1 2-1 6-1 6s0 4 1 6a3 3 0 0 0 2 2c2 .5 8 .5 8 .5s6 0 8-.5a3 3 0 0 0 2-2c1-2 1-6 1-6zm-13 3V9l6 3-6 3z"/>
       </svg>
     </a>
-
   </div>
+
   <p class="footer-mini">© JIW School of English</p>
 </footer>
 
