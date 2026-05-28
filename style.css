@@ -1160,3 +1160,66 @@ body{
   font-weight: 700;
   color: #9fd3a8;
 }
+/* ==========================================
+   DIAGNOSTIC MOVEMENT
+========================================== */
+
+.metric-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 18px;
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.metric-card {
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 18px;
+
+  padding: 22px 18px;
+
+  min-height: 170px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.metric-title {
+  font-size: 0.95rem;
+  line-height: 1.45;
+  font-weight: 600;
+  opacity: 0.92;
+
+  min-height: 52px;
+}
+
+.metric-score {
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 1.1;
+
+  margin-top: 12px;
+}
+
+.metric-score span {
+  opacity: 0.55;
+  margin: 0 4px;
+}
+
+@media (max-width: 900px) {
+  .metric-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .metric-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .metric-card {
+    min-height: auto;
+  }
+}
