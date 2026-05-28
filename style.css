@@ -1119,3 +1119,44 @@ body{
     margin-top: 42px !important;
   }
 }
+/* ==========================================
+   FRAMEWORK SECTION
+========================================== */
+
+.framework-card {
+  text-align: center;
+}
+
+.framework-flow {
+  font-size: 1.2rem;
+  letter-spacing: 0.03em;
+  line-height: 1.8;
+}
+
+/* ==========================================
+   SCORE TABLE
+========================================== */
+
+.score-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.score-table th,
+.score-table td {
+  border-bottom: 1px solid rgba(255,255,255,0.12);
+  padding: 0.9rem 0.4rem;
+  text-align: left;
+}
+
+.score-table th {
+  font-weight: 600;
+  opacity: 0.9;
+}
+
+.score-table td:last-child {
+  font-weight: 700;
+  color: #9fd3a8;
+}
