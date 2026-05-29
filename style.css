@@ -967,3 +967,238 @@ p + p { margin-top: 14px; }
     padding: 18px;
   }
 }
+
+/* =========================
+   V7 POLISH — CONSISTENT REPORT DATA, BALANCED ROADMAP, CLEANER FRAMEWORK
+   ========================= */
+
+/* Keep initial diagnostic mockup and roadmap mini-report consistent */
+.profile-box .danger-score,
+.mini-report-row .danger-score {
+  color: #a00000 !important;
+  font-weight: 900 !important;
+}
+
+.profile-box .sub-score b {
+  font-weight: 500 !important;
+  font-size: 0.7rem !important;
+  color: rgba(17,19,24,0.70) !important;
+}
+
+.profile-box .score-row b {
+  font-weight: 950 !important;
+  font-size: 0.92rem !important;
+  color: #111318 !important;
+}
+
+.profile-box .constraint-row {
+  margin-top: 8px;
+  padding: 11px 12px !important;
+  background: rgba(201,163,90,0.16);
+  border-top: 1px solid rgba(0,0,0,0.08);
+}
+
+.profile-box .constraint-row span {
+  font-size: 0.62rem;
+  font-weight: 950;
+  letter-spacing: 0.10em;
+  text-transform: uppercase;
+  color: rgba(17,19,24,0.56);
+}
+
+.profile-box .constraint-row strong {
+  font-size: 0.76rem;
+  color: #111318;
+  text-align: right;
+}
+
+/* Framework: elegant segmented capsule instead of one overfull pill */
+.framework-card {
+  padding: 34px;
+}
+
+.framework-flow.framework-flow--single {
+  display: grid !important;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 0;
+  align-items: stretch;
+  overflow: hidden;
+  border-radius: 999px;
+  background: var(--navy);
+  margin-bottom: 24px;
+}
+
+.framework-flow.framework-flow--single span {
+  width: auto !important;
+  min-height: 46px !important;
+  padding: 12px 10px !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+  color: #fff !important;
+  font-size: 0.78rem !important;
+  font-weight: 900 !important;
+  line-height: 1.15 !important;
+  white-space: normal !important;
+  text-align: center !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  position: relative;
+}
+
+.framework-flow.framework-flow--single span + i + span::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 12px;
+  bottom: 12px;
+  width: 1px;
+  background: rgba(255,255,255,0.18);
+}
+
+.framework-flow.framework-flow--single i {
+  display: none !important;
+}
+
+.answer-compare article {
+  min-height: 230px;
+}
+
+.answer-compare strong {
+  color: rgba(10,20,32,0.58);
+}
+
+.answer-compare p {
+  font-size: 0.94rem;
+}
+
+.answer-compare .strong-answer p {
+  font-size: 0.84rem;
+  line-height: 1.56;
+}
+
+/* Roadmap section: left/right visual language should match */
+.program-section {
+  background: #fbfaf7;
+}
+
+.program-diagnostic-grid {
+  align-items: center;
+  grid-template-columns: 0.95fr 1.05fr;
+  gap: 64px;
+}
+
+.program-copy {
+  max-width: none;
+}
+
+.program-copy h2 {
+  max-width: 520px;
+}
+
+.program-copy .lead {
+  max-width: 520px;
+}
+
+.program-principles {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+  margin-top: 28px;
+  max-width: 560px;
+}
+
+.program-principles article {
+  padding: 20px 22px;
+  border-radius: 20px;
+  border: 1px solid rgba(17,19,24,0.10);
+  background: #fff;
+  box-shadow: 0 18px 44px rgba(7,20,33,0.055);
+}
+
+.program-principles article span {
+  display: block;
+  margin-bottom: 22px;
+  color: var(--gold);
+  font-size: 0.78rem;
+  font-weight: 950;
+  letter-spacing: 0.16em;
+}
+
+.program-principles article strong {
+  display: block;
+  margin-bottom: 6px;
+  color: var(--ink);
+  font-size: 1.02rem;
+  font-weight: 900;
+}
+
+.program-principles article p {
+  color: rgba(17,19,24,0.62);
+  font-size: 0.9rem;
+  line-height: 1.55;
+}
+
+.roadmap-panel {
+  padding: 30px;
+  border-radius: 28px;
+}
+
+.roadmap-mini-report {
+  transform: none;
+  box-shadow: 0 18px 48px rgba(0,0,0,0.18);
+}
+
+.roadmap-focus-card,
+.roadmap-timeline article {
+  background: rgba(255,255,255,0.07);
+}
+
+.roadmap-arrow {
+  height: 28px;
+}
+
+.roadmap-timeline article h3 {
+  font-size: 0.98rem;
+}
+
+.roadmap-timeline article p {
+  font-size: 0.86rem;
+}
+
+@media (max-width: 980px) {
+  .program-diagnostic-grid {
+    grid-template-columns: 1fr;
+    gap: 38px;
+  }
+}
+
+@media (max-width: 760px) {
+  .framework-flow.framework-flow--single {
+    grid-template-columns: 1fr;
+    border-radius: 18px;
+  }
+
+  .framework-flow.framework-flow--single span {
+    min-height: 42px !important;
+    font-size: 0.82rem !important;
+  }
+
+  .framework-flow.framework-flow--single span + i + span::before {
+    left: 18px;
+    right: 18px;
+    top: 0;
+    bottom: auto;
+    width: auto;
+    height: 1px;
+  }
+
+  .program-principles {
+    grid-template-columns: 1fr;
+  }
+
+  .roadmap-panel {
+    padding: 22px;
+    border-radius: 24px;
+  }
+}
