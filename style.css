@@ -655,3 +655,89 @@ p + p { margin-top: 14px; }
     font-size: 0.86rem;
   }
 }
+
+
+/* =========================
+   V5 POLISH — EPD FORM LINK, FRAMEWORK FLOW, REPORT NUMBERS, SYSTEM NUMBERS
+   ========================= */
+
+/* Cleaner one-line framework flow */
+.framework-flow--single {
+  display: block;
+  margin-bottom: 24px;
+}
+
+.framework-flow--single span {
+  width: 100%;
+  min-height: 48px;
+  padding: 13px 18px;
+  border-radius: 999px;
+  justify-content: center;
+  text-align: center;
+  white-space: normal;
+  line-height: 1.35;
+  letter-spacing: 0.01em;
+}
+
+.answer-compare article {
+  min-height: 248px;
+}
+
+.answer-compare b {
+  font-weight: 900;
+  color: rgba(10,20,32,0.88);
+}
+
+/* Report mockup: minor scores should feel quieter; CAS/EAI should dominate */
+.profile-box div {
+  align-items: baseline;
+}
+
+.profile-score--minor {
+  font-weight: 500;
+  font-size: 0.72rem;
+  color: rgba(17,19,24,0.72);
+}
+
+.profile-score--major {
+  font-weight: 950;
+  font-size: 0.86rem;
+  color: #111;
+}
+
+.profile-box .index-row {
+  background: rgba(13,79,134,0.045);
+}
+
+/* Four-area system numbers: match the pattern-card logic more closely */
+.quadrant-icon {
+  width: auto;
+  height: auto;
+  border: none;
+  border-radius: 0;
+  display: block;
+  margin-bottom: 42px;
+  color: var(--gold);
+  font-size: 0.86rem;
+  font-weight: 950;
+  letter-spacing: 0.16em;
+}
+
+.quadrant {
+  padding-top: 38px;
+}
+
+@media (max-width: 760px) {
+  .framework-flow--single span {
+    border-radius: 18px;
+    font-size: 0.82rem;
+  }
+
+  .answer-compare article {
+    min-height: auto;
+  }
+
+  .quadrant-icon {
+    margin-bottom: 34px;
+  }
+}
