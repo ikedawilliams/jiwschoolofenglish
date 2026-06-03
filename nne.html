@@ -5,26 +5,23 @@
   <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32.PNG">
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="English coaching for Japanese learners preparing for interviews, study abroad, travel, presentations, auditions, EIKEN, and real-world communication. Personalized training. Real goals. Real results." />
+  <meta name="description" content="English coaching for Japanese learners preparing for interviews, travel, study abroad, presentations, auditions, EIKEN, and real-world communication. Personalized training. Real goals. Real results." />
   <link rel="stylesheet" href="style.css?v=14" />
-  <link rel="stylesheet" href="nne.css?v=22" />
+  <link rel="stylesheet" href="nne.css?v=30" />
 </head>
 
-<body class="nne-page">
-<header class="site-header nne-header">
-  <div class="header-inner">
-    <div class="header-left">
-      <a href="nne.html" class="site-brand">JIW School of English</a>
+<body class="nne-page" id="top">
+
+<header class="nne-header">
+  <div class="nne-header-inner">
+    <a href="nne.html" class="nne-brand">JIW School of English</a>
+
+    <div class="nne-lang-toggle" aria-label="Language toggle">
+      <button type="button" class="nne-lang-btn" data-lang="jp">JP</button>
+      <button type="button" class="nne-lang-btn" data-lang="en">EN</button>
     </div>
 
-    <div class="header-center">
-      <div class="lang-toggle" aria-label="Language toggle">
-        <button type="button" class="lang-btn" data-lang="en">EN</button>
-        <button type="button" class="lang-btn" data-lang="jp">JP</button>
-      </div>
-    </div>
-
-    <nav class="header-right">
+    <nav class="nne-nav" aria-label="Main navigation">
       <a href="nne.html">Home</a>
       <a href="dojo.html">AI Dojo</a>
       <a href="nne-policy.html">Terms</a>
@@ -33,354 +30,383 @@
   </div>
 </header>
 
-<main>
+<main class="nne-main">
+
   <!-- HERO -->
-  <section class="nne-hero">
-    <div class="nne-hero-wrap">
+  <section class="nne-hero" aria-label="No Nonsense English">
+    <div class="nne-hero-bg"></div>
+
+    <div class="nne-hero-inner">
+
       <div class="nne-hero-copy">
-        <div class="lang-block lang-en">
+        <div class="lang-block lang-jp">
           <p class="nne-kicker">No Nonsense English</p>
-          <h1>Real English for real goals.</h1>
-          <p class="nne-hero-lead">For interviews, travel, study abroad, auditions, presentations, EIKEN, and real life.</p>
-          <p class="nne-hero-sub">No generic textbooks. No wasted time. We build the training around what you actually need to do.</p>
-          <div class="nne-actions">
-            <a href="https://forms.gle/TSEGoVxQLY1MLr7BA" class="nne-btn nne-btn-primary" target="_blank" rel="noopener">Book a Free Consultation</a>
-            <a href="#stories" class="nne-btn nne-btn-secondary">See who I’ve helped</a>
+          <h1>英語で、何をしたいですか？</h1>
+
+          <p class="nne-hero-lead">
+            面接、旅行、留学、オーディション、プレゼン、英検、そして実生活のための英語。
+          </p>
+
+          <p class="nne-hero-sub">
+            教科書を進めるだけではありません。あなたの目標に合わせて、本当に使う英語を練習します。
+          </p>
+
+          <div class="nne-hero-actions">
+            <a href="https://forms.gle/TSEGoVxQLY1MLr7BA" class="nne-btn nne-btn-primary" target="_blank" rel="noopener">無料相談を予約する</a>
+            <a href="#real-students-jp" class="nne-btn nne-btn-secondary">サポート例を見る</a>
           </div>
-          <p class="nne-micro">Look at who I have helped. Do you want to be next?</p>
+
+          <p class="nne-micro">本物の人。本物の練習。本当の成長。</p>
         </div>
 
-        <div class="lang-block lang-jp" hidden>
+        <div class="lang-block lang-en" hidden>
           <p class="nne-kicker">No Nonsense English</p>
-          <h1>本当に使う英語を、あなたの目標へ。</h1>
-          <p class="nne-hero-lead">面接、海外旅行、留学、オーディション、プレゼン、英検、そして実生活のための英語。</p>
-          <p class="nne-hero-sub">教科書をただ進めるだけではありません。あなたが本当に必要な場面に合わせて、実践的に練習します。</p>
-          <div class="nne-actions">
-            <a href="https://forms.gle/TSEGoVxQLY1MLr7BA" class="nne-btn nne-btn-primary" target="_blank" rel="noopener">無料相談を予約する</a>
-            <a href="#stories-jp" class="nne-btn nne-btn-secondary">サポート例を見る</a>
+          <h1>Real English for real goals.</h1>
+
+          <p class="nne-hero-lead">
+            For interviews, travel, study abroad, auditions, presentations, EIKEN, and real life.
+          </p>
+
+          <p class="nne-hero-sub">
+            No generic textbooks. No wasted time. We build practical training around what you actually need to do.
+          </p>
+
+          <div class="nne-hero-actions">
+            <a href="https://forms.gle/TSEGoVxQLY1MLr7BA" class="nne-btn nne-btn-primary" target="_blank" rel="noopener">Book a Free Consultation</a>
+            <a href="#real-students" class="nne-btn nne-btn-secondary">See People I’ve Helped</a>
           </div>
-          <p class="nne-micro">次は、あなたの番かもしれません。</p>
+
+          <p class="nne-micro">Real person. Real practice. Real progress.</p>
         </div>
       </div>
 
-      <aside class="nne-polaroid" aria-label="John Ikeda-Williams">
-        <div class="nne-tape"></div>
+      <aside class="nne-photo-card" aria-label="John Ikeda-Williams">
+        <span class="nne-tape"></span>
         <img src="images/John.png" alt="John Ikeda-Williams">
-        <div class="nne-polaroid-caption">
+        <div class="nne-photo-caption">
           <strong>John Ikeda-Williams</strong>
           <span>25+ years helping Japanese learners</span>
         </div>
       </aside>
+
+    </div>
+
+    <div class="nne-quick-goals" aria-label="Popular goals">
+      <a href="#goals-jp">🎓<span>留学</span></a>
+      <a href="#goals-jp">📚<span>英検</span></a>
+      <a href="#goals-jp">✈️<span>旅行</span></a>
+      <a href="#goals-jp">💼<span>面接</span></a>
+      <a href="#goals-jp">🎭<span>オーディション</span></a>
+      <a href="#goals-jp">🎤<span>プレゼン</span></a>
     </div>
   </section>
 
-  <!-- ENGLISH -->
-  <div class="lang-all lang-en">
-    <section class="nne-strip" aria-label="Popular goals">
-      <a href="#goals">🎓<span>Study Abroad</span></a>
-      <a href="#goals">📚<span>EIKEN</span></a>
-      <a href="#goals">✈️<span>Travel</span></a>
-      <a href="#goals">💼<span>Interviews</span></a>
-      <a href="#goals">🎭<span>Auditions</span></a>
-      <a href="#goals">🎤<span>Presentations</span></a>
-    </section>
 
-    <section class="nne-section nne-stories" id="stories">
-      <div class="nne-inner">
+  <!-- JAPANESE PAGE -->
+  <div class="lang-all lang-jp">
+
+    <!-- REAL STUDENTS -->
+    <section class="nne-section nne-students-section" id="real-students-jp">
+      <div class="nne-container">
         <div class="nne-section-head">
           <p class="nne-kicker">Real students. Real goals.</p>
-          <h2>Look at who I have helped. Do you want to be next?</h2>
-          <p>Every student is different. Every goal is different. So the training should be different too.</p>
+          <h2>実際に、いろいろな目標を持つ方々をサポートしてきました。</h2>
+          <p>
+            英語が必要になる場面は人によって違います。だから、全員に同じレッスンはしません。
+          </p>
         </div>
 
         <div class="nne-story-grid">
-          <article class="nne-story-card">
-            <div class="nne-icon">🇬🇧</div>
-            <h3>Medical Conference</h3>
-            <p><b>Goal:</b> Present research at an international conference.</p>
-            <p><b>Training:</b> Presentation flow, Q&amp;A, clear explanations.</p>
-            <p><b>Result:</b> More confidence for the presentation and audience questions.</p>
+          <article class="nne-story-card accent-blue">
+            <div class="nne-story-top"><span>🇬🇧</span><small>Presentation</small></div>
+            <h3>国際学会発表</h3>
+            <p><b>目標：</b>海外の学会で研究を発表する。</p>
+            <p><b>課題：</b>専門的な内容を分かりやすく伝え、質問に落ち着いて答える。</p>
+            <p><b>結果：</b>発表と質疑応答に自信を持って臨めるよう準備。</p>
           </article>
 
-          <article class="nne-story-card featured">
-            <div class="nne-icon">🇺🇸</div>
-            <h3>Overseas Audition</h3>
-            <p><b>Goal:</b> Prepare for auditions and interviews in the United States.</p>
-            <p><b>Training:</b> Interview answers, small talk, travel situations.</p>
-            <p><b>Result:</b> Stronger answers, better fluency, and more confidence.</p>
+          <article class="nne-story-card accent-pink">
+            <div class="nne-story-top"><span>🇺🇸</span><small>Audition</small></div>
+            <h3>海外オーディション</h3>
+            <p><b>目標：</b>アメリカでのオーディションや面接に備える。</p>
+            <p><b>課題：</b>緊張する場面で、自分の経験や考えを自然に話す。</p>
+            <p><b>結果：</b>答え方、会話力、自信を強化。</p>
           </article>
 
-          <article class="nne-story-card">
-            <div class="nne-icon">💼</div>
-            <h3>Business Travel</h3>
-            <p><b>Goal:</b> Meet overseas clients and represent the company.</p>
-            <p><b>Training:</b> Meetings, client visits, explanations, small talk.</p>
-            <p><b>Result:</b> Better preparation for real business communication.</p>
+          <article class="nne-story-card accent-green">
+            <div class="nne-story-top"><span>💼</span><small>Business</small></div>
+            <h3>海外出張</h3>
+            <p><b>目標：</b>海外のクライアントと会う。</p>
+            <p><b>課題：</b>会議、雑談、説明、トラブル対応を英語で行う。</p>
+            <p><b>結果：</b>実際のビジネス場面に合わせて準備。</p>
           </article>
 
-          <article class="nne-story-card">
-            <div class="nne-icon">📚</div>
-            <h3>EIKEN Speaking</h3>
-            <p><b>Goal:</b> Pass the speaking test.</p>
-            <p><b>Training:</b> Answer structure, fluency, and pressure control.</p>
-            <p><b>Result:</b> Clearer answers and stronger test confidence.</p>
+          <article class="nne-story-card accent-gold">
+            <div class="nne-story-top"><span>📚</span><small>EIKEN</small></div>
+            <h3>英検スピーキング</h3>
+            <p><b>目標：</b>スピーキング試験に合格する。</p>
+            <p><b>課題：</b>短時間で考えを整理し、理由と例を入れて答える。</p>
+            <p><b>結果：</b>答えの構成、流暢さ、本番での自信を改善。</p>
           </article>
+        </div>
+
+        <div class="nne-next-band">
+          <p>次は、あなたの番かもしれません。</p>
+          <a href="https://forms.gle/TSEGoVxQLY1MLr7BA" target="_blank" rel="noopener">無料相談で話してみる</a>
         </div>
       </div>
     </section>
 
-    <section class="nne-next">
-      <div class="nne-inner nne-next-card">
-        <p class="nne-kicker">Do you want to be next?</p>
-        <h2>Tell me what you want to do. I’ll help you get there.</h2>
-        <a href="https://forms.gle/TSEGoVxQLY1MLr7BA" class="nne-btn nne-btn-primary" target="_blank" rel="noopener">Start with a free consultation</a>
+    <!-- YOUR GOAL -->
+    <section class="nne-section nne-goals-section" id="goals-jp">
+      <div class="nne-container">
+        <div class="nne-section-head">
+          <p class="nne-kicker">Your goal</p>
+          <h2>目標が違えば、必要な練習も違います。</h2>
+          <p>
+            まずは「何のために英語が必要か」を聞かせてください。そこから、必要な練習を一緒に作ります。
+          </p>
+        </div>
+
+        <div class="nne-goal-grid">
+          <article><span>🎓</span><h3>留学</h3><p>授業、ホームステイ、友達作り、日常生活に備えます。</p></article>
+          <article><span>✈️</span><h3>海外旅行</h3><p>空港、ホテル、レストラン、交通機関、実際の会話を練習します。</p></article>
+          <article><span>📚</span><h3>英検</h3><p>答え方、構成、理由、具体例、流暢さを鍛えます。</p></article>
+          <article><span>💼</span><h3>面接</h3><p>自然で分かりやすく、自信を持って答える練習をします。</p></article>
+          <article><span>🎤</span><h3>プレゼン</h3><p>考えを整理し、聞き手に伝わる話し方を練習します。</p></article>
+          <article><span>🧳</span><h3>海外出張</h3><p>会議、雑談、説明、クライアント対応に備えます。</p></article>
+          <article><span>🌎</span><h3>海外生活</h3><p>仕事、買い物、住まい、学校、日常会話を練習します。</p></article>
+          <article><span>🎭</span><h3>オーディション</h3><p>国際的な環境での面接や会話に備えます。</p></article>
+        </div>
       </div>
     </section>
 
-    <section class="nne-section" id="goals">
-      <div class="nne-inner">
+    <!-- HOW LESSONS WORK -->
+    <section class="nne-section nne-method-section">
+      <div class="nne-container nne-split">
+        <div>
+          <p class="nne-kicker">How lessons work</p>
+          <h2>たくさん話す。直す。もう一度やる。</h2>
+          <p>
+            レッスンは、ただ説明を聞く時間ではありません。実際に話し、間違いを直し、もう一度使えるようにする時間です。
+          </p>
+        </div>
+
+        <div class="nne-steps">
+          <article><b>1</b><div><h3>ウォームアップ</h3><p>あなたの生活や目標に関係する自然な会話から始めます。</p></div></article>
+          <article><b>2</b><div><h3>修正</h3><p>文法、発音、語彙、言い方をその場で直します。</p></div></article>
+          <article><b>3</b><div><h3>ロールプレイ</h3><p>面接、旅行、発表、トラブル対応など、実際の場面に近づけます。</p></div></article>
+          <article><b>4</b><div><h3>次の課題</h3><p>何が良くなったか、次に何を練習すべきかを明確にします。</p></div></article>
+        </div>
+      </div>
+    </section>
+
+    <!-- AI DOJO -->
+    <section class="nne-section nne-dojo-section">
+      <div class="nne-container nne-split">
+        <div>
+          <p class="nne-kicker">AI Dojo</p>
+          <h2>レッスンの間にも、練習できます。</h2>
+          <p>
+            AI Dojoでは、面接、旅行、プレゼン、英検スピーキング、日常会話などを自分で練習できます。
+          </p>
+          <a href="dojo.html" class="nne-btn nne-btn-primary">AI Dojoを見る</a>
+        </div>
+
+        <div class="nne-dojo-card">
+          <h3>恥ずかしくない。何度でも練習できる。</h3>
+          <p>英語は分かるのに、話す時に止まってしまう人は多いです。</p>
+          <p>本番前に、使う表現や会話の流れに慣れておくことが大切です。</p>
+          <div>話す → 直す → もう一度言う → 上達する</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- JOHN -->
+    <section class="nne-section nne-about-section">
+      <div class="nne-container nne-about">
+        <img src="images/John.png" alt="John Ikeda-Williams">
+        <div>
+          <p class="nne-kicker">About John</p>
+          <h2>日本人学習者を25年以上サポートしてきました。</h2>
+          <p>こんにちは、ジョンです。日本で、英語を必要とする日本人学習者を長くサポートしてきました。</p>
+          <p>カナダのバンクーバー島出身で、日本に住んでいます。息子が2人います。</p>
+          <p>サイクリング、散歩、ガーデニング、テクノロジー、投資、健康、ライ麦パン作り、自然の中で過ごすことが好きです。</p>
+          <p><strong>私にも夢があります。いつか南房総で農業をすることです。</strong></p>
+          <p>あなたの夢は何ですか？</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="nne-final-cta" id="consultation-jp">
+      <div class="nne-container">
+        <p class="nne-kicker">Start here</p>
+        <h2>まずは、あなたの目標について話しましょう。</h2>
+        <p>無料オンライン相談では、目標、現在のレベル、困っていること、これからの進め方について話します。</p>
+        <a href="https://forms.gle/TSEGoVxQLY1MLr7BA" class="nne-btn nne-btn-primary" target="_blank" rel="noopener">無料相談を予約する</a>
+        <p class="nne-micro">無理な勧誘はありません。まずは話すだけです。</p>
+      </div>
+    </section>
+  </div>
+
+
+  <!-- ENGLISH PAGE -->
+  <div class="lang-all lang-en" hidden>
+
+    <section class="nne-section nne-students-section" id="real-students">
+      <div class="nne-container">
+        <div class="nne-section-head">
+          <p class="nne-kicker">Real students. Real goals.</p>
+          <h2>Look at who I’ve helped. Do you want to be next?</h2>
+          <p>Different goals need different training. That is why I do not force every student into the same textbook path.</p>
+        </div>
+
+        <div class="nne-story-grid">
+          <article class="nne-story-card accent-blue"><div class="nne-story-top"><span>🇬🇧</span><small>Presentation</small></div><h3>Medical Conference</h3><p><b>Goal:</b> Present research overseas.</p><p><b>Challenge:</b> Explain complex ideas clearly and answer questions.</p><p><b>Result:</b> Delivered the presentation and handled audience questions with confidence.</p></article>
+          <article class="nne-story-card accent-pink"><div class="nne-story-top"><span>🇺🇸</span><small>Audition</small></div><h3>International Audition</h3><p><b>Goal:</b> Prepare for auditions and interviews in the United States.</p><p><b>Challenge:</b> Speak naturally under pressure.</p><p><b>Result:</b> Built stronger answers, fluency, and confidence.</p></article>
+          <article class="nne-story-card accent-green"><div class="nne-story-top"><span>💼</span><small>Business</small></div><h3>Business Travel</h3><p><b>Goal:</b> Meet overseas clients and represent the company.</p><p><b>Challenge:</b> Speak clearly in real business situations.</p><p><b>Result:</b> Prepared for meetings, small talk, explanations, and client communication.</p></article>
+          <article class="nne-story-card accent-gold"><div class="nne-story-top"><span>📚</span><small>EIKEN</small></div><h3>EIKEN Speaking</h3><p><b>Goal:</b> Pass the speaking test.</p><p><b>Challenge:</b> Organize answers quickly under pressure.</p><p><b>Result:</b> Improved answer structure, fluency, and confidence.</p></article>
+        </div>
+
+        <div class="nne-next-band">
+          <p>You could be next.</p>
+          <a href="https://forms.gle/TSEGoVxQLY1MLr7BA" target="_blank" rel="noopener">Talk to me for free</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="nne-section nne-goals-section" id="goals">
+      <div class="nne-container">
         <div class="nne-section-head">
           <p class="nne-kicker">Your goal</p>
           <h2>Choose the goal. Then we build the strategy.</h2>
-          <p>Most students do not need “more English.” They need the right practice for the situation they are preparing for.</p>
+          <p>Most students do not need “more English.” They need the right training for the situation they are preparing for.</p>
         </div>
 
         <div class="nne-goal-grid">
           <article><span>🎓</span><h3>Study Abroad</h3><p>Classes, daily life, friends, host families, and new experiences.</p></article>
           <article><span>✈️</span><h3>Travel</h3><p>Airports, hotels, restaurants, transport, and real conversations.</p></article>
           <article><span>📚</span><h3>EIKEN</h3><p>Speaking structure, fluency, confidence, and test performance.</p></article>
-          <article><span>🤝</span><h3>Interviews</h3><p>Clear, natural answers for job, school, and overseas interviews.</p></article>
+          <article><span>💼</span><h3>Interviews</h3><p>Clear, natural answers for job, school, and overseas interviews.</p></article>
           <article><span>🎤</span><h3>Presentations</h3><p>Clear messages, better structure, and more control under pressure.</p></article>
-          <article><span>💼</span><h3>Business Travel</h3><p>Meetings, client visits, small talk, and professional confidence.</p></article>
-          <article><span>🌏</span><h3>Life Overseas</h3><p>Work, study, shopping, housing, schools, and daily survival English.</p></article>
-          <article><span>⭐</span><h3>Auditions</h3><p>Interview practice and international communication for performers.</p></article>
+          <article><span>🧳</span><h3>Business Travel</h3><p>Meetings, client visits, small talk, and professional confidence.</p></article>
+          <article><span>🌎</span><h3>Life Overseas</h3><p>Work, study, shopping, housing, schools, and daily survival English.</p></article>
+          <article><span>🎭</span><h3>Auditions</h3><p>Interview practice and international communication for performers.</p></article>
         </div>
       </div>
     </section>
 
-    <section class="nne-section nne-method">
-      <div class="nne-inner nne-split">
+    <section class="nne-section nne-method-section">
+      <div class="nne-container nne-split">
         <div>
           <p class="nne-kicker">How lessons work</p>
-          <h2>Speak. Get corrected. Try again. Improve.</h2>
-          <p class="nne-lead">You speak a lot. I correct what matters. Then we practice again in more realistic situations.</p>
+          <h2>Speak. Get corrected. Try again.</h2>
+          <p>The lesson is not just listening to explanations. You speak, get corrected, and practice until the English becomes usable.</p>
         </div>
+
         <div class="nne-steps">
-          <article><b>1</b><span>Warm-up conversation connected to your real life.</span></article>
-          <article><b>2</b><span>Useful vocabulary, grammar, pronunciation, and reaction practice.</span></article>
-          <article><b>3</b><span>Longer role plays that make you explain, react, and ask questions.</span></article>
-          <article><b>4</b><span>Clear feedback so you know what to improve next.</span></article>
+          <article><b>1</b><div><h3>Warm-up</h3><p>Natural conversation connected to your life and goal.</p></div></article>
+          <article><b>2</b><div><h3>Correction</h3><p>Grammar, pronunciation, vocabulary, and expression corrections.</p></div></article>
+          <article><b>3</b><div><h3>Role play</h3><p>Interviews, travel, presentations, problems, auditions, and real situations.</p></div></article>
+          <article><b>4</b><div><h3>Next step</h3><p>Clear feedback so you know what to improve next.</p></div></article>
         </div>
       </div>
     </section>
 
-    <section class="nne-section nne-dojo">
-      <div class="nne-inner nne-split">
+    <section class="nne-section nne-dojo-section">
+      <div class="nne-container nne-split">
         <div>
           <p class="nne-kicker">AI Dojo</p>
-          <h2>Practice between lessons.</h2>
-          <p>Use the AI Dojo for extra speaking practice between coaching sessions.</p>
-          <p>Practice interviews, travel situations, presentations, EIKEN speaking, and everyday conversations as often as you like.</p>
+          <h2>Practice anytime between lessons.</h2>
+          <p>Students can use the AI Dojo for extra speaking practice between coaching sessions.</p>
           <a href="dojo.html" class="nne-btn nne-btn-primary">Visit the AI Dojo</a>
         </div>
-        <div class="nne-glass-card">
+        <div class="nne-dojo-card">
           <h3>No embarrassment. No pressure.</h3>
-          <p>Many students understand English, but freeze when they have to speak. Repetition helps you build familiar patterns before the real situation.</p>
-          <div class="nne-flow">Repeat → Correct → Try Again → Improve</div>
+          <p>Many students understand English, but freeze when they have to speak.</p>
+          <p>Repeated practice helps you build familiar patterns before the real situation.</p>
+          <div>Repeat → Correct → Try Again → Improve</div>
         </div>
       </div>
     </section>
 
-    <section class="nne-section nne-about">
-      <div class="nne-inner nne-about-grid">
+    <section class="nne-section nne-about-section">
+      <div class="nne-container nne-about">
         <img src="images/John.png" alt="John Ikeda-Williams">
         <div>
-          <p class="nne-kicker">John</p>
-          <h2>A real teacher for real goals.</h2>
+          <p class="nne-kicker">About John</p>
+          <h2>A practical coach for Japanese learners with real goals.</h2>
           <p>Hi, I’m John. I’ve been helping Japanese learners achieve their English goals for more than 25 years.</p>
           <p>I’m originally from Vancouver Island, Canada. I have two sons, and I live in Japan.</p>
           <p>I like cycling, walking, gardening, technology, investing, health, baking rye bread, and spending time outdoors.</p>
-          <p><b>My dream is to become a farmer in Minami Boso someday. What is yours?</b></p>
+          <p><strong>My dream is to become a farmer in Minami Boso someday.</strong></p>
+          <p>What is yours?</p>
         </div>
       </div>
     </section>
 
-    <section class="nne-final">
-      <div class="nne-inner">
+    <section class="nne-final-cta" id="consultation">
+      <div class="nne-container">
         <p class="nne-kicker">Start here</p>
         <h2>Let’s talk about your goal.</h2>
-        <p>In a free online consultation, we’ll discuss your goal, your level, your challenges, and the best way forward.</p>
+        <p>In a free online consultation, we’ll discuss your goal, your current level, your challenges, and the best way forward.</p>
         <a href="https://forms.gle/TSEGoVxQLY1MLr7BA" class="nne-btn nne-btn-primary" target="_blank" rel="noopener">Book a Free Consultation</a>
         <p class="nne-micro">No pressure. Just a conversation.</p>
       </div>
     </section>
   </div>
 
-  <!-- JAPANESE -->
-  <div class="lang-all lang-jp" hidden>
-    <section class="nne-strip" aria-label="Popular goals">
-      <a href="#goals-jp">🎓<span>留学</span></a>
-      <a href="#goals-jp">📚<span>英検</span></a>
-      <a href="#goals-jp">✈️<span>海外旅行</span></a>
-      <a href="#goals-jp">💼<span>面接</span></a>
-      <a href="#goals-jp">🎭<span>オーディション</span></a>
-      <a href="#goals-jp">🎤<span>プレゼン</span></a>
-    </section>
-
-    <section class="nne-section nne-stories" id="stories-jp">
-      <div class="nne-inner">
-        <div class="nne-section-head">
-          <p class="nne-kicker">実際の生徒。実際の目標。</p>
-          <h2>こんな目標を持つ方々をサポートしてきました。</h2>
-          <p>目標が違えば、必要な練習も変わります。だから全員に同じレッスンはしません。</p>
-        </div>
-
-        <div class="nne-story-grid">
-          <article class="nne-story-card">
-            <div class="nne-icon">🇬🇧</div>
-            <h3>国際学会発表</h3>
-            <p><b>目標：</b>海外の学会で研究を発表する。</p>
-            <p><b>練習：</b>発表の流れ、質疑応答、分かりやすい説明。</p>
-            <p><b>結果：</b>発表と質問対応に自信を持てるように準備。</p>
-          </article>
-
-          <article class="nne-story-card featured">
-            <div class="nne-icon">🇺🇸</div>
-            <h3>海外オーディション</h3>
-            <p><b>目標：</b>アメリカでのオーディションや面接に備える。</p>
-            <p><b>練習：</b>面接の答え方、雑談、旅行中の会話。</p>
-            <p><b>結果：</b>答え方、流暢さ、自信を強化。</p>
-          </article>
-
-          <article class="nne-story-card">
-            <div class="nne-icon">💼</div>
-            <h3>海外出張</h3>
-            <p><b>目標：</b>海外のクライアントと会う。</p>
-            <p><b>練習：</b>会議、訪問、説明、スモールトーク。</p>
-            <p><b>結果：</b>実際のビジネス場面に向けて準備。</p>
-          </article>
-
-          <article class="nne-story-card">
-            <div class="nne-icon">📚</div>
-            <h3>英検スピーキング</h3>
-            <p><b>目標：</b>スピーキング試験に合格する。</p>
-            <p><b>練習：</b>答えの構成、流暢さ、プレッシャー対策。</p>
-            <p><b>結果：</b>答えが整理され、本番への自信が向上。</p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section class="nne-next">
-      <div class="nne-inner nne-next-card">
-        <p class="nne-kicker">次は、あなたの番ですか？</p>
-        <h2>あなたの目標を教えてください。一緒に準備しましょう。</h2>
-        <a href="https://forms.gle/TSEGoVxQLY1MLr7BA" class="nne-btn nne-btn-primary" target="_blank" rel="noopener">無料相談から始める</a>
-      </div>
-    </section>
-
-    <section class="nne-section" id="goals-jp">
-      <div class="nne-inner">
-        <div class="nne-section-head">
-          <p class="nne-kicker">あなたの目標</p>
-          <h2>目標に合わせて、必要な練習を作ります。</h2>
-          <p>必要なのは、ただ英語の勉強を増やすことではありません。実際に英語を使う場面に合わせた練習です。</p>
-        </div>
-
-        <div class="nne-goal-grid">
-          <article><span>🎓</span><h3>留学</h3><p>授業、日常生活、友達作り、ホームステイ、新しい経験に備えます。</p></article>
-          <article><span>✈️</span><h3>海外旅行</h3><p>空港、ホテル、レストラン、交通機関、実際の会話に自信をつけます。</p></article>
-          <article><span>📚</span><h3>英検</h3><p>スピーキングの答え方、流暢さ、本番での自信を鍛えます。</p></article>
-          <article><span>🤝</span><h3>面接</h3><p>仕事、学校、海外での面接に自然に分かりやすく答える練習をします。</p></article>
-          <article><span>🎤</span><h3>プレゼン</h3><p>伝えたいことを整理し、プレッシャーの中でも落ち着いて話す練習をします。</p></article>
-          <article><span>💼</span><h3>海外出張</h3><p>会議、クライアント訪問、雑談、プロらしい対応に備えます。</p></article>
-          <article><span>🌏</span><h3>海外生活</h3><p>仕事、勉強、買い物、住まい、学校、日常生活に必要な英語を練習します。</p></article>
-          <article><span>⭐</span><h3>オーディション</h3><p>国際的な環境での面接や会話に備えます。</p></article>
-        </div>
-      </div>
-    </section>
-
-    <section class="nne-section nne-method">
-      <div class="nne-inner nne-split">
-        <div>
-          <p class="nne-kicker">レッスンの流れ</p>
-          <h2>話す。直す。もう一度言う。上達する。</h2>
-          <p class="nne-lead">たくさん話す。大事な間違いを直す。そして、より実際の場面に近い形でもう一度練習します。</p>
-        </div>
-        <div class="nne-steps">
-          <article><b>1</b><span>あなたの生活や目標に関係するウォームアップ会話。</span></article>
-          <article><b>2</b><span>必要な語彙、文法、発音、反応表現をその場で修正。</span></article>
-          <article><b>3</b><span>説明、反応、質問が必要な長めのロールプレイ。</span></article>
-          <article><b>4</b><span>次に何を改善すればいいかが分かるフィードバック。</span></article>
-        </div>
-      </div>
-    </section>
-
-    <section class="nne-section nne-dojo">
-      <div class="nne-inner nne-split">
-        <div>
-          <p class="nne-kicker">AI Dojo</p>
-          <h2>レッスンの間にも練習できます。</h2>
-          <p>AI Dojoを使って、レッスン以外の時間にもスピーキング練習ができます。</p>
-          <p>面接、旅行、プレゼン、英検スピーキング、日常会話などを何度でも練習できます。</p>
-          <a href="dojo.html" class="nne-btn nne-btn-primary">AI Dojoを見る</a>
-        </div>
-        <div class="nne-glass-card">
-          <h3>恥ずかしくない。プレッシャーもない。</h3>
-          <p>英語は分かるのに、話す時に止まってしまう生徒は多いです。くり返し練習することで、本番前に使える表現や流れに慣れることができます。</p>
-          <div class="nne-flow">話す → 直す → もう一度言う → 上達する</div>
-        </div>
-      </div>
-    </section>
-
-    <section class="nne-section nne-about">
-      <div class="nne-inner nne-about-grid">
-        <img src="images/John.png" alt="John Ikeda-Williams">
-        <div>
-          <p class="nne-kicker">John</p>
-          <h2>本当の目標を持つ日本人学習者のための実践的コーチ。</h2>
-          <p>こんにちは、ジョンです。日本人学習者が英語で目標を達成できるよう、25年以上サポートしてきました。</p>
-          <p>カナダのバンクーバー島出身で、日本に住んでいます。息子が2人います。</p>
-          <p>サイクリング、散歩、ガーデニング、テクノロジー、投資、健康、ライ麦パン作り、自然の中で過ごすことが好きです。</p>
-          <p><b>私にも夢があります。いつか南房総で農業をすることです。あなたの夢は何ですか？</b></p>
-        </div>
-      </div>
-    </section>
-
-    <section class="nne-final">
-      <div class="nne-inner">
-        <p class="nne-kicker">Start here</p>
-        <h2>まずは、あなたの目標について話しましょう。</h2>
-        <p>無料オンライン相談では、目標、現在のレベル、課題、これからの進め方について話します。</p>
-        <a href="https://forms.gle/TSEGoVxQLY1MLr7BA" class="nne-btn nne-btn-primary" target="_blank" rel="noopener">無料相談を予約する</a>
-        <p class="nne-micro">無理な勧誘はありません。まずは話すだけです。</p>
-      </div>
-    </section>
-  </div>
 </main>
 
 <footer class="nne-footer">
+  <div class="nne-social-icons" aria-label="Social media links">
+    <a href="https://x.com/JIWSchoolEng" target="_blank" rel="noopener" aria-label="X">𝕏</a>
+    <a href="https://www.facebook.com/jiwschoolofenglish/" target="_blank" rel="noopener" aria-label="Facebook">f</a>
+    <a href="https://www.instagram.com/jiwschoolofenglish/" target="_blank" rel="noopener" aria-label="Instagram">◎</a>
+    <a href="https://www.youtube.com/@JIWSchoolofEnglish" target="_blank" rel="noopener" aria-label="YouTube">▶</a>
+  </div>
   <p>© JIW School of English</p>
 </footer>
 
 <script>
 document.addEventListener("DOMContentLoaded", () => {
-  const buttons = document.querySelectorAll(".lang-btn");
+  const buttons = document.querySelectorAll(".nne-lang-btn");
   const blocks = document.querySelectorAll(".lang-block");
   const pages = document.querySelectorAll(".lang-all");
+  const quickGoals = document.querySelectorAll(".nne-quick-goals a");
 
   function setLang(lang) {
-    const isEN = lang === "en";
-    blocks.forEach(block => block.hidden = block.classList.contains("lang-en") ? !isEN : isEN);
-    pages.forEach(page => page.hidden = page.classList.contains("lang-en") ? !isEN : isEN);
-    buttons.forEach(btn => btn.classList.toggle("active", btn.dataset.lang === lang));
-    document.documentElement.lang = isEN ? "en" : "ja";
-    try { localStorage.setItem("jiw_lang", lang); } catch(e) {}
+    const isJP = lang === "jp";
+
+    blocks.forEach(block => {
+      block.hidden = block.classList.contains("lang-jp") ? !isJP : isJP;
+    });
+
+    pages.forEach(page => {
+      page.hidden = page.classList.contains("lang-jp") ? !isJP : isJP;
+    });
+
+    buttons.forEach(btn => {
+      btn.classList.toggle("active", btn.dataset.lang === lang);
+    });
+
+    quickGoals.forEach(link => {
+      link.setAttribute("href", isJP ? "#goals-jp" : "#goals");
+      const labelsJP = ["留学","英検","旅行","面接","オーディション","プレゼン"];
+      const labelsEN = ["Study Abroad","EIKEN","Travel","Interviews","Auditions","Presentations"];
+      const span = link.querySelector("span");
+      if (span) span.textContent = isJP ? labelsJP[[...quickGoals].indexOf(link)] : labelsEN[[...quickGoals].indexOf(link)];
+    });
+
+    document.documentElement.lang = isJP ? "ja" : "en";
+
+    try { localStorage.setItem("jiw_nne_lang", lang); } catch(e) {}
   }
 
   let lang = "jp";
   try {
-    const saved = localStorage.getItem("jiw_lang");
+    const saved = localStorage.getItem("jiw_nne_lang");
     if (saved === "jp" || saved === "en") lang = saved;
   } catch(e) {}
 
