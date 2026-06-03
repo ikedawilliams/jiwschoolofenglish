@@ -2274,3 +2274,52 @@ p + p { margin-top: 14px; }
     font-size: clamp(2.5rem, 13vw, 4.2rem);
   }
 }
+/* =========================
+   NNE PAGE
+========================= */
+
+.nne-hero {
+  min-height: auto;
+  background:
+    radial-gradient(circle at 76% 35%, rgba(201,163,90,0.18), transparent 34%),
+    linear-gradient(135deg, rgba(18,54,38,0.98), rgba(28,78,55,0.95));
+}
+
+.nne-hero .hero-premium-inner {
+  grid-template-columns: 1fr 330px;
+}
+
+.nne-hero .hero-title {
+  max-width: 860px;
+  font-size: clamp(3rem, 6.4vw, 6.1rem);
+}
+
+.nne-hero .advisor-card {
+  align-self: center;
+}
+
+.nne-hero .advisor-image {
+  display: block;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border-radius: 18px;
+  background: #000;
+  margin-bottom: 18px;
+}
+
+@media (max-width: 860px) {
+  .nne-hero .hero-premium-inner {
+    grid-template-columns: 1fr;
+    gap: 36px;
+  }
+
+  .nne-hero .advisor-card {
+    max-width: 280px;
+    margin: 0 auto;
+  }
+
+  .nne-hero .hero-title {
+    font-size: clamp(2.5rem, 13vw, 4.2rem);
+  }
+}
