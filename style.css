@@ -2774,3 +2774,120 @@ p + p { margin-top: 14px; }
 
   .nne-warm-section {
     padding-top: 54px;
+
+   /* =========================
+   NNE v16 — Real / Human / Referral Page
+========================= */
+
+/* HERO: lighter, more human */
+.nne-hero {
+  background:
+    radial-gradient(circle at 82% 24%, rgba(214,154,58,0.20), transparent 34%),
+    linear-gradient(135deg, #fffaf0 0%, #f8f4ea 52%, #eaf3ee 100%);
+  color: #173d2b;
+  padding-top: 92px;
+  padding-bottom: 92px;
+}
+
+.nne-hero .hero-title {
+  color: #173d2b;
+  font-size: clamp(3.3rem, 7vw, 6.5rem);
+  letter-spacing: -0.06em;
+}
+
+.nne-hero .hero-sub {
+  color: #234c3a;
+}
+
+.nne-hero .hero-sub-secondary {
+  color: #667085;
+}
+
+.nne-hero .cta-micro {
+  color: #667085;
+}
+
+/* Thrown-photo style */
+.nne-hero .advisor-card {
+  transform: rotate(4deg) translateY(10px);
+  background: rgba(255,255,255,0.86);
+  border: 1px solid rgba(35,76,58,0.14);
+  box-shadow:
+    0 28px 60px rgba(20,40,30,0.18),
+    0 4px 10px rgba(20,40,30,0.08);
+}
+
+.nne-hero .advisor-image {
+  filter: grayscale(1);
+  border-radius: 18px;
+}
+
+.nne-hero .advisor-name {
+  color: #173d2b;
+}
+
+.nne-hero .advisor-role {
+  color: #667085;
+}
+
+/* Success stories near top */
+.nne-top-stories {
+  background: #fff;
+  padding-top: 80px;
+}
+
+.nne-top-stories .quadrant {
+  border-left: 6px solid #d69a3a;
+  background: #ffffff;
+  border-radius: 26px;
+  box-shadow: 0 14px 34px rgba(20,40,30,0.07);
+}
+
+/* Real vibe section */
+.nne-real-section {
+  background: #eaf3ee;
+}
+
+.nne-real-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+}
+
+.nne-real-card {
+  background: #fff;
+  border: 1px solid rgba(35,76,58,0.13);
+  border-radius: 26px;
+  padding: 28px;
+  box-shadow: 0 14px 34px rgba(20,40,30,0.06);
+}
+
+.nne-real-card h3 {
+  color: #234c3a;
+  margin-bottom: 10px;
+}
+
+.nne-real-card p {
+  color: #667085;
+  line-height: 1.7;
+}
+
+/* Softer cards */
+.dream-card {
+  transform: translateY(0);
+}
+
+.dream-card:hover {
+  transform: translateY(-4px);
+}
+
+/* Mobile */
+@media (max-width: 920px) {
+  .nne-hero .advisor-card {
+    transform: rotate(2deg);
+  }
+
+  .nne-real-grid {
+    grid-template-columns: 1fr;
+  }
+}
