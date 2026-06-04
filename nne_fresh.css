@@ -1436,3 +1436,29 @@ p {
     border-radius: 22px;
   }
 }
+
+/* =========================================================
+   Dojo v10 polish — spacing + editable example emphasis
+========================================================= */
+.change-box {
+  margin-top: 40px;
+}
+.change-box p strong {
+  color: var(--ink);
+  font-weight: 950;
+}
+.dojo-prompt pre strong {
+  color: var(--ink);
+  font-weight: 950;
+  background: rgba(255,214,107,.24);
+  border-radius: 6px;
+  padding: 0 3px;
+}
+.feature-prompt + .change-box {
+  margin-top: 42px;
+}
+@media(max-width:760px){
+  .change-box {
+    margin-top: 30px;
+  }
+}
