@@ -1468,3 +1468,89 @@ p {
     margin: 0 auto 2rem auto;
   }
 }
+/* =========================================================
+   Super Natural English — v91 mobile/about/header patch
+   Paste at the VERY BOTTOM of nne_fresh.css
+   OR rename this file to nne_fresh.css after merging if desired.
+========================================================= */
+
+/* Keep mobile header clean and centered */
+@media (max-width: 860px) {
+  .sne-header-inner {
+    grid-template-columns: 1fr auto;
+    grid-template-areas:
+      "brand toggle"
+      "nav nav";
+    gap: 10px;
+  }
+
+  .sne-brand {
+    grid-area: brand;
+  }
+
+  .sne-lang-toggle {
+    grid-area: toggle;
+    justify-content: flex-end;
+  }
+
+  .sne-nav {
+    grid-area: nav;
+    justify-content: center;
+    gap: 12px;
+    flex-wrap: wrap;
+  }
+
+  .sne-nav a {
+    font-size: .72rem;
+  }
+
+  /* About John mobile centering */
+  .about-grid {
+    grid-template-columns: 1fr !important;
+    gap: 32px !important;
+    justify-items: center !important;
+    text-align: center !important;
+  }
+
+  .about-grid img,
+  .about-john-image {
+    display: block !important;
+    width: 230px !important;
+    max-width: 72vw !important;
+    margin: 0 auto 2rem auto !important;
+    justify-self: center !important;
+  }
+
+  .about-grid > div {
+    max-width: 680px !important;
+    margin: 0 auto !important;
+  }
+}
+
+/* Slightly softer global background */
+body.sne-page {
+  background:
+    radial-gradient(circle at 8% 12%, rgba(16,163,127,.055), transparent 28%),
+    radial-gradient(circle at 92% 18%, rgba(255,214,107,.08), transparent 28%),
+    linear-gradient(180deg, #fff 0%, #fbfffd 34%, #f3fff8 100%) !important;
+}
+
+/* ChatGPT green accent lock */
+:root {
+  --green: #10a37f;
+  --green2: #19c29a;
+}
+
+.lang-btn.active,
+.steps span,
+.guide-grid span {
+  background: var(--green) !important;
+}
+
+.sne-nav a:hover,
+.kicker,
+.card-label,
+.sne-socials a:hover,
+.sne-socials-text a:hover {
+  color: var(--green) !important;
+}
