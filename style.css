@@ -1455,3 +1455,133 @@ p + p {
     margin-left: 0;
   }
 }
+
+/* =========================
+   V17 FINAL POLISH — EXECUTIVE SITE
+   Clean alignment, JP natural typography, framework comparison spacing
+   ========================= */
+
+/* Make English/Japanese body copy render cleanly on Windows and Mac */
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+
+.lang-jp {
+  font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Yu Gothic", "Yu Gothic UI", Meiryo, sans-serif;
+  letter-spacing: 0.005em;
+}
+
+.lang-jp h1,
+.lang-jp h2,
+.lang-jp h3 {
+  letter-spacing: -0.055em;
+  line-height: 1.12;
+}
+
+.lang-jp p,
+.lang-jp li {
+  line-height: 1.85;
+}
+
+/* Hero paragraph hierarchy: first = positioning, second = differentiator */
+.hero-sub {
+  color: rgba(255, 255, 255, 0.84);
+}
+
+.hero-sub-secondary {
+  margin-top: 18px;
+  padding-left: 18px;
+  border-left: 2px solid rgba(225, 196, 123, 0.58);
+  color: rgba(255, 255, 255, 0.62);
+  font-size: clamp(1rem, 1.35vw, 1.16rem);
+  line-height: 1.76;
+}
+
+.lang-en .hero-sub-secondary {
+  font-style: italic;
+}
+
+.lang-jp .hero-sub-secondary {
+  font-style: normal;
+  color: rgba(255, 255, 255, 0.68);
+}
+
+/* Framework comparison: line up the two cards and separate the casual note */
+.answer-compare {
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.12fr);
+  gap: 16px;
+}
+
+.answer-compare article {
+  min-height: 272px;
+  padding: 22px;
+}
+
+.answer-compare strong {
+  margin-bottom: 16px;
+}
+
+.answer-compare p {
+  font-size: 0.95rem;
+  line-height: 1.7;
+}
+
+.answer-compare small.coffee-note {
+  display: block;
+  margin-top: 22px;
+  padding-top: 16px;
+  border-top: 1px solid rgba(10, 20, 32, 0.10);
+  font-size: 0.79rem;
+  line-height: 1.7;
+  color: rgba(10, 20, 32, 0.58);
+}
+
+.executive-sequence {
+  gap: 11px;
+}
+
+.executive-sequence li {
+  padding-left: 34px;
+  font-size: 0.88rem;
+  line-height: 1.6;
+  color: rgba(10, 20, 32, 0.80);
+}
+
+.executive-sequence li::before {
+  top: 0.12em;
+  color: var(--gold);
+}
+
+.lang-jp .executive-sequence li {
+  line-height: 1.72;
+}
+
+/* Avoid over-wide framework capsule text on mid-size screens */
+.framework-flow--sentence span {
+  max-width: 100%;
+}
+
+/* Mobile spacing polish */
+@media (max-width: 760px) {
+  .hero-sub-secondary {
+    margin-top: 16px;
+    padding-left: 14px;
+  }
+
+  .answer-compare {
+    grid-template-columns: 1fr;
+  }
+
+  .answer-compare article {
+    min-height: auto;
+  }
+
+  .answer-compare small.coffee-note {
+    margin-top: 18px;
+    padding-top: 14px;
+  }
+
+  .executive-sequence li {
+    font-size: 0.9rem;
+  }
+}
