@@ -5,157 +5,515 @@
   <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32.PNG">
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="AI Dojo: guided ChatGPT prompts for Japanese English learners to practice speaking, listening, pronunciation, writing, grammar, and vocabulary." />
-  <link rel="stylesheet" href="nne_fresh.css?v=90" />
+  <meta name="description" content="AI Dojo: guided AI prompts for Japanese English learners to practice speaking, listening, pronunciation, writing, grammar, and vocabulary." />
+  <link rel="stylesheet" href="nne_fresh.css?v=100" />
 </head>
 <body class="sne-page dojo-page">
-<header class="sne-header"><div class="sne-header-inner"><a href="nne.html" class="sne-brand">Super Natural English</a><div class="sne-lang-toggle" aria-label="Language toggle"><button type="button" class="lang-btn active" data-lang="jp">JP</button><button type="button" class="lang-btn" data-lang="en">EN</button></div><nav class="sne-nav" aria-label="Main navigation"><a href="nne.html">Home</a><a href="dojo.html">AI Dojo</a><a href="nne-policy.html">Terms</a><a href="index.html">Executive Program</a></nav></div></header>
+<header class="sne-header">
+  <div class="sne-header-inner">
+    <a href="nne.html" class="sne-brand">Super Natural English</a>
+    <div class="sne-lang-toggle" aria-label="Language toggle">
+      <button type="button" class="lang-btn active" data-lang="jp">JP</button>
+      <button type="button" class="lang-btn" data-lang="en">EN</button>
+    </div>
+    <nav class="sne-nav" aria-label="Main navigation">
+      <a href="nne.html">Home</a>
+      <a href="dojo.html">AI Dojo</a>
+      <a href="nne-policy.html">Terms</a>
+      <a href="index.html">Executive Program</a>
+    </nav>
+  </div>
+</header>
+
 <main>
-<div class="lang-all lang-jp">
-<section class="dojo-hero"><div class="section-head"><p class="kicker gradient-text">AI Dojo</p><h1>恥ずかしくない。<br>何度でも練習できる。</h1><p>レッスンの間も、英語は伸ばせます。下のプロンプトをコピーして、ChatGPTの音声モードやテキストで練習してください。</p></div></section>
-<section class="section dojo-guide"><div class="guide-grid"><article><span>1</span><h3>Part 1</h3><p>最初に、自分の名前・レベル・目的をAIに伝えます。</p></article><article><span>2</span><h3>Part 2</h3><p>練習したいメニューを1つ選んでコピーします。</p></article><article><span>3</span><h3>Stop</h3><p>一度に全部やらない。1メニューだけで十分です。</p></article></div></section>
-<section class="section prompt-section"><div class="section-head"><p class="kicker">Part 1</p><h2>最初に送る自己設定</h2><p>黒いカッコの部分だけ、自分用に変えてください。</p></div><article class="dojo-prompt"><div class="prompt-head"><div><p class="card-label">AI Prompt</p><h3>自己設定<span>Identity Prompt</span></h3></div><button class="copy-mini" data-copy-target="jp-part1" data-copied="コピー完了">Copy</button></div><pre id="jp-part1">My name is (name).
+  <!-- JAPANESE PAGE -->
+  <div class="lang-all lang-jp">
+    <section class="dojo-hero">
+      <div class="section-head">
+        <p class="kicker gradient-text">AI Dojo</p>
+        <h1>ひとりでも、<br>英語の練習はできる。</h1>
+        <p>
+          AI Dojoは、レッスンとレッスンの間に使える自主練ページです。ChatGPT、Gemini、ClaudeなどのAIに下のプロンプトをコピーして、会話・リスニング・発音・ライティングを練習できます。
+        </p>
+      </div>
+    </section>
+
+    <section class="section dojo-guide">
+      <div class="guide-grid">
+        <article>
+          <span>1</span>
+          <h3>Part 1</h3>
+          <p>最初に、名前・レベル・目的・練習方法をAIに伝えます。</p>
+        </article>
+        <article>
+          <span>2</span>
+          <h3>Part 2</h3>
+          <p>練習したいメニューを1つだけ選んでコピーします。</p>
+        </article>
+        <article>
+          <span>3</span>
+          <h3>Stop</h3>
+          <p>一度に全部やらない。短く練習して、また次の日に続けます。</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section mode-section soft">
+      <div class="section-head">
+        <p class="kicker">Text Mode / Voice Mode</p>
+        <h2>まずは、文字でも大丈夫。</h2>
+        <p>AIに慣れていない人は、最初は文字で練習してOKです。慣れてきたら音声モードを使うと、会話・発音・リスニングの練習がしやすくなります。</p>
+      </div>
+      <div class="mode-grid">
+        <article class="mode-card">
+          <h3>Text Mode</h3>
+          <p>文字で入力して、文字で返事をもらう練習です。AIが初めての人、声を出すのが不安な人におすすめです。</p>
+        </article>
+        <article class="mode-card">
+          <h3>Voice Mode</h3>
+          <p>文字を打つ代わりに、AIと声で話す練習です。ロールプレイ、発音、リスニング、会話練習に向いています。</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section prompt-section">
+      <div class="section-head">
+        <p class="kicker">Part 1</p>
+        <h2>最初に送る自己設定</h2>
+        <p>黒いカッコの部分だけ、自分用に変えてください。Part 1では練習を始めません。AIにあなたの情報を覚えさせるだけです。</p>
+      </div>
+      <article class="dojo-prompt">
+        <div class="prompt-head">
+          <div>
+            <p class="card-label">AI Prompt</p>
+            <h3>自己設定<span>最初にコピーするプロンプト</span></h3>
+          </div>
+          <button class="copy-mini" data-copy-target="jp-part1" data-copied="コピー完了">Copy</button>
+        </div>
+<pre id="jp-part1">私の名前は（名前）です。
+私は英語を勉強している日本人です。
+私の現在のレベルは（初級 / 初中級 / 中級 / 中上級 / 上級 / レベルがわからない）です。
+英語を使う目的は（海外旅行 / 学校 / ビジネス / 英会話に自信をつけたい / その他）です。
+練習方法は（文字モード / 音声モード）です。
+
+私のレベルに合わせて、英語の難しさ、語彙、例文、修正の量、スピードを調整してください。
+質問は1つずつしてください。
+難しい言葉は、簡単に説明してください。
+間違いがあれば、自然に短く直してください。
+長い文法説明は、私がお願いした時だけしてください。
+
+必要な情報が足りない場合は、練習を始める前に質問してください。
+準備できたら、「OK、Part 2を送ってください。」とだけ返事してください。</pre>
+      </article>
+    </section>
+
+    <section class="section prompt-section soft">
+      <div class="section-head">
+        <p class="kicker">Part 2</p>
+        <h2>1つ選んで、練習する。</h2>
+        <p>Part 2では、下から練習メニューを1つだけ選びます。レベルはPart 1で伝えてあるので、ここではもう書かなくて大丈夫です。</p>
+      </div>
+
+      <div class="prompt-grid">
+        <article class="dojo-prompt">
+          <div class="prompt-head">
+            <div>
+              <p class="card-label">AI Prompt</p>
+              <h3>ロールプレイ<span>旅行・面接・日常会話</span></h3>
+            </div>
+            <button class="copy-mini" data-copy-target="jp-roleplay" data-copied="コピー完了">Copy</button>
+          </div>
+<pre id="jp-roleplay">ロールプレイを始めてください。
+Part 1で伝えた私のレベルと目的に合わせてください。
+
+場面：（ホテルチェックイン / 空港チェックイン / レストラン / 道案内 / 面接 / 学校 / 仕事）
+私の役割：（お客さん / 旅行者 / 学生 / 応募者 / 社員）
+練習方法：（文字モード / 音声モード）
+
+ルール：
+・役になりきってください。
+・短く自然なやり取りにしてください。
+・質問は1つずつしてください。
+・私の返事の後、必要な時だけ短く1つ修正してください。
+・その後、会話を続けてください。
+・私がわからない時に使える「聞き返し表現」も自然に教えてください。
+
+最初に場面を短く説明して、最初の質問をしてください。</pre>
+        </article>
+
+        <article class="dojo-prompt">
+          <div class="prompt-head">
+            <div>
+              <p class="card-label">AI Prompt</p>
+              <h3>リスニング<span>聞く練習</span></h3>
+            </div>
+            <button class="copy-mini" data-copy-target="jp-listening" data-copied="コピー完了">Copy</button>
+          </div>
+<pre id="jp-listening">リスニング練習をしてください。
+Part 1で伝えた私のレベルと目的に合わせてください。
+
+トピック：（海外旅行 / 日常会話 / 学校 / 仕事 / 面接）
+長さ：（30秒 / 1分）
+スピード：（ゆっくり / 自然）
+
+ルール：
+・最初はスクリプトを見せないでください。
+・音声モードの場合は、英文を1回だけ読んでください。
+・文字モードの場合は、「今から英文を出します」と言ってから英文を出してください。
+・その後、理解チェックの質問を3つしてください。
+・答え合わせの後に、同じ英文をもう一度出してください。
+・最後に、難しい単語や表現を短く説明してください。</pre>
+        </article>
+
+        <article class="dojo-prompt">
+          <div class="prompt-head">
+            <div>
+              <p class="card-label">AI Prompt</p>
+              <h3>発音<span>自然な音・リズム</span></h3>
+            </div>
+            <button class="copy-mini" data-copy-target="jp-pronunciation" data-copied="コピー完了">Copy</button>
+          </div>
+<pre id="jp-pronunciation">発音練習をしてください。
+Part 1で伝えた私のレベルと目的に合わせてください。
+
+練習したいこと：（旅行英語 / 自己紹介 / よく使う短い文 / 苦手な音）
+
+ルール：
+・短い文を1つずつ出してください。
+・発音、リズム、強く読むところを簡単に教えてください。
+・音声モードの場合は、先にあなたが読んでください。
+・私が繰り返した後、修正は1つだけにしてください。
+・難しい専門用語や発音記号は使わないでください。
+
+まず、簡単な文を1つ出してください。</pre>
+        </article>
+
+        <article class="dojo-prompt">
+          <div class="prompt-head">
+            <div>
+              <p class="card-label">AI Prompt</p>
+              <h3>ライティング<span>日記・メール・意見</span></h3>
+            </div>
+            <button class="copy-mini" data-copy-target="jp-writing" data-copied="コピー完了">Copy</button>
+          </div>
+<pre id="jp-writing">英語のライティング練習をしてください。
+Part 1で伝えた私のレベルと目的に合わせてください。
+
+まず、次の4つから1つ選ばせてください。
+1 日記
+2 メール
+3 短い意見
+4 英検風の答え
+
+ルール：
+・課題は1つずつ出してください。
+・私が書くまで待ってください。
+・修正は短く、わかりやすくしてください。
+・自然な英語の例も見せてください。
+・最後に、私がもう一度書き直す文を1つだけ選んでください。
+
+最初に「1〜4から選んでください」と聞いてください。</pre>
+        </article>
+
+        <article class="dojo-prompt">
+          <div class="prompt-head">
+            <div>
+              <p class="card-label">AI Prompt</p>
+              <h3>文法<span>短く確認する</span></h3>
+            </div>
+            <button class="copy-mini" data-copy-target="jp-grammar" data-copied="コピー完了">Copy</button>
+          </div>
+<pre id="jp-grammar">文法練習をしてください。
+Part 1で伝えた私のレベルと目的に合わせてください。
+
+ルール：
+・問題は1つずつ出してください。
+・私の答えを待ってから、次に進んでください。
+・説明は短くしてください。
+・間違えたら、正しい例文を1つだけ見せてください。
+・全部で5問だけにしてください。
+
+まず、簡単な問題を1つ出してください。</pre>
+        </article>
+
+        <article class="dojo-prompt">
+          <div class="prompt-head">
+            <div>
+              <p class="card-label">AI Prompt</p>
+              <h3>語彙<span>使える単語</span></h3>
+            </div>
+            <button class="copy-mini" data-copy-target="jp-vocabulary" data-copied="コピー完了">Copy</button>
+          </div>
+<pre id="jp-vocabulary">語彙練習をしてください。
+Part 1で伝えた私のレベルと目的に合わせてください。
+
+トピック：（海外旅行 / 学校 / 仕事 / 日常会話 / 面接）
+
+ルール：
+・単語を1つずつ出してください。
+・意味を簡単な日本語で説明してください。
+・短い例文を1つ見せてください。
+・その後、私に短い文を作らせてください。
+・全部で5語だけにしてください。
+
+まず、最初の単語を出してください。</pre>
+        </article>
+      </div>
+    </section>
+
+    <section class="final-cta">
+      <p class="kicker">Live Lessons</p>
+      <h2>AIだけで足りない時は、レッスンで一緒に練習しましょう。</h2>
+      <p>フォームから、目標・レベル・希望時間を送ってください。</p>
+      <a class="btn btn-white" href="https://forms.gle/PdmqfD4jVGaNqxPs9" target="_blank" rel="noopener">体験レッスンを相談する</a>
+    </section>
+  </div>
+
+  <!-- ENGLISH PAGE -->
+  <div class="lang-all lang-en" hidden>
+    <section class="dojo-hero">
+      <div class="section-head">
+        <p class="kicker gradient-text">AI Dojo</p>
+        <h1>Practice alone.<br>Improve between lessons.</h1>
+        <p>
+          AI Dojo is a self-practice page for the time between lessons. Copy the prompts below into ChatGPT, Gemini, Claude, or another AI tool to practice speaking, listening, pronunciation, writing, grammar, and vocabulary.
+        </p>
+      </div>
+    </section>
+
+    <section class="section dojo-guide">
+      <div class="guide-grid">
+        <article>
+          <span>1</span>
+          <h3>Part 1</h3>
+          <p>Tell the AI your name, level, goal, and practice style.</p>
+        </article>
+        <article>
+          <span>2</span>
+          <h3>Part 2</h3>
+          <p>Choose one training menu and copy it.</p>
+        </article>
+        <article>
+          <span>3</span>
+          <h3>Stop</h3>
+          <p>Do not do everything at once. One short task is enough.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section mode-section soft">
+      <div class="section-head">
+        <p class="kicker">Text Mode / Voice Mode</p>
+        <h2>Text is fine at first.</h2>
+        <p>If you are new to AI, start with text. When you feel ready, use Voice Mode for speaking, pronunciation, listening, and role play.</p>
+      </div>
+      <div class="mode-grid">
+        <article class="mode-card">
+          <h3>Text Mode</h3>
+          <p>You type to the AI and read the reply. This is good for beginners, shy learners, and writing practice.</p>
+        </article>
+        <article class="mode-card">
+          <h3>Voice Mode</h3>
+          <p>You speak to the AI instead of typing. This is useful for conversation, pronunciation, listening, and role play.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section prompt-section">
+      <div class="section-head">
+        <p class="kicker">Part 1</p>
+        <h2>Send your identity prompt first.</h2>
+        <p>Change only the bracket parts for your situation. Part 1 does not start the training. It tells the AI who you are.</p>
+      </div>
+      <article class="dojo-prompt">
+        <div class="prompt-head">
+          <div>
+            <p class="card-label">AI Prompt</p>
+            <h3>Identity Prompt<span>Copy this first</span></h3>
+          </div>
+          <button class="copy-mini" data-copy-target="en-part1" data-copied="Copied">Copy</button>
+        </div>
+<pre id="en-part1">My name is (name).
 I am a Japanese person studying English.
 My current level is (beginner / lower intermediate / intermediate / upper intermediate / advanced / not sure).
-I want to improve (travel / school / business / speaking confidence / etc.).
-Please adjust your English level, examples, corrections, and speed to suit me.
-I want to practice (verbally / by text).
-If you need more information, ask me before continuing.
-Please respond with: OK, I am ready for Part 2.</pre></article></section>
-<section class="section prompt-section soft"><div class="section-head"><p class="kicker">Part 2</p><h2>1つ選んで、練習する。</h2><p>コピーしてChatGPTに貼り付けてください。音声練習なら、先にVoice ModeをONにします。</p></div><div class="prompt-grid"><article class="dojo-prompt"><div class="prompt-head"><div><p class="card-label">AI Prompt</p><h3>ロールプレイ<span>Role Play</span></h3></div><button class="copy-mini" data-copy-target="jp-roleplay" data-copied="コピー完了">Copy</button></div><pre id="jp-roleplay">ROLE PLAY — VOICE MODE
+I want to improve (travel English / school English / business English / speaking confidence / other).
+I want to practice by (text mode / voice mode).
 
-I am using ChatGPT in voice mode for speaking practice.
-Start the role play immediately using the settings below.
+Please adjust your English level, vocabulary, examples, corrections, and speed to suit me.
+Ask me one question at a time.
+Explain difficult words simply.
+Correct my mistakes naturally and briefly.
+Do not give long grammar explanations unless I ask.
 
-Situation: (travel / restaurant / interview / school / work / daily life)
-My role: (customer / student / traveler / employee / etc.)
-Speed: (slow / natural)
-Level: (beginner / intermediate / advanced)
+If you need more information, ask me before starting.
+When you are ready, please respond only with: “OK, I am ready for Part 2.”</pre>
+      </article>
+    </section>
+
+    <section class="section prompt-section soft">
+      <div class="section-head">
+        <p class="kicker">Part 2</p>
+        <h2>Choose one. Practice.</h2>
+        <p>Choose only one training menu below. Your level is already in Part 1, so Part 2 does not ask for it again.</p>
+      </div>
+
+      <div class="prompt-grid">
+        <article class="dojo-prompt">
+          <div class="prompt-head">
+            <div>
+              <p class="card-label">AI Prompt</p>
+              <h3>Role Play<span>Travel / interview / daily life</span></h3>
+            </div>
+            <button class="copy-mini" data-copy-target="en-roleplay" data-copied="Copied">Copy</button>
+          </div>
+<pre id="en-roleplay">Please start a role play.
+Use the level and goal I gave you in Part 1.
+
+Situation: (hotel check-in / airport check-in / restaurant / asking for directions / interview / school / work)
+My role: (customer / traveler / student / applicant / employee)
+Practice style: (text mode / voice mode)
 
 Rules:
 - Stay in character.
-- Speak in short, natural turns.
+- Use short, natural turns.
+- Ask one question at a time.
 - After my response, give one short correction only if needed.
 - Then continue the conversation.
 - If I do not understand, help me ask for repetition naturally.
 
-Start now. Set the scene briefly and ask me the first question.</pre></article><article class="dojo-prompt"><div class="prompt-head"><div><p class="card-label">AI Prompt</p><h3>リスニング<span>Listening</span></h3></div><button class="copy-mini" data-copy-target="jp-listening" data-copied="コピー完了">Copy</button></div><pre id="jp-listening">LISTENING TRAINING — VOICE MODE
+Start now. Set the scene briefly and ask me the first question.</pre>
+        </article>
 
-Create a short listening activity for my English level.
+        <article class="dojo-prompt">
+          <div class="prompt-head">
+            <div>
+              <p class="card-label">AI Prompt</p>
+              <h3>Listening<span>Understanding practice</span></h3>
+            </div>
+            <button class="copy-mini" data-copy-target="en-listening" data-copied="Copied">Copy</button>
+          </div>
+<pre id="en-listening">Please create a listening activity.
+Use the level and goal I gave you in Part 1.
 
-Topic: (travel / school / daily life / work / interview)
-Speed: (slow / natural)
+Topic: (travel / daily life / school / work / interview)
 Length: (30 seconds / 1 minute)
+Speed: (slow / natural)
 
 Rules:
-- Read the script aloud once.
 - Do not show the script before the first listen.
+- If we are using voice mode, read the script aloud once.
+- If we are using text mode, say “Here is the listening text” and then show the text.
 - Ask me 3 comprehension questions.
-- Then read it again.
-- Finally show the script and explain difficult words briefly.</pre></article><article class="dojo-prompt"><div class="prompt-head"><div><p class="card-label">AI Prompt</p><h3>発音<span>Pronunciation</span></h3></div><button class="copy-mini" data-copy-target="jp-pronunciation" data-copied="コピー完了">Copy</button></div><pre id="jp-pronunciation">PRONUNCIATION TRAINING — VOICE MODE
+- After checking my answers, show the same text again.
+- Finally, explain difficult words or phrases briefly.</pre>
+        </article>
 
-Help me practice natural English pronunciation.
+        <article class="dojo-prompt">
+          <div class="prompt-head">
+            <div>
+              <p class="card-label">AI Prompt</p>
+              <h3>Pronunciation<span>Sound and rhythm</span></h3>
+            </div>
+            <button class="copy-mini" data-copy-target="en-pronunciation" data-copied="Copied">Copy</button>
+          </div>
+<pre id="en-pronunciation">Please help me practice pronunciation.
+Use the level and goal I gave you in Part 1.
 
-Focus on:
-- clarity
-- rhythm
-- stress
-- intonation
+Focus: (travel phrases / self-introduction / useful short sentences / difficult sounds)
 
-Give me one short sentence at a time.
-Say it first.
-Ask me to repeat.
-Give one correction only.
-Then ask me to repeat again.</pre></article><article class="dojo-prompt"><div class="prompt-head"><div><p class="card-label">AI Prompt</p><h3>ライティング<span>Writing</span></h3></div><button class="copy-mini" data-copy-target="jp-writing" data-copied="コピー完了">Copy</button></div><pre id="jp-writing">WRITING TRAINING
+Rules:
+- Give me one short sentence at a time.
+- Explain the pronunciation, rhythm, and stress simply.
+- If we are using voice mode, say the sentence first.
+- After I repeat, give only one correction.
+- Do not use technical terms or IPA unless I ask.
 
-Please assess my English writing level.
-Give me one short writing task at a time.
+Start with one easy sentence.</pre>
+        </article>
 
-Choose one task:
+        <article class="dojo-prompt">
+          <div class="prompt-head">
+            <div>
+              <p class="card-label">AI Prompt</p>
+              <h3>Writing<span>Diary / email / opinion</span></h3>
+            </div>
+            <button class="copy-mini" data-copy-target="en-writing" data-copied="Copied">Copy</button>
+          </div>
+<pre id="en-writing">Please help me practice English writing.
+Use the level and goal I gave you in Part 1.
+
+First, ask me to choose one option:
 1 Diary
 2 Email
-3 Opinion
+3 Short opinion
 4 EIKEN-style answer
 
-After I write:
-- correct my mistakes
-- show a more natural version
-- give 3 short comments
-- ask me to rewrite one sentence</pre></article></div></section>
-<section class="final-cta"><p class="kicker">Live Lessons</p><h2>AIだけで足りない時は、レッスンで一緒に練習しましょう。</h2><p>フォームから、目標・レベル・希望時間を送ってください。</p><a class="btn btn-white" href="https://forms.gle/PdmqfD4jVGaNqxPs9" target="_blank" rel="noopener">体験レッスンを相談する</a></section>
-</div><div class="lang-all lang-en" hidden>
-<section class="dojo-hero"><div class="section-head"><p class="kicker gradient-text">AI Dojo</p><h1>No embarrassment.<br>Practice again and again.</h1><p>You can improve between lessons. Copy one prompt below and use it with ChatGPT Voice Mode or text practice.</p></div></section>
-<section class="section dojo-guide"><div class="guide-grid"><article><span>1</span><h3>Part 1</h3><p>Tell the AI your name, level, and goal.</p></article><article><span>2</span><h3>Part 2</h3><p>Choose one training menu and copy it.</p></article><article><span>3</span><h3>Stop</h3><p>Do not do everything at once. One menu is enough.</p></article></div></section>
-<section class="section prompt-section"><div class="section-head"><p class="kicker">Part 1</p><h2>Send your identity prompt first.</h2><p>Change only the black bracket parts for your situation.</p></div><article class="dojo-prompt"><div class="prompt-head"><div><p class="card-label">AI Prompt</p><h3>Identity Prompt<span>Copy and paste into ChatGPT</span></h3></div><button class="copy-mini" data-copy-target="en-part1" data-copied="Copied">Copy</button></div><pre id="en-part1">My name is (name).
-I am a Japanese person studying English.
-My current level is (beginner / lower intermediate / intermediate / upper intermediate / advanced / not sure).
-I want to improve (travel / school / business / speaking confidence / etc.).
-Please adjust your English level, examples, corrections, and speed to suit me.
-I want to practice (verbally / by text).
-If you need more information, ask me before continuing.
-Please respond with: OK, I am ready for Part 2.</pre></article></section>
-<section class="section prompt-section soft"><div class="section-head"><p class="kicker">Part 2</p><h2>Choose one. Practice.</h2><p>Copy and paste one prompt into ChatGPT. For speaking practice, turn on Voice Mode first.</p></div><div class="prompt-grid"><article class="dojo-prompt"><div class="prompt-head"><div><p class="card-label">AI Prompt</p><h3>Role Play<span>Copy and paste into ChatGPT</span></h3></div><button class="copy-mini" data-copy-target="en-roleplay" data-copied="Copied">Copy</button></div><pre id="en-roleplay">ROLE PLAY — VOICE MODE
+Rules:
+- Give me one task at a time.
+- Wait for me to write.
+- Keep corrections short and clear.
+- Show a more natural English version.
+- Choose one sentence for me to rewrite.
 
-I am using ChatGPT in voice mode for speaking practice.
-Start the role play immediately using the settings below.
+Start by asking me to choose 1, 2, 3, or 4.</pre>
+        </article>
 
-Situation: (travel / restaurant / interview / school / work / daily life)
-My role: (customer / student / traveler / employee / etc.)
-Speed: (slow / natural)
-Level: (beginner / intermediate / advanced)
+        <article class="dojo-prompt">
+          <div class="prompt-head">
+            <div>
+              <p class="card-label">AI Prompt</p>
+              <h3>Grammar<span>Short practice</span></h3>
+            </div>
+            <button class="copy-mini" data-copy-target="en-grammar" data-copied="Copied">Copy</button>
+          </div>
+<pre id="en-grammar">Please help me practice grammar.
+Use the level and goal I gave you in Part 1.
 
 Rules:
-- Stay in character.
-- Speak in short, natural turns.
-- After my response, give one short correction only if needed.
-- Then continue the conversation.
-- If I do not understand, help me ask for repetition naturally.
+- Give me one question at a time.
+- Wait for my answer before continuing.
+- Keep explanations short.
+- If I make a mistake, show only one correct example sentence.
+- Give me only 5 questions total.
 
-Start now. Set the scene briefly and ask me the first question.</pre></article><article class="dojo-prompt"><div class="prompt-head"><div><p class="card-label">AI Prompt</p><h3>Listening<span>Copy and paste into ChatGPT</span></h3></div><button class="copy-mini" data-copy-target="en-listening" data-copied="Copied">Copy</button></div><pre id="en-listening">LISTENING TRAINING — VOICE MODE
+Start with one easy question.</pre>
+        </article>
 
-Create a short listening activity for my English level.
+        <article class="dojo-prompt">
+          <div class="prompt-head">
+            <div>
+              <p class="card-label">AI Prompt</p>
+              <h3>Vocabulary<span>Useful words</span></h3>
+            </div>
+            <button class="copy-mini" data-copy-target="en-vocabulary" data-copied="Copied">Copy</button>
+          </div>
+<pre id="en-vocabulary">Please help me practice vocabulary.
+Use the level and goal I gave you in Part 1.
 
-Topic: (travel / school / daily life / work / interview)
-Speed: (slow / natural)
-Length: (30 seconds / 1 minute)
+Topic: (travel / school / work / daily conversation / interview)
 
 Rules:
-- Read the script aloud once.
-- Do not show the script before the first listen.
-- Ask me 3 comprehension questions.
-- Then read it again.
-- Finally show the script and explain difficult words briefly.</pre></article><article class="dojo-prompt"><div class="prompt-head"><div><p class="card-label">AI Prompt</p><h3>Pronunciation<span>Copy and paste into ChatGPT</span></h3></div><button class="copy-mini" data-copy-target="en-pronunciation" data-copied="Copied">Copy</button></div><pre id="en-pronunciation">PRONUNCIATION TRAINING — VOICE MODE
+- Give me one word at a time.
+- Explain the meaning simply.
+- Show one short example sentence.
+- Then ask me to make one short sentence.
+- Give me only 5 words total.
 
-Help me practice natural English pronunciation.
+Start with the first word.</pre>
+        </article>
+      </div>
+    </section>
 
-Focus on:
-- clarity
-- rhythm
-- stress
-- intonation
+    <section class="final-cta">
+      <p class="kicker">Live Lessons</p>
+      <h2>When AI is not enough, practice with me.</h2>
+      <p>Send your goal, level, and preferred time through the form.</p>
+      <a class="btn btn-white" href="https://forms.gle/PdmqfD4jVGaNqxPs9" target="_blank" rel="noopener">Ask About a Trial Lesson</a>
+    </section>
+  </div>
+</main>
 
-Give me one short sentence at a time.
-Say it first.
-Ask me to repeat.
-Give one correction only.
-Then ask me to repeat again.</pre></article><article class="dojo-prompt"><div class="prompt-head"><div><p class="card-label">AI Prompt</p><h3>Writing<span>Copy and paste into ChatGPT</span></h3></div><button class="copy-mini" data-copy-target="en-writing" data-copied="Copied">Copy</button></div><pre id="en-writing">WRITING TRAINING
-
-Please assess my English writing level.
-Give me one short writing task at a time.
-
-Choose one task:
-1 Diary
-2 Email
-3 Opinion
-4 EIKEN-style answer
-
-After I write:
-- correct my mistakes
-- show a more natural version
-- give 3 short comments
-- ask me to rewrite one sentence</pre></article></div></section>
-<section class="final-cta"><p class="kicker">Live Lessons</p><h2>When AI is not enough, practice with me.</h2><p>Send your goal, level, and preferred time through the form.</p><a class="btn btn-white" href="https://forms.gle/PdmqfD4jVGaNqxPs9" target="_blank" rel="noopener">Ask About a Trial Lesson</a></section>
-</div></main><footer class="sne-footer">
+<footer class="sne-footer">
   <div class="sne-socials sne-socials-text" aria-label="Social media links">
     <a href="https://www.instagram.com/jiwschoolofenglish/" target="_blank" rel="noopener">Instagram</a>
     <span>·</span>
@@ -169,6 +527,7 @@ After I write:
   </div>
   <p>© JIW School of English</p>
 </footer>
+
 <script>
 document.addEventListener('DOMContentLoaded', () => {
   const buttons = document.querySelectorAll('.lang-btn');
@@ -207,4 +566,5 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 });
 </script>
-</body></html>
+</body>
+</html>
