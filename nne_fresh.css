@@ -1462,3 +1462,9 @@ p {
     margin-top: 30px;
   }
 }
+@media (max-width: 768px) {
+  .about-john-image {
+    display: block;
+    margin: 0 auto 2rem auto;
+  }
+}
