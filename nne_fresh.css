@@ -1,5 +1,5 @@
 /* =========================================================
-   Super Natural English — Fun Track v1
+   Super Natural English — Fun Track v2
    Fresh / white / green-teal / soft gradient / young
    Standalone CSS for nne.html, dojo.html, nne-policy.html
 ========================================================= */
@@ -887,4 +887,139 @@ p {
     font-size:.88rem
   }
 
+}
+
+
+/* =========================================================
+   V2 POLISH — Menu consistency, lesson alignment, AI Dojo strength
+========================================================= */
+
+/* Keep split sections visually top-aligned so the left heading lines up with Step 1 */
+.split-section {
+  align-items: start !important;
+}
+
+.split-section .split-copy {
+  padding-top: 2px;
+}
+
+/* Stronger, centered AI Dojo feature section on the Home page */
+.dojo-feature {
+  background:
+    radial-gradient(circle at 50% 0%, rgba(255, 214, 107, 0.26), transparent 38%),
+    linear-gradient(180deg, #ffffff 0%, #f3fff8 100%);
+}
+
+.dojo-feature-head {
+  margin-bottom: 34px;
+}
+
+.dojo-feature-head h2 {
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.dojo-feature-grid {
+  max-width: 1080px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.dojo-feature-grid article {
+  background: rgba(255, 255, 255, 0.88);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 30px;
+  text-align: center;
+  box-shadow: var(--soft-shadow);
+}
+
+.dojo-feature-grid span {
+  width: 58px;
+  height: 58px;
+  display: grid;
+  place-items: center;
+  margin: 0 auto 20px;
+  border-radius: 20px;
+  background: linear-gradient(135deg, rgba(16,163,127,.13), rgba(255,214,107,.25));
+  font-size: 1.7rem;
+}
+
+.dojo-feature-grid h3 {
+  margin-bottom: 10px;
+  color: var(--ink);
+  font-size: 1.3rem;
+  letter-spacing: -0.04em;
+}
+
+.dojo-feature-grid p {
+  margin: 0;
+  font-size: 0.98rem;
+}
+
+.dojo-feature-action {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+/* Old dojo-teaser fallback: if an older page remains, make it less weak */
+.dojo-teaser {
+  align-items: center;
+  text-align: left;
+}
+
+.dojo-bubble {
+  text-align: center;
+  padding: 42px;
+}
+
+.dojo-bubble strong {
+  font-size: clamp(2rem, 3.4vw, 3.2rem);
+}
+
+/* Policy page should visually belong to the Fun Track, not the executive site */
+.policy-page .policy-hero {
+  background:
+    radial-gradient(circle at 78% 12%, rgba(255, 92, 168, 0.14), transparent 32%),
+    linear-gradient(135deg, #ffffff 0%, #fffaf0 48%, #edfff8 100%);
+}
+
+.policy-page .policy-card {
+  box-shadow: var(--shadow);
+}
+
+/* Dojo page polish */
+.dojo-page .dojo-hero {
+  background:
+    radial-gradient(circle at 82% 12%, rgba(255, 214, 107, .28), transparent 34%),
+    linear-gradient(135deg, #fff, #edfff8 100%);
+}
+
+.dojo-page .guide-grid article,
+.dojo-page .dojo-prompt {
+  box-shadow: var(--soft-shadow);
+}
+
+/* Responsive adjustments */
+@media (max-width: 900px) {
+  .dojo-feature-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .dojo-feature-grid article {
+    text-align: left;
+  }
+
+  .dojo-feature-grid span {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .dojo-feature-action .btn {
+    width: 100%;
+  }
 }
