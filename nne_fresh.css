@@ -1239,3 +1239,71 @@ p {
   font-size: 1.42rem;
   line-height: 1.16;
 }
+
+
+/* =========================
+   V6 FINAL LAUNCH POLISH
+   - stronger small labels
+   - top-aligned lesson section
+   - subtle text socials
+   - policy/pricing polish
+========================= */
+
+.kicker.gradient-text {
+  background: linear-gradient(90deg, #10a37f, #d9981e, #e45a93);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.split-section,
+.dojo-teaser,
+.dojo-feature {
+  align-items: start;
+}
+
+.sne-socials-text {
+  gap: 7px;
+  font-size: .86rem;
+  color: rgba(98,112,130,.50);
+}
+
+.sne-socials-text span {
+  color: rgba(98,112,130,.32);
+}
+
+.sne-socials-text a {
+  color: rgba(98,112,130,.64) !important;
+  font-size: .86rem !important;
+  font-weight: 600 !important;
+}
+
+.sne-socials-text a:hover {
+  color: var(--green) !important;
+}
+
+.price-grid article strong {
+  display: block;
+  color: var(--ink);
+  font-size: 1.45rem;
+  line-height: 1.16;
+}
+
+.price-grid article p {
+  margin-top: 10px;
+}
+
+.policy-note {
+  margin-top: 20px;
+}
+
+.policy-hero .section-head {
+  margin-bottom: 0;
+}
+
+@media (max-width: 520px) {
+  .sne-socials-text {
+    max-width: 280px;
+    line-height: 1.9;
+  }
+}
